@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zgbblPd1Y4PEMo/kQCDbl0z4RvRKo/xOeWdpF3vK+DmibhbY92kwVGrfInvjMcNGVTdR+rtdsFj7qMvHxr3muQ==",
+  "dgSpecHash": "q0J3QONPNucLAdvJcTA5znHgiZSRttaFe50VE2o9hSr0eD6d04bw3P2tc7YPQYJkr//uv9nNrIZRlkDcKQ6u5A==",
   "success": true,
-  "projectFilePath": "D:\\Project\\JobStack\\src\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Project\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

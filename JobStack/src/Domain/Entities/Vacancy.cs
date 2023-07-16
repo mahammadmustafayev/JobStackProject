@@ -21,4 +21,7 @@ public class Vacancy:BaseAuditableEntity
     public JobType JobType { get; set; }
     public Category Category { get; set; } = null!;
 
+    public int CompanyId { get; set; }
+    public Company Company { get; set; } = null!;
+
 }

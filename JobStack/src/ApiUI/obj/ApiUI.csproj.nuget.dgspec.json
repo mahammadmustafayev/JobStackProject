@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\JobStack\\src\\ApiUI\\ApiUI.csproj": {}
+    "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj": {}
   },
   "projects": {
-    "D:\\Project\\JobStack\\src\\ApiUI\\ApiUI.csproj": {
+    "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\JobStack\\src\\ApiUI\\ApiUI.csproj",
+        "projectUniqueName": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
         "projectName": "ApiUI",
-        "projectPath": "D:\\Project\\JobStack\\src\\ApiUI\\ApiUI.csproj",
+        "projectPath": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\JobStack\\src\\ApiUI\\obj\\",
+        "outputPath": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

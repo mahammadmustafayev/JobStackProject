@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rcLzl9MbdCI3ISAFRLealWsC9Web3WsJrv/JZ2RPltflBbJXh0Ok20lHbhrEiUyxcsMFzijQWuG3OtpbZLW0HQ==",
+  "dgSpecHash": "apqgCpM0mD0c+II5bgoIcqtMv0CMTYikSXzltOZClhWIQnVV0Z0PC2ZIxZfflDNl2J2ZMjj86UXJwQrlaTnJjw==",
   "success": true,
-  "projectFilePath": "D:\\Project\\JobStack\\src\\WebUI\\WebUI.csproj",
+  "projectFilePath": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
