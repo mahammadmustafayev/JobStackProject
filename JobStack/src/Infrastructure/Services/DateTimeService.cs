@@ -1,0 +1,10 @@
+﻿
+
+using JobStack.Application.Common.Interfaces;
+
+namespace JobStack.Infrastructure.Services;
+
+public class DateTimeService : IDateTime
+{
+    public DateTime Now => DateTime.Now;
+}
