@@ -1,6 +1,7 @@
 ﻿
 
-using JobStack.Infrastructure.Identity;
+
+using JobStack.Domain.Identity;
 using JobStack.Infrastructure.Seeds;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -62,7 +63,7 @@ public class ApplicationDbContextInitializer
             LastName="Mustafayev",
             NormalizedUserName= "MANAGEADMIN",
             NormalizedEmail= "MAHAMMADVM@CODE.EDU.AZ",
-            EmailConfirmed= true,
+            EmailConfirmed= false,
             PhoneNumberConfirmed= false,
             SecurityStamp = Guid.NewGuid().ToString("D")
         };
@@ -74,7 +75,7 @@ public class ApplicationDbContextInitializer
             LastName="Yevo",
             NormalizedUserName= "MANAGEMODERATOR",
             NormalizedEmail= "MMMYEV125@GMAIL.COM",
-            EmailConfirmed= true,
+            EmailConfirmed= false,
             PhoneNumberConfirmed= false,
             SecurityStamp = Guid.NewGuid().ToString("D")
         };

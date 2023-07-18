@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Identity;
 
-namespace JobStack.Infrastructure.Identity;
+namespace JobStack.Domain.Identity;
 
 public class ApplicationUser : IdentityUser 
 {

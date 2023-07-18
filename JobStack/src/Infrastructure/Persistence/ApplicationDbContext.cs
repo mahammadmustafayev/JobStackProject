@@ -1,6 +1,6 @@
 ﻿using JobStack.Application.Common.Interfaces;
 using JobStack.Domain.Entities;
-using JobStack.Infrastructure.Identity;
+using JobStack.Domain.Identity;
 using JobStack.Infrastructure.Persistence.Interceptors;
 using JobStack.Infrastructure.Seeds;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
