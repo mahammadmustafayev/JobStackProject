@@ -130,6 +130,10 @@
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
             }
           },
           "imports": [
@@ -204,9 +208,9 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Identity": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -215,6 +219,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "sib_api_v3_sdk": {
+              "target": "Package",
+              "version": "[4.0.2, )"
             }
           },
           "imports": [

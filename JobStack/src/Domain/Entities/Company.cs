@@ -11,13 +11,19 @@ public class Company:BaseAuditableEntity
 {
     public string ComapnyName { get; set; } = null!;
 
-    public string Address { get; set; }
+    
     public string Description { get; set; }
 
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}")]
     public DateTime Founded { get; set; }
     public int NumberOdEmployees { get; set; }
+
+    public int? CountryId { get; set; }
+    public Country? Country { get; set; }
+
+    public int? CityId { get; set; }
+    public City? City { get; set; }
 
     public string? CompanyEmail { get; set; }
     public string? CompanySite { get; set; }
