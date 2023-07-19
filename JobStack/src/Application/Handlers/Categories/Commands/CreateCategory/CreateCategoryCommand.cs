@@ -1,5 +1,10 @@
 ﻿
+using AutoMapper;
+using JobStack.Application.Common.Constants;
+using JobStack.Application.Common.Exceptions;
+using JobStack.Application.Common.Extensions;
 using JobStack.Application.Common.Interfaces;
+using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -7,30 +12,80 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 
-public class CreateCategoryCommand:IRequest<int>
+public record CreateCategoryCommand(string CategoryName,string Logo,IFormFile Photo)
+        :IRequest<IDataResult<CreateCategoryCommand>>
 {
-    public string CategoryName { get; set; } = null!;
-    public string Logo { get; set; }
-    [NotMapped]
-    public IFormFile Photo { get; set; }
-}
-
-public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, int>
-{
-    private readonly IApplicationDbContext _context;
-
-    public CreateCategoryCommandHandler(IApplicationDbContext context)
+    public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, IDataResult<CreateCategoryCommand>>
     {
-        _context = context;
-    }
+        private readonly IMapper _mapper;
+        private readonly IApplicationDbContext _context;
 
-    public async  Task<int> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
-    {
-        Category entity = new()
+        public CreateCategoryCommandHandler(IMapper mapper, IApplicationDbContext context)
         {
-            // sekil yukleme yazilacaq
-        };
-        return entity.Id;
+            _mapper = mapper;
+            _context = context;
+        }
+
+        public async Task<IDataResult<CreateCategoryCommand>> Handle(CreateCategoryCommand request,CancellationToken cancellationToken)
+        {
+            Category category = new()
+            {
+                CategoryName=request.CategoryName,
+                
+            };
+           
+            if (request != null)
+            {
+                if (request.Photo.CheckSize(200))
+                {
+                    return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidPhoto);
+                }
+                if (!request.Photo.CheckType("image/"))
+                {
+                    return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidImagePhoto);
+                }
+                category.Logo = request.Photo.SaveFile(Path.Combine());
+            }
+
+            await _context.Categories.AddAsync(category);
+
+            await _context.SaveChangesAsync(cancellationToken);
+            return  new SuccessDataResult<CreateCategoryCommand>(request,Messages.Added);
+        }
     }
 }
+
+
+//{
+//    public string CategoryName { get; set; } = null!;
+//    public string Logo { get; set; }
+//    [NotMapped]
+//    public IFormFile Photo { get; set; }
+//}
+
+//public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, int>
+//{
+//    private readonly IApplicationDbContext _context;
+   
+
+//    public CreateCategoryCommandHandler(IApplicationDbContext context)
+//    {
+//        _context = context;
+//    }
+
+//    public async  Task<int> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+//    {
+//        Category entity = new();
+//        if (entity != null)
+//        {
+//            if (entity.Photo.CheckSize(200))
+//            {
+//                throw new FileException();
+//            }
+//        }
+
+        
+//        return entity.Id;
+//    }
+//}
 

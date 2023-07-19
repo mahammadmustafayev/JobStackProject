@@ -2,7 +2,7 @@
 
 using Infrastructure.Persistence;
 using JobStack.Application.Common.Interfaces;
-using JobStack.Infrastructure.Identity;
+using JobStack.Domain.Identity;
 using JobStack.Infrastructure.Persistence.Interceptors;
 using JobStack.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;

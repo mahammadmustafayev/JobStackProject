@@ -1,35 +1,41 @@
 ﻿
 
+using JobStack.Application.Common.Constants;
 using JobStack.Application.Common.Exceptions;
 using JobStack.Application.Common.Interfaces;
+using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
 using MediatR;
 
 namespace JobStack.Application.Handlers.Categories.Commands.PermaDeleteCategory;
 
-public record PermaDeleteCategoryCommand(int id):IRequest{}
-
-public class PermaDeleteCategoryCommandHandler : IRequestHandler<PermaDeleteCategoryCommand>
+public record PermaDeleteCategoryCommand(int id):IRequest<IResult>
 {
-    private readonly IApplicationDbContext _context;
-
-    public PermaDeleteCategoryCommandHandler(IApplicationDbContext context)
+    public class PermaDeleteCategoryCommandHandler : IRequestHandler<PermaDeleteCategoryCommand,IResult>
     {
-        _context = context;
-    }
+        private readonly IApplicationDbContext _context;
 
-    public async Task<Unit> Handle(PermaDeleteCategoryCommand request, CancellationToken cancellationToken)
-    {
-        var entity = await _context.Categories.FindAsync(new object[] { request.id }, cancellationToken);
-        if (entity is null)
+        public PermaDeleteCategoryCommandHandler(IApplicationDbContext context)
         {
-            throw new NotFoundException(nameof(Category), request.id);
+            _context = context;
         }
 
-        _context.Categories.Remove(entity);
+        public async Task<IResult> Handle(PermaDeleteCategoryCommand request, CancellationToken cancellationToken)
+        {
+            var entity = await _context.Categories.FindAsync(new object[] { request.id }, cancellationToken);
+            if (entity is null)
+            {
+                return new ErrorResult(Messages.NullMessage);
 
-        await _context.SaveChangesAsync(cancellationToken);
+            }
 
-        return Unit.Value;   
+            _context.Categories.Remove(entity);
+
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return new Result(true, Messages.DeletedMessage);
+        }
     }
+
 }
+

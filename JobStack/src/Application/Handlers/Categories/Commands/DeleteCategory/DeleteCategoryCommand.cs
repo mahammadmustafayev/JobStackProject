@@ -1,35 +1,43 @@
 ﻿
 
+using JobStack.Application.Common.Constants;
 using JobStack.Application.Common.Exceptions;
 using JobStack.Application.Common.Interfaces;
+using JobStack.Application.Common.Results;
+using JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 using JobStack.Domain.Entities;
 using MediatR;
 
 namespace JobStack.Application.Handlers.Categories.Commands.DeleteCategory;
 
-public record DeleteCategoryCommand(int id):IRequest {}
-
-public class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryCommand>
+public record DeleteCategoryCommand(int id):IRequest<IResult>
 {
-    private readonly IApplicationDbContext _context;
-
-    public DeleteCategoryCommandHandler(IApplicationDbContext context)
+    public class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryCommand,IResult>
     {
-        _context = context;
-    }
+        private readonly IApplicationDbContext _context;
 
-    public async Task<Unit> Handle(DeleteCategoryCommand request, CancellationToken cancellationToken)
-    {
-        var entity= await _context.Categories.FindAsync(new object[] { request.id}, cancellationToken);
-        if (entity is null)
+        public DeleteCategoryCommandHandler(IApplicationDbContext context)
         {
-            throw new NotFoundException(nameof(Category),request.id);
+            _context = context;
         }
 
-        entity.IsDeleted= true;
+        public async Task<IResult> Handle(DeleteCategoryCommand request, CancellationToken cancellationToken)
+        {
+            var entity = await _context.Categories.FindAsync(new object[] { request.id }, cancellationToken);
+            if (entity is null)
+            {
+               return  new ErrorResult(Messages.NullMessage);
+            }
 
-        await _context.SaveChangesAsync(cancellationToken);
+            entity.IsDeleted = true;
 
-        return Unit.Value;
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return new Result(true,Messages.DeletedMessage);
+        }
+
+        
     }
+
 }
+

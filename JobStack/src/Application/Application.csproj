@@ -21,7 +21,6 @@
   <ItemGroup>
     <Folder Include="Handlers\Authorizations\Queries\" />
     <Folder Include="Handlers\Authorizations\Validations\" />
-    <Folder Include="Handlers\Candidates\Commands\CreateCandidate\" />
     <Folder Include="Handlers\Candidates\Commands\DeleteCandidate\" />
     <Folder Include="Handlers\Candidates\Commands\PermaDeleteCandidate\" />
     <Folder Include="Handlers\Candidates\Commands\UpdateCandidate\" />
@@ -51,6 +50,21 @@
     <Folder Include="Handlers\Vacancies\Commands\" />
     <Folder Include="Handlers\Vacancies\Queries\" />
     <Folder Include="Handlers\Vacancies\Validations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Common\Constants\Messages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Common\Constants\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
