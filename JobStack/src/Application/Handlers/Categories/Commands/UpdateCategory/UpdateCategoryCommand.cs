@@ -13,7 +13,7 @@ namespace JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
 
 public class UpdateCategoryCommand:IRequest<IDataResult<UpdateCategoryCommand>>
 {
-    public string CategoryId { get; set;}
+    public int CategoryId { get; set;}
     public string CategoryName { get; set;}
     public string Logo { get; set; }
     [NotMapped]
@@ -42,9 +42,9 @@ public class UpdateCategoryCommand:IRequest<IDataResult<UpdateCategoryCommand>>
 
                 string newFileName = Guid.NewGuid().ToString();
                 newFileName += file.CutFileName(60);
-                if (System.IO.File.Exists(Path.Combine()))
+                if (System.IO.File.Exists(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\")))
                 {
-                    System.IO.File.Delete(Path.Combine());
+                    System.IO.File.Delete(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\"));
                 }
                 file.UpdateSaveFile(Path.Combine(newFileName));
                 existCategory.Logo = newFileName;

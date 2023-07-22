@@ -10,7 +10,10 @@ public class CreateCategoryCommandValidator:AbstractValidator<CreateCategoryComm
 {
 	public CreateCategoryCommandValidator()
 	{
-		RuleFor(c=>c.CategoryName).MaximumLength(200).NotEmpty().WithMessage("Category Name is required");
+		RuleFor(c=>c.CategoryName).MaximumLength(200)
+			.NotEmpty()
+			.WithMessage("Category Name is required");
+
 		RuleFor(c => c.Logo).NotEmpty();
 		RuleFor(c => c.Photo).NotEmpty();
 	}

@@ -11,6 +11,7 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.6.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
   </ItemGroup>
 
@@ -26,21 +27,9 @@
     <Folder Include="Handlers\Candidates\Commands\UpdateCandidate\" />
     <Folder Include="Handlers\Candidates\Validations\" />
     <Folder Include="Handlers\Candidates\Queries\" />
-    <Folder Include="Handlers\Cities\Commands\CreateCity\" />
-    <Folder Include="Handlers\Cities\Commands\DeleteCity\" />
-    <Folder Include="Handlers\Cities\Commands\PermaDeleteCity\" />
-    <Folder Include="Handlers\Cities\Commands\UpdateCity\" />
-    <Folder Include="Handlers\Cities\Validations\" />
-    <Folder Include="Handlers\Cities\Queries\" />
     <Folder Include="Handlers\Companies\Commands\" />
     <Folder Include="Handlers\Companies\Validations\" />
     <Folder Include="Handlers\Companies\Queries\" />
-    <Folder Include="Handlers\Countries\Commands\" />
-    <Folder Include="Handlers\Countries\Validations\" />
-    <Folder Include="Handlers\Countries\Queries\" />
-    <Folder Include="Handlers\Experiences\Commands\" />
-    <Folder Include="Handlers\Experiences\Validations\" />
-    <Folder Include="Handlers\Experiences\Queries\" />
     <Folder Include="Handlers\JobApplies\Commands\" />
     <Folder Include="Handlers\JobApplies\Validations\" />
     <Folder Include="Handlers\JobApplies\Queries\" />

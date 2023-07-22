@@ -13,3 +13,5 @@ D:\Project\JobStackProject\JobStack\src\Application\obj\Debug\net7.0\Application
 D:\Project\JobStackProject\JobStack\src\Application\obj\Debug\net7.0\refint\Application.dll
 D:\Project\JobStackProject\JobStack\src\Application\obj\Debug\net7.0\Application.pdb
 D:\Project\JobStackProject\JobStack\src\Application\obj\Debug\net7.0\ref\Application.dll
+D:\Project\JobStackProject\JobStack\src\Application\obj\Debug\net7.0\JobStack.Application.Common.Constants.Messages.resources
+D:\Project\JobStackProject\JobStack\src\Application\obj\Debug\net7.0\Application.csproj.GenerateResource.cache

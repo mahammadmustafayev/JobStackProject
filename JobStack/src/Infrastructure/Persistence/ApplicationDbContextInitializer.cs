@@ -45,7 +45,7 @@ public class ApplicationDbContextInitializer
 
     public async Task TrySeedAsync()
     {
-        string[] roles= {"superadmin","moderator","company","employee"};
+        string[] roles= {"superadmin","moderator","company","candidate"};
 
         foreach (string role in roles)
         {
@@ -100,6 +100,16 @@ public class ApplicationDbContextInitializer
         if (!_context.Cities.Any())
         {
             await _context.AddRangeAsync(CitySeed.CityData);
+            await _context.SaveChangesAsync();
+        }
+        if (!_context.JobTypes.Any())
+        {
+            await _context.AddRangeAsync(JobTypeSeed.JobTypesData);
+            await _context.SaveChangesAsync();
+        }
+        if (!_context.Categories.Any())
+        {
+            await _context.AddRangeAsync(CategorySeed.CategoriesData);
             await _context.SaveChangesAsync();
         }
 

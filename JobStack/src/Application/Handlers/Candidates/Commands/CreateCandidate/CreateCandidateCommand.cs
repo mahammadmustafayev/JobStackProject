@@ -1,12 +1,16 @@
-﻿using JobStack.Application.Common.Interfaces;
+﻿using AutoMapper;
+using JobStack.Application.Common.Interfaces;
+using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
+using JobStack.Domain.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JobStack.Application.Handlers.Candidates.Commands.CreateCandidate;
 
-public class CreateCandidateCommand:IRequest<int>
+public record CreateCandidateCommand:IRequest<IDataResult<CreateCandidateCommand>>
 {
     public string CandidateFirstName { get; set; } = null!;
     public string CandidateLastName { get; set; } = null!;
@@ -17,6 +21,7 @@ public class CreateCandidateCommand:IRequest<int>
 
     public int? CountryId { get; set; }
     public Country? Country { get; set; }
+    public ICollection<Experience>? Experiences { get; set; }
 
     public int? CityId { get; set; }
     public City? City { get; set; }
@@ -30,23 +35,31 @@ public class CreateCandidateCommand:IRequest<int>
     public string? CandidateProfilImage { get; set; }
     [NotMapped]
     public IFormFile? CandidateProfileUrl { get; set; }
-}
 
-public class CreateCandidateCommandHandler : IRequestHandler<CreateCandidateCommand, int>
-{
-    private readonly IApplicationDbContext _context;
-
-    public CreateCandidateCommandHandler(IApplicationDbContext context)
+    public class CreateCandidateCommandHandler : IRequestHandler<CreateCandidateCommand, IDataResult<CreateCandidateCommand>>
     {
-        _context = context;
-    }
+        private readonly IApplicationDbContext _context;
+        private readonly IHttpContextAccessor _accessor;
+        private readonly IMapper _mapper;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUser _user;
 
-    public async Task<int> Handle(CreateCandidateCommand request, CancellationToken cancellationToken)
-    {
-        Candidate entity = new()
+
+        public CreateCandidateCommandHandler(IApplicationDbContext context, IMapper mapper, UserManager<ApplicationUser> userManager, ApplicationUser user, IHttpContextAccessor accessor)
         {
+            _context = context;
+            _mapper = mapper;
+            _userManager = userManager;
+            _user = user;
+            _accessor = accessor;
+        }
 
-        };
-        return entity.Id;
+        public Task<IDataResult<CreateCandidateCommand>> Handle(CreateCandidateCommand request, CancellationToken cancellationToken)
+        {
+            return new SuccessDataResult<CreateCandidateCommand>(request, "Good");
+           
+        }
     }
+
 }
+

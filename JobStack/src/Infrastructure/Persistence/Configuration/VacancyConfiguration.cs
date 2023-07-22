@@ -23,6 +23,18 @@ public class VacancyConfiguration:BaseAudiTableEntityConfiguration<Vacancy>
         entity.Property(p=>p.SkillsArray).IsRequired(false);
         entity.Property(p=>p.SkillName).IsRequired(false);
 
+        entity.HasOne(h=>h.Company)
+            .WithMany(x=>x.Vacancies)
+            .HasForeignKey(x=>x.CompanyId);
+
+        entity.HasOne(h=>h.Country)
+            .WithMany(x=>x.Vacancies)
+            .HasForeignKey(x=>x.CountryId); 
+
+        entity.HasOne(h=>h.City)
+            .WithMany(x=>x.Vacancies)
+            .HasForeignKey(x=>x.CityId);
+        
         entity.HasOne(h=>h.Category)
             .WithMany(x=>x.Vacancies)
             .HasForeignKey(x=>x.CategoryId);

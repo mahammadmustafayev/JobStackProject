@@ -32,5 +32,5 @@ public class Company:BaseAuditableEntity
     [NotMapped]
     public IFormFile? CompanyUrl { get; set; }
 
-    public virtual ICollection<Vacancy> Vacancies { get; set; }
+    public  ICollection<Vacancy> Vacancies { get; set; }
 }

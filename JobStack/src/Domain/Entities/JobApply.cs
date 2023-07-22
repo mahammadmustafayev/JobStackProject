@@ -14,4 +14,7 @@ public class JobApply:BaseAuditableEntity
     [NotMapped]
     public IFormFile CvFileUrl { get; set; } = null!;
 
+    public int VacancyId { get; set; }
+    public Vacancy Vacancy { get; set; }
+
 }

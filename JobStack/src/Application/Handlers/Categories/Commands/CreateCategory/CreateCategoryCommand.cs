@@ -8,7 +8,9 @@ using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection;
 
 namespace JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 
@@ -19,11 +21,13 @@ public record CreateCategoryCommand(string CategoryName,string Logo,IFormFile Ph
     {
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
+        
 
         public CreateCategoryCommandHandler(IMapper mapper, IApplicationDbContext context)
         {
             _mapper = mapper;
             _context = context;
+            
         }
 
         public async Task<IDataResult<CreateCategoryCommand>> Handle(CreateCategoryCommand request,CancellationToken cancellationToken)
@@ -44,7 +48,7 @@ public record CreateCategoryCommand(string CategoryName,string Logo,IFormFile Ph
                 {
                     return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidImagePhoto);
                 }
-                category.Logo = request.Photo.SaveFile(Path.Combine());
+                category.Logo = request.Photo.SaveFile(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\"));
             }
 
             await _context.Categories.AddAsync(category);

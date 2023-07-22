@@ -7,6 +7,7 @@ namespace JobStack.Application.Common.Extensions;
 public static class FileExtension
 {
     public static string RootPath = "";
+    
     public static void UpdateSaveFile(this IFormFile file, string path)
     {
         path = Path.Combine(JobStack.Application.Common.Extensions.FileExtension.RootPath, path);

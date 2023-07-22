@@ -16,6 +16,8 @@ public class Candidate:BaseAuditableEntity
     public string CandidateEmail { get; set; } = null!;
     public string CandidateProfession { get; set; } = null!;
 
+    // collection experience
+    public  ICollection<Experience>? Experiences { get; set; }
     public string? Description { get; set; }
 
     public int? CountryId { get; set; }
