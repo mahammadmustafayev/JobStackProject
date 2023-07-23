@@ -52,4 +52,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
         optionsBuilder.AddInterceptors(_interceptor);
     }
 
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        return await base.SaveChangesAsync(cancellationToken);
+    }
+
 }

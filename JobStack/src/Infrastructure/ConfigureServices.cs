@@ -23,9 +23,9 @@ public static class ConfigureServices
         );
 
         services.AddScoped<IApplicationDbContext>(provider=>provider.GetRequiredService<ApplicationDbContext>());
-        services.AddScoped<ApplicationDbContextInitializer>();
 
         services.AddIdentity<ApplicationUser,AppRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+        services.AddScoped<ApplicationDbContextInitializer>();
 
         services.AddTransient<IDateTime, DateTimeService>();
 

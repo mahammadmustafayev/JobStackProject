@@ -30,15 +30,6 @@
     <Folder Include="Handlers\Companies\Commands\" />
     <Folder Include="Handlers\Companies\Validations\" />
     <Folder Include="Handlers\Companies\Queries\" />
-    <Folder Include="Handlers\JobApplies\Commands\" />
-    <Folder Include="Handlers\JobApplies\Validations\" />
-    <Folder Include="Handlers\JobApplies\Queries\" />
-    <Folder Include="Handlers\JobTypes\Commands\" />
-    <Folder Include="Handlers\JobTypes\Queries\" />
-    <Folder Include="Handlers\JobTypes\Validations\" />
-    <Folder Include="Handlers\Vacancies\Commands\" />
-    <Folder Include="Handlers\Vacancies\Queries\" />
-    <Folder Include="Handlers\Vacancies\Validations\" />
   </ItemGroup>
 
   <ItemGroup>

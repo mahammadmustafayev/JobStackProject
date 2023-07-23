@@ -79,6 +79,15 @@ namespace JobStack.Application.Common.Constants {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This cv file must be better than 500 kb.
+        /// </summary>
+        internal static string InvalidCvFile {
+            get {
+                return ResourceManager.GetString("InvalidCvFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This image type must be image.
         /// </summary>
         internal static string InvalidImagePhoto {
@@ -102,6 +111,19 @@ namespace JobStack.Application.Common.Constants {
         internal static string NullMessage {
             get {
                 return ResourceManager.GetString("NullMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;div style=&quot;border: 2px solid black;border-radius: 25px; &quot;&gt;
+        ///        &lt;img style=&quot;padding-left: 600px; width: 200px;height: 45px; padding-top: 15px;&quot; src=&quot;https://shreethemes.in/jobstack/layouts/assets/images/logo-dark.png&quot; alt=&quot;&quot;&gt;
+        ///        &lt;div style=&quot;padding-left: 50px;&quot;&gt;
+        ///            &lt;h3 style=&quot;font-size: 25px;&quot;&gt;Deyerli Mehemmed Mustafayev&lt;/h3&gt;
+        ///            &lt;p style=&quot;font-size: 20px;&quot;&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Lenovo&lt;/b&gt; sirketinin  &lt;b style=&quot;font-size: 20px;&quot;&gt;Back-end developer&lt;/b&gt; vakansiyasına muraci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SendEmailMessages {
+            get {
+                return ResourceManager.GetString("SendEmailMessages", resourceCulture);
             }
         }
         

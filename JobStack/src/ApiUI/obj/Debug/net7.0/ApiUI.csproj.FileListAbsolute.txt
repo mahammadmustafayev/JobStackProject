@@ -93,3 +93,13 @@ D:\Project\JobStackProject\JobStack\src\ApiUI\obj\Debug\net7.0\refint\ApiUI.dll
 D:\Project\JobStackProject\JobStack\src\ApiUI\obj\Debug\net7.0\ApiUI.pdb
 D:\Project\JobStackProject\JobStack\src\ApiUI\obj\Debug\net7.0\ApiUI.genruntimeconfig.cache
 D:\Project\JobStackProject\JobStack\src\ApiUI\obj\Debug\net7.0\ref\ApiUI.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\MailKit.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\MimeKit.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\Humanizer.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\System.CodeDom.dll

@@ -11,7 +11,7 @@ public class CategoryConfiguration:BaseAudiTableEntityConfiguration<Category>
     {
         entity.Property(p => p.CategoryName).HasMaxLength(200).IsRequired();
         entity.Property(p=>p.Logo).IsRequired(false);
-        entity.Property(p=>p.Photo).IsRequired(false);
+        
         
 
         base.Configure(entity);

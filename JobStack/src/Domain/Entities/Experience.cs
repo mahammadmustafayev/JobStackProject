@@ -1,5 +1,6 @@
 ﻿
 
+
 using JobStack.Domain.Common;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,12 +15,12 @@ public class Experience:BaseAuditableEntity
 
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy}")]
-    public DateTime ExperienceStartYear { get; set;}
+    public DateTime? ExperienceStartYear { get; set; } 
 
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy}")]
-    public DateTime ExperienceEndYear { get; set;}
+    public DateTime? ExperienceEndYear { get; set;}
 
     public int CandidateId { get; set; }
-    public Candidate Candidate { get; set; }
+    public Candidate Candidate { get; set; } = null!;
 }

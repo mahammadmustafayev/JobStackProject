@@ -11,9 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{0F579B71-F5A4-42A5-9ABD-D626275FF021}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiUI", "src\ApiUI\ApiUI.csproj", "{0A62E289-73FD-4094-9926-D63FE23A1A08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiUI", "src\ApiUI\ApiUI.csproj", "{0A62E289-73FD-4094-9926-D63FE23A1A08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "src\WebUI\WebUI.csproj", "{0D2468EE-1BDD-40C6-966F-A11BAC905980}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "src\WebUI\WebUI.csproj", "{0D2468EE-1BDD-40C6-966F-A11BAC905980}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09B29AA5-983A-47A5-B799-E1AFF681E02C}"
+	ProjectSection(SolutionItems) = preProject
+		migration.txt = migration.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +56,7 @@ Global
 		{0F579B71-F5A4-42A5-9ABD-D626275FF021} = {FCA525F8-EBD4-40E6-B96E-CBD1EFC0AB06}
 		{0A62E289-73FD-4094-9926-D63FE23A1A08} = {FCA525F8-EBD4-40E6-B96E-CBD1EFC0AB06}
 		{0D2468EE-1BDD-40C6-966F-A11BAC905980} = {FCA525F8-EBD4-40E6-B96E-CBD1EFC0AB06}
+		{09B29AA5-983A-47A5-B799-E1AFF681E02C} = {FCA525F8-EBD4-40E6-B96E-CBD1EFC0AB06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B30BA16C-C3FC-400E-ADAB-F56657C5744E}

@@ -26,9 +26,6 @@ public class Candidate:BaseAuditableEntity
     public int? CityId { get; set; }
     public City? City { get; set; }
 
-
-
-
     public string CandidateSkillName { get; set; } = null!;
     public string[] CandidateSkillsArray { get; set; }= null!;
 

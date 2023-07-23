@@ -9,8 +9,6 @@ public class Vacancy:BaseAuditableEntity
     public string? Description { get; set; }
     public string? Salary { get; set; }
 
-    // job apply vacanc
-    public ICollection<JobApply>? JobApplies { get; set; }
 
     public string? Address { get; set; }
 
@@ -33,5 +31,8 @@ public class Vacancy:BaseAuditableEntity
 
     public int CompanyId { get; set; }
     public Company Company { get; set; } = null!;
+
+    // job apply vacanc
+    public ICollection<JobApply>? JobApplies { get; set; }
 
 }

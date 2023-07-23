@@ -9,15 +9,15 @@ namespace JobStack.Domain.Entities;
 
 public class Company:BaseAuditableEntity
 {
-    public string ComapnyName { get; set; } = null!;
+    public string CompanyName { get; set; } = null!;
 
     
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}")]
-    public DateTime Founded { get; set; }
-    public int NumberOdEmployees { get; set; }
+    public DateTime? Founded { get; set; }
+    public int? NumberOfEmployees { get; set; }
 
     public int? CountryId { get; set; }
     public Country? Country { get; set; }
@@ -28,9 +28,9 @@ public class Company:BaseAuditableEntity
     public string? CompanyEmail { get; set; }
     public string? CompanySite { get; set; }
 
-    public string? CompanyLogo { get; set; }
+    public string CompanyLogo { get; set; }
     [NotMapped]
-    public IFormFile? CompanyUrl { get; set; }
+    public IFormFile CompanyUrl { get; set; }
 
     public  ICollection<Vacancy> Vacancies { get; set; }
 }

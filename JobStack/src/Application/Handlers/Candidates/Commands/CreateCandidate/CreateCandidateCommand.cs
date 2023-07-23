@@ -54,7 +54,7 @@ public record CreateCandidateCommand:IRequest<IDataResult<CreateCandidateCommand
             _accessor = accessor;
         }
 
-        public Task<IDataResult<CreateCandidateCommand>> Handle(CreateCandidateCommand request, CancellationToken cancellationToken)
+        public async Task<IDataResult<CreateCandidateCommand>> Handle(CreateCandidateCommand request, CancellationToken cancellationToken)
         {
             return new SuccessDataResult<CreateCandidateCommand>(request, "Good");
            

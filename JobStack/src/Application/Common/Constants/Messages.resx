@@ -123,6 +123,9 @@
   <data name="DeletedMessage" xml:space="preserve">
     <value>This file deleted successfully</value>
   </data>
+  <data name="InvalidCvFile" xml:space="preserve">
+    <value>This cv file must be better than 500 kb</value>
+  </data>
   <data name="InvalidImagePhoto" xml:space="preserve">
     <value>This image type must be image</value>
   </data>
@@ -131,6 +134,15 @@
   </data>
   <data name="NullMessage" xml:space="preserve">
     <value>This category is not found!</value>
+  </data>
+  <data name="SendEmailMessages" xml:space="preserve">
+    <value>&lt;div style="border: 2px solid black;border-radius: 25px; "&gt;
+        &lt;img style="padding-left: 600px; width: 200px;height: 45px; padding-top: 15px;" src="https://shreethemes.in/jobstack/layouts/assets/images/logo-dark.png" alt=""&gt;
+        &lt;div style="padding-left: 50px;"&gt;
+            &lt;h3 style="font-size: 25px;"&gt;Deyerli Mehemmed Mustafayev&lt;/h3&gt;
+            &lt;p style="font-size: 20px;"&gt;&lt;b style="font-size: 20px;"&gt;Lenovo&lt;/b&gt; sirketinin  &lt;b style="font-size: 20px;"&gt;Back-end developer&lt;/b&gt; vakansiyasına muraciət etdiyiniz üçün təşəkkür edirik.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</value>
   </data>
   <data name="Updated" xml:space="preserve">
     <value>Updated Successfully</value>

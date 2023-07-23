@@ -27,7 +27,7 @@ public class ApplicationDbContextInitializer
         _logger = logger;
     }
 
-    public async System.Threading.Tasks.Task InitializeAsync()
+    public async Task InitializeAsync()
     {
         try
         {
@@ -39,6 +39,18 @@ public class ApplicationDbContextInitializer
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred while initializing the database.");
+            throw;
+        }
+    }
+    public async Task SeedAsync()
+    {
+        try
+        {
+            await TrySeedAsync();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occured while seeding the database");
             throw;
         }
     }

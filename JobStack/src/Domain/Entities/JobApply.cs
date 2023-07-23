@@ -15,6 +15,6 @@ public class JobApply:BaseAuditableEntity
     public IFormFile CvFileUrl { get; set; } = null!;
 
     public int VacancyId { get; set; }
-    public Vacancy Vacancy { get; set; }
+    public Vacancy Vacancy { get; set; } = null!;
 
 }
