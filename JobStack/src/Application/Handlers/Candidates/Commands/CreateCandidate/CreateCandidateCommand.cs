@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JobStack.Application.Handlers.Candidates.Commands.CreateCandidate;
 
-public record CreateCandidateCommand:IRequest<IDataResult<CreateCandidateCommand>>
+public class CreateCandidateCommand : IRequest<IDataResult<CreateCandidateCommand>>
 {
     public string CandidateFirstName { get; set; } = null!;
     public string CandidateLastName { get; set; } = null!;
@@ -42,22 +42,28 @@ public record CreateCandidateCommand:IRequest<IDataResult<CreateCandidateCommand
         private readonly IHttpContextAccessor _accessor;
         private readonly IMapper _mapper;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly ApplicationUser _user;
 
 
-        public CreateCandidateCommandHandler(IApplicationDbContext context, IMapper mapper, UserManager<ApplicationUser> userManager, ApplicationUser user, IHttpContextAccessor accessor)
+
+        public CreateCandidateCommandHandler(
+            IApplicationDbContext context, IMapper mapper,
+            UserManager<ApplicationUser> userManager,
+            IHttpContextAccessor accessor)
         {
             _context = context;
             _mapper = mapper;
             _userManager = userManager;
-            _user = user;
             _accessor = accessor;
         }
 
         public async Task<IDataResult<CreateCandidateCommand>> Handle(CreateCandidateCommand request, CancellationToken cancellationToken)
         {
+            var user = await _userManager.FindByNameAsync(_accessor.HttpContext.User.Identity.Name);
+            var candidateex = _context.Candidates.FirstOrDefault(x => x.CandidateEmail == user.Email);
+
+
             return new SuccessDataResult<CreateCandidateCommand>(request, "Good");
-           
+
         }
     }
 

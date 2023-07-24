@@ -1,43 +1,41 @@
 ﻿
 using AutoMapper;
 using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Exceptions;
 using JobStack.Application.Common.Extensions;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Reflection;
+using Microsoft.Extensions.Hosting;
 
 namespace JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 
-public record CreateCategoryCommand(string CategoryName,string Logo,IFormFile Photo)
-        :IRequest<IDataResult<CreateCategoryCommand>>
+public record CreateCategoryCommand(string CategoryName, string Logo, IFormFile Photo)
+        : IRequest<IDataResult<CreateCategoryCommand>>
 {
     public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, IDataResult<CreateCategoryCommand>>
     {
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
-        
+        private readonly IHostEnvironment _env;
 
-        public CreateCategoryCommandHandler(IMapper mapper, IApplicationDbContext context)
+
+        public CreateCategoryCommandHandler(IMapper mapper, IApplicationDbContext context, IHostEnvironment env)
         {
             _mapper = mapper;
             _context = context;
-            
+            _env = env;
         }
 
-        public async Task<IDataResult<CreateCategoryCommand>> Handle(CreateCategoryCommand request,CancellationToken cancellationToken)
+        public async Task<IDataResult<CreateCategoryCommand>> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
             Category category = new()
             {
-                CategoryName=request.CategoryName,
-                
+                CategoryName = request.CategoryName,
+
             };
-           
+
             if (request != null)
             {
                 if (request.Photo.CheckSize(200))
@@ -48,13 +46,14 @@ public record CreateCategoryCommand(string CategoryName,string Logo,IFormFile Ph
                 {
                     return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidImagePhoto);
                 }
-                category.Logo = request.Photo.SaveFile(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\"));
+                //category.Logo = request.Photo.SaveFile(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\"));
+                category.Logo = request.Photo.SaveFile(Path.Combine(_env.EnvironmentName, "src", "ApiUI", "wwwroot", "Category"));
             }
 
             await _context.Categories.AddAsync(category);
 
             await _context.SaveChangesAsync(cancellationToken);
-            return  new SuccessDataResult<CreateCategoryCommand>(request,Messages.Added);
+            return new SuccessDataResult<CreateCategoryCommand>(request, Messages.Added);
         }
     }
 }
@@ -70,7 +69,7 @@ public record CreateCategoryCommand(string CategoryName,string Logo,IFormFile Ph
 //public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, int>
 //{
 //    private readonly IApplicationDbContext _context;
-   
+
 
 //    public CreateCategoryCommandHandler(IApplicationDbContext context)
 //    {
@@ -88,7 +87,7 @@ public record CreateCategoryCommand(string CategoryName,string Logo,IFormFile Ph
 //            }
 //        }
 
-        
+
 //        return entity.Id;
 //    }
 //}

@@ -1,15 +1,22 @@
+using Infrastructure;
+using Infrastructure.Persistence;
+using JobStack.Application;
 
 namespace ApiUI
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddApplicationServices(builder.Configuration);
+            builder.Services.AddInfrastructureServices(builder.Configuration);
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -22,6 +29,13 @@ namespace ApiUI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+
+
+            using IServiceScope scope = app.Services.CreateScope();
+            ApplicationDbContextInitializer initializer = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitializer>();
+            await initializer.InitializeAsync();
+            await initializer.SeedAsync();
 
             app.UseHttpsRedirection();
 

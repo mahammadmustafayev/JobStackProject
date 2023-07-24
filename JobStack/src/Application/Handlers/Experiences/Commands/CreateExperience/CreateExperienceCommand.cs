@@ -3,19 +3,14 @@ using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JobStack.Application.Handlers.Experiences.Commands.CreateExperience;
 
 public record CreateExperienceCommand
-    (string ExperienceName, 
-    string ExperienceDescription, 
+    (string ExperienceName,
+    string ExperienceDescription,
     DateTime ExperienceStartYear,
-    DateTime ExperienceEndYear):IRequest<IDataResult<CreateExperienceCommand>>
+    DateTime ExperienceEndYear) : IRequest<IDataResult<CreateExperienceCommand>>
 {
     public class CreateExperienceCommandHandler : IRequestHandler<CreateExperienceCommand, IDataResult<CreateExperienceCommand>>
     {
@@ -30,13 +25,13 @@ public record CreateExperienceCommand
         {
             Experience experience = new()
             {
-                ExperienceName=request.ExperienceName,
-                ExperienceDescription=request.ExperienceDescription,
-                ExperienceEndYear=request.ExperienceEndYear,
-                ExperienceStartYear=request.ExperienceStartYear,
-                
+                ExperienceName = request.ExperienceName,
+                ExperienceDescription = request.ExperienceDescription,
+                ExperienceEndYear = request.ExperienceEndYear,
+                ExperienceStartYear = request.ExperienceStartYear,
+
             };
-            await _context.Experiences.AddAsync(experience);
+            //await _context.Experiences.AddAsync(experience);
             await _context.SaveChangesAsync(cancellationToken);
 
             return new SuccessDataResult<CreateExperienceCommand>(request, Messages.Added);

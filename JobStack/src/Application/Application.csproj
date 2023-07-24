@@ -13,6 +13,7 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,7 @@
   <ItemGroup>
     <Folder Include="Handlers\Authorizations\Queries\" />
     <Folder Include="Handlers\Authorizations\Validations\" />
+    <Folder Include="Handlers\Candidates\Commands\CreateCandidate\" />
     <Folder Include="Handlers\Candidates\Commands\DeleteCandidate\" />
     <Folder Include="Handlers\Candidates\Commands\PermaDeleteCandidate\" />
     <Folder Include="Handlers\Candidates\Commands\UpdateCandidate\" />

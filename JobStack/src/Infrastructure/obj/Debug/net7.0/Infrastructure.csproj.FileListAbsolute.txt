@@ -15,3 +15,5 @@ D:\Project\JobStackProject\JobStack\src\Infrastructure\obj\Debug\net7.0\Infrastr
 D:\Project\JobStackProject\JobStack\src\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 D:\Project\JobStackProject\JobStack\src\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 D:\Project\JobStackProject\JobStack\src\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+D:\Project\JobStackProject\JobStack\src\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
+D:\Project\JobStackProject\JobStack\src\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache

@@ -13,10 +13,10 @@ public interface IApplicationDbContext
     DbSet<Country> Countries { get; set; }
     DbSet<Experience> Experiences { get; set; }
     DbSet<JobApply> JobApplies { get; set; }
-    
+
     DbSet<Category> Categories { get; set; }
     DbSet<JobType> JobTypes { get; set; }
     DbSet<Vacancy> Vacancies { get; set; }
 
-    Task<int> SaveChangesAsync(CancellationToken cancellationToken=default);
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

@@ -6,7 +6,7 @@ using MediatR;
 
 namespace JobStack.Application.Handlers.Experiences.Commands.DeleteExperience;
 
-public record DeleteExperienceCommand(int id):IRequest<IResult>
+public record DeleteExperienceCommand(int id) : IRequest<IResult>
 {
     public class DeleteExperienceCommandHandler : IRequestHandler<DeleteExperienceCommand, IResult>
     {
@@ -19,13 +19,13 @@ public record DeleteExperienceCommand(int id):IRequest<IResult>
 
         public async Task<IResult> Handle(DeleteExperienceCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Experiences.FindAsync(new object[] { request.id }, cancellationToken);
-            if (entity is null)
-            {
-                return new ErrorResult(Messages.NullMessage);
-            }
+            //var entity = await _context.Experiences.FindAsync(new object[] { request.id }, cancellationToken);
+            //if (entity is null)
+            //{
+            //    return new ErrorResult(Messages.NullMessage);
+            //}
 
-            entity.IsDeleted = true;
+            //entity.IsDeleted = true;
 
             await _context.SaveChangesAsync(cancellationToken);
 

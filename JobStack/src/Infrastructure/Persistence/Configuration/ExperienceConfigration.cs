@@ -17,6 +17,7 @@ public class ExperienceConfigration:BaseAudiTableEntityConfiguration<Experience>
         entity.HasOne(h => h.Candidate)
            .WithMany(h => h.Experiences)
            .HasForeignKey(x => x.CandidateId)
+           .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.NoAction)
            .IsRequired();
 
         base.Configure(entity);

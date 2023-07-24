@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "5V2XTMddkrZGsbPoS+cGCMyPkWRK6owLMtKQs6PvQno=",
+  "Hash": "EKpSFjUWXQI5y2+eUstR6ulVxl0cBGmno3ADRtTzjaU=",
   "Source": "ApiUI",
   "BasePath": "_content/ApiUI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ApiUI\\wwwroot",
+      "Source": "ApiUI",
+      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "BasePath": "_content/ApiUI",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

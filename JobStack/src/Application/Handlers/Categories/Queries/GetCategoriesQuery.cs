@@ -1,7 +1,6 @@
 ﻿
 
 using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using MediatR;
@@ -9,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobStack.Application.Handlers.Categories.Queries;
 
-public class GetCategoriesQuery:IRequest<IDataResult<CategoryVM>>
+public class GetCategoriesQuery : IRequest<IDataResult<CategoryVM>>
 {
     public class GetCategoriesQueryHandler : IRequestHandler<GetCategoriesQuery, IDataResult<CategoryVM>>
     {
@@ -27,14 +26,14 @@ public class GetCategoriesQuery:IRequest<IDataResult<CategoryVM>>
             return new SuccessDataResult<CategoryVM>(
                  _mapper.Map<CategoryVM>(
                      await _context.Categories
-                     .Include(c=>c.Vacancies)
+                     .Include(c => c.Vacancies)
                      .AsNoTracking()
-                     .Where(c=>c.IsDeleted==false)
+                     .Where(c => c.IsDeleted == false)
                      .ToListAsync()));
-            
+
         }
 
-        
+
     }
 
 }

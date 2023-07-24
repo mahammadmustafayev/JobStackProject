@@ -1,19 +1,12 @@
 ﻿using JobStack.Application.Common.Constants;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
-using JobStack.Application.Handlers.Countries.Commands.UpdateCountry;
-using JobStack.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JobStack.Application.Handlers.Experiences.Commands.UpdateExperience;
 
-public class UpdateExperienceCommand:IRequest<IDataResult<UpdateExperienceCommand>>
+public class UpdateExperienceCommand : IRequest<IDataResult<UpdateExperienceCommand>>
 {
     public int ExperienceId { get; set; }
     public string ExperienceName { get; set; }
@@ -38,18 +31,18 @@ public class UpdateExperienceCommand:IRequest<IDataResult<UpdateExperienceComman
 
         public async Task<IDataResult<UpdateExperienceCommand>> Handle(UpdateExperienceCommand request, CancellationToken cancellationToken)
         {
-            Experience existexperience = await _context.Experiences.FindAsync(request.ExperienceId);
-            if (existexperience is null)
-            {
-                return new ErrorDataResult<UpdateExperienceCommand>(Messages.NullMessage);
+            //Experience existexperience = await _context.Experiences.FindAsync(request.ExperienceId);
+            //if (existexperience is null)
+            //{
+            //    return new ErrorDataResult<UpdateExperienceCommand>(Messages.NullMessage);
 
-            }
-            existexperience.ExperienceStartYear = request.ExperienceStartYear;
-            existexperience.ExperienceEndYear=request.ExperienceEndYear;
-            existexperience.ExperienceDescription=request.ExperienceDescription;    
-            existexperience.ExperienceName=request.ExperienceName;  
+            //}
+            //existexperience.ExperienceStartYear = request.ExperienceStartYear;
+            //existexperience.ExperienceEndYear=request.ExperienceEndYear;
+            //existexperience.ExperienceDescription=request.ExperienceDescription;    
+            //existexperience.ExperienceName=request.ExperienceName;  
 
-            _context.Experiences.Update(existexperience);
+            //_context.Experiences.Update(existexperience);
             await _context.SaveChangesAsync(cancellationToken);
 
             return new SuccessDataResult<UpdateExperienceCommand>(request, Messages.Updated);

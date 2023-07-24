@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace JobStack.Infrastructure.Persistence.Interceptors;
 
-public class AuditableEntitySaveChangesInterceptor:SaveChangesInterceptor
+public class AuditableEntitySaveChangesInterceptor : SaveChangesInterceptor
 {
     private readonly IDateTime _dateTime;
     private readonly ICurrentUserService _currentUserService;
@@ -37,7 +37,7 @@ public class AuditableEntitySaveChangesInterceptor:SaveChangesInterceptor
             if (entry.State == EntityState.Added)
             {
                 entry.Entity.Created = _dateTime.Now;
-                entry.Entity.CreatedBy = _currentUserService.UserName;
+                entry.Entity.CreatedBy = _currentUserService.UserName != null ? _currentUserService.UserName : "User";
             }
 
             if (
@@ -45,8 +45,8 @@ public class AuditableEntitySaveChangesInterceptor:SaveChangesInterceptor
                 entry.State == EntityState.Modified
                 )
             {
-                entry.Entity.LastModified=_dateTime.Now;
-                entry.Entity.LastModifiedBy= _currentUserService.UserName;
+                entry.Entity.LastModified = _dateTime.Now;
+                entry.Entity.LastModifiedBy = _currentUserService.UserName != null ? _currentUserService.UserName : "User";
             }
         }
     }

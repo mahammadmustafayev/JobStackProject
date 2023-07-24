@@ -1,9 +1,9 @@
 ﻿using JobStack.Domain.Common;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JobStack.Domain.Entities;
 
-public class Vacancy:BaseAuditableEntity
+public class Vacancy : BaseAuditableEntity
 {
     public string TitleName { get; set; } = null!;
     public string? Description { get; set; }
@@ -14,8 +14,10 @@ public class Vacancy:BaseAuditableEntity
 
     public string? Experience { get; set; }
     public string? ResponsibilityName { get; set; }
+    [NotMapped]
     public string[]? ResponsibilitiesArray { get; set; }
     public string? SkillName { get; set; }
+    [NotMapped]
     public string[]? SkillsArray { get; set; }
 
     public int? CountryId { get; set; }
