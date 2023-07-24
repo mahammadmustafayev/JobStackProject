@@ -2,12 +2,13 @@
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace JobStack.Application.Handlers.Experiences.Queries;
 
-public class GetExperiencesQuery : IRequest<IDataResult<ExperienceVM>>
+public class GetExperiencesQuery : IRequest<IDataResult<IEnumerable<ExperienceDto>>>
 {
-    public class GetExperiencesQueryHandler : IRequestHandler<GetExperiencesQuery, IDataResult<ExperienceVM>>
+    public class GetExperiencesQueryHandler : IRequestHandler<GetExperiencesQuery, IDataResult<IEnumerable<ExperienceDto>>>
     {
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
@@ -18,18 +19,18 @@ public class GetExperiencesQuery : IRequest<IDataResult<ExperienceVM>>
             _context = context;
         }
 
-        public async Task<IDataResult<ExperienceVM>> Handle(GetExperiencesQuery request, CancellationToken cancellationToken)
+        public async Task<IDataResult<IEnumerable<ExperienceDto>>> Handle(GetExperiencesQuery request, CancellationToken cancellationToken)
         {
-            return null;
-            //return new SuccessDataResult<ExperienceVM>(
-            //    _mapper.Map<ExperienceVM>(
-            //          await _context.Experiences
 
-            //          .Include(e=>e.Candidate)
-            //          .AsNoTracking()
+            return new SuccessDataResult<IEnumerable<ExperienceDto>>(
+                _mapper.Map<IEnumerable<ExperienceDto>>(
+                      await _context.Experiences
 
-            //          .Where(e=>e.IsDeleted==false)
-            //          .ToListAsync()));
+                      .Include(e => e.Candidate)
+                      .AsNoTracking()
+
+                      .Where(e => e.IsDeleted == false)
+                      .ToListAsync()));
         }
     }
 }

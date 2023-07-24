@@ -2,15 +2,10 @@
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JobStack.Application.Handlers.Countries.Commands.PermaDeleteCountry;
 
-public record PermaDeleteCountryCommand(int id):IRequest<IResult>
+public record PermaDeleteCountryCommand(int id) : IRequest<IResult>
 {
     public class PermaDeleteCountryCommandHandler : IRequestHandler<PermaDeleteCountryCommand, IResult>
     {
@@ -23,7 +18,7 @@ public record PermaDeleteCountryCommand(int id):IRequest<IResult>
 
         public async Task<IResult> Handle(PermaDeleteCountryCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Countries.FindAsync(new object[] { request.id }, cancellationToken);
+            var entity = await _context.Countries.FindAsync(request.id);
             if (entity is null)
             {
                 return new ErrorResult(Messages.NullMessage);

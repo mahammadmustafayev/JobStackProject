@@ -1,29 +1,28 @@
-﻿using JobStack.Application.Common.Constants;
+﻿using AutoMapper;
+using JobStack.Application.Common.Constants;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JobStack.Application.Handlers.Cities.Commands.PermaDeleteCity;
 
-public record PermaDeleteCityCommand(int id):IRequest<IResult>
+public record PermaDeleteCityCommand(int id) : IRequest<IResult>
 {
     public class PermaDeleteCityCommandHandler : IRequestHandler<PermaDeleteCityCommand, IResult>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public PermaDeleteCityCommandHandler(IApplicationDbContext context)
+        public PermaDeleteCityCommandHandler(IApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public async Task<IResult> Handle(PermaDeleteCityCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Cities.FindAsync(new object[] { request.id }, cancellationToken);
+            //var entity = await _context.Cities.FindAsync(new object[] { request.id }, cancellationToken);
+            var entity = await _context.Cities.FindAsync(request.id);
             if (entity is null)
             {
                 return new ErrorResult(Messages.NullMessage);

@@ -1,6 +1,7 @@
 ﻿using JobStack.Application.Common.Constants;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
+using JobStack.Domain.Entities;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 
@@ -31,18 +32,18 @@ public class UpdateExperienceCommand : IRequest<IDataResult<UpdateExperienceComm
 
         public async Task<IDataResult<UpdateExperienceCommand>> Handle(UpdateExperienceCommand request, CancellationToken cancellationToken)
         {
-            //Experience existexperience = await _context.Experiences.FindAsync(request.ExperienceId);
-            //if (existexperience is null)
-            //{
-            //    return new ErrorDataResult<UpdateExperienceCommand>(Messages.NullMessage);
+            Experience existexperience = await _context.Experiences.FindAsync(request.ExperienceId);
+            if (existexperience is null)
+            {
+                return new ErrorDataResult<UpdateExperienceCommand>(Messages.NullMessage);
 
-            //}
-            //existexperience.ExperienceStartYear = request.ExperienceStartYear;
-            //existexperience.ExperienceEndYear=request.ExperienceEndYear;
-            //existexperience.ExperienceDescription=request.ExperienceDescription;    
-            //existexperience.ExperienceName=request.ExperienceName;  
+            }
+            existexperience.ExperienceStartYear = request.ExperienceStartYear;
+            existexperience.ExperienceEndYear = request.ExperienceEndYear;
+            existexperience.ExperienceDescription = request.ExperienceDescription;
+            existexperience.ExperienceName = request.ExperienceName;
 
-            //_context.Experiences.Update(existexperience);
+            _context.Experiences.Update(existexperience);
             await _context.SaveChangesAsync(cancellationToken);
 
             return new SuccessDataResult<UpdateExperienceCommand>(request, Messages.Updated);

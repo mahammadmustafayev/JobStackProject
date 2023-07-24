@@ -13,7 +13,7 @@ public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCo
             .NotEmpty()
             .WithMessage("Category Name is required");
 
-        //RuleFor(c => c.Logo).NotEmpty();
-        //RuleFor(c => c.Photo).NotEmpty();
+        //RuleFor(c => c.Logo).Empty();
+        //RuleFor(c => c.Photo).Empty();
     }
 }

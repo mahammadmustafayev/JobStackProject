@@ -1,4 +1,5 @@
-﻿using JobStack.Application.Common.Constants;
+﻿using AutoMapper;
+using JobStack.Application.Common.Constants;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
@@ -15,23 +16,25 @@ public record CreateExperienceCommand
     public class CreateExperienceCommandHandler : IRequestHandler<CreateExperienceCommand, IDataResult<CreateExperienceCommand>>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public CreateExperienceCommandHandler(IApplicationDbContext context)
+        public CreateExperienceCommandHandler(IApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public async Task<IDataResult<CreateExperienceCommand>> Handle(CreateExperienceCommand request, CancellationToken cancellationToken)
         {
-            Experience experience = new()
-            {
-                ExperienceName = request.ExperienceName,
-                ExperienceDescription = request.ExperienceDescription,
-                ExperienceEndYear = request.ExperienceEndYear,
-                ExperienceStartYear = request.ExperienceStartYear,
+            Experience experience = _mapper.Map<Experience>(request);
 
-            };
-            //await _context.Experiences.AddAsync(experience);
+            experience.ExperienceName = request.ExperienceName;
+            experience.ExperienceDescription = request.ExperienceDescription;
+            experience.ExperienceEndYear = request.ExperienceEndYear;
+            experience.ExperienceStartYear = request.ExperienceStartYear;
+
+
+            await _context.Experiences.AddAsync(experience);
             await _context.SaveChangesAsync(cancellationToken);
 
             return new SuccessDataResult<CreateExperienceCommand>(request, Messages.Added);

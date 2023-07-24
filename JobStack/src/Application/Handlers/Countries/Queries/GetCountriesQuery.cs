@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobStack.Application.Handlers.Countries.Queries;
 
-public class GetCountriesQuery:IRequest<IDataResult<CountryVM>>
+public class GetCountriesQuery : IRequest<IDataResult<IEnumerable<CountryDto>>>
 {
-    public class GetCountriesQueryHandler : IRequestHandler<GetCountriesQuery, IDataResult<CountryVM>>
+    public class GetCountriesQueryHandler : IRequestHandler<GetCountriesQuery, IDataResult<IEnumerable<CountryDto>>>
     {
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
@@ -20,22 +20,22 @@ public class GetCountriesQuery:IRequest<IDataResult<CountryVM>>
             _context = context;
         }
 
-        public async Task<IDataResult<CountryVM>> Handle(GetCountriesQuery request, CancellationToken cancellationToken)
+        public async Task<IDataResult<IEnumerable<CountryDto>>> Handle(GetCountriesQuery request, CancellationToken cancellationToken)
         {
-            return new SuccessDataResult<CountryVM>(
-                 _mapper.Map<CountryVM>(
+            return new SuccessDataResult<IEnumerable<CountryDto>>(
+                 _mapper.Map<IEnumerable<CountryDto>>(
                       await _context.Countries
 
-                      .Include(c=>c.Vacancies)
+                      .Include(c => c.Vacancies)
                       .AsNoTracking()
 
-                      .Include(c=>c.Companies)
+                      .Include(c => c.Companies)
                       .AsNoTracking()
 
-                      .Include(c=>c.Candidates)
+                      .Include(c => c.Candidates)
                       .AsNoTracking()
 
-                      .Where(c=>c.IsDeleted==false)
+                      .Where(c => c.IsDeleted == false)
                       .ToListAsync()));
         }
     }

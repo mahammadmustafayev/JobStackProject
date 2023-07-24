@@ -1,14 +1,8 @@
-﻿using JobStack.Application.Common.Interfaces;
-using JobStack.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JobStack.Domain.Entities;
 
 namespace JobStack.Application.Handlers.Countries.Queries;
 
-public class CountryDto:IMapFrom<Country>
+public class CountryDto
 {
     public int Id { get; set; }
     public bool IsDeleted { get; set; }

@@ -1,15 +1,8 @@
-﻿using JobStack.Application.Common.Interfaces;
-using JobStack.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JobStack.Application.Handlers.Experiences.Queries;
 
-public class ExperienceDto:IMapFrom<Experience>
+public class ExperienceDto
 {
     public int Id { get; set; }
     public bool IsDeleted { get; set; }
