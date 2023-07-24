@@ -30,9 +30,10 @@ public record CreateCategoryCommand(string CategoryName, string Logo, IFormFile 
 
         public async Task<IDataResult<CreateCategoryCommand>> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
+            //Category category = _mapper.Map<Category>(request);
             Category category = new()
             {
-                CategoryName = request.CategoryName,
+                CategoryName = request.CategoryName
 
             };
 
@@ -47,7 +48,8 @@ public record CreateCategoryCommand(string CategoryName, string Logo, IFormFile 
                     return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidImagePhoto);
                 }
                 //category.Logo = request.Photo.SaveFile(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\"));
-                category.Logo = request.Photo.SaveFile(Path.Combine(_env.EnvironmentName, "src", "ApiUI", "wwwroot", "Category"));
+                //category.Logo = request.Photo.SaveFile(Path.Combine(_env.EnvironmentName, "src", "ApiUI", "wwwroot", "Category"));
+                category.Logo = request.Photo.SaveFile(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\wwwroot\"));
             }
 
             await _context.Categories.AddAsync(category);

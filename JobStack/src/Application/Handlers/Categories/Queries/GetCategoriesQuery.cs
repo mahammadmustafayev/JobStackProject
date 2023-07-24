@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobStack.Application.Handlers.Categories.Queries;
 
-public class GetCategoriesQuery : IRequest<IDataResult<CategoryVM>>
+public class GetCategoriesQuery : IRequest<IDataResult<IEnumerable<CategoryDto>>>
 {
-    public class GetCategoriesQueryHandler : IRequestHandler<GetCategoriesQuery, IDataResult<CategoryVM>>
+    public class GetCategoriesQueryHandler : IRequestHandler<GetCategoriesQuery, IDataResult<IEnumerable<CategoryDto>>>
     {
         private readonly IApplicationDbContext _context;
         private readonly IMapper _mapper;
@@ -21,10 +21,10 @@ public class GetCategoriesQuery : IRequest<IDataResult<CategoryVM>>
             _mapper = mapper;
         }
 
-        public async Task<IDataResult<CategoryVM>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
+        public async Task<IDataResult<IEnumerable<CategoryDto>>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
         {
-            return new SuccessDataResult<CategoryVM>(
-                 _mapper.Map<CategoryVM>(
+            return new SuccessDataResult<List<CategoryDto>>(
+                 _mapper.Map<List<CategoryDto>>(
                      await _context.Categories
                      .Include(c => c.Vacancies)
                      .AsNoTracking()

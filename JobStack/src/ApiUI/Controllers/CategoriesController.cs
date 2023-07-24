@@ -1,23 +1,31 @@
-﻿using MediatR;
+﻿using ApiUI.Controllers;
+using JobStack.Application.Handlers.Categories.Commands.CreateCategory;
+using JobStack.Application.Handlers.Categories.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobStack.ApiUI.Controllers;
 
 [Route("api/[controller]/[action]")]
 [ApiController]
-//[Produces("application/json")]
-public class CategoriesController : ControllerBase
+public class CategoriesController : BaseApiController
 {
-    private readonly IMediator _mediator;
-
-    public CategoriesController(IMediator mediator)
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateCategoryCommand))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpPost]
+    public async Task<IActionResult> Post([FromQuery] CreateCategoryCommand createCategoryCommand)
     {
-        _mediator = mediator;
+        return GetResponseOnlyResultData(await Mediator.Send(createCategoryCommand));
     }
 
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetCategoriesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]
     public async Task<IActionResult> GetAllCategories()
     {
-        return Ok();
+        return GetResponseOnlyResultData(await Mediator.Send(new GetCategoriesQuery()));
     }
 }
