@@ -14,6 +14,8 @@ public static class ConfigureServices
 
         services.AddMediatR(Assembly.GetExecutingAssembly());
 
+
+
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         //services.AddFluentValidationAutoValidation();

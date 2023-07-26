@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\0fecd84a-8f39-4c42-b863-d3d049f1390501.jpg",
+      "PackagePath": "staticwebassets\\Candidate\\0fecd84a-8f39-4c42-b863-d3d049f1390501.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\53bc9a57-ee05-498f-bae2-a36ef7d3ac1e01.jpg",
+      "PackagePath": "staticwebassets\\Candidate\\53bc9a57-ee05-498f-bae2-a36ef7d3ac1e01.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\63b723a1-598c-44fe-aba4-0ff357625bc501.jpg",
+      "PackagePath": "staticwebassets\\Candidate\\63b723a1-598c-44fe-aba4-0ff357625bc501.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\7c8000e3-8588-4e6d-9701-ba6c384272ba01.jpg",
+      "PackagePath": "staticwebassets\\Candidate\\7c8000e3-8588-4e6d-9701-ba6c384272ba01.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\Resume\\4f16c6fd-8881-4084-93aa-30be47be9292testcv.pdf",
+      "PackagePath": "staticwebassets\\Candidate\\Resume\\4f16c6fd-8881-4084-93aa-30be47be9292testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\Resume\\727415a6-31ec-4569-a1c2-02baf7b61db3testcv.pdf",
+      "PackagePath": "staticwebassets\\Candidate\\Resume\\727415a6-31ec-4569-a1c2-02baf7b61db3testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\Resume\\9fd9655a-803e-47fc-9d15-635519ed040ctestcv.pdf",
+      "PackagePath": "staticwebassets\\Candidate\\Resume\\9fd9655a-803e-47fc-9d15-635519ed040ctestcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Candidate\\Resume\\e0cee546-30cc-4926-8898-8aab486ee968testcv.pdf",
+      "PackagePath": "staticwebassets\\Candidate\\Resume\\e0cee546-30cc-4926-8898-8aab486ee968testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Category\\7c036219-5a7e-422f-8dca-436187707568marketing-global-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Category\\7c036219-5a7e-422f-8dca-436187707568marketing-global-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Category\\ecfe9841-5025-4272-893e-565eeb4c97c1marketing-global-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Category\\ecfe9841-5025-4272-893e-565eeb4c97c1marketing-global-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\021789fa-79f1-49e5-adc4-435bdc6915d1testcv.pdf",
+      "PackagePath": "staticwebassets\\JobApply\\021789fa-79f1-49e5-adc4-435bdc6915d1testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\06271a91-81bf-4046-b8b6-7909507d6c0btestcv.pdf",
+      "PackagePath": "staticwebassets\\JobApply\\06271a91-81bf-4046-b8b6-7909507d6c0btestcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\0f1e31a8-85d7-4499-8249-5c880646d790testcv.pdf",
+      "PackagePath": "staticwebassets\\JobApply\\0f1e31a8-85d7-4499-8249-5c880646d790testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\505b8651-cf90-4270-8b6c-483933ef4d92testcv.pdf",
+      "PackagePath": "staticwebassets\\JobApply\\505b8651-cf90-4270-8b6c-483933ef4d92testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\60a07a8d-2783-4bcf-8d14-c33e49f19efatestcv.pdf",
+      "PackagePath": "staticwebassets\\JobApply\\60a07a8d-2783-4bcf-8d14-c33e49f19efatestcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\70c9f218-5a72-4af1-92ed-b280bdfc1f5atestcv.pdf",
+      "PackagePath": "staticwebassets\\JobApply\\70c9f218-5a72-4af1-92ed-b280bdfc1f5atestcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\7fd59e12-53e0-4dc5-a0f2-681c57b7f683testcv.pdf",
+      "PackagePath": "staticwebassets\\JobApply\\7fd59e12-53e0-4dc5-a0f2-681c57b7f683testcv.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ApiUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ApiUI.props",
+      "PackagePath": "build\\ApiUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ApiUI.props",
+      "PackagePath": "buildMultiTargeting\\ApiUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ApiUI.props",
+      "PackagePath": "buildTransitive\\ApiUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

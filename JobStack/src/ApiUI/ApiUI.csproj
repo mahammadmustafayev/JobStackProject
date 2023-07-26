@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Candidate\" />
+    <Folder Include="wwwroot\Candidate\Resume\" />
     <Folder Include="wwwroot\Category\" />
     <Folder Include="wwwroot\JobApply\" />
   </ItemGroup>

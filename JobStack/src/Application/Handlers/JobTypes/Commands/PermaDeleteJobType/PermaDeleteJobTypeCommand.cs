@@ -7,7 +7,7 @@ using MediatR;
 
 namespace JobStack.Application.Handlers.JobTypes.Commands.PermaDeleteJobType;
 
-public record PermaDeleteJobTypeCommand(int id):IRequest<IResult>
+public record PermaDeleteJobTypeCommand(int id) : IRequest<IResult>
 {
     public class PermaDeleteJobTypeCommandHandler : IRequestHandler<PermaDeleteJobTypeCommand, IResult>
     {
@@ -20,7 +20,7 @@ public record PermaDeleteJobTypeCommand(int id):IRequest<IResult>
 
         public async Task<IResult> Handle(PermaDeleteJobTypeCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.JobTypes.FindAsync(new object[] { request.id }, cancellationToken);
+            var entity = await _context.JobTypes.FindAsync(request.id);
             if (entity is null)
             {
                 return new ErrorResult(Messages.NullMessage);

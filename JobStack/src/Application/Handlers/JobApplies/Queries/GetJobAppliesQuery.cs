@@ -10,9 +10,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JobStack.Application.Handlers.JobApplies.Queries;
 
-public class GetJobAppliesQuery:IRequest<IDataResult<IEnumerable<GetJobAppliesQuery>>>
+public class GetJobAppliesQuery : IRequest<IDataResult<IEnumerable<GetJobAppliesQuery>>>
 {
     public int Id { get; set; }
+    public bool IsDeleted { get; set; }
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
     public string EmailAddress { get; set; } = null!;
@@ -39,9 +40,9 @@ public class GetJobAppliesQuery:IRequest<IDataResult<IEnumerable<GetJobAppliesQu
                      await _context.JobApplies
 
                      .Include(j => j.Vacancy)
-                     .ThenInclude(j=>j.Company)
+                     .ThenInclude(j => j.Company)
                      .AsNoTracking()
-                     
+
                      .Where(j => j.IsDeleted == false)
                      .ToListAsync()
                      ));

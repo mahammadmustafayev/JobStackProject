@@ -1,6 +1,8 @@
 ﻿
 
 using AutoMapper;
+using JobStack.Application.Handlers.Candidates.Commands;
+using JobStack.Application.Handlers.Candidates.Queries;
 using JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 using JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
 using JobStack.Application.Handlers.Categories.Queries;
@@ -13,6 +15,11 @@ using JobStack.Application.Handlers.Countries.Queries;
 using JobStack.Application.Handlers.Experiences.Commands.CreateExperience;
 using JobStack.Application.Handlers.Experiences.Commands.UpdateExperience;
 using JobStack.Application.Handlers.Experiences.Queries;
+using JobStack.Application.Handlers.JobApplies.Commands;
+using JobStack.Application.Handlers.JobApplies.Queries;
+using JobStack.Application.Handlers.JobTypes.Commands.CreateJobType;
+using JobStack.Application.Handlers.JobTypes.Commands.UpdateJobType;
+using JobStack.Application.Handlers.JobTypes.Queries;
 using JobStack.Domain.Entities;
 
 namespace JobStack.Application.Common.Mapping;
@@ -41,6 +48,22 @@ public class MappingProfile : Profile
         CreateMap<Experience, UpdateExperienceCommand>().ReverseMap();
         CreateMap<Experience, GetExperienceQuery>().ReverseMap();
         CreateMap<Experience, GetExperiencesQuery>().ReverseMap();
+
+        CreateMap<JobType, CreateJobTypeCommand>().ReverseMap();
+        CreateMap<JobType, JobTypeDto>().ReverseMap();
+        CreateMap<JobType, UpdateJobTypeCommand>().ReverseMap();
+        CreateMap<JobType, GetJobTypesQuery>().ReverseMap();
+
+        CreateMap<JobApply, SendJobApplytoCompany>().ReverseMap();
+        //CreateMap<JobApply, JobApplyDto>().ReverseMap();
+        //CreateMap<JobApply, UpdateExperienceCommand>().ReverseMap();
+        CreateMap<JobApply, GetJobAppliesQuery>().ReverseMap();
+        CreateMap<JobApply, GetJobApplyQuery>().ReverseMap();
+
+
+        CreateMap<Candidate, ManageCreateCandidateCommand>().ReverseMap();
+        CreateMap<Candidate, CandidateDto>().ReverseMap();
+        CreateMap<Candidate, GetCandidatesQuery>().ReverseMap();
     }
 
 

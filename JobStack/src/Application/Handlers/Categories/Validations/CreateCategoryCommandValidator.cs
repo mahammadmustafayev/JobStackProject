@@ -14,6 +14,6 @@ public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCo
             .WithMessage("Category Name is required");
 
         //RuleFor(c => c.Logo).Empty();
-        //RuleFor(c => c.Photo).Empty();
+        //RuleFor(c => c.Photo).Null();
     }
 }

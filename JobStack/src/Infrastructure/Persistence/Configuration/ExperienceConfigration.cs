@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace JobStack.Infrastructure.Persistence.Configuration;
 
-public class ExperienceConfigration:BaseAudiTableEntityConfiguration<Experience>
+public class ExperienceConfigration : BaseAudiTableEntityConfiguration<Experience>
 {
     public override void Configure(EntityTypeBuilder<Experience> entity)
     {
@@ -17,7 +17,7 @@ public class ExperienceConfigration:BaseAudiTableEntityConfiguration<Experience>
         entity.HasOne(h => h.Candidate)
            .WithMany(h => h.Experiences)
            .HasForeignKey(x => x.CandidateId)
-           .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.NoAction)
+           //.OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.NoAction)
            .IsRequired();
 
         base.Configure(entity);

@@ -16,7 +16,8 @@ public class CategoriesController : BaseApiController
 {
     //[Authorize(Roles = "superadmin")]
     //[Authorize(Roles = "moderator")]
-    [Consumes("application/json")]
+
+    //[Consumes("application/json")]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateCategoryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
@@ -25,6 +26,7 @@ public class CategoriesController : BaseApiController
     {
         return GetResponseOnlyResultData(await Mediator.Send(createCategoryCommand));
     }
+
     [AllowAnonymous]
     [Consumes("application/json")]
     [Produces("application/json", "text/plain")]
@@ -36,7 +38,7 @@ public class CategoriesController : BaseApiController
         return GetResponseOnlyResultData(await Mediator.Send(new GetCategoriesQuery()));
     }
 
-    [Consumes("application/json")]
+    //[Consumes("application/json")]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UpdateCategoryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]

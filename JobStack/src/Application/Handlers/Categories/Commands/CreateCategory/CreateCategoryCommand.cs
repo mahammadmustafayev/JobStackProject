@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 
-public record CreateCategoryCommand(string CategoryName, string Logo, IFormFile Photo)
+public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
         : IRequest<IDataResult<CreateCategoryCommand>>
 {
     public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, IDataResult<CreateCategoryCommand>>
@@ -33,13 +33,6 @@ public record CreateCategoryCommand(string CategoryName, string Logo, IFormFile 
             Category category = _mapper.Map<Category>(request);
 
 
-            //Category category = new()
-            //{
-            //    CategoryName = request.CategoryName
-
-            //};
-
-            //Category category = new();
 
             if (request != null)
             {
@@ -51,9 +44,10 @@ public record CreateCategoryCommand(string CategoryName, string Logo, IFormFile 
                 {
                     return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidImagePhoto);
                 }
-                //category.Logo = request.Photo.SaveFile(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\"));
-                //category.Logo = request.Photo.SaveFile(Path.Combine(_env.EnvironmentName, "src", "ApiUI", "wwwroot", "Category"));
-                category.Logo = request.Photo.SaveFile(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\wwwroot\Category\"));
+
+                category.Logo = request.Photo.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Category"));
+
+
             }
             category.CategoryName = request.CategoryName;
 

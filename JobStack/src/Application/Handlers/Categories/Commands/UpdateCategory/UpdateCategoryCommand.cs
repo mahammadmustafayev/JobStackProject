@@ -7,25 +7,28 @@ using JobStack.Application.Common.Results;
 using JobStack.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
 
-public class UpdateCategoryCommand:IRequest<IDataResult<UpdateCategoryCommand>>
+public class UpdateCategoryCommand : IRequest<IDataResult<UpdateCategoryCommand>>
 {
-    public int CategoryId { get; set;}
-    public string CategoryName { get; set;}
-    public string Logo { get; set; }
+    public int CategoryId { get; set; }
+    public string CategoryName { get; set; }
+    //public string Logo { get; set; }
     [NotMapped]
     public IFormFile Photo { get; set; }
 
     public class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommand, IDataResult<UpdateCategoryCommand>>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IHostEnvironment _env;
 
-        public UpdateCategoryCommandHandler(IApplicationDbContext context)
+        public UpdateCategoryCommandHandler(IApplicationDbContext context, IHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
 
         public async Task<IDataResult<UpdateCategoryCommand>> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
@@ -42,9 +45,9 @@ public class UpdateCategoryCommand:IRequest<IDataResult<UpdateCategoryCommand>>
 
                 string newFileName = Guid.NewGuid().ToString();
                 newFileName += file.CutFileName(60);
-                if (System.IO.File.Exists(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\")))
+                if (System.IO.File.Exists(Path.Combine(_env.ContentRootPath, "wwwroot", "Category")))
                 {
-                    System.IO.File.Delete(Path.Combine(@"D:\Project\JobStackProject\JobStack\src\ApiUI\PhotoFiles\Category\"));
+                    System.IO.File.Delete(Path.Combine(_env.ContentRootPath, "wwwroot", "Category"));
                 }
                 file.UpdateSaveFile(Path.Combine(newFileName));
                 existCategory.Logo = newFileName;
@@ -56,11 +59,11 @@ public class UpdateCategoryCommand:IRequest<IDataResult<UpdateCategoryCommand>>
 
 
 
-            return  new SuccessDataResult<UpdateCategoryCommand>(request,Messages.Updated);
-            
+            return new SuccessDataResult<UpdateCategoryCommand>(request, Messages.Updated);
+
         }
 
-       
+
     }
 }
 

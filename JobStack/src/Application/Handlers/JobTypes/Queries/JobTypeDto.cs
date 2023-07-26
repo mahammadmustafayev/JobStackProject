@@ -1,10 +1,8 @@
-﻿
-using JobStack.Application.Common.Interfaces;
-using JobStack.Domain.Entities;
+﻿using JobStack.Domain.Entities;
 
 namespace JobStack.Application.Handlers.JobTypes.Queries;
 
-public class JobTypeDto:IMapFrom<JobType>
+public class JobTypeDto
 {
     public int Id { get; set; }
     public bool IsDeleted { get; set; }

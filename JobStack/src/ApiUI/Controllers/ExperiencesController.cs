@@ -38,7 +38,7 @@ public class ExperiencesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateExperienceCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] CreateExperienceCommand createExperienceCommand)
+    public async Task<IActionResult> Post([FromQuery] CreateExperienceCommand createExperienceCommand)
     {
         return GetResponseOnlyResultData(await Mediator.Send(createExperienceCommand));
     }

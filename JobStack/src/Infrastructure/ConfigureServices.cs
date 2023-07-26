@@ -24,6 +24,7 @@ public static class ConfigureServices
         services.AddScoped<ApplicationDbContextInitializer>();
 
 
+
         services.AddIdentity<ApplicationUser, AppRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>();
 
