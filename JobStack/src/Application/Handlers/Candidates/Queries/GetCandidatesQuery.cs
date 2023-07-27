@@ -36,6 +36,9 @@ public class GetCandidatesQuery : IRequest<IDataResult<IEnumerable<CandidateDto>
                     //.ThenInclude(x => x.CityName)
                     .AsNoTracking()
 
+                    .Include(p => p.Experiences)
+                    .AsNoTracking()
+
 
                     .Where(p => p.IsDeleted == false)
 

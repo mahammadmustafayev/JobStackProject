@@ -31,7 +31,6 @@ public record DeleteCategoryCommand(int id) : IRequest<IResult>
             }
 
 
-            entity.IsDeleted = true;
 
             await _context.SaveChangesAsync(cancellationToken);
 

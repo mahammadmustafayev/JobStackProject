@@ -1,11 +1,8 @@
-﻿
-
-using JobStack.Application.Common.Interfaces;
-using JobStack.Domain.Entities;
+﻿using JobStack.Domain.Entities;
 
 namespace JobStack.Application.Handlers.Vacancies.Queries;
 
-public class VacancyDto:IMapFrom<Vacancy>
+public class VacancyDto
 {
     public int Id { get; set; }
     public bool IsDeleted { get; set; }
@@ -18,9 +15,9 @@ public class VacancyDto:IMapFrom<Vacancy>
 
     public string? Experience { get; set; }
     public string? ResponsibilityName { get; set; }
-    public string[]? ResponsibilitiesArray { get; set; }
+    //public string[]? ResponsibilitiesArray { get; set; }
     public string? SkillName { get; set; }
-    public string[]? SkillsArray { get; set; }
+    //public string[]? SkillsArray { get; set; }
 
     public int? CountryId { get; set; }
     public Country? Country { get; set; }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zj3T9Kw5S5eLzn0+Pu/DQWI45v/Wm8bEqa2hJBP99vA=",
+  "Hash": "c7sujv00hOuZs05B9lvVuG1tJAmfzg9Axb1Y3AC0kOo=",
   "Source": "ApiUI",
   "BasePath": "_content/ApiUI",
   "Mode": "Default",
@@ -289,6 +289,40 @@
       "OriginalItemSpec": "wwwroot\\Category\\ecfe9841-5025-4272-893e-565eeb4c97c1marketing-global-svgrepo-com.svg"
     },
     {
+      "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Company\\977accab-25ca-4295-9fdd-ee4b5836caa8companylogo.png",
+      "SourceId": "ApiUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "BasePath": "_content/ApiUI",
+      "RelativePath": "Company/977accab-25ca-4295-9fdd-ee4b5836caa8companylogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Company\\977accab-25ca-4295-9fdd-ee4b5836caa8companylogo.png"
+    },
+    {
+      "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\Company\\d48eebe5-d8ce-4779-ba02-afa8d21e932fgooglelogo.png",
+      "SourceId": "ApiUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "BasePath": "_content/ApiUI",
+      "RelativePath": "Company/d48eebe5-d8ce-4779-ba02-afa8d21e932fgooglelogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Company\\d48eebe5-d8ce-4779-ba02-afa8d21e932fgooglelogo.png"
+    },
+    {
       "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\021789fa-79f1-49e5-adc4-435bdc6915d1testcv.pdf",
       "SourceId": "ApiUI",
       "SourceType": "Discovered",
@@ -357,6 +391,23 @@
       "OriginalItemSpec": "wwwroot\\JobApply\\505b8651-cf90-4270-8b6c-483933ef4d92testcv.pdf"
     },
     {
+      "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\5dea407e-4043-414d-8af1-9ac5392ed6d1testcv.pdf",
+      "SourceId": "ApiUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "BasePath": "_content/ApiUI",
+      "RelativePath": "JobApply/5dea407e-4043-414d-8af1-9ac5392ed6d1testcv.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JobApply\\5dea407e-4043-414d-8af1-9ac5392ed6d1testcv.pdf"
+    },
+    {
       "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\60a07a8d-2783-4bcf-8d14-c33e49f19efatestcv.pdf",
       "SourceId": "ApiUI",
       "SourceType": "Discovered",
@@ -372,6 +423,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JobApply\\60a07a8d-2783-4bcf-8d14-c33e49f19efatestcv.pdf"
+    },
+    {
+      "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\61440924-2844-4528-9c09-5ce8ba2d43f1testcv.pdf",
+      "SourceId": "ApiUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "BasePath": "_content/ApiUI",
+      "RelativePath": "JobApply/61440924-2844-4528-9c09-5ce8ba2d43f1testcv.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JobApply\\61440924-2844-4528-9c09-5ce8ba2d43f1testcv.pdf"
     },
     {
       "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\70c9f218-5a72-4af1-92ed-b280bdfc1f5atestcv.pdf",
@@ -406,6 +474,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JobApply\\7fd59e12-53e0-4dc5-a0f2-681c57b7f683testcv.pdf"
+    },
+    {
+      "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\e1ad9caf-21b7-45fe-8fb1-c2a9b7adabb2testcv.pdf",
+      "SourceId": "ApiUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "BasePath": "_content/ApiUI",
+      "RelativePath": "JobApply/e1ad9caf-21b7-45fe-8fb1-c2a9b7adabb2testcv.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JobApply\\e1ad9caf-21b7-45fe-8fb1-c2a9b7adabb2testcv.pdf"
+    },
+    {
+      "Identity": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\JobApply\\ef8f65a9-6a57-4de5-9ec5-a9569e70ddeetestcv.pdf",
+      "SourceId": "ApiUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "BasePath": "_content/ApiUI",
+      "RelativePath": "JobApply/ef8f65a9-6a57-4de5-9ec5-a9569e70ddeetestcv.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JobApply\\ef8f65a9-6a57-4de5-9ec5-a9569e70ddeetestcv.pdf"
     }
   ]
 }

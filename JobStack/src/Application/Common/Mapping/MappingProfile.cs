@@ -2,6 +2,7 @@
 
 using AutoMapper;
 using JobStack.Application.Handlers.Candidates.Commands;
+using JobStack.Application.Handlers.Candidates.Commands.UpdateCandidate;
 using JobStack.Application.Handlers.Candidates.Queries;
 using JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 using JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
@@ -9,6 +10,8 @@ using JobStack.Application.Handlers.Categories.Queries;
 using JobStack.Application.Handlers.Cities.Commands.CreateCity;
 using JobStack.Application.Handlers.Cities.Commands.UpdateCity;
 using JobStack.Application.Handlers.Cities.Queries;
+using JobStack.Application.Handlers.Companies.Commands;
+using JobStack.Application.Handlers.Companies.Queries;
 using JobStack.Application.Handlers.Countries.Commands.CreateCountry;
 using JobStack.Application.Handlers.Countries.Commands.UpdateCountry;
 using JobStack.Application.Handlers.Countries.Queries;
@@ -20,6 +23,9 @@ using JobStack.Application.Handlers.JobApplies.Queries;
 using JobStack.Application.Handlers.JobTypes.Commands.CreateJobType;
 using JobStack.Application.Handlers.JobTypes.Commands.UpdateJobType;
 using JobStack.Application.Handlers.JobTypes.Queries;
+using JobStack.Application.Handlers.Vacancies.Commands.CreateVacancy;
+using JobStack.Application.Handlers.Vacancies.Commands.UpdateVacancy;
+using JobStack.Application.Handlers.Vacancies.Queries;
 using JobStack.Domain.Entities;
 
 namespace JobStack.Application.Common.Mapping;
@@ -55,15 +61,30 @@ public class MappingProfile : Profile
         CreateMap<JobType, GetJobTypesQuery>().ReverseMap();
 
         CreateMap<JobApply, SendJobApplytoCompany>().ReverseMap();
-        //CreateMap<JobApply, JobApplyDto>().ReverseMap();
-        //CreateMap<JobApply, UpdateExperienceCommand>().ReverseMap();
         CreateMap<JobApply, GetJobAppliesQuery>().ReverseMap();
+        CreateMap<JobApply, JobApplyDto>().ReverseMap();
         CreateMap<JobApply, GetJobApplyQuery>().ReverseMap();
 
 
         CreateMap<Candidate, ManageCreateCandidateCommand>().ReverseMap();
         CreateMap<Candidate, CandidateDto>().ReverseMap();
         CreateMap<Candidate, GetCandidatesQuery>().ReverseMap();
+        CreateMap<Candidate, GetCandidateQuery>().ReverseMap();
+        CreateMap<Candidate, UpdateCandidateCommand>().ReverseMap();
+
+        CreateMap<Company, ManageCreateCompanyCommand>().ReverseMap();
+        CreateMap<Company, CompanyDto>().ReverseMap();
+        CreateMap<Company, GetCompaniesQuery>().ReverseMap();
+        CreateMap<Company, GetCompanyQuery>().ReverseMap();
+        CreateMap<Company, UpdateCompanyCommand>().ReverseMap();
+
+        CreateMap<Vacancy, CreateVacancyCommand>().ReverseMap();
+        CreateMap<Vacancy, VacancyDto>().ReverseMap();
+        CreateMap<Vacancy, GetVacanciesQuery>().ReverseMap();
+        CreateMap<Vacancy, GetVacancyQuery>().ReverseMap();
+        CreateMap<Vacancy, UpdateVacancyCommand>().ReverseMap();
+
+
     }
 
 

@@ -14,6 +14,7 @@ namespace JobStack.Application.Handlers.JobApplies.Commands;
 
 public record SendJobApplytoCompany
     (
+       int VacancyId,
        string FirstName,
       string LastName,
       string EmailAddress,
@@ -50,14 +51,14 @@ public record SendJobApplytoCompany
                 jobApply.CvFile = request.CvFileUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "JobApply"));
             }
 
-            _emailService.SendEmail(request.EmailAddress, Messages.SendEmailMessages
-                );
+
 
             jobApply.EmailAddress = request.EmailAddress;
             jobApply.FirstName = request.FirstName;
             jobApply.LastName = request.LastName;
             jobApply.Description = request.Description;
 
+            _emailService.SendEmail(request.EmailAddress, Messages.SendEmailMessages);
 
             await _context.JobApplies.AddAsync(jobApply);
 

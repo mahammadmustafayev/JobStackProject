@@ -19,13 +19,21 @@ public record DeleteExperienceCommand(int id) : IRequest<IResult>
 
         public async Task<IResult> Handle(DeleteExperienceCommand request, CancellationToken cancellationToken)
         {
-            //var entity = await _context.Experiences.FindAsync(new object[] { request.id }, cancellationToken);
-            //if (entity is null)
-            //{
-            //    return new ErrorResult(Messages.NullMessage);
-            //}
+            var entity = await _context.Experiences.FindAsync(request.id);
+            if (entity is null)
+            {
+                return new ErrorResult(Messages.NullMessage);
+            }
 
-            //entity.IsDeleted = true;
+            if (entity.IsDeleted == true)
+            {
+                entity.IsDeleted = false;
+            }
+            else
+            {
+                entity.IsDeleted = true;
+            }
+
 
             await _context.SaveChangesAsync(cancellationToken);
 

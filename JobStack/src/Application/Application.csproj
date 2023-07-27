@@ -26,13 +26,8 @@
     <Folder Include="Handlers\Authorizations\Queries\" />
     <Folder Include="Handlers\Authorizations\Validations\" />
     <Folder Include="Handlers\Candidates\Commands\CreateCandidate\" />
-    <Folder Include="Handlers\Candidates\Commands\DeleteCandidate\" />
-    <Folder Include="Handlers\Candidates\Commands\PermaDeleteCandidate\" />
-    <Folder Include="Handlers\Candidates\Commands\UpdateCandidate\" />
     <Folder Include="Handlers\Candidates\Validations\" />
-    <Folder Include="Handlers\Companies\Commands\" />
     <Folder Include="Handlers\Companies\Validations\" />
-    <Folder Include="Handlers\Companies\Queries\" />
   </ItemGroup>
 
   <ItemGroup>

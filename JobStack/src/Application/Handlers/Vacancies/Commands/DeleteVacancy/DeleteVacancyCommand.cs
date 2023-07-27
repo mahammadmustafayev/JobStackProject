@@ -3,7 +3,6 @@
 using JobStack.Application.Common.Constants;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
 using MediatR;
 
 namespace JobStack.Application.Handlers.Vacancies.Commands.DeleteVacancy;
@@ -21,13 +20,16 @@ public record DeleteVacancyCommand(int id) : IRequest<IResult>
 
         public async Task<IResult> Handle(DeleteVacancyCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Vacancies.FindAsync(new object[] { request.id }, cancellationToken);
-            if (entity is null)
+            var entity = await _context.Vacancies.FindAsync(request.id);
+            if (entity.IsDeleted == true)
             {
-                return new ErrorResult(Messages.NullMessage);
+                entity.IsDeleted = false;
+            }
+            else
+            {
+                entity.IsDeleted = true;
             }
 
-            entity.IsDeleted = true;
 
             await _context.SaveChangesAsync(cancellationToken);
 

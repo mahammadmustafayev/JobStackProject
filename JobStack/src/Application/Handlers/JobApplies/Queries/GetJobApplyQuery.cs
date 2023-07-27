@@ -4,24 +4,15 @@ using AutoMapper;
 using JobStack.Application.Common.Interfaces;
 using JobStack.Application.Common.Results;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace JobStack.Application.Handlers.JobApplies.Queries;
 
-public class GetJobApplyQuery : IRequest<IDataResult<IEnumerable<GetJobApplyQuery>>>
+public record GetJobApplyQuery(int id) : IRequest<IDataResult<IEnumerable<JobApplyDto>>>
 {
-    public int Id { get; set; }
-    public bool IsDeleted { get; set; }
-    public string FirstName { get; set; } = null!;
-    public string LastName { get; set; } = null!;
-    public string EmailAddress { get; set; } = null!;
-    public string? Description { get; set; }
-    public string CvFile { get; set; } = null!;
 
-    public IFormFile CvFileUrl { get; set; } = null!;
 
-    public class GetJobApplyQueryHandler : IRequestHandler<GetJobApplyQuery, IDataResult<IEnumerable<GetJobApplyQuery>>>
+    public class GetJobApplyQueryHandler : IRequestHandler<GetJobApplyQuery, IDataResult<IEnumerable<JobApplyDto>>>
     {
         private readonly IApplicationDbContext _context;
         private readonly IMapper _mapper;
@@ -32,16 +23,16 @@ public class GetJobApplyQuery : IRequest<IDataResult<IEnumerable<GetJobApplyQuer
             _mapper = mapper;
         }
 
-        public async Task<IDataResult<IEnumerable<GetJobApplyQuery>>> Handle(GetJobApplyQuery request, CancellationToken cancellationToken)
+        public async Task<IDataResult<IEnumerable<JobApplyDto>>> Handle(GetJobApplyQuery request, CancellationToken cancellationToken)
         {
-            return new SuccessDataResult<IEnumerable<GetJobApplyQuery>>(
-                 _mapper.Map<IEnumerable<GetJobApplyQuery>>(
+            return new SuccessDataResult<IEnumerable<JobApplyDto>>(
+                 _mapper.Map<IEnumerable<JobApplyDto>>(
                      await _context.JobApplies
 
                      .Include(j => j.Vacancy)
                      .ThenInclude(j => j.Company)
                      .AsNoTracking()
-
+                     .Where(j => j.Id == request.id)
                      .Where(j => j.IsDeleted == false)
                      .ToListAsync()
                      ));

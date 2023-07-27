@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobStack.Application.Handlers.Vacancies.Queries;
 
-public class GetVacanciesQuery:IRequest<IDataResult<VacancyVM>>
+public class GetVacanciesQuery : IRequest<IDataResult<IEnumerable<VacancyDto>>>
 {
-    public class GetVacanciesQueryHandler : IRequestHandler<GetVacanciesQuery, IDataResult<VacancyVM>>
+    public class GetVacanciesQueryHandler : IRequestHandler<GetVacanciesQuery, IDataResult<IEnumerable<VacancyDto>>>
     {
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
@@ -21,11 +21,22 @@ public class GetVacanciesQuery:IRequest<IDataResult<VacancyVM>>
             _context = context;
         }
 
-        public async Task<IDataResult<VacancyVM>> Handle(GetVacanciesQuery request, CancellationToken cancellationToken)
+        public async Task<IDataResult<IEnumerable<VacancyDto>>> Handle(GetVacanciesQuery request, CancellationToken cancellationToken)
         {
-            return new SuccessDataResult<VacancyVM>(
-                _mapper.Map<VacancyVM>(
+            return new SuccessDataResult<IEnumerable<VacancyDto>>(
+                _mapper.Map<IEnumerable<VacancyDto>>(
                     await _context.Vacancies
+                    //.Include(p => p.C)
+                    //.AsNoTracking()
+                    .Include(p => p.JobType)
+                    .AsNoTracking()
+                    .Include(p => p.Category)
+                    .AsNoTracking()
+                    .Include(p => p.City)
+                    .AsNoTracking()
+                    .Include(p => p.Country)
+                    .AsNoTracking()
+
                     .Include(v => v.JobApplies)
                     .AsNoTracking()
                     .Where(v => v.IsDeleted == false)
