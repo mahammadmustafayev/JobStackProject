@@ -26,8 +26,8 @@ public class GetExperiencesQuery : IRequest<IDataResult<IEnumerable<ExperienceDt
                 _mapper.Map<IEnumerable<ExperienceDto>>(
                       await _context.Experiences
 
-                      .Include(e => e.Candidate)
-                      .AsNoTracking()
+                      //.Include(e => e.Candidate)
+                      //.AsNoTracking()
 
                       .Where(e => e.IsDeleted == false)
                       .ToListAsync()));

@@ -1,7 +1,6 @@
 ﻿using ApiUI.Controllers;
 using JobStack.Application.Handlers.Candidates.Commands;
 using JobStack.Application.Handlers.Candidates.Queries;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobStack.ApiUI.Controllers;
@@ -19,7 +18,7 @@ public class CandidatesController : BaseApiController
         return GetResponseOnlyResultData(await Mediator.Send(create));
     }
 
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Consumes("application/json")]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetCandidatesQuery>))]

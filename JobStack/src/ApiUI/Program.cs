@@ -1,6 +1,7 @@
 using Infrastructure;
 using Infrastructure.Persistence;
 using JobStack.Application;
+using System.Text.Json.Serialization;
 
 namespace ApiUI
 {
@@ -13,6 +14,17 @@ namespace ApiUI
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+
+
+            builder.Services.AddControllers().AddJsonOptions(x =>
+                            x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+
+
+
+
+
             builder.Services.AddApplicationServices(builder.Configuration);
             builder.Services.AddInfrastructureServices(builder.Configuration);
 

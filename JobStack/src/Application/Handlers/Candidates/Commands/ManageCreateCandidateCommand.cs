@@ -52,7 +52,7 @@ public record ManageCreateCandidateCommand
                 {
                     return new ErrorDataResult<ManageCreateCandidateCommand>(Messages.InvalidImagePhoto);
                 }
-                candidate.CandidateProfilImage = request.CandidateProfileUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate"));
+                candidate.CandidateProfilImage = request.CandidateProfileUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Images"));
                 candidate.CandidateCV = request.CandidateCVUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Resume"));
             }
             candidate.CandidateFirstName = request.CandidateFirstName;
@@ -61,8 +61,8 @@ public record ManageCreateCandidateCommand
             candidate.CandidateProfession = request.CandidateProfession;
             candidate.Description = request.Description;
             candidate.CandidateSkillName = request.CandidateSkillName;
-            candidate.CountryId = request.CountryId;
             candidate.CityId = request.CityId;
+            candidate.CountryId = request.CountryId;
 
             await _context.Candidates.AddAsync(candidate);
             await _context.SaveChangesAsync(cancellationToken);

@@ -26,14 +26,14 @@ public class GetCountriesQuery : IRequest<IDataResult<IEnumerable<CountryDto>>>
                  _mapper.Map<IEnumerable<CountryDto>>(
                       await _context.Countries
 
-                      .Include(c => c.Vacancies)
-                      .AsNoTracking()
+                      //.Include(c => c.Vacancies)
+                      //.AsNoTracking()
 
-                      .Include(c => c.Companies)
-                      .AsNoTracking()
+                      //.Include(c => c.Companies)
+                      //.AsNoTracking()
 
-                      .Include(c => c.Candidates)
-                      .AsNoTracking()
+                      //.Include(c => c.Candidates)
+                      //.AsNoTracking()
 
                       .Where(c => c.IsDeleted == false)
                       .ToListAsync()));

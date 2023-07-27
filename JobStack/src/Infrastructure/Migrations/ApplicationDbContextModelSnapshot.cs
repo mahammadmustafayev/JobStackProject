@@ -31,7 +31,6 @@ namespace JobStack.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CandidateCV")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CandidateEmail")
@@ -47,14 +46,12 @@ namespace JobStack.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CandidateProfession")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CandidateProfilImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CandidateSkillName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("CityId")

@@ -27,14 +27,14 @@ public class GetCitiesQuery : IRequest<IDataResult<IEnumerable<CityDto>>>
                 _mapper.Map<IEnumerable<CityDto>>(
                      await _context.Cities
 
-                     .Include(c => c.Vacancies)
-                     .AsNoTracking()
+                     //.Include(c => c.Vacancies)
+                     //.AsNoTracking()
 
-                     .Include(c => c.Companies)
-                     .AsNoTracking()
+                     //.Include(c => c.Companies)
+                     //.AsNoTracking()
 
-                     .Include(c => c.Candidates)
-                     .AsNoTracking()
+                     //.Include(c => c.Candidates)
+                     //.AsNoTracking()
 
                      .Where(c => c.IsDeleted == false)
                      .ToListAsync()));

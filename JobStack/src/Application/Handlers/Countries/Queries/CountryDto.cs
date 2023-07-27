@@ -1,6 +1,4 @@
-﻿using JobStack.Domain.Entities;
-
-namespace JobStack.Application.Handlers.Countries.Queries;
+﻿namespace JobStack.Application.Handlers.Countries.Queries;
 
 public class CountryDto
 {
@@ -8,7 +6,5 @@ public class CountryDto
     public bool IsDeleted { get; set; }
     public string Name { get; set; }
 
-    public ICollection<Vacancy>? Vacancies { get; set; }
-    public ICollection<Company>? Companies { get; set; }
-    public ICollection<Candidate>? Candidates { get; set; }
+
 }

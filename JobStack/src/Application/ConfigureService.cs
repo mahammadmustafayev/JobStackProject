@@ -14,7 +14,7 @@ public static class ConfigureServices
 
         services.AddMediatR(Assembly.GetExecutingAssembly());
 
-
+        //services.AddNewtonsoftJson.Include(p => p.CityId).Include(p => p.CountryId).AsNoTracking();
 
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

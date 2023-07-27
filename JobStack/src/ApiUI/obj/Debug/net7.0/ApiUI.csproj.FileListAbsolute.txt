@@ -102,5 +102,6 @@ D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\Microsoft.EntityF
 D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\System.CodeDom.dll
-D:\Project\JobStackProject\JobStack\src\ApiUI\obj\Debug\net7.0\ApiUI.MvcApplicationPartsAssemblyInfo.cs
 D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\ApiUI.staticwebassets.runtime.json
+D:\Project\JobStackProject\JobStack\src\ApiUI\bin\Debug\net7.0\CloudinaryDotNet.dll
+D:\Project\JobStackProject\JobStack\src\ApiUI\obj\Debug\net7.0\ApiUI.MvcApplicationPartsAssemblyInfo.cs
