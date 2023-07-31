@@ -123,6 +123,9 @@
   <data name="DeletedMessage" xml:space="preserve">
     <value>This file deleted successfully</value>
   </data>
+  <data name="EmailExist" xml:space="preserve">
+    <value>Email already exist</value>
+  </data>
   <data name="InvalidCvFile" xml:space="preserve">
     <value>This cv file must be better than 500 kb</value>
   </data>
@@ -132,8 +135,17 @@
   <data name="InvalidPhoto" xml:space="preserve">
     <value>This image must be better than 200 kb</value>
   </data>
+  <data name="InvalidUser" xml:space="preserve">
+    <value>Invalid login </value>
+  </data>
+  <data name="LoginSucces" xml:space="preserve">
+    <value>Login successfully</value>
+  </data>
   <data name="NullMessage" xml:space="preserve">
     <value>This category is not found!</value>
+  </data>
+  <data name="Registersucces" xml:space="preserve">
+    <value>Register successfully</value>
   </data>
   <data name="SendEmailMessages" xml:space="preserve">
     <value>&lt;div style="border: 2px solid black;border-radius: 25px; "&gt;
@@ -146,5 +158,8 @@
   </data>
   <data name="Updated" xml:space="preserve">
     <value>Updated Successfully</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found</value>
   </data>
 </root>

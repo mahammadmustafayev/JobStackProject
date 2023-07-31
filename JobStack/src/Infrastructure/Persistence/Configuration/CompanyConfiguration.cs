@@ -13,7 +13,7 @@ public class CompanyConfiguration : BaseAudiTableEntityConfiguration<Company>
         entity.Property(p => p.Description).IsRequired(false);
         entity.Property(p => p.Founded).IsRequired(false);
         entity.Property(p => p.NumberOfEmployees).IsRequired(false);
-        entity.Property(p => p.CompanyEmail).IsRequired(false);
+        entity.Property(p => p.CompanyEmail).IsRequired();
         entity.Property(p => p.CompanySite).IsRequired(false);
         entity.Property(p => p.CompanyLogo).IsRequired(false);
 

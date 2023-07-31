@@ -24,12 +24,12 @@ public class Company : BaseAuditableEntity
     public int? CityId { get; set; }
     public City? City { get; set; }
 
-    public string? CompanyEmail { get; set; }
+    public string CompanyEmail { get; set; } = null!;
     public string? CompanySite { get; set; }
 
-    public string CompanyLogo { get; set; }
+    public string? CompanyLogo { get; set; }
     [NotMapped]
-    public IFormFile CompanyUrl { get; set; }
+    public IFormFile? CompanyUrl { get; set; }
 
     public ICollection<Vacancy> Vacancies { get; set; }
 }

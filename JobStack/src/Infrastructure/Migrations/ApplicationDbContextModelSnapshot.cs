@@ -165,10 +165,10 @@ namespace JobStack.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CompanyEmail")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CompanyLogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CompanyName")

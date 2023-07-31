@@ -1,6 +1,7 @@
 ﻿
 
 using AutoMapper;
+using JobStack.Application.Handlers.Authorizations.Commands;
 using JobStack.Application.Handlers.Candidates.Commands;
 using JobStack.Application.Handlers.Candidates.Commands.UpdateCandidate;
 using JobStack.Application.Handlers.Candidates.Queries;
@@ -71,18 +72,22 @@ public class MappingProfile : Profile
         CreateMap<Candidate, GetCandidatesQuery>().ReverseMap();
         CreateMap<Candidate, GetCandidateQuery>().ReverseMap();
         CreateMap<Candidate, UpdateCandidateCommand>().ReverseMap();
+        CreateMap<Candidate, RegisterCandidateCommand>().ReverseMap();
 
         CreateMap<Company, ManageCreateCompanyCommand>().ReverseMap();
         CreateMap<Company, CompanyDto>().ReverseMap();
         CreateMap<Company, GetCompaniesQuery>().ReverseMap();
         CreateMap<Company, GetCompanyQuery>().ReverseMap();
         CreateMap<Company, UpdateCompanyCommand>().ReverseMap();
+        CreateMap<Company, RegisterCompanyCommand>().ReverseMap();
 
         CreateMap<Vacancy, CreateVacancyCommand>().ReverseMap();
         CreateMap<Vacancy, VacancyDto>().ReverseMap();
         CreateMap<Vacancy, GetVacanciesQuery>().ReverseMap();
         CreateMap<Vacancy, GetVacancyQuery>().ReverseMap();
         CreateMap<Vacancy, UpdateVacancyCommand>().ReverseMap();
+
+
 
 
     }

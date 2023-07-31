@@ -3147,6 +3147,7 @@
           "FluentValidation.DependencyInjectionExtensions": "11.6.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.EntityFrameworkCore": "7.0.9",
           "Microsoft.Extensions.Hosting.Abstractions": "7.0.0",
           "Newtonsoft.Json": "13.0.3"

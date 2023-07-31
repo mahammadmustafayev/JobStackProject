@@ -79,6 +79,15 @@ namespace JobStack.Application.Common.Constants {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email already exist.
+        /// </summary>
+        internal static string EmailExist {
+            get {
+                return ResourceManager.GetString("EmailExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This cv file must be better than 500 kb.
         /// </summary>
         internal static string InvalidCvFile {
@@ -106,11 +115,38 @@ namespace JobStack.Application.Common.Constants {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid login .
+        /// </summary>
+        internal static string InvalidUser {
+            get {
+                return ResourceManager.GetString("InvalidUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login successfully.
+        /// </summary>
+        internal static string LoginSucces {
+            get {
+                return ResourceManager.GetString("LoginSucces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This category is not found!.
         /// </summary>
         internal static string NullMessage {
             get {
                 return ResourceManager.GetString("NullMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register successfully.
+        /// </summary>
+        internal static string Registersucces {
+            get {
+                return ResourceManager.GetString("Registersucces", resourceCulture);
             }
         }
         
@@ -133,6 +169,15 @@ namespace JobStack.Application.Common.Constants {
         internal static string Updated {
             get {
                 return ResourceManager.GetString("Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User not found.
+        /// </summary>
+        internal static string UserNotFound {
+            get {
+                return ResourceManager.GetString("UserNotFound", resourceCulture);
             }
         }
     }
