@@ -1,9 +1,8 @@
-namespace WebUI.Models
-{
-    public class ErrorViewModel
-    {
-        public string? RequestId { get; set; }
+﻿namespace WebUI.Models;
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-    }
+public class ErrorViewModel
+{
+    public string? RequestId { get; set; }
+
+    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 }

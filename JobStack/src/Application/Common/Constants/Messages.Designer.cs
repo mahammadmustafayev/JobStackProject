@@ -164,6 +164,15 @@ namespace JobStack.Application.Common.Constants {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sign out successfully.
+        /// </summary>
+        internal static string SignOut {
+            get {
+                return ResourceManager.GetString("SignOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Updated Successfully.
         /// </summary>
         internal static string Updated {

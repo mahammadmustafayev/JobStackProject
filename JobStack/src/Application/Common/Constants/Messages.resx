@@ -156,6 +156,9 @@
         &lt;/div&gt;
     &lt;/div&gt;</value>
   </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Sign out successfully</value>
+  </data>
   <data name="Updated" xml:space="preserve">
     <value>Updated Successfully</value>
   </data>

@@ -5,244 +5,748 @@
       "PackagePath": "staticwebassets\\WebUI.bundle.scp.css"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\css\\tailwind.css",
+      "PackagePath": "staticwebassets\\assets\\css\\tailwind.css"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\about\\ab01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\ab01.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\about\\ab02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\ab02.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\about\\ab03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\ab03.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\about\\ab04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\ab04.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\about\\ab05.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\ab05.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\01.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\02.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\03.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\04.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\05.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\06.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\07.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\08.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\blog\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\09.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\calvin-carlo-resume.pdf",
+      "PackagePath": "staticwebassets\\assets\\images\\calvin-carlo-resume.pdf"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\1.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\2.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\3.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\android.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\android.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\circle-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\circle-logo.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\facebook-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\facebook-logo.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\google-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\google-logo.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\lenovo-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\lenovo-logo.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\linkedin.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\linkedin.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\shree-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\shree-logo.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\skype.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\skype.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\snapchat.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\snapchat.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\spotify.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\spotify.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\telegram.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\telegram.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\company\\whatsapp.png",
+      "PackagePath": "staticwebassets\\assets\\images\\company\\whatsapp.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\error.png",
+      "PackagePath": "staticwebassets\\assets\\images\\error.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon.ico"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\bg.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\bg2.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\bg3.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\bg4.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\bg5.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\bg6.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg6.png",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\bg6.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\curve-shape-dark.png",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\curve-shape-dark.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\curve-shape.png",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\curve-shape.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\logo-dark.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-dark.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\logo-icon-40-white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-icon-40-white.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\logo-icon-40.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-icon-40.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\logo-light.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-light.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\logo-white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-white.png"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\svg\\contact.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg\\contact.svg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\svg\\woman_working_2.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg\\woman_working_2.svg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\01.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\02.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\03.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\04.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\05.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\06.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\07.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\team\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\08.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\work\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\work\\01.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\work\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\work\\02.jpg"
     },
     {
-      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\work\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\work\\03.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\work\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\work\\04.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\work\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\work\\05.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\work\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\work\\06.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\js\\app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\js\\plugins.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins.init.js"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\css\\line.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\css\\line.css"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-0.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-1.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-10.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-11.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-12.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-13.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-14.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-15.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-16.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-17.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-18.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-19.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-2.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-20.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-3.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-4.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-5.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-6.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-7.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-8.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@iconscout\\unicons\\fonts\\line\\unicons-9.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@mdi\\font\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\@mdi\\font\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.ttf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.woff"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfont9445.woff2"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\@mdi\\font\\fonts\\materialdesignicons-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\choices.js\\public\\assets\\scripts\\choices.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\choices.js\\public\\assets\\scripts\\choices.min.js"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\choices.js\\public\\assets\\styles\\choices.min.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\choices.js\\public\\assets\\styles\\choices.min.css"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\feather-icons\\feather.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\feather-icons\\feather.min.js"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\gumshoejs\\gumshoe.polyfills.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\gumshoejs\\gumshoe.polyfills.min.js"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\jarallax\\jarallax.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\jarallax\\jarallax.min.js"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\tiny-slider\\min\\tiny-slider.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\tiny-slider\\min\\tiny-slider.js"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\tiny-slider\\tiny-slider.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\tiny-slider\\tiny-slider.css"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\tobii\\css\\tobii.min.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\tobii\\css\\tobii.min.css"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\libs\\tobii\\js\\tobii.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\tobii\\js\\tobii.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",

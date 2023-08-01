@@ -32,7 +32,7 @@ public class EmailService : IEmailService
         var ms = _configuration["SendApply:Password"];
         email.From.Add(MailboxAddress.Parse(mm));
         email.To.Add(MailboxAddress.Parse(to));
-        email.Subject = "Excel Project";
+        email.Subject = "JobStack apply";
         email.Body = new TextPart(TextFormat.Html) { Text = content };
         using (SmtpClient smtp = new())
         {
