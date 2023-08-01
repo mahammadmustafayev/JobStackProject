@@ -1,10 +1,4 @@
-﻿using JobStack.Application.Common.Interfaces;
-using JobStack.Domain.Entities;
-using JobStack.Domain.Identity;
-using JobStack.Infrastructure.Persistence.Interceptors;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace Infrastructure.Persistence;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser, AppRole, string>, IApplicationDbContext

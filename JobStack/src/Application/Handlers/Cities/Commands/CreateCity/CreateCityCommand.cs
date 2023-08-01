@@ -1,13 +1,4 @@
-﻿
-
-using AutoMapper;
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using MediatR;
-
-namespace JobStack.Application.Handlers.Cities.Commands.CreateCity;
+﻿namespace JobStack.Application.Handlers.Cities.Commands.CreateCity;
 
 public record CreateCityCommand(string CityName) : IRequest<IDataResult<CreateCityCommand>>
 {

@@ -1,9 +1,4 @@
-﻿
-
-using JobStack.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace JobStack.Infrastructure.Persistence.Configuration;
+﻿namespace JobStack.Infrastructure.Persistence.Configuration;
 
 public class ExperienceConfigration : BaseAudiTableEntityConfiguration<Experience>
 {

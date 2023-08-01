@@ -1,10 +1,6 @@
-﻿using JobStack.Domain.Common;
-using Microsoft.AspNetCore.Http;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿namespace JobStack.Domain.Entities;
 
-namespace JobStack.Domain.Entities;
-
-public class JobApply:BaseAuditableEntity
+public class JobApply : BaseAuditableEntity
 {
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;

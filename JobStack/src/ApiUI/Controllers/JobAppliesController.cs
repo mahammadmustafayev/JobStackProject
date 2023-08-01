@@ -1,11 +1,8 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.JobApplies.Commands;
-using JobStack.Application.Handlers.JobApplies.Queries;
-using Microsoft.AspNetCore.Mvc;
+﻿
 
 namespace JobStack.ApiUI.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class JobAppliesController : BaseApiController
 {
@@ -25,6 +22,15 @@ public class JobAppliesController : BaseApiController
     public async Task<IActionResult> GetAllExperinces()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetJobAppliesQuery()));
+    }
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetJobAppliesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllExperinces()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetJobAppliesQuery()));
     }
 
     [Consumes("application/json")]

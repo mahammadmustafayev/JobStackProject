@@ -1,12 +1,4 @@
-﻿
-
-using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.Categories.Queries;
+﻿namespace JobStack.Application.Handlers.Categories.Queries;
 
 public class GetCategoriesQuery : IRequest<IDataResult<IEnumerable<CategoryDto>>>
 {

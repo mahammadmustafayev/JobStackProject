@@ -1,9 +1,4 @@
-﻿
-
-using FluentValidation;
-using JobStack.Application.Handlers.JobApplies.Commands;
-
-namespace JobStack.Application.Handlers.JobApplies.Validations;
+﻿namespace JobStack.Application.Handlers.JobApplies.Validations;
 
 public class SendJobApplytoCompanyValidator : AbstractValidator<SendJobApplytoCompany>
 {

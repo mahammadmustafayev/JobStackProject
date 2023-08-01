@@ -1,17 +1,9 @@
-﻿using FluentValidation;
-using JobStack.Application.Handlers.Experiences.Commands.UpdateExperience;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace JobStack.Application.Handlers.Experiences.Validations;
 
-namespace JobStack.Application.Handlers.Experiences.Validations;
-
-public class UpdateExperienceCommandValidator:AbstractValidator<UpdateExperienceCommand>
+public class UpdateExperienceCommandValidator : AbstractValidator<UpdateExperienceCommand>
 {
-	public UpdateExperienceCommandValidator()
-	{
+    public UpdateExperienceCommandValidator()
+    {
         RuleFor(x => x.ExperienceId).NotEmpty().WithMessage("Experience Id is required");
         RuleFor(e => e.ExperienceName).NotEmpty().WithMessage("Experience Name is required");
         RuleFor(e => e.ExperienceDescription);

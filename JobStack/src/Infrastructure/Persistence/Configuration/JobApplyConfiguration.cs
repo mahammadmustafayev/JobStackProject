@@ -1,11 +1,6 @@
-﻿
+﻿namespace JobStack.Infrastructure.Persistence.Configuration;
 
-using JobStack.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace JobStack.Infrastructure.Persistence.Configuration;
-
-public class JobApplyConfiguration:BaseAudiTableEntityConfiguration<JobApply>
+public class JobApplyConfiguration : BaseAudiTableEntityConfiguration<JobApply>
 {
     public override void Configure(EntityTypeBuilder<JobApply> entity)
     {

@@ -1,13 +1,4 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.Categories.Commands.CreateCategory;
-using JobStack.Application.Handlers.Categories.Commands.DeleteCategory;
-using JobStack.Application.Handlers.Categories.Commands.PermaDeleteCategory;
-using JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
-using JobStack.Application.Handlers.Categories.Queries;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
-
+﻿
 namespace JobStack.ApiUI.Controllers;
 
 [Route("api/[controller]/[action]")]
@@ -36,6 +27,17 @@ public class CategoriesController : BaseApiController
     public async Task<IActionResult> GetAllCategories()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetCategoriesQuery()));
+    }
+
+    [AllowAnonymous]
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetCategoriesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllCategories()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetCategoriesQuery()));
     }
 
     //[Consumes("application/json")]

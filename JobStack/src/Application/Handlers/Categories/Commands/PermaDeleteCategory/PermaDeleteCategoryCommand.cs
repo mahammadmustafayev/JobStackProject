@@ -1,13 +1,4 @@
-﻿
-
-using JobStack.Application.Common.Constants;
-
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-
-using MediatR;
-
-namespace JobStack.Application.Handlers.Categories.Commands.PermaDeleteCategory;
+﻿namespace JobStack.Application.Handlers.Categories.Commands.PermaDeleteCategory;
 
 public record PermaDeleteCategoryCommand(int id) : IRequest<IResult>
 {

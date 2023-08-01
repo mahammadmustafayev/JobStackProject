@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace JobStack.Application.Handlers.Experiences.Queries;
+﻿namespace JobStack.Application.Handlers.Experiences.Queries;
 
 public class ExperienceDto
 {

@@ -1,11 +1,4 @@
-﻿
-
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-
-namespace JobStack.Application.Handlers.JobTypes.Commands.DeleteJobType;
+﻿namespace JobStack.Application.Handlers.JobTypes.Commands.DeleteJobType;
 
 public record DeleteJobTypeCommand(int id) : IRequest<IResult>
 {

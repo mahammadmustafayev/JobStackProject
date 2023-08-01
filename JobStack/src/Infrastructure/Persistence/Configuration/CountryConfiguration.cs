@@ -1,11 +1,6 @@
-﻿
+﻿namespace JobStack.Infrastructure.Persistence.Configuration;
 
-using JobStack.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace JobStack.Infrastructure.Persistence.Configuration;
-
-public class CountryConfiguration:BaseAudiTableEntityConfiguration<Country>
+public class CountryConfiguration : BaseAudiTableEntityConfiguration<Country>
 {
     public override void Configure(EntityTypeBuilder<Country> entity)
     {

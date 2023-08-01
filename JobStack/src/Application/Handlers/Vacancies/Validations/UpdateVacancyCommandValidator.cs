@@ -1,9 +1,4 @@
-﻿
-
-using FluentValidation;
-using JobStack.Application.Handlers.Vacancies.Commands.UpdateVacancy;
-
-namespace JobStack.Application.Handlers.Vacancies.Validations;
+﻿namespace JobStack.Application.Handlers.Vacancies.Validations;
 
 public class UpdateVacancyCommandValidator : AbstractValidator<UpdateVacancyCommand>
 {

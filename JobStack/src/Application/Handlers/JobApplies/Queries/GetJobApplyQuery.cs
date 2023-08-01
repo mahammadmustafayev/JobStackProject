@@ -1,12 +1,4 @@
-﻿
-
-using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.JobApplies.Queries;
+﻿namespace JobStack.Application.Handlers.JobApplies.Queries;
 
 public record GetJobApplyQuery(int id) : IRequest<IDataResult<IEnumerable<JobApplyDto>>>
 {

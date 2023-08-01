@@ -1,12 +1,7 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.Companies.Commands;
-using JobStack.Application.Handlers.Companies.Queries;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
-
+﻿
 namespace JobStack.ApiUI.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class CompaniesController : BaseApiController
 {
@@ -28,6 +23,17 @@ public class CompaniesController : BaseApiController
     public async Task<IActionResult> GetAllCandidates()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetCompaniesQuery()));
+    }
+
+    //[AllowAnonymous]
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetCompaniesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllCandidates()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetCompaniesQuery()));
     }
 
     [Consumes("application/json")]

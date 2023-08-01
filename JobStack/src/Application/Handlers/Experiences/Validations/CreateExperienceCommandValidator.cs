@@ -1,7 +1,4 @@
-﻿using FluentValidation;
-using JobStack.Application.Handlers.Experiences.Commands.CreateExperience;
-
-namespace JobStack.Application.Handlers.Experiences.Validations;
+﻿namespace JobStack.Application.Handlers.Experiences.Validations;
 
 public class CreateExperienceCommandValidator : AbstractValidator<CreateExperienceCommand>
 {

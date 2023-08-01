@@ -1,11 +1,4 @@
-﻿using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-
-namespace JobStack.Application.Handlers.Countries.Queries;
+﻿namespace JobStack.Application.Handlers.Countries.Queries;
 
 public class GetCountriesQuery : IRequest<IDataResult<IEnumerable<CountryDto>>>
 {

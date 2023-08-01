@@ -1,9 +1,4 @@
-﻿
-
-using FluentValidation;
-using JobStack.Application.Handlers.JobTypes.Commands.UpdateJobType;
-
-namespace JobStack.Application.Handlers.JobTypes.Validations;
+﻿namespace JobStack.Application.Handlers.JobTypes.Validations;
 
 public class UpdateJobTypeCommandValidator : AbstractValidator<UpdateJobTypeCommand>
 {

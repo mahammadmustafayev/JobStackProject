@@ -1,8 +1,4 @@
-﻿using JobStack.Domain.Common;
-using Microsoft.AspNetCore.Http;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace JobStack.Domain.Entities;
+﻿namespace JobStack.Domain.Entities;
 
 public class Candidate : BaseAuditableEntity
 {

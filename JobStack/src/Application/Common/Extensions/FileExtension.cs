@@ -1,13 +1,13 @@
 ﻿
 
-using Microsoft.AspNetCore.Http;
+
 
 namespace JobStack.Application.Common.Extensions;
 
 public static class FileExtension
 {
     public static string RootPath = "";
-    
+
     public static void UpdateSaveFile(this IFormFile file, string path)
     {
         path = Path.Combine(JobStack.Application.Common.Extensions.FileExtension.RootPath, path);
@@ -24,7 +24,7 @@ public static class FileExtension
         }
         return file.FileName;
     }
-    public static bool CheckSize(this IFormFile file,int kb)
+    public static bool CheckSize(this IFormFile file, int kb)
     {
         if (file.Length / 1024 > kb) return true;
         return false;

@@ -1,9 +1,4 @@
-﻿
-
-
-using JobStack.Domain.Common;
-
-namespace JobStack.Domain.Entities;
+﻿namespace JobStack.Domain.Entities;
 
 public class Experience : BaseAuditableEntity
 {

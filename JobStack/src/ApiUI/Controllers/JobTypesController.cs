@@ -1,15 +1,8 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.JobTypes.Commands.CreateJobType;
-using JobStack.Application.Handlers.JobTypes.Commands.DeleteJobType;
-using JobStack.Application.Handlers.JobTypes.Commands.PermaDeleteJobType;
-using JobStack.Application.Handlers.JobTypes.Commands.UpdateJobType;
-using JobStack.Application.Handlers.JobTypes.Queries;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
+﻿
 
 namespace JobStack.ApiUI.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class JobTypesController : BaseApiController
 {
@@ -21,6 +14,15 @@ public class JobTypesController : BaseApiController
     public async Task<IActionResult> GetAllCities()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetJobTypesQuery()));
+    }
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetJobTypesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllCities()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetJobTypesQuery()));
     }
 
     [Consumes("application/json")]

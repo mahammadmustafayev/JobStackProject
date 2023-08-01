@@ -1,10 +1,6 @@
 ﻿
 
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Identity;
-using MediatR;
-using Microsoft.AspNetCore.Identity;
+
 
 namespace JobStack.Application.Handlers.Authorizations.Commands;
 

@@ -1,6 +1,4 @@
-﻿using JobStack.Domain.Entities;
-
-namespace JobStack.Application.Handlers.Vacancies.Queries;
+﻿namespace JobStack.Application.Handlers.Vacancies.Queries;
 
 public class VacancyDto
 {

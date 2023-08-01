@@ -1,33 +1,6 @@
 ﻿
 
-using AutoMapper;
-using JobStack.Application.Handlers.Authorizations.Commands;
-using JobStack.Application.Handlers.Candidates.Commands;
-using JobStack.Application.Handlers.Candidates.Commands.UpdateCandidate;
-using JobStack.Application.Handlers.Candidates.Queries;
-using JobStack.Application.Handlers.Categories.Commands.CreateCategory;
-using JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
-using JobStack.Application.Handlers.Categories.Queries;
-using JobStack.Application.Handlers.Cities.Commands.CreateCity;
-using JobStack.Application.Handlers.Cities.Commands.UpdateCity;
-using JobStack.Application.Handlers.Cities.Queries;
-using JobStack.Application.Handlers.Companies.Commands;
-using JobStack.Application.Handlers.Companies.Queries;
-using JobStack.Application.Handlers.Countries.Commands.CreateCountry;
-using JobStack.Application.Handlers.Countries.Commands.UpdateCountry;
-using JobStack.Application.Handlers.Countries.Queries;
-using JobStack.Application.Handlers.Experiences.Commands.CreateExperience;
-using JobStack.Application.Handlers.Experiences.Commands.UpdateExperience;
-using JobStack.Application.Handlers.Experiences.Queries;
-using JobStack.Application.Handlers.JobApplies.Commands;
-using JobStack.Application.Handlers.JobApplies.Queries;
-using JobStack.Application.Handlers.JobTypes.Commands.CreateJobType;
-using JobStack.Application.Handlers.JobTypes.Commands.UpdateJobType;
-using JobStack.Application.Handlers.JobTypes.Queries;
-using JobStack.Application.Handlers.Vacancies.Commands.CreateVacancy;
-using JobStack.Application.Handlers.Vacancies.Commands.UpdateVacancy;
-using JobStack.Application.Handlers.Vacancies.Queries;
-using JobStack.Domain.Entities;
+
 
 namespace JobStack.Application.Common.Mapping;
 

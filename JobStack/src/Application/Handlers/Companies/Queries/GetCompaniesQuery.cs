@@ -1,10 +1,4 @@
-﻿using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.Companies.Queries;
+﻿namespace JobStack.Application.Handlers.Companies.Queries;
 
 public class GetCompaniesQuery : IRequest<IDataResult<IEnumerable<CompanyDto>>>
 {

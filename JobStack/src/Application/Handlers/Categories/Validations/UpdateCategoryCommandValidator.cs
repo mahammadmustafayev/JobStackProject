@@ -1,9 +1,4 @@
-﻿
-
-using FluentValidation;
-using JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
-
-namespace JobStack.Application.Handlers.Categories.Validations;
+﻿namespace JobStack.Application.Handlers.Categories.Validations;
 
 public class UpdateCategoryCommandValidator : AbstractValidator<UpdateCategoryCommand>
 {

@@ -1,9 +1,5 @@
 ﻿
 
-using JobStack.Application.Common.Interfaces;
-using JobStack.Domain.Common;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace JobStack.Infrastructure.Persistence.Interceptors;
 

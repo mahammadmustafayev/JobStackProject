@@ -1,8 +1,4 @@
-﻿using JobStack.Domain.Entities;
-using Microsoft.AspNetCore.Http;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace JobStack.Application.Handlers.Categories.Queries;
+﻿namespace JobStack.Application.Handlers.Categories.Queries;
 
 public class CategoryDto
 {

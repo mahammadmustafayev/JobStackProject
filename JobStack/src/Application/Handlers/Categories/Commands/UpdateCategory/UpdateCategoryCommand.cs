@@ -1,16 +1,4 @@
-﻿
-
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Extensions;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Hosting;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
+﻿namespace JobStack.Application.Handlers.Categories.Commands.UpdateCategory;
 
 public class UpdateCategoryCommand : IRequest<IDataResult<UpdateCategoryCommand>>
 {

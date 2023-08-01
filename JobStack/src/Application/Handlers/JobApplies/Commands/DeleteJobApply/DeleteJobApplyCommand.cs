@@ -1,13 +1,6 @@
-﻿
+﻿namespace JobStack.Application.Handlers.JobApplies.Commands.DeleteJobApply;
 
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-
-namespace JobStack.Application.Handlers.JobApplies.Commands.DeleteJobApply;
-
-public record DeleteJobApplyCommand(int id):IRequest<IResult>
+public record DeleteJobApplyCommand(int id) : IRequest<IResult>
 {
     public class DeleteJobApplyCommandHandler : IRequestHandler<DeleteJobApplyCommand, IResult>
     {

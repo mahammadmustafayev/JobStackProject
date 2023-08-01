@@ -1,15 +1,8 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.Candidates.Commands;
-using JobStack.Application.Handlers.Candidates.Commands.DeleteCandidate;
-using JobStack.Application.Handlers.Candidates.Commands.PermaDeleteCandidate;
-using JobStack.Application.Handlers.Candidates.Commands.UpdateCandidate;
-using JobStack.Application.Handlers.Candidates.Queries;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
+﻿
 
 namespace JobStack.ApiUI.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class CandidatesController : BaseApiController
 {
@@ -31,6 +24,16 @@ public class CandidatesController : BaseApiController
     public async Task<IActionResult> GetAllCandidates()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetCandidatesQuery()));
+    }
+
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetCandidatesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllCandidates()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetCandidatesQuery()));
     }
 
     [Consumes("application/json")]

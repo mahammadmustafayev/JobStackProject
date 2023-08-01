@@ -1,11 +1,7 @@
-﻿
+﻿namespace JobStack.Domain.Entities;
 
-using JobStack.Domain.Common;
-
-namespace JobStack.Domain.Entities;
-
-public class JobType:BaseAuditableEntity
+public class JobType : BaseAuditableEntity
 {
     public string TypeName { get; set; } = null!;
-    public  ICollection<Vacancy>? Vacancies { get; set; }
+    public ICollection<Vacancy>? Vacancies { get; set; }
 }

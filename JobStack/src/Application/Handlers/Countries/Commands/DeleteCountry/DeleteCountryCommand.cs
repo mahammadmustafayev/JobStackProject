@@ -1,9 +1,4 @@
-﻿using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-
-namespace JobStack.Application.Handlers.Countries.Commands.DeleteCountry;
+﻿namespace JobStack.Application.Handlers.Countries.Commands.DeleteCountry;
 
 public record DeleteCountryCommand(int id) : IRequest<IResult>
 {

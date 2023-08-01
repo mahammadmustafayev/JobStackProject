@@ -1,12 +1,4 @@
-﻿using AutoMapper;
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using JobStack.Domain.Identity;
-using MediatR;
-using Microsoft.AspNetCore.Identity;
-using Newtonsoft.Json;
+﻿
 
 namespace JobStack.Application.Handlers.Authorizations.Commands;
 

@@ -1,13 +1,4 @@
-﻿using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using JobStack.Domain.Identity;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 namespace JobStack.Application.Handlers.Candidates.Commands.CreateCandidate;
 
 public class CreateCandidateCommand : IRequest<IDataResult<CreateCandidateCommand>>

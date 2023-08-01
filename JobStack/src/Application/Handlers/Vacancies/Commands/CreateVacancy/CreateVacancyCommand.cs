@@ -1,11 +1,4 @@
-﻿using AutoMapper;
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using MediatR;
-
-namespace JobStack.Application.Handlers.Vacancies.Commands.CreateVacancy;
+﻿namespace JobStack.Application.Handlers.Vacancies.Commands.CreateVacancy;
 
 public class CreateVacancyCommand : IRequest<IDataResult<CreateVacancyCommand>>
 {

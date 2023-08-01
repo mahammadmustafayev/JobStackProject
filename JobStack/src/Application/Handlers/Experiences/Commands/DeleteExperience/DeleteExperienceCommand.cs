@@ -1,10 +1,4 @@
-﻿
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-
-namespace JobStack.Application.Handlers.Experiences.Commands.DeleteExperience;
+﻿namespace JobStack.Application.Handlers.Experiences.Commands.DeleteExperience;
 
 public record DeleteExperienceCommand(int id) : IRequest<IResult>
 {

@@ -1,12 +1,4 @@
-﻿
-
-using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.JobTypes.Queries;
+﻿namespace JobStack.Application.Handlers.JobTypes.Queries;
 
 public class GetJobTypesQuery : IRequest<IDataResult<IEnumerable<JobTypeDto>>>
 {

@@ -1,13 +1,6 @@
 ﻿
 
-using Infrastructure.Persistence;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Domain.Identity;
-using JobStack.Infrastructure.Persistence.Interceptors;
-using JobStack.Infrastructure.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+
 
 namespace Infrastructure;
 

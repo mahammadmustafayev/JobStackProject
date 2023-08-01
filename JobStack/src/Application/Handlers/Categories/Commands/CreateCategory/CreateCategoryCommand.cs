@@ -1,15 +1,4 @@
-﻿
-using AutoMapper;
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Extensions;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Hosting;
-
-namespace JobStack.Application.Handlers.Categories.Commands.CreateCategory;
+﻿namespace JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 
 public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
         : IRequest<IDataResult<CreateCategoryCommand>>

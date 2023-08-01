@@ -1,15 +1,6 @@
-﻿
+﻿namespace JobStack.Application.Handlers.JobTypes.Commands.UpdateJobType;
 
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Application.Handlers.Countries.Commands.UpdateCountry;
-using JobStack.Domain.Entities;
-using MediatR;
-
-namespace JobStack.Application.Handlers.JobTypes.Commands.UpdateJobType;
-
-public class UpdateJobTypeCommand:IRequest<IDataResult<UpdateJobTypeCommand>>
+public class UpdateJobTypeCommand : IRequest<IDataResult<UpdateJobTypeCommand>>
 {
     public int JobTypeId { get; set; }
     public string TypeName { get; set; }

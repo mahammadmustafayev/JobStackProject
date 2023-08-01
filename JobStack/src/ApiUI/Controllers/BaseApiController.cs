@@ -1,8 +1,4 @@
-﻿using MediatR;
-
-using Microsoft.AspNetCore.Mvc;
-
-namespace ApiUI.Controllers;
+﻿namespace ApiUI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

@@ -1,12 +1,5 @@
 ﻿
 
-using JobStack.Application.Common.Interfaces;
-using MailKit.Net.Smtp;
-using MailKit.Security;
-using Microsoft.Extensions.Configuration;
-using MimeKit;
-using MimeKit.Text;
-
 
 
 namespace JobStack.Infrastructure.Services;

@@ -1,9 +1,4 @@
-﻿using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-
-namespace JobStack.Application.Handlers.Companies.Commands;
+﻿namespace JobStack.Application.Handlers.Companies.Commands;
 
 public record DeleteCompanyCommand(int id) : IRequest<IResult>
 {

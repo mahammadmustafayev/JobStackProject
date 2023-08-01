@@ -1,15 +1,12 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.Cities.Commands.CreateCity;
+﻿using JobStack.Application.Handlers.Cities.Commands.CreateCity;
 using JobStack.Application.Handlers.Cities.Commands.DeleteCity;
 using JobStack.Application.Handlers.Cities.Commands.PermaDeleteCity;
 using JobStack.Application.Handlers.Cities.Commands.UpdateCity;
 using JobStack.Application.Handlers.Cities.Queries;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace JobStack.ApiUI.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class CitiesController : BaseApiController
 {
@@ -21,6 +18,16 @@ public class CitiesController : BaseApiController
     public async Task<IActionResult> GetAllCities()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetCitiesQuery()));
+    }
+
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetCitiesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllCities()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetCitiesQuery()));
     }
 
     [Consumes("application/json")]

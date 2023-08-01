@@ -1,18 +1,6 @@
-﻿using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Application.Handlers.Cities.Commands.UpdateCity;
-using JobStack.Domain.Entities;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace JobStack.Application.Handlers.Countries.Commands.UpdateCountry;
 
-namespace JobStack.Application.Handlers.Countries.Commands.UpdateCountry;
-
-public class UpdateCountryCommand:IRequest<IDataResult<UpdateCountryCommand>>
+public class UpdateCountryCommand : IRequest<IDataResult<UpdateCountryCommand>>
 {
     public int CountryId { get; set; }
     public string CountryName { get; set; } = null!;
@@ -33,8 +21,8 @@ public class UpdateCountryCommand:IRequest<IDataResult<UpdateCountryCommand>>
                 return new ErrorDataResult<UpdateCountryCommand>(Messages.NullMessage);
 
             }
-            existcountry.Name= request.CountryName;
-             _context.Countries.Update(existcountry);
+            existcountry.Name = request.CountryName;
+            _context.Countries.Update(existcountry);
             await _context.SaveChangesAsync(cancellationToken);
 
             return new SuccessDataResult<UpdateCountryCommand>(request, Messages.Updated);

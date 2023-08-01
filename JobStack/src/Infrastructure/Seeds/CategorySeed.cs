@@ -1,11 +1,4 @@
-﻿using JobStack.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobStack.Infrastructure.Seeds;
+﻿namespace JobStack.Infrastructure.Seeds;
 
 public static class CategorySeed
 {
@@ -22,7 +15,7 @@ public static class CategorySeed
         new Category
         {
             CategoryName="Healthy"
-        }, 
+        },
         new Category
         {
             CategoryName="Web Designer"

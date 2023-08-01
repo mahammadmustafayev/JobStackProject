@@ -1,15 +1,7 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.Experiences.Commands.CreateExperience;
-using JobStack.Application.Handlers.Experiences.Commands.DeleteExperience;
-using JobStack.Application.Handlers.Experiences.Commands.PermaDeleteExperience;
-using JobStack.Application.Handlers.Experiences.Commands.UpdateExperience;
-using JobStack.Application.Handlers.Experiences.Queries;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
-
+﻿
 namespace JobStack.ApiUI.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class ExperiencesController : BaseApiController
 {
@@ -21,6 +13,16 @@ public class ExperiencesController : BaseApiController
     public async Task<IActionResult> GetAllExperinces()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetExperiencesQuery()));
+    }
+
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetExperiencesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllExperinces()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetExperiencesQuery()));
     }
 
     [Consumes("application/json")]

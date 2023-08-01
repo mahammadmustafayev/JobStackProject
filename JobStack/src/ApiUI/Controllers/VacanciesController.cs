@@ -1,15 +1,8 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Handlers.Vacancies.Commands.CreateVacancy;
-using JobStack.Application.Handlers.Vacancies.Commands.DeleteVacancy;
-using JobStack.Application.Handlers.Vacancies.Commands.PermaDeleteVacancy;
-using JobStack.Application.Handlers.Vacancies.Commands.UpdateVacancy;
-using JobStack.Application.Handlers.Vacancies.Queries;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
+﻿
 
 namespace JobStack.ApiUI.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class VacanciesController : BaseApiController
 {
@@ -21,6 +14,15 @@ public class VacanciesController : BaseApiController
     public async Task<IActionResult> GetAllExperinces()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetVacanciesQuery()));
+    }
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetVacanciesQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet]
+    public async Task<IActionResult> ManageGetAllExperinces()
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new ManageGetVacanciesQuery()));
     }
 
     [Consumes("application/json")]

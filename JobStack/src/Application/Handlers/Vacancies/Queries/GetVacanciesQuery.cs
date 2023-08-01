@@ -1,12 +1,4 @@
-﻿
-
-using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.Vacancies.Queries;
+﻿namespace JobStack.Application.Handlers.Vacancies.Queries;
 
 public class GetVacanciesQuery : IRequest<IDataResult<IEnumerable<VacancyDto>>>
 {

@@ -1,7 +1,6 @@
 ﻿
 
-using JobStack.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace JobStack.Application.Common.Interfaces;
 

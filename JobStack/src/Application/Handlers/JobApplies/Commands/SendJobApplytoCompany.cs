@@ -1,16 +1,4 @@
-﻿
-
-using AutoMapper;
-using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Extensions;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Hosting;
-
-namespace JobStack.Application.Handlers.JobApplies.Commands;
+﻿namespace JobStack.Application.Handlers.JobApplies.Commands;
 
 public record SendJobApplytoCompany
     (

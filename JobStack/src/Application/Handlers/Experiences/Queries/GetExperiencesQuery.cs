@@ -1,10 +1,4 @@
-﻿using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.Experiences.Queries;
+﻿namespace JobStack.Application.Handlers.Experiences.Queries;
 
 public class GetExperiencesQuery : IRequest<IDataResult<IEnumerable<ExperienceDto>>>
 {

@@ -1,8 +1,4 @@
 ﻿
-
-using JobStack.Application.Common.Interfaces;
-using Microsoft.AspNetCore.Http;
-
 namespace JobStack.Infrastructure.Services;
 
 public class CurrentUserService : ICurrentUserService

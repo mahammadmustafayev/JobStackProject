@@ -1,9 +1,4 @@
-﻿
-
-using FluentValidation;
-using JobStack.Application.Handlers.Categories.Commands.CreateCategory;
-
-namespace JobStack.Application.Handlers.Categories.Validations;
+﻿namespace JobStack.Application.Handlers.Categories.Validations;
 
 public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCommand>
 {

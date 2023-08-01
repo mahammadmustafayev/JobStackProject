@@ -1,7 +1,4 @@
-﻿using JobStack.Domain.Common;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace JobStack.Domain.Entities;
+﻿namespace JobStack.Domain.Entities;
 
 public class Vacancy : BaseAuditableEntity
 {

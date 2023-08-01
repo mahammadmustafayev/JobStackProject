@@ -1,9 +1,4 @@
-﻿using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-
-namespace JobStack.Application.Handlers.Countries.Commands.PermaDeleteCountry;
+﻿namespace JobStack.Application.Handlers.Countries.Commands.PermaDeleteCountry;
 
 public record PermaDeleteCountryCommand(int id) : IRequest<IResult>
 {

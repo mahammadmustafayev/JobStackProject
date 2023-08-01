@@ -1,12 +1,4 @@
-﻿
-
-using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.Cities.Queries;
+﻿namespace JobStack.Application.Handlers.Cities.Queries;
 
 public class GetCitiesQuery : IRequest<IDataResult<IEnumerable<CityDto>>>
 {

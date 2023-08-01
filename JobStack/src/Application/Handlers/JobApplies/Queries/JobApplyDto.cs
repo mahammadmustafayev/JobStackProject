@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace JobStack.Application.Handlers.JobApplies.Queries;
+﻿namespace JobStack.Application.Handlers.JobApplies.Queries;
 
 public class JobApplyDto
 {

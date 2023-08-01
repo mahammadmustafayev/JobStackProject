@@ -1,6 +1,4 @@
-﻿using JobStack.Domain.Entities;
-
-namespace JobStack.Application.Handlers.JobTypes.Queries;
+﻿namespace JobStack.Application.Handlers.JobTypes.Queries;
 
 public class JobTypeDto
 {

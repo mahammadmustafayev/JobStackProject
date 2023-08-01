@@ -1,13 +1,6 @@
-﻿using ApiUI.Controllers;
-using JobStack.Application.Common.Results;
-using JobStack.Application.Handlers.Authorizations.Commands;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using IResult = JobStack.Application.Common.Results.IResult;
+﻿namespace JobStack.ApiUI.Controllers;
 
-namespace JobStack.ApiUI.Controllers;
-
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class AuthController : BaseApiController
 {

@@ -1,11 +1,4 @@
-﻿using JobStack.Application.Common.Constants;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using JobStack.Domain.Entities;
-using MediatR;
-using System.ComponentModel.DataAnnotations;
-
-namespace JobStack.Application.Handlers.Experiences.Commands.UpdateExperience;
+﻿namespace JobStack.Application.Handlers.Experiences.Commands.UpdateExperience;
 
 public class UpdateExperienceCommand : IRequest<IDataResult<UpdateExperienceCommand>>
 {
