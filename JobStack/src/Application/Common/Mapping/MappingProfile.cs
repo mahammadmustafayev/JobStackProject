@@ -12,6 +12,7 @@ public class MappingProfile : Profile
         CreateMap<Category, CategoryDto>().ReverseMap();
         CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
         CreateMap<Category, GetCategoriesQuery>().ReverseMap();
+        CreateMap<Category, GetCategoriesCountQuery>().ReverseMap();
 
         CreateMap<City, CreateCityCommand>().ReverseMap();
         CreateMap<City, CityDto>().ReverseMap();
@@ -50,6 +51,7 @@ public class MappingProfile : Profile
         CreateMap<Company, ManageCreateCompanyCommand>().ReverseMap();
         CreateMap<Company, CompanyDto>().ReverseMap();
         CreateMap<Company, GetCompaniesQuery>().ReverseMap();
+        CreateMap<Company, GetCompaniesCountQuery>().ReverseMap();
         CreateMap<Company, GetCompanyQuery>().ReverseMap();
         CreateMap<Company, UpdateCompanyCommand>().ReverseMap();
         CreateMap<Company, RegisterCompanyCommand>().ReverseMap();
@@ -57,6 +59,7 @@ public class MappingProfile : Profile
         CreateMap<Vacancy, CreateVacancyCommand>().ReverseMap();
         CreateMap<Vacancy, VacancyDto>().ReverseMap();
         CreateMap<Vacancy, GetVacanciesQuery>().ReverseMap();
+        CreateMap<Vacancy, GetCountVacanciesQuery>().ReverseMap();
         CreateMap<Vacancy, GetVacancyQuery>().ReverseMap();
         CreateMap<Vacancy, UpdateVacancyCommand>().ReverseMap();
 

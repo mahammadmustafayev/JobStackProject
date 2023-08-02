@@ -7,6 +7,7 @@ public static class ConfigureServices
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
     {
 
+
         services.AddMediatR(Assembly.GetExecutingAssembly());
 
         //services.AddNewtonsoftJson.Include(p => p.CityId).Include(p => p.CountryId).AsNoTracking();

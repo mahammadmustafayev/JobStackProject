@@ -749,6 +749,38 @@
       "PackagePath": "staticwebassets\\assets\\libs\\tobii\\js\\tobii.min.js"
     },
     {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\047d8514-7ba8-4b70-ab78-b33262133765health-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\data\\category\\047d8514-7ba8-4b70-ab78-b33262133765health-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\0f057b82-0e66-4def-b63d-92db835903fbcmd-terminal-icon.svg",
+      "PackagePath": "staticwebassets\\data\\category\\0f057b82-0e66-4def-b63d-92db835903fbcmd-terminal-icon.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\1c47520d-66c5-4ec4-a335-3f2ded6f9369tool-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\data\\category\\1c47520d-66c5-4ec4-a335-3f2ded6f9369tool-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\2148bc0d-cea7-45fd-84f8-c344a4516845code-circle-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\data\\category\\2148bc0d-cea7-45fd-84f8-c344a4516845code-circle-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\41067a57-cbd7-407f-8df8-48dee67e2f1ccode-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\data\\category\\41067a57-cbd7-407f-8df8-48dee67e2f1ccode-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\607e918c-65bc-47f0-b665-feea01b4ec58wireframe-icon.svg",
+      "PackagePath": "staticwebassets\\data\\category\\607e918c-65bc-47f0-b665-feea01b4ec58wireframe-icon.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\905e6742-93b8-406c-832e-bdae39e31cc8business-color-briefcase-24-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\data\\category\\905e6742-93b8-406c-832e-bdae39e31cc8business-color-briefcase-24-svgrepo-com.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\b492482e-31ef-4594-9eea-f98a237abcdbreshot-icon-web-design-UXATJ5GQF7.svg",
+      "PackagePath": "staticwebassets\\data\\category\\b492482e-31ef-4594-9eea-f98a237abcdbreshot-icon-web-design-UXATJ5GQF7.svg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

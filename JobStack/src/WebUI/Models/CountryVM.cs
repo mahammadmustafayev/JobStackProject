@@ -1,6 +1,8 @@
-﻿namespace WebUI.Models;
+﻿using JobStack.WebUI.Models;
 
-public class CountryVM
+namespace WebUI.Models;
+
+public class CountryVM : BaseAuditableEntityVM
 {
     public string Name { get; set; } = null!;
 

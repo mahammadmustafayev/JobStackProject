@@ -32,6 +32,17 @@ public class CategoriesController : BaseApiController
     [AllowAnonymous]
     [Consumes("application/json")]
     [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetCategoriesCountQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet("{count}")]
+    public async Task<IActionResult> GetCountCategories(int count)
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new GetCategoriesCountQuery(count)));
+    }
+
+    [AllowAnonymous]
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetCategoriesQuery>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]

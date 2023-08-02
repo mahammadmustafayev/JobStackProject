@@ -8,7 +8,7 @@ public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
         private readonly IHostEnvironment _env;
-
+        //private readonly IWebHostEnvironment _env;
 
         public CreateCategoryCommandHandler(IMapper mapper, IApplicationDbContext context, IHostEnvironment env)
         {
@@ -34,7 +34,12 @@ public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
                     return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidImagePhoto);
                 }
 
-                category.Logo = request.Photo.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Category"));
+
+                string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "category");
+
+                category.Logo = request.Photo.SaveFile(root);
+
+
 
 
             }

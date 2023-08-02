@@ -1,5 +1,6 @@
 ﻿
 
+
 namespace JobStack.Application.Handlers.Authorizations.Commands;
 
 public record RegisterCompanyCommand(string CompanyName, string Email, string Password) : IRequest<IResult>

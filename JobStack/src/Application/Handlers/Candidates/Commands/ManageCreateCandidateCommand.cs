@@ -33,6 +33,9 @@ public record ManageCreateCandidateCommand
 
         public async Task<IDataResult<ManageCreateCandidateCommand>> Handle(ManageCreateCandidateCommand request, CancellationToken cancellationToken)
         {
+            string rootv1 = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "candidate", "images");
+            string rootv2 = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "candidate", "resume");
+
             Candidate candidate = _mapper.Map<Candidate>(request);
             if (request != null)
             {
@@ -44,8 +47,8 @@ public record ManageCreateCandidateCommand
                 {
                     return new ErrorDataResult<ManageCreateCandidateCommand>(Messages.InvalidImagePhoto);
                 }
-                candidate.CandidateProfilImage = request.CandidateProfileUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Images"));
-                candidate.CandidateCV = request.CandidateCVUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Resume"));
+                candidate.CandidateProfilImage = request.CandidateProfileUrl.SaveFile(rootv1);
+                candidate.CandidateCV = request.CandidateCVUrl.SaveFile(rootv2);
             }
             candidate.CandidateFirstName = request.CandidateFirstName;
             candidate.CandidateLastName = request.CandidateLastName;

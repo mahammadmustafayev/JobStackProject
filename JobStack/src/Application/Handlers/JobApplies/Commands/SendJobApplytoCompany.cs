@@ -27,6 +27,8 @@ public record SendJobApplytoCompany
 
         public async Task<IDataResult<SendJobApplytoCompany>> Handle(SendJobApplytoCompany request, CancellationToken cancellationToken)
         {
+            string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "jobapply");
+
             JobApply jobApply = _mapper.Map<JobApply>(request);
 
             if (request != null)
@@ -36,7 +38,7 @@ public record SendJobApplytoCompany
                     return new ErrorDataResult<SendJobApplytoCompany>(Messages.InvalidCvFile);
 
                 }
-                jobApply.CvFile = request.CvFileUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "JobApply"));
+                jobApply.CvFile = request.CvFileUrl.SaveFile(root);
             }
 
 

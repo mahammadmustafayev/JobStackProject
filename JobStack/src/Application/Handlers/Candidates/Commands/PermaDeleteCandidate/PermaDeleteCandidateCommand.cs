@@ -2,6 +2,7 @@
 
 
 
+
 namespace JobStack.Application.Handlers.Candidates.Commands.PermaDeleteCandidate;
 
 public record PermaDeleteCandidateCommand(int id) : IRequest<IResult>

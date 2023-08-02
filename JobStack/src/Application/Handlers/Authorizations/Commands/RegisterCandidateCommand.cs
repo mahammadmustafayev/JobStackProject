@@ -1,5 +1,6 @@
 ﻿
 
+
 namespace JobStack.Application.Handlers.Authorizations.Commands;
 
 public record RegisterCandidateCommand(string FirstName, string LastName, string Email, string Password) : IRequest<IResult>

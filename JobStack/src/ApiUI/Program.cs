@@ -8,6 +8,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+
         // Add services to the container.
 
         builder.Services.AddControllers();
@@ -16,7 +17,6 @@ public class Program
 
         builder.Services.AddControllers().AddJsonOptions(x =>
                         x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
 
 
 
@@ -47,6 +47,8 @@ public class Program
         await initializer.SeedAsync();
 
         app.UseHttpsRedirection();
+        app.UseStaticFiles();
+        app.UseRouting();
 
         app.UseAuthorization();
 

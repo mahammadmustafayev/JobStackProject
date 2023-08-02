@@ -1,5 +1,6 @@
 ﻿
 
+
 namespace JobStack.Application.Handlers.Candidates.Commands.DeleteCandidate;
 
 public record DeleteCandidateCommand(int id) : IRequest<IResult>

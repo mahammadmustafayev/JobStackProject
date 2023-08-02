@@ -20,9 +20,18 @@ public class CompaniesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetCompaniesQuery>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]
-    public async Task<IActionResult> GetAllCandidates()
+    public async Task<IActionResult> GetAllCompanies()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetCompaniesQuery()));
+    }
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetCompaniesCountQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet("{count}")]
+    public async Task<IActionResult> GetCountCompanies(int count)
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new GetCompaniesCountQuery(count)));
     }
 
     //[AllowAnonymous]
@@ -31,7 +40,7 @@ public class CompaniesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetCompaniesQuery>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]
-    public async Task<IActionResult> ManageGetAllCandidates()
+    public async Task<IActionResult> ManageGetAllCompanies()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new ManageGetCompaniesQuery()));
     }

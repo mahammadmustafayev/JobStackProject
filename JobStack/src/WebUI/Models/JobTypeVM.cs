@@ -1,6 +1,8 @@
-﻿namespace WebUI.Models;
+﻿using JobStack.WebUI.Models;
 
-public class JobTypeVM
+namespace WebUI.Models;
+
+public class JobTypeVM : BaseAuditableEntityVM
 {
     public string TypeName { get; set; } = null!;
     public ICollection<VacancyVM>? Vacancies { get; set; }

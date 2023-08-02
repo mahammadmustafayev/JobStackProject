@@ -1,32 +1,47 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿
+using JobStack.WebUI.ViewModels.Home;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WebUI.Models;
 
-namespace WebUI.Controllers
+namespace WebUI.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    Uri baseUrl = new("https://localhost:7264/api");
+    private readonly HttpClient _client;
+
+    public HomeController(HttpClient client)
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        _client = client;
+        _client.BaseAddress = baseUrl;
     }
+
+
+    public IActionResult Index()
+    {
+        HomeViewModel homeVM = new();
+
+        //  D:\Project\JobStackProject\JobStack\src\ApiUI\wwwroot\Category\
+        HttpResponseMessage responseCategory = _client.GetAsync(_client.BaseAddress + "/Categories/GetCountCategories/5").Result;
+        HttpResponseMessage responseVacancy = _client.GetAsync(_client.BaseAddress + "/Vacancies/GetCountVacancies/6").Result;
+        HttpResponseMessage responseCompany = _client.GetAsync(_client.BaseAddress + "/Companies/GetCountCompanies/8").Result;
+        if (responseCategory.IsSuccessStatusCode && responseCompany.IsSuccessStatusCode && responseVacancy.IsSuccessStatusCode)
+        {
+            string dataCategory = responseCategory.Content.ReadAsStringAsync().Result;
+            string dataVacancy = responseVacancy.Content.ReadAsStringAsync().Result;
+            string dataCompany = responseCompany.Content.ReadAsStringAsync().Result;
+            homeVM.Categories = JsonConvert.DeserializeObject<List<CategoryVM>>(dataCategory);
+            homeVM.Vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(dataVacancy);
+            homeVM.Companies = JsonConvert.DeserializeObject<List<CompanyVM>>(dataCompany);
+
+
+        }
+
+        return View(homeVM);
+    }
+
+
+
+
 }

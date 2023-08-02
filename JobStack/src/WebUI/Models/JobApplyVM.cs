@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using JobStack.WebUI.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebUI.Models;
 
-public class JobApplyVM
+public class JobApplyVM : BaseAuditableEntityVM
 {
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "apqgCpM0mD0c+II5bgoIcqtMv0CMTYikSXzltOZClhWIQnVV0Z0PC2ZIxZfflDNl2J2ZMjj86UXJwQrlaTnJjw==",
+  "dgSpecHash": "cOgZsB8tdqIOfYxBxX7HA2F8hXdCRs+rb7JxOxcL0ALabF7ZktjmehdlF55GcH6zJgntd7XqXowK+aqfhIWXiw==",
   "success": true,
   "projectFilePath": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\acer\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

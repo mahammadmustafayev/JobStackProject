@@ -27,11 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Candidate\Images\" />
-    <Folder Include="wwwroot\Candidate\Resume\" />
-    <Folder Include="wwwroot\Category\" />
-    <Folder Include="wwwroot\JobApply\" />
-    <Folder Include="wwwroot\Company\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

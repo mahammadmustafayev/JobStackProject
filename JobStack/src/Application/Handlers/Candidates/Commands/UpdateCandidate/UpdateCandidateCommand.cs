@@ -32,6 +32,8 @@ public class UpdateCandidateCommand : IRequest<IDataResult<UpdateCandidateComman
 
         public async Task<IDataResult<UpdateCandidateCommand>> Handle(UpdateCandidateCommand request, CancellationToken cancellationToken)
         {
+            string rootv1 = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "candidate", "images");
+            string rootv2 = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "candidate", "resume");
             Candidate existcandidate = await _context.Candidates.FindAsync(request.CandidateId);
 
             if (existcandidate is null)
@@ -44,9 +46,9 @@ public class UpdateCandidateCommand : IRequest<IDataResult<UpdateCandidateComman
 
                 string newFileName = Guid.NewGuid().ToString();
                 newFileName += file.CutFileName(60);
-                if (System.IO.File.Exists(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Images")))
+                if (System.IO.File.Exists(rootv1))
                 {
-                    System.IO.File.Delete(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Images"));
+                    System.IO.File.Delete(rootv1);
                 }
                 file.UpdateSaveFile(Path.Combine(newFileName));
                 existcandidate.CandidateProfilImage = newFileName;
@@ -57,9 +59,9 @@ public class UpdateCandidateCommand : IRequest<IDataResult<UpdateCandidateComman
 
                 string newFileName = Guid.NewGuid().ToString();
                 newFileName += file.CutFileName(60);
-                if (System.IO.File.Exists(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Images")))
+                if (System.IO.File.Exists(rootv2))
                 {
-                    System.IO.File.Delete(Path.Combine(_env.ContentRootPath, "wwwroot", "Candidate", "Resume"));
+                    System.IO.File.Delete(rootv2);
                 }
                 file.UpdateSaveFile(Path.Combine(newFileName));
                 existcandidate.CandidateCV = newFileName;

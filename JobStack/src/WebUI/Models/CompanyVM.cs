@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using JobStack.WebUI.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebUI.Models;
 
-public class CompanyVM
+public class CompanyVM : BaseAuditableEntityVM
 {
     public string CompanyName { get; set; } = null!;
 

@@ -1,4 +1,7 @@
-﻿@{
+﻿
+
+@model HomeViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -63,60 +66,24 @@
         </div><!--end grid-->
 
         <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+
+            @foreach (var category in Model.Categories)
+            {
             <div class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
                 <div class="w-16 h-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                    <i class="uil uil-gitlab"></i>
+                       
+                        <img src="~/data/category/@category.Logo" class="h-8 w-8" alt="Categoryerror">
                 </div>
 
                 <div class="content mt-6">
-                    <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Business <br> Development</a>
-                    <p class="text-slate-400 mt-3">74 Jobs</p>
+                    <a href="#" class="title text-lg font-semibold hover:text-emerald-600">@category.CategoryName</a>
+                    <p class="text-slate-400 mt-3">@category.Vacancies.Count Jobs</p>
                 </div>
             </div><!--end content-->
+                
+            }
 
-            <div class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                <div class="w-16 h-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                    <i class="uil uil-book-open"></i>
-                </div>
-
-                <div class="content mt-6">
-                    <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Marketing & <br> Communication</a>
-                    <p class="text-slate-400 mt-3">20 Jobs</p>
-                </div>
-            </div><!--end content-->
-
-            <div class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                <div class="w-16 h-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                    <i class="uil uil-chart-pie-alt"></i>
-                </div>
-
-                <div class="content mt-6">
-                    <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Project <br> Management</a>
-                    <p class="text-slate-400 mt-3">35 Jobs</p>
-                </div>
-            </div><!--end content-->
-
-            <div class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                <div class="w-16 h-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                    <i class="uil uil-feedback"></i>
-                </div>
-
-                <div class="content mt-6">
-                    <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Customer <br> Service</a>
-                    <p class="text-slate-400 mt-3">46 Jobs</p>
-                </div>
-            </div><!--end content-->
-
-            <div class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
-                <div class="w-16 h-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
-                    <i class="uil uil-presentation-line"></i>
-                </div>
-
-                <div class="content mt-6">
-                    <a href="#" class="title text-lg font-semibold hover:text-emerald-600">Software <br> Engineering</a>
-                    <p class="text-slate-400 mt-3">60 Jobs</p>
-                </div>
-            </div><!--end content-->
+           
         </div><!--end grid-->
     </div><!--end container-->
 
@@ -166,16 +133,18 @@
         </div><!--end grid-->
 
         <div class="grid md:grid-cols-2 mt-8 gap-[30px]">
+            @foreach (var vacancy in Model.Vacancies)
+            {
             <div class="group rounded-lg shadow hover:shadow-lg dark:shadow-gray-700 transition-all duration-500">
                 <div class="flex items-center justify-between p-6">
                     <div class="flex items-center">
                         <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                            <img src="~/assets/images/company/facebook-logo.png" class="h-8 w-8" alt="">
+                            <img src="~/data/company/@vacancy.Company.CompanyLogo" class="h-8 w-8" alt="error">
                         </div>
 
                         <div class="ms-3">
-                            <a href="employer-detail.html" class="block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500">Facebook</a>
-                            <span class="block text-sm text-slate-400">2 days ago</span>
+                            <a href="employer-detail.html" class="block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500">@vacancy.Company.CompanyName</a>
+                            <span class="block text-sm text-slate-400">@vacancy.Created.Day days ago</span>
                         </div>
                     </div>
 
@@ -184,15 +153,15 @@
 
                 <div class="lg:flex items-center justify-between border-t border-gray-100 dark:border-gray-800 p-6">
                     <div>
-                        <a href="job-detail-one.html" class="text-lg font-semibold hover:text-emerald-600">Web Designer / Developer</a>
+                        <a href="job-detail-one.html" class="text-lg font-semibold hover:text-emerald-600">@vacancy.TitleName</a>
                         <p class="text-slate-400 mt-1">Total Openings: 1</p>
                     </div>
 
-                    <p class="text-slate-400 lg:mt-0 mt-4"><i class="uil uil-usd-circle text-[20px] text-emerald-600"></i> $950 - $1100/mo</p>
+                    <p class="text-slate-400 lg:mt-0 mt-4"><i class="uil uil-usd-circle text-[20px] text-emerald-600"></i>@vacancy.Salary</p>
                 </div>
 
                 <div class="px-6 py-2 bg-slate-50 dark:bg-slate-800 flex justify-between items-center">
-                    <div>
+                   @* <div>
                         <span class="inline-block font-semibold"><i class="mdi mdi-check-decagram mdi-18px text-blue-500 me-1"></i>Verified</span>
                         <ul class="list-none inline-block ms-1 text-yellow-400">
                             <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
@@ -202,12 +171,14 @@
                             <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
                             <li class="inline text-slate-400 font-semibold">4.8</li>
                         </ul>
-                    </div>
-                    <span class="inline-block me-1 text-slate-400"><i class="uil uil-map-marker text-[18px] text-slate-900 dark:text-white me-1"></i>Australia</span>
+                    </div>*@
+                    <span class="inline-block me-1 text-slate-400"><i class="uil uil-map-marker text-[18px] text-slate-900 dark:text-white me-1"></i>@vacancy.Country.Name</span>
                 </div>
             </div><!--end content-->
+                
+            }
 
-            <div class="group rounded-lg shadow hover:shadow-lg dark:shadow-gray-700 transition-all duration-500">
+           @* <div class="group rounded-lg shadow hover:shadow-lg dark:shadow-gray-700 transition-all duration-500">
                 <div class="flex items-center justify-between p-6">
                     <div class="flex items-center">
                         <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
@@ -410,7 +381,7 @@
                     </div>
                     <span class="inline-block me-1 text-slate-400"><i class="uil uil-map-marker text-[18px] text-slate-900 dark:text-white me-1"></i>Pakistan</span>
                 </div>
-            </div><!--end content-->
+            </div><!--end content-->*@
         </div><!--end grid-->
 
         <div class="grid md:grid-cols-12 grid-cols-1 mt-8">
@@ -422,7 +393,7 @@
 </section><!--end section-->
 <!-- End -->
 
-<section class="py-20 w-full table relative bg-[url('../../assets/images/hero/bg2.html')] bg-top bg-no-repeat bg-cover">
+<section class="py-20 w-full table relative bg-[url('../../assets/images/hero/bg2.jpg')] bg-top bg-no-repeat bg-cover">
     <div class="absolute inset-0 bg-slate-900/70"></div>
     <div class="container relative">
         <div class="grid grid-cols-1 text-center">
@@ -466,23 +437,28 @@
         </div><!--end grid-->
 
         <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-            <div class="group relative p-6 rounded-md shadow dark:shadow-gray-700 mt-6">
+
+            @foreach (var company in Model.Companies)
+            {
+              <div class="group relative p-6 rounded-md shadow dark:shadow-gray-700 mt-6">
                 <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md relative -mt-12">
-                    <img src="~/assets/images/company/spotify.png" class="h-8 w-8" alt="">
+                    <img src="~/data/company/@company.CompanyLogo" class="h-8 w-8" alt="error">
                 </div>
 
                 <div class="mt-4">
-                    <a href="#" class="text-lg hover:text-emerald-600 font-semibold">Spotify</a>
-                    <p class="text-slate-400 mt-2">Digital Marketing Solutions for Tomorrow</p>
+                    <a href="#" class="text-lg hover:text-emerald-600 font-semibold">@company.CompanyName</a>
+                    <p class="text-slate-400 mt-2">@company.Description</p>
                 </div>
 
                 <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between">
-                    <span class="text-slate-400"><i class="uil uil-map-marker"></i> Australia</span>
-                    <span class="block font-semibold text-emerald-600">6 Jobs</span>
+                    <span class="text-slate-400"><i class="uil uil-map-marker"></i> @company.Country.Name</span>
+                    <span class="block font-semibold text-emerald-600">@company.Vacancies.Count Jobs</span>
                 </div>
             </div><!--end content-->
+                
+            }
 
-            <div class="group relative p-6 rounded-md shadow dark:shadow-gray-700 mt-6">
+            @*<div class="group relative p-6 rounded-md shadow dark:shadow-gray-700 mt-6">
                 <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md relative -mt-12">
                     <img src="~/assets/images/company/facebook-logo.png" class="h-8 w-8" alt="">
                 </div>
@@ -592,7 +568,7 @@
                     <span class="text-slate-400"><i class="uil uil-map-marker"></i> Turkey</span>
                     <span class="block font-semibold text-emerald-600">6 Jobs</span>
                 </div>
-            </div><!--end content-->
+            </div><!--end content-->*@
         </div><!--end grid-->
 
         <div class="grid md:grid-cols-12 grid-cols-1 mt-6">

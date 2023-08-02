@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using JobStack.WebUI.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebUI.Models;
 
-public class CategoryVM
+public class CategoryVM : BaseAuditableEntityVM
 {
     public string CategoryName { get; set; } = null!;
     public string? Logo { get; set; }

@@ -30,12 +30,14 @@ public class UpdateCategoryCommand : IRequest<IDataResult<UpdateCategoryCommand>
             if (request.Photo != null)
             {
                 IFormFile file = request.Photo;
+                string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "category");
+
 
                 string newFileName = Guid.NewGuid().ToString();
                 newFileName += file.CutFileName(60);
-                if (System.IO.File.Exists(Path.Combine(_env.ContentRootPath, "wwwroot", "Category")))
+                if (System.IO.File.Exists(root))
                 {
-                    System.IO.File.Delete(Path.Combine(_env.ContentRootPath, "wwwroot", "Category"));
+                    System.IO.File.Delete(root);
                 }
                 file.UpdateSaveFile(Path.Combine(newFileName));
                 existCategory.Logo = newFileName;

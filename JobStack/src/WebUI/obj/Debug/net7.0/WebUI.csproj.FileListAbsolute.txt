@@ -29,3 +29,5 @@ D:\Project\JobStackProject\JobStack\src\WebUI\obj\Debug\net7.0\refint\WebUI.dll
 D:\Project\JobStackProject\JobStack\src\WebUI\obj\Debug\net7.0\WebUI.pdb
 D:\Project\JobStackProject\JobStack\src\WebUI\obj\Debug\net7.0\WebUI.genruntimeconfig.cache
 D:\Project\JobStackProject\JobStack\src\WebUI\obj\Debug\net7.0\ref\WebUI.dll
+D:\Project\JobStackProject\JobStack\src\WebUI\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Project\JobStackProject\JobStack\src\WebUI\obj\Debug\net7.0\WebUI.csproj.CopyComplete

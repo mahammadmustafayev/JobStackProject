@@ -33,6 +33,7 @@ public class UpdateCompanyCommand : IRequest<IDataResult<UpdateCompanyCommand>>
 
         public async Task<IDataResult<UpdateCompanyCommand>> Handle(UpdateCompanyCommand request, CancellationToken cancellationToken)
         {
+            string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "company");
             Company existcompany = await _context.Companies.FindAsync(request.CompanyId);
             if (existcompany is null)
             {
@@ -43,9 +44,9 @@ public class UpdateCompanyCommand : IRequest<IDataResult<UpdateCompanyCommand>>
                 IFormFile file = request.CompanyUrl;
                 string newFileName = Guid.NewGuid().ToString();
                 newFileName += file.CutFileName(60);
-                if (System.IO.File.Exists(Path.Combine(_env.ContentRootPath, "wwwroot", "Company")))
+                if (System.IO.File.Exists(root))
                 {
-                    System.IO.File.Delete(Path.Combine(_env.ContentRootPath, "wwwroot", "Company"));
+                    System.IO.File.Delete(root);
                 }
                 file.UpdateSaveFile(Path.Combine(newFileName));
                 existcompany.CompanyLogo = newFileName;

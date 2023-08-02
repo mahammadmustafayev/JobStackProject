@@ -1,6 +1,8 @@
-﻿namespace WebUI.Models;
+﻿using JobStack.WebUI.Models;
 
-public class ExperienceVM
+namespace WebUI.Models;
+
+public class ExperienceVM : BaseAuditableEntityVM
 {
     public string ExperienceName { get; set; } = null!;
     public string? ExperienceDescription { get; set; }

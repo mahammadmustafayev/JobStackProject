@@ -29,6 +29,8 @@ public record ManageCreateCompanyCommand
         public async Task<IDataResult<ManageCreateCompanyCommand>> Handle(ManageCreateCompanyCommand request, CancellationToken cancellationToken)
         {
             Company company = _mapper.Map<Company>(request);
+            string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "company");
+
             if (request != null)
             {
                 if (request.CompanyLogoUrl.CheckSize(200))
@@ -39,7 +41,7 @@ public record ManageCreateCompanyCommand
                 {
                     return new ErrorDataResult<ManageCreateCompanyCommand>(Messages.InvalidImagePhoto);
                 }
-                company.CompanyLogo = request.CompanyLogoUrl.SaveFile(Path.Combine(_env.ContentRootPath, "wwwroot", "Company"));
+                company.CompanyLogo = request.CompanyLogoUrl.SaveFile(root);
             }
             company.CompanyName = request.CompanyName;
             company.Description = request.Description;

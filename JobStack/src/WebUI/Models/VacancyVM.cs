@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using JobStack.WebUI.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebUI.Models;
 
-public class VacancyVM
+public class VacancyVM : BaseAuditableEntityVM
 {
     public string TitleName { get; set; } = null!;
     public string? Description { get; set; }
