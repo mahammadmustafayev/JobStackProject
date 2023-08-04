@@ -68,12 +68,12 @@
             <!-- End Mobile Toggle -->
             <!--Login button Start-->
             <ul class="buy-button list-none mb-0">
-                <li class="inline-block mb-0">
+                @*<li class="inline-block mb-0">
                     <div class="relative top-[3px]">
                         <i class="uil uil-search text-lg absolute top-[3px] end-3"></i>
                         <input type="text" class="form-input h-9 pe-10 rounded-3xl sm:w-44 w-36 border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900" name="s" id="searchItem" placeholder="Search...">
                     </div>
-                </li>
+                </li>*@
                 <li class="inline-block ps-1 mb-0">
                     <a href="#" class="btn btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><img src="~/assets/images/team/05.jpg" class="rounded-full" alt=""></a>
                 </li>
@@ -83,23 +83,20 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu justify-end">
-                    <li class="has-submenu parent-menu-item">
-                        <a href="javascript:void(0)">Home</a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li><a href="index.html" class="sub-menu-item">Hero One</a></li>
-                            <li><a href="index-two.html" class="sub-menu-item">Hero Two</a></li>
-                            <li><a href="index-three.html" class="sub-menu-item">Hero Three</a></li>
-                            <li><a href="index-four.html" class="sub-menu-item">Hero Four</a></li>
-                            <li><a href="index-five.html" class="sub-menu-item">Hero Five</a></li>
-                            <li><a href="index-six.html" class="sub-menu-item">Hero Six </a></li>
-                            <li><a href="index-seven.html" class="sub-menu-item">Hero Seven </a></li>
-                        </ul>
-                    </li>
+                    
 
                     <li class="has-submenu parent-parent-menu-item">
-                        <a href="javascript:void(0)"> Jobs </a><span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li><a href="job-categories.html" class="sub-menu-item">Job Categories</a></li>
+                        <a asp-controller="Vacancies" asp-action="Index"> Jobs </a>
+
+
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a asp-controller="Companies" asp-action="Index"> Companies </a>
+                    </li> 
+                    <li class="has-submenu parent-parent-menu-item">
+                        <a asp-controller="Candidates" asp-action="Index"> Candidates </a>
+                    </li>
+                        @*<ul class="submenu">
+                            <li><a asp-controller="Categories" asp-action="Index" class="sub-menu-item">Job Categories</a></li>
 
                             <li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Job Grids </a><span class="submenu-arrow"></span>
@@ -137,31 +134,32 @@
                             <li><a href="job-post.html" class="sub-menu-item">Job Post </a></li>
 
                             <li><a href="career.html" class="sub-menu-item">Career </a></li>
-                        </ul>
+                        </ul>*@
                     </li>
 
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
                         <ul class="submenu">
+                            <li><a asp-controller="Categories" asp-action="Index" class="sub-menu-item">Job Categories</a></li>
                             <li><a href="aboutus.html" class="sub-menu-item">About Us</a></li>
                             <li><a href="services.html" class="sub-menu-item">Services</a></li>
-                            <li><a href="pricing.html" class="sub-menu-item">Pricing </a></li>
+                            
 
-                            <li class="has-submenu parent-menu-item">
+                           @* <li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)">Employers</a><span class="submenu-arrow"></span>
                                 <ul class="submenu">
                                     <li><a href="employer-list.html" class="sub-menu-item">Employers</a></li>
                                     <li><a href="employer-detail.html" class="sub-menu-item">Employer Detail</a></li>
                                 </ul>
-                            </li>
+                            </li>*@
 
-                            <li class="has-submenu parent-menu-item">
+                            @*<li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)">Candidates</a><span class="submenu-arrow"></span>
                                 <ul class="submenu">
                                     <li><a href="candidate-list.html" class="sub-menu-item">Candidates</a></li>
                                     <li><a href="candidate-detail.html" class="sub-menu-item">Candidate Detail</a></li>
                                 </ul>
-                            </li>
+                            </li>*@
 
                             <li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Helpcenter </a><span class="submenu-arrow"></span>
@@ -173,15 +171,9 @@
                                 </ul>
                             </li>
 
-                            <li class="has-submenu parent-menu-item">
-                                <a href="javascript:void(0)"> Blog </a><span class="submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="blogs.html" class="sub-menu-item"> Blogs</a></li>
-                                    <li><a href="blog-detail.html" class="sub-menu-item"> Blog Detail</a></li>
-                                </ul>
-                            </li>
+                            
 
-                            <li class="has-submenu parent-menu-item">
+                            @*<li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Auth Pages </a><span class="submenu-arrow"></span>
                                 <ul class="submenu">
                                     <li><a href="login.html" class="sub-menu-item"> Login</a></li>
@@ -189,7 +181,7 @@
                                     <li><a href="reset-password.html" class="sub-menu-item"> Forgot Password</a></li>
                                     <li><a href="lock-screen.html" class="sub-menu-item"> Lock Screen</a></li>
                                 </ul>
-                            </li>
+                            </li>*@
 
                             <li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Utility </a><span class="submenu-arrow"></span>
@@ -199,7 +191,7 @@
                                 </ul>
                             </li>
 
-                            <li class="has-submenu parent-menu-item">
+                            @*<li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Special </a><span class="submenu-arrow"></span>
                                 <ul class="submenu">
                                     <li><a href="comingsoon.html" class="sub-menu-item"> Coming Soon</a></li>
@@ -207,7 +199,7 @@
                                     <li><a href="error.html" class="sub-menu-item"> 404!</a></li>
                                     <li><a href="thankyou.html" class="sub-menu-item"> Thank you</a></li>
                                 </ul>
-                            </li>
+                            </li>*@
                         </ul>
                     </li>
 

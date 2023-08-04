@@ -749,6 +749,46 @@
       "PackagePath": "staticwebassets\\assets\\libs\\tobii\\js\\tobii.min.js"
     },
     {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\2b10faa8-b0de-4769-8c30-d59aaaf6a92402.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\2b10faa8-b0de-4769-8c30-d59aaaf6a92402.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\2f6caf7b-fddb-48a6-b960-eeebbd8998aa01.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\2f6caf7b-fddb-48a6-b960-eeebbd8998aa01.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\6f46dce5-3809-415b-98a1-42e616293e0804.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\6f46dce5-3809-415b-98a1-42e616293e0804.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\70aa628c-5c40-4f8e-96eb-4a59b6a6528202.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\70aa628c-5c40-4f8e-96eb-4a59b6a6528202.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\b43045dc-cc2d-4eb7-bddc-95f83775531e04.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\b43045dc-cc2d-4eb7-bddc-95f83775531e04.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\049cb7aa-fdb6-4b9e-8d73-d2fe0195c106testcv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\049cb7aa-fdb6-4b9e-8d73-d2fe0195c106testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\a8593b1f-95b4-43fb-aa51-57aebae45310testcv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\a8593b1f-95b4-43fb-aa51-57aebae45310testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\a935366c-2ac1-4b88-9bc7-7a2d10f6f2f1testcv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\a935366c-2ac1-4b88-9bc7-7a2d10f6f2f1testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\c185b40e-94fb-4ae3-9138-2c1124080872testcv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\c185b40e-94fb-4ae3-9138-2c1124080872testcv.pdf"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\c55d717f-a6d9-4e02-af38-e373499e4cf4testcv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\c55d717f-a6d9-4e02-af38-e373499e4cf4testcv.pdf"
+    },
+    {
       "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\047d8514-7ba8-4b70-ab78-b33262133765health-svgrepo-com.svg",
       "PackagePath": "staticwebassets\\data\\category\\047d8514-7ba8-4b70-ab78-b33262133765health-svgrepo-com.svg"
     },
@@ -779,6 +819,46 @@
     {
       "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\b492482e-31ef-4594-9eea-f98a237abcdbreshot-icon-web-design-UXATJ5GQF7.svg",
       "PackagePath": "staticwebassets\\data\\category\\b492482e-31ef-4594-9eea-f98a237abcdbreshot-icon-web-design-UXATJ5GQF7.svg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\0d50689b-49e7-49fe-a723-659e429de495googlelogo.png",
+      "PackagePath": "staticwebassets\\data\\company\\0d50689b-49e7-49fe-a723-659e429de495googlelogo.png"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\1ade46bc-1f44-4d17-9eb1-57b59705bd66circle-logo.png",
+      "PackagePath": "staticwebassets\\data\\company\\1ade46bc-1f44-4d17-9eb1-57b59705bd66circle-logo.png"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\4ecc0e52-02a0-4bea-adda-66b68d40749fkapital.jpg",
+      "PackagePath": "staticwebassets\\data\\company\\4ecc0e52-02a0-4bea-adda-66b68d40749fkapital.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\8ded5478-682f-4216-b080-82dc0b36b6aafacebook-logo.png",
+      "PackagePath": "staticwebassets\\data\\company\\8ded5478-682f-4216-b080-82dc0b36b6aafacebook-logo.png"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\a6891e81-8501-4a67-83ef-86d8417be650Code-Academy.jpg",
+      "PackagePath": "staticwebassets\\data\\company\\a6891e81-8501-4a67-83ef-86d8417be650Code-Academy.jpg"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\a7e8b6a4-68ef-4ead-b40a-650b1c72e240pasha.png",
+      "PackagePath": "staticwebassets\\data\\company\\a7e8b6a4-68ef-4ead-b40a-650b1c72e240pasha.png"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\ab5604ff-9ee1-4196-9d6f-8b750afc67e0spotify.png",
+      "PackagePath": "staticwebassets\\data\\company\\ab5604ff-9ee1-4196-9d6f-8b750afc67e0spotify.png"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\b5515fe4-fb12-48ed-822b-0f636494b3datelegram.png",
+      "PackagePath": "staticwebassets\\data\\company\\b5515fe4-fb12-48ed-822b-0f636494b3datelegram.png"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\be2de941-15fa-4bc9-ba97-d44d793eced1companylogo.png",
+      "PackagePath": "staticwebassets\\data\\company\\be2de941-15fa-4bc9-ba97-d44d793eced1companylogo.png"
+    },
+    {
+      "Id": "D:\\Project\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\d08fb15c-2067-440d-9449-e9f49b8ace72skype.png",
+      "PackagePath": "staticwebassets\\data\\company\\d08fb15c-2067-440d-9449-e9f49b8ace72skype.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",

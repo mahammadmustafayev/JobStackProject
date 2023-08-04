@@ -1,6 +1,6 @@
 ﻿namespace JobStack.WebUI.Models;
 
-public class BaseAuditableEntityVM
+public class BaseAuditableEntityVM : BaseEntityVM
 {
     public DateTime Created { get; set; }
     public string? CreatedBy { get; set; }

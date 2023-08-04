@@ -1,4 +1,5 @@
 ﻿using JobStack.WebUI.Models;
+using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebUI.Models;
@@ -21,14 +22,19 @@ public class VacancyVM : BaseAuditableEntityVM
     public string[]? SkillsArray { get; set; }
 
     public int? CountryId { get; set; }
+
     public CountryVM? Country { get; set; }
 
     public int? CityId { get; set; }
     public CityVM? City { get; set; }
 
     public int CategoryId { get; set; }
+
     public int JobTypeId { get; set; }
+
     public JobTypeVM JobType { get; set; }
+    [JsonProperty]
+
     public CategoryVM Category { get; set; } = null!;
 
     public int CompanyId { get; set; }

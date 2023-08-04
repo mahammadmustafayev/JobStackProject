@@ -20,6 +20,8 @@ public record GetCountVacanciesQuery(int count) : IRequest<IDataResult<IEnumerab
                      await _context.Vacancies
                     .Include(p => p.JobType)
                     .AsNoTracking()
+                    .Include(p => p.Company)
+                    .AsNoTracking()
                     .Include(p => p.Category)
                     .AsNoTracking()
                     .Include(p => p.City)

@@ -18,13 +18,13 @@ public record GetVacancyQuery(int id) : IRequest<IDataResult<IEnumerable<Vacancy
             return new SuccessDataResult<IEnumerable<VacancyDto>>(
                   _mapper.Map<IEnumerable<VacancyDto>>(
                      await _context.Vacancies
+                     .Include(p => p.Company)
+                     .AsNoTracking()
                      .Include(v => v.Category)
                      .AsNoTracking()
                      .Include(v => v.City)
                      .AsNoTracking()
                      .Include(v => v.Country)
-                     .AsNoTracking()
-                     .Include(v => v.Category)
                      .AsNoTracking()
                      .Include(v => v.JobType)
                      .AsNoTracking()

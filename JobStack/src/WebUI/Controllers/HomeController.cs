@@ -22,7 +22,6 @@ public class HomeController : Controller
     {
         HomeViewModel homeVM = new();
 
-        //  D:\Project\JobStackProject\JobStack\src\ApiUI\wwwroot\Category\
         HttpResponseMessage responseCategory = _client.GetAsync(_client.BaseAddress + "/Categories/GetCountCategories/5").Result;
         HttpResponseMessage responseVacancy = _client.GetAsync(_client.BaseAddress + "/Vacancies/GetCountVacancies/6").Result;
         HttpResponseMessage responseCompany = _client.GetAsync(_client.BaseAddress + "/Companies/GetCountCompanies/8").Result;

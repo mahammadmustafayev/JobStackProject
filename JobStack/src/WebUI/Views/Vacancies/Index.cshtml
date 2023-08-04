@@ -1,0 +1,627 @@
+﻿@model List<VacancyVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Start Hero -->
+        <section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+            <div class="absolute inset-0 bg-emerald-900/90"></div>
+            <div class="container">
+                <div class="grid grid-cols-1 text-center mt-10">
+                    <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Job Vacancies</h3>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <div class="relative">
+            <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-white dark:text-slate-900">
+                <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- End Hero -->
+
+        <!-- Start -->
+        <section class="relative -mt-[42px] md:pb-24 pb-16">
+            <div class="container z-1">
+                <div class="d-flex" id="reserve-form">
+                    <div class="md:w-5/6 mx-auto">
+                        <div class="lg:col-span-10">
+                            @*<div class="bg-white dark:bg-slate-900 border-0 shadow rounded-md p-3">*@
+                                @*<form action="#">
+                                    <div class="registration-form text-dark text-start">
+                                        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-0 gap-6">
+                                            <div class="filter-search-form relative filter-border">
+                                                <i class="uil uil-briefcase-alt icons"></i>
+                                                <input name="name" type="text" id="job-keyword" class="form-input filter-input-box bg-gray-50 dark:bg-slate-800 border-0" placeholder="Search your Keywords">
+                                            </div>
+
+                                            <div class="filter-search-form relative filter-border">
+                                                <i class="uil uil-map-marker icons"></i>
+                                                <select class="form-select" data-trigger name="choices-location" id="choices-location" aria-label="Default select example">
+                                                    <option value="AF">Afghanistan</option>
+                                                    <option value="AZ">Azerbaijan</option>
+                                                    <option value="BS">Bahamas</option>
+                                                    <option value="BH">Bahrain</option>
+                                                    <option value="CA">Canada</option>
+                                                    <option value="CV">Cape Verde</option>
+                                                    <option value="DK">Denmark</option>
+                                                    <option value="DJ">Djibouti</option>
+                                                    <option value="ER">Eritrea</option>
+                                                    <option value="EE">Estonia</option>
+                                                    <option value="GM">Gambia</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="filter-search-form relative filter-border">
+                                                <i class="uil uil-briefcase-alt icons"></i>
+                                                <select class="form-select" data-trigger name="choices-type" id="choices-type" aria-label="Default select example">
+                                                    <option selected="" value="1">Full Time</option>
+                                                    <option value="2">Part Time</option>
+                                                    <option value="3">Freelancer</option>
+                                                    <option value="4">Remote Work</option>
+                                                    <option value="5">Office Work</option>
+                                                </select>
+                                            </div>
+
+                                            <input type="submit" id="search" name="search" style="height: 60px;" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white searchbtn submit-btn w-100" value="Search">
+                                        </div><!--end grid-->
+                                    </div><!--end container-->
+                                </form>*@
+                            @*</div>*@
+                        </div><!--ed col-->
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container mt-10">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
+                    
+                    @foreach (var vacancy in Model)
+                    {
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                <img src="~/data/company/@vacancy.Company.CompanyLogo" class="h-8 w-8" alt="">
+                                </div>
+                            <a asp-controller="Vacancies" asp-action="Details" asp-route-id="@vacancy.Id" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">@vacancy.Company.CompanyName</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                @*<a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>*@
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                        <a asp-controller="Vacancies" asp-action="Details" asp-route-id="@vacancy.Id" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">@vacancy.TitleName</a>
+                            <p class="text-slate-400 mt-2">@vacancy.Description</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">@vacancy.JobType.TypeName</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">@vacancy.Salary</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> @vacancy.Country.Name</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+                
+                    }
+
+                   @* <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/google-logo.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Google</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Marketing Director</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/android.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Android</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Application Developer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/lenovo-logo.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Lenovo</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Senior Product Designer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/spotify.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Spotify</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">C++ Developer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/linkedin.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Linkedin</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Php Developer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/circle-logo.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Circle CI</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Web Designer / Developer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/skype.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Skype</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Marketing Director</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/snapchat.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Snapchat</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Application Developer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/shree-logo.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Shreethemes</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Senior Product Designer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/telegram.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Telegram</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">C++ Developer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 rounded-lg border border-emerald-600/20 dark:border-emerald-600/40 bg-white dark:bg-slate-900 hover:bg-emerald-600/[0.02] hover:dark:bg-emerald-600/5 hover:shadow-md hover:shadow-emerald-600/5 transition-all duration-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
+                                    <img src="assets/images/company/whatsapp.png" class="h-8 w-8"  alt="">
+                                </div>
+                                <a href="employer-detail.html" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Whatsapp</a>
+                            </div>
+
+                            <div class="flex items-center">
+                                <a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
+                                <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>
+                                <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="job-detail-one.html" class="text-xl hover:text-emerald-600 font-semibold transition-all duration-500">Php Developer</a>
+                            <p class="text-slate-400 mt-2">Looking for an experienced Web Designer for an our company.</p>
+
+                            <div class="mt-3">
+                                <a href="#">
+                                    <span class="bg-orange-500/5 hover:bg-orange-500/20 dark:bg-orange-500/10 hover:dark:bg-orange-500/30 inline-block text-orange-500 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">Full Time</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-purple-600/5 hover:bg-purple-600/20 dark:bg-purple-600/10 hover:dark:bg-purple-600/30 inline-block text-purple-600 px-4 text-[14px] font-medium rounded-full mt-2 me-1 transition-all duration-500">$4,000 - $4,500</span>
+                                </a>
+                                <a href="#">
+                                    <span class="bg-emerald-600/5 hover:bg-emerald-600/20 dark:bg-emerald-600/10 hover:dark:bg-emerald-600/30 inline-block text-emerald-600 px-4 text-[14px] font-medium rounded-full mt-2 transition-all duration-500"><i class="uil uil-map-marker"></i> Australia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end content-->*@
+                </div><!--end grid-->
+
+                <div class="grid md:grid-cols-12 grid-cols-1 mt-8">
+                    <div class="md:col-span-12 text-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="inline-flex items-center -space-x-px">
+                                <li>
+                                    <a href="#" class="w-[40px] h-[40px] inline-flex justify-center items-center text-slate-400 bg-white dark:bg-slate-900 rounded-s-3xl hover:text-white border border-gray-100 dark:border-gray-800 hover:border-emerald-600 dark:hover:border-emerald-600 hover:bg-emerald-600 dark:hover:bg-emerald-600">
+                                        <i class="uil uil-angle-left text-[20px] rtl:rotate-180 rtl:-mt-1"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="w-[40px] h-[40px] inline-flex justify-center items-center text-slate-400 hover:text-white bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 hover:border-emerald-600 dark:hover:border-emerald-600 hover:bg-emerald-600 dark:hover:bg-emerald-600">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="w-[40px] h-[40px] inline-flex justify-center items-center text-slate-400 hover:text-white bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 hover:border-emerald-600 dark:hover:border-emerald-600 hover:bg-emerald-600 dark:hover:bg-emerald-600">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page" class="z-10 w-[40px] h-[40px] inline-flex justify-center items-center text-white bg-emerald-600 border border-emerald-600">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="w-[40px] h-[40px] inline-flex justify-center items-center text-slate-400 hover:text-white bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 hover:border-emerald-600 dark:hover:border-emerald-600 hover:bg-emerald-600 dark:hover:bg-emerald-600">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="w-[40px] h-[40px] inline-flex justify-center items-center text-slate-400 hover:text-white bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 hover:border-emerald-600 dark:hover:border-emerald-600 hover:bg-emerald-600 dark:hover:bg-emerald-600">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="w-[40px] h-[40px] inline-flex justify-center items-center text-slate-400 bg-white dark:bg-slate-900 rounded-e-3xl hover:text-white border border-gray-100 dark:border-gray-800 hover:border-emerald-600 dark:hover:border-emerald-600 hover:bg-emerald-600 dark:hover:bg-emerald-600">
+                                        <i class="uil uil-angle-right text-[20px] rtl:rotate-180 rtl:-mt-1"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div><!--end col-->
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container md:mt-24 mt-16">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold">Here's why you'll love it Jobstack</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
+                </div><!--end grid-->
+
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">                    
+                    <div class="group p-6 shadow dark:shadow-gray-700 rounded-md bg-white hover:bg-emerald-600/5 dark:bg-slate-900 dark:hover:bg-emerald-600/10 text-center transition-all duration-500">
+                        <div class="w-16 h-16 flex items-center justify-center mx-auto bg-emerald-600/5 group-hover:bg-emerald-600 dark:bg-emerald-600/10 dark:group-hover:bg-emerald-600 shadow dark:shadow-gray-700 rounded-lg transition-all duration-500">
+                            <i class="uil uil-phone text-[30px] text-emerald-600 group-hover:text-white"></i>
+                        </div>
+
+                        <div class="mt-4">
+                            <a href="#" class="text-lg font-semibold hover:text-emerald-600 transition-all duration-500">24/7 Support</a>
+
+                            <p class="text-slate-400 mt-3 mb-2">Many desktop publishing now use and a search for job.</p>
+
+                            <a href="#" class="hover:text-emerald-600 font-medium transition-all duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 shadow dark:shadow-gray-700 rounded-md bg-white hover:bg-emerald-600/5 dark:bg-slate-900 dark:hover:bg-emerald-600/10 text-center transition-all duration-500">
+                        <div class="w-16 h-16 flex items-center justify-center mx-auto bg-emerald-600/5 group-hover:bg-emerald-600 dark:bg-emerald-600/10 dark:group-hover:bg-emerald-600 shadow dark:shadow-gray-700 rounded-lg transition-all duration-500">
+                            <i class="uil uil-atom text-[30px] text-emerald-600 group-hover:text-white"></i>
+                        </div>
+
+                        <div class="mt-4">
+                            <a href="#" class="text-lg font-semibold hover:text-emerald-600 transition-all duration-500">Tech & Startup Jobs</a>
+
+                            <p class="text-slate-400 mt-3 mb-2">Many desktop publishing now use and a search for job.</p>
+
+                            <a href="#" class="hover:text-emerald-600 font-medium transition-all duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 shadow dark:shadow-gray-700 rounded-md bg-white hover:bg-emerald-600/5 dark:bg-slate-900 dark:hover:bg-emerald-600/10 text-center transition-all duration-500">
+                        <div class="w-16 h-16 flex items-center justify-center mx-auto bg-emerald-600/5 group-hover:bg-emerald-600 dark:bg-emerald-600/10 dark:group-hover:bg-emerald-600 shadow dark:shadow-gray-700 rounded-lg transition-all duration-500">
+                            <i class="uil uil-user-arrows text-[30px] text-emerald-600 group-hover:text-white"></i>
+                        </div>
+
+                        <div class="mt-4">
+                            <a href="#" class="text-lg font-semibold hover:text-emerald-600 transition-all duration-500">Quick & Easy</a>
+
+                            <p class="text-slate-400 mt-3 mb-2">Many desktop publishing now use and a search for job.</p>
+
+                            <a href="#" class="hover:text-emerald-600 font-medium transition-all duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div><!--end content-->
+
+                    <div class="group p-6 shadow dark:shadow-gray-700 rounded-md bg-white hover:bg-emerald-600/5 dark:bg-slate-900 dark:hover:bg-emerald-600/10 text-center transition-all duration-500">
+                        <div class="w-16 h-16 flex items-center justify-center mx-auto bg-emerald-600/5 group-hover:bg-emerald-600 dark:bg-emerald-600/10 dark:group-hover:bg-emerald-600 shadow dark:shadow-gray-700 rounded-lg transition-all duration-500">
+                            <i class="uil uil-hourglass text-[30px] text-emerald-600 group-hover:text-white"></i>
+                        </div>
+
+                        <div class="mt-4">
+                            <a href="#" class="text-lg font-semibold hover:text-emerald-600 transition-all duration-500">Save Time</a>
+
+                            <p class="text-slate-400 mt-3 mb-2">Many desktop publishing now use and a search for job.</p>
+
+                            <a href="#" class="hover:text-emerald-600 font-medium transition-all duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                        </div>
+                    </div><!--end content-->
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container-fluid md:mt-24 mt-16">
+                <div class="container">
+                    <div class="grid grid-cols-1">
+                        <div class="relative overflow-hidden lg:px-8 px-6 py-10 rounded-xl shadow-lg dark:shadow-gray-700">
+                            <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                                <div class="lg:col-span-8 md:col-span-7">
+                                    <div class="ltr:md:text-left rtl:md:text-right text-center relative z-1">
+                                        <h3 class="text-2xl font-semibold text-black dark:text-white mb-4">Explore a job now!</h3>
+                                        <p class="text-slate-400 max-w-xl">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="lg:col-span-4 md:col-span-5">
+                                    <div class="ltr:text-right rtl:text-left relative z-1">
+                                        <a href="employer-detail.html" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Apply Now</a>
+                                        <a href="aboutus.html" class="btn bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-md ms-2">Learn More</a>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end grid-->
+
+                            <div class="absolute -top-5 -start-5">
+                                <div class="uil uil-envelope lg:text-[150px] text-7xl text-black/5 dark:text-white/5 ltr:-rotate-45 rtl:rotate-45"></div>
+                            </div>
+
+                            <div class="absolute -bottom-5 -end-5">
+                                <div class="uil uil-pen lg:text-[150px] text-7xl text-black/5 dark:text-white/5 rtl:-rotate-90"></div>
+                            </div>
+                        </div>
+                    </div><!--end grid-->
+                </div><!--end container-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+

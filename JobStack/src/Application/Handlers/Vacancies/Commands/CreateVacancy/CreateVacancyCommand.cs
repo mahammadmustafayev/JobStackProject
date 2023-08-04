@@ -11,8 +11,10 @@ public class CreateVacancyCommand : IRequest<IDataResult<CreateVacancyCommand>>
     public string? Address { get; set; }
 
     public string? Experience { get; set; }
-    public string? ResponsibilityName { get; set; }
-    public string? SkillName { get; set; }
+    //public string? ResponsibilityName { get; set; }
+    public string[]? ResponsibilitiesArray { get; set; }
+    // public string? SkillName { get; set; }
+    public string[]? SkillsArray { get; set; }
 
     public int CountryId { get; set; }
 
@@ -38,9 +40,9 @@ public class CreateVacancyCommand : IRequest<IDataResult<CreateVacancyCommand>>
             Vacancy vacancy = _mapper.Map<Vacancy>(request);
 
             vacancy.Salary = request.Salary;
-            vacancy.SkillName = request.SkillName;
+            vacancy.SkillName = System.Text.Json.JsonSerializer.Serialize<string[]>(request.SkillsArray);
             vacancy.TitleName = request.TitleName;
-            vacancy.ResponsibilityName = request.ResponsibilityName;
+            vacancy.ResponsibilityName = System.Text.Json.JsonSerializer.Serialize<string[]>(request.ResponsibilitiesArray);
             vacancy.Address = request.Address;
             vacancy.CategoryId = request.CategoryId;
             vacancy.CityId = request.CityId;

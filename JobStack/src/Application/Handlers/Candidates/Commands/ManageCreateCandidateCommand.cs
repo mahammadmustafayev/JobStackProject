@@ -11,7 +11,8 @@ public record ManageCreateCandidateCommand
         string CandidateEmail,
         string CandidateProfession,
         string Description,
-        string CandidateSkillName,
+         string[] CandidateSkillsArray,
+        //string CandidateSkillName,
         IFormFile CandidateCVUrl,
         IFormFile CandidateProfileUrl,
         int CountryId,
@@ -55,7 +56,7 @@ public record ManageCreateCandidateCommand
             candidate.CandidateEmail = request.CandidateEmail;
             candidate.CandidateProfession = request.CandidateProfession;
             candidate.Description = request.Description;
-            candidate.CandidateSkillName = request.CandidateSkillName;
+            candidate.CandidateSkillName = System.Text.Json.JsonSerializer.Serialize<string[]>(request.CandidateSkillsArray);
             candidate.CityId = request.CityId;
             candidate.CountryId = request.CountryId;
 
