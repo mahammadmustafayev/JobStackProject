@@ -37,4 +37,16 @@ public class CompaniesController : Controller
         }
         return View(company[0]);
     }
+    public IActionResult SeeJob(int id)
+    {
+        List<CompanyVM> company = new();
+        HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + $"/Companies/Details/{id}").Result;
+        if (response.IsSuccessStatusCode)
+        {
+            string data = response.Content.ReadAsStringAsync().Result;
+            company = JsonConvert.DeserializeObject<List<CompanyVM>>(data);
+        }
+        return View(company[0]);
+    }
+
 }

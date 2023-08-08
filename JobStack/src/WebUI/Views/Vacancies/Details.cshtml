@@ -16,6 +16,8 @@
                         <div class="mt-2">
                             <span class="text-slate-400 font-medium me-2 inline-block"><i class="uil uil-building text-[18px] text-emerald-600 me-1"></i> @Model.Company.CompanyName</span>
                             <span class="text-slate-400 font-medium me-2 inline-block"><i class="uil uil-map-marker text-[18px] text-emerald-600 me-1"></i> @Model.City.CityName, @Model.Country.Name</span>
+
+                            <span class="text-slate-400 font-medium me-2 inline-block"><a asp-controller="JobApplies" asp-action="Index" asp-route-id="@Model.Id" class="btn btn-sm bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">See Apply</a></span>
                         </div>
                     </div>
                 </div>

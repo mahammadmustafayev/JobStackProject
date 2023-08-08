@@ -1,0 +1,56 @@
+﻿@model List<JobTypeVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+    int order = 0;
+}
+
+<div class="container-fluid">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <h1>Job Types:</h1>
+        <a asp-action="Create" asp-controller="JobType" class="btn btn-primary">Create</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Id</th>
+                <th scope="col">Type Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                order++;
+                <tr>
+                    <th scope="row">@order</th>
+                    <td>@item.Id</td>
+                    <td>@item.TypeName</td>
+
+                    <td>
+                        @if (item.IsDeleted)
+                        {
+                            <span class="text-danger">Hidden</span>
+                        }
+                        else
+                        {
+                            <span class="text-success">Active</span>
+                        }
+                    </td>
+
+
+                    <td>
+                        <a asp-action="Edit" asp-controller="JobType" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-controller="JobType" asp-route-id="@item.Id" class="btn btn-danger btn-sweet-delete">Delete</a>
+                        <a asp-action="PermaDelete" asp-controller="JobType" asp-route-id="@item.Id" class="btn btn-danger btn-sweet-delete">Perma-Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+

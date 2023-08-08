@@ -1,0 +1,85 @@
+﻿@model JobApplyPostDto
+@{
+    ViewData["Title"] = "SendApply";
+}
+
+<!-- Start Hero -->
+<section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+    <div class="absolute inset-0 bg-emerald-900/90"></div>
+    <div class="container">
+        <div class="grid grid-cols-1 text-center mt-10">
+            @*<h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">@Model.Vacancy.TitleName</h3>*@
+
+        </div><!--end grid-->
+    </div><!--end container-->
+
+    <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+        <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a href="index.html">Jobstack</a></li>
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white" aria-current="page">Job apply form</li>
+        </ul>
+    </div>
+</section><!--end section-->
+<div class="relative">
+    <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-slate-50 dark:text-slate-800">
+        <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!-- End Hero -->
+<!-- Start -->
+<section class="relative bg-slate-50 dark:bg-slate-800 lg:py-24 py-16">
+    <div class="container">
+        <div class="md:flex justify-center">
+            <div class="lg:w-2/4 md:w-2/3">
+                <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
+                    <form asp-action="SendApply"  enctype="multipart/form-data" class="text-left">
+                        <div class="grid grid-cols-1">
+                            <div asp-validation-summary="ModelOnly" class="text-red-800"></div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="FirstName">Your FirstName:</label>
+                                <input asp-for="FirstName" autocomplete="off" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Harry">
+                                <span asp-validation-for="FirstName" class="text-red-800"></span>
+                            </div> 
+                            
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="LastName">Your LastName:</label>
+                                <input asp-for="LastName" autocomplete="off" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Harry">
+                                <span asp-validation-for="LastName" class="text-red-800"></span>
+                            </div>
+
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="EmailAddress">Email Address:</label>
+                                <input asp-for="EmailAddress" autocomplete="off" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="name@example.com">
+                                <span asp-validation-for="EmailAddress" class="text-red-800"></span>
+
+                            </div>
+
+                            
+
+                            <div class="mb-2 ltr:text-left rtl:text-right">
+                                <label asp-for="Description" class="font-semibold">Coverting Letter:</label>
+                                <textarea asp-for="Description" autocomplete="off" class="form-input border border-slate-100 dark:border-slate-800 mt-1 textarea" placeholder="Message :"></textarea>
+                                <span asp-validation-for="Description" class="text-red-800"></span>
+
+                            </div>
+
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CvFileUrl">Upload Resume:</label>
+                                <input asp-for="CvFileUrl"  class="relative form-input border border-slate-100 dark:border-slate-800 file:h-10 file:-mx-3 file:-my-2 file:cursor-pointer file:rounded-none file:border-0 file:px-3 file:text-neutral-700 bg-clip-padding px-3 py-1.5 file:me-3 mt-1">
+                                <span asp-validation-for="CvFileUrl" class="text-red-800"></span>
+
+                            </div>
+
+                            <div>
+                                <button   class="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Send</button>
+                            </div>
+                        </div>
+                    </form><!--end form-->
+                </div>
+            </div>
+        </div><!--end flex-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->

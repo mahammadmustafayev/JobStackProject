@@ -8,6 +8,6 @@ public class SendJobApplytoCompanyValidator : AbstractValidator<SendJobApplytoCo
         RuleFor(j => j.FirstName).NotEmpty();
         RuleFor(j => j.LastName).NotEmpty();
         RuleFor(j => j.Description);
-        RuleFor(j => j.CvFileUrl).NotEmpty();
+        RuleFor(j => j.CvFileUrl);
     }
 }

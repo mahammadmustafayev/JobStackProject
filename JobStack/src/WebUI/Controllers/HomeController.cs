@@ -22,9 +22,9 @@ public class HomeController : Controller
     {
         HomeViewModel homeVM = new();
 
-        HttpResponseMessage responseCategory = _client.GetAsync(_client.BaseAddress + "/Categories/GetCountCategories/5").Result;
-        HttpResponseMessage responseVacancy = _client.GetAsync(_client.BaseAddress + "/Vacancies/GetCountVacancies/6").Result;
-        HttpResponseMessage responseCompany = _client.GetAsync(_client.BaseAddress + "/Companies/GetCountCompanies/8").Result;
+        HttpResponseMessage responseCategory = _client.GetAsync(_client.BaseAddress + "/Categories/GetAllCategories").Result;
+        HttpResponseMessage responseVacancy = _client.GetAsync(_client.BaseAddress + "/Vacancies/GetAllVacancies").Result;
+        HttpResponseMessage responseCompany = _client.GetAsync(_client.BaseAddress + "/Companies/GetAllCompanies").Result;
         if (responseCategory.IsSuccessStatusCode && responseCompany.IsSuccessStatusCode && responseVacancy.IsSuccessStatusCode)
         {
             string dataCategory = responseCategory.Content.ReadAsStringAsync().Result;

@@ -7,7 +7,7 @@ public record SendJobApplytoCompany
       string LastName,
       string EmailAddress,
       string? Description,
-      IFormFile CvFileUrl
+      IFormFile? CvFileUrl
     ) : IRequest<IDataResult<SendJobApplytoCompany>>
 {
     public class SendJobApplytoCompanyHandler : IRequestHandler<SendJobApplytoCompany, IDataResult<SendJobApplytoCompany>>
@@ -56,7 +56,7 @@ public record SendJobApplytoCompany
                 <p>JobStack Managment</p>
                 <img  src="https://shreethemes.in/jobstack/layouts/assets/images/logo-dark.png" style="width: 200px;height: 45px; ">
                 """);
-
+            //await _context.JobApplies.Where(j => j.Id == request.VacancyId);
             await _context.JobApplies.AddAsync(jobApply);
 
             await _context.SaveChangesAsync(cancellationToken);

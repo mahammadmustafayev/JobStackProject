@@ -67,7 +67,7 @@
 
         <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
 
-            @foreach (var category in Model.Categories)
+            @foreach (var category in Model.Categories.Take(5))
             {
             <div class="group px-3 py-10 rounded-full shadow dark:shadow-gray-700 hover:shadow-emerald-600/10 dark:hover:shadow-emerald-600/10 text-center bg-white dark:bg-slate-900 hover:bg-emerald-600/5 dark:hover:bg-emerald-600/5 transition duration-500">
                 <div class="w-16 h-16 bg-emerald-600/5 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-full text-2xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-700 transition duration-500 mx-auto">
@@ -133,7 +133,7 @@
         </div><!--end grid-->
 
         <div class="grid md:grid-cols-2 mt-8 gap-[30px]">
-            @foreach (var vacancy in Model.Vacancies)
+            @foreach (var vacancy in Model.Vacancies.Take(6))
             {
             <div class="group rounded-lg shadow hover:shadow-lg dark:shadow-gray-700 transition-all duration-500">
                 <div class="flex items-center justify-between p-6">
@@ -147,8 +147,7 @@
                             <span class="block text-sm text-slate-400">@vacancy.Created.Day days ago</span>
                         </div>
                     </div>
-
-                    <a href="job-apply.html" class="btn btn-icon btn-lg rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border border-slate-100 dark:border-slate-800 text-emerald-600 group-hover:text-white"><i class="uil uil-arrow-up-right"></i></a>
+                        <a asp-controller="JobApplies" asp-action="SendApply" asp-route-id="@vacancy.Id" class="btn btn-icon btn-lg rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border border-slate-100 dark:border-slate-800 text-emerald-600 group-hover:text-white"><i class="uil uil-arrow-up-right"></i></a>
                 </div>
 
                 <div class="lg:flex items-center justify-between border-t border-gray-100 dark:border-gray-800 p-6">
@@ -235,7 +234,7 @@
 
         <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
 
-            @foreach (var company in Model.Companies)
+            @foreach (var company in Model.Companies.Take(8))
             {
               <div class="group relative p-6 rounded-md shadow dark:shadow-gray-700 mt-6">
                 <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md relative -mt-12">

@@ -8,12 +8,12 @@ public class JobApplyConfiguration : BaseAudiTableEntityConfiguration<JobApply>
         entity.Property(p => p.LastName).IsRequired();
         entity.Property(p => p.EmailAddress).IsRequired();
         entity.Property(p => p.Description).IsRequired(false);
-        entity.Property(p => p.CvFile).IsRequired();
+        entity.Property(p => p.CvFile).IsRequired(false);
 
         entity.HasOne(h => h.Vacancy)
            .WithMany(h => h.JobApplies)
            .HasForeignKey(x => x.VacancyId)
-           .IsRequired();
+           .IsRequired(false);
 
         base.Configure(entity);
     }

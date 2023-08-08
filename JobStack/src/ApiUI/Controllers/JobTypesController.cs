@@ -11,7 +11,7 @@ public class JobTypesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetJobTypesQuery>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]
-    public async Task<IActionResult> GetAllCities()
+    public async Task<IActionResult> GetAllTypes()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetJobTypesQuery()));
     }
@@ -20,7 +20,7 @@ public class JobTypesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetJobTypesQuery>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]
-    public async Task<IActionResult> ManageGetAllCities()
+    public async Task<IActionResult> ManageGetAllTypes()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new ManageGetJobTypesQuery()));
     }

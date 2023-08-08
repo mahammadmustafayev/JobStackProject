@@ -6,11 +6,11 @@ public class JobApply : BaseAuditableEntity
     public string LastName { get; set; } = null!;
     public string EmailAddress { get; set; } = null!;
     public string? Description { get; set; }
-    public string CvFile { get; set; } = null!;
+    public string? CvFile { get; set; }
     [NotMapped]
-    public IFormFile CvFileUrl { get; set; } = null!;
+    public IFormFile? CvFileUrl { get; set; }
 
     public int VacancyId { get; set; }
-    public Vacancy Vacancy { get; set; } = null!;
+    public Vacancy? Vacancy { get; set; }
 
 }

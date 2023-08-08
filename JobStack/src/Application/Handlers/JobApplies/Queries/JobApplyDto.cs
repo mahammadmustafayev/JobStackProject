@@ -11,4 +11,6 @@ public class JobApplyDto
     public string CvFile { get; set; }
 
     public IFormFile CvFileUrl { get; set; }
+    public int VacancyId { get; set; }
+    public Vacancy Vacancy { get; set; }
 }

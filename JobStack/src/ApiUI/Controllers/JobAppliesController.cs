@@ -6,6 +6,7 @@ namespace JobStack.ApiUI.Controllers;
 [ApiController]
 public class JobAppliesController : BaseApiController
 {
+
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SendJobApplytoCompany))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
@@ -19,16 +20,26 @@ public class JobAppliesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetJobAppliesQuery>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]
-    public async Task<IActionResult> GetAllExperinces()
+    public async Task<IActionResult> GetAllJobApplies()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetJobAppliesQuery()));
+    }
+
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetJobAppliesVacancyQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetAllJobAppliesVacancy(int id)
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new GetJobAppliesVacancyQuery(id)));
     }
     [Consumes("application/json")]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetJobAppliesQuery>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpGet]
-    public async Task<IActionResult> ManageGetAllExperinces()
+    public async Task<IActionResult> ManageGetAllJobApplies()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new ManageGetJobAppliesQuery()));
     }

@@ -20,7 +20,9 @@ public record GetCompanyQuery(int id) : IRequest<IDataResult<IEnumerable<Company
                       await _context.Companies
                           .Include(p => p.City)
                           .AsNoTracking()
-                          .Include(p => p.Vacancies)
+                          .Include(p => p.Vacancies).ThenInclude(p => p.JobType)
+                          .Include(p => p.Vacancies).ThenInclude(p => p.Country)
+                          .Include(p => p.Vacancies).ThenInclude(p => p.City)
                           .AsNoTracking()
                           .Include(p => p.Country)
                           .AsNoTracking()

@@ -39,5 +39,6 @@ public class VacanciesController : Controller
         }
         return View(vacancies[0]);
     }
+
 }
 

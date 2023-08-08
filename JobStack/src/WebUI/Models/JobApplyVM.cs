@@ -9,10 +9,10 @@ public class JobApplyVM : BaseAuditableEntityVM
     public string LastName { get; set; } = null!;
     public string EmailAddress { get; set; } = null!;
     public string? Description { get; set; }
-    public string CvFile { get; set; } = null!;
+    public string? CvFile { get; set; }
     [NotMapped]
-    public IFormFile CvFileUrl { get; set; } = null!;
+    public IFormFile? CvFileUrl { get; set; }
 
     public int VacancyId { get; set; }
-    public VacancyVM Vacancy { get; set; } = null!;
+    public VacancyVM? Vacancy { get; set; }
 }
