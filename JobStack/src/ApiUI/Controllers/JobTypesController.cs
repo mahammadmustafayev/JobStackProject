@@ -15,6 +15,17 @@ public class JobTypesController : BaseApiController
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetJobTypesQuery()));
     }
+
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetJobTypeQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Details(int id)
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new GetJobTypeQuery(id)));
+    }
+
     [Consumes("application/json")]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<ManageGetJobTypesQuery>))]
@@ -30,17 +41,18 @@ public class JobTypesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateJobTypeCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromQuery] CreateJobTypeCommand create)
+    public async Task<IActionResult> Add([FromQuery] CreateJobTypeCommand create)
     {
         return GetResponseOnlyResultData(await Mediator.Send(create));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete]
-    public async Task<IActionResult> Delete([FromForm] DeleteJobTypeCommand delete)
+    [HttpPost]
+    // ("status/{id}")
+    public async Task<IActionResult> Delete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(delete));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new DeleteJobTypeCommand(id)));
     }
 
     [Consumes("application/json")]
@@ -48,14 +60,14 @@ public class JobTypesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UpdateJobTypeCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPut]
-    public async Task<IActionResult> Put([FromQuery] UpdateJobTypeCommand update)
+    public async Task<IActionResult> Update([FromQuery] UpdateJobTypeCommand update)
     {
         return GetResponseOnlyResultData(await Mediator.Send(update));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete("perma")]
+    [HttpDelete("perma/id")]
     public async Task<IActionResult> PermaDelete([FromForm] PermaDeleteJobTypeCommand perma)
     {
         return GetResponseOnlyResultMessage(await Mediator.Send(perma));

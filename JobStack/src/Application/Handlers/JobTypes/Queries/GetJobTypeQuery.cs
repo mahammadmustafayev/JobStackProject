@@ -20,7 +20,6 @@ public record GetJobTypeQuery(int id) : IRequest<IDataResult<IEnumerable<JobType
                    await _context.JobTypes
                    .Include(j => j.Vacancies)
                    .AsNoTracking()
-                   .Where(j => j.IsDeleted == false)
                    .Where(j => j.Id == request.id)
                    .ToListAsync()));
         }

@@ -12,6 +12,7 @@ public class Program
 
         builder.Services.AddHttpClient();
 
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

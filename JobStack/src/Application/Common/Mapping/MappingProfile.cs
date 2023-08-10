@@ -34,6 +34,7 @@ public class MappingProfile : Profile
         CreateMap<JobType, JobTypeDto>().ReverseMap();
         CreateMap<JobType, UpdateJobTypeCommand>().ReverseMap();
         CreateMap<JobType, GetJobTypesQuery>().ReverseMap();
+        CreateMap<JobType, GetJobTypeQuery>().ReverseMap();
 
         CreateMap<JobApply, SendJobApplytoCompany>().ReverseMap();
         CreateMap<JobApply, GetJobAppliesQuery>().ReverseMap();
