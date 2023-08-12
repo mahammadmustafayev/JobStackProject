@@ -67,9 +67,9 @@ public class JobTypesController : BaseApiController
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete("perma/id")]
-    public async Task<IActionResult> PermaDelete([FromForm] PermaDeleteJobTypeCommand perma)
+    [HttpPost]
+    public async Task<IActionResult> PermaDelete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(perma));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new PermaDeleteJobTypeCommand(id)));
     }
 }

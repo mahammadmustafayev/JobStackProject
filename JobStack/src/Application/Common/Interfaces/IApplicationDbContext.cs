@@ -14,6 +14,7 @@ public interface IApplicationDbContext
     DbSet<JobApply> JobApplies { get; set; }
 
     DbSet<Category> Categories { get; set; }
+    //DbSet<CategoryTest> CategoryTests { get; set; }
     DbSet<JobType> JobTypes { get; set; }
     DbSet<Vacancy> Vacancies { get; set; }
 

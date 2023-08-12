@@ -8,7 +8,7 @@ namespace WebUI.Controllers;
 
 public class HomeController : Controller
 {
-    Uri baseUrl = new("https://localhost:7264/api");
+    Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
 
     public HomeController(HttpClient client)

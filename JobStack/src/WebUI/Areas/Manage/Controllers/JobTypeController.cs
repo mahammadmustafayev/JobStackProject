@@ -9,7 +9,7 @@ namespace JobStack.WebUI.Areas.Manage.Controllers;
 [Area("Manage")]
 public class JobTypeController : Controller
 {
-    Uri baseUrl = new("https://localhost:7264/api");
+    Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
 
     public JobTypeController(HttpClient client)
@@ -105,7 +105,9 @@ public class JobTypeController : Controller
     [HttpPost, ActionName(nameof(PermaDelete))]
     public IActionResult DeleteConfirmed(int id)
     {
-        HttpResponseMessage result = _client.DeleteAsync(_client.BaseAddress + $"/JobTypes/PermaDelete/perma/{id}").Result;
+        string data = id.ToString();
+        StringContent content = new(data, Encoding.UTF8, "application/json");
+        HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/JobTypes/PermaDelete?id={id}",content).Result;
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {

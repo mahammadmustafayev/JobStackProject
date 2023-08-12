@@ -1,6 +1,6 @@
 ﻿namespace JobStack.Application.Handlers.Categories.Validations;
 
-public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCommand>
+public class CreateCategoryCommandValidator : AbstractValidator<ManageCreateCategoryCommand>
 {
     public CreateCategoryCommandValidator()
     {

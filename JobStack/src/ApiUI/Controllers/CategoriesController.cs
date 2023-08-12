@@ -1,4 +1,6 @@
 ﻿
+using JobStack.Application.Handlers.Categories.Commands;
+
 namespace JobStack.ApiUI.Controllers;
 
 [Route("api/[controller]/[action]")]
@@ -10,10 +12,19 @@ public class CategoriesController : BaseApiController
 
     //[Consumes("application/json")]
     [Produces("application/json", "text/plain")]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateCategoryCommand))]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ManageCreateCategoryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromQuery] CreateCategoryCommand createCategoryCommand)
+    public async Task<IActionResult> Post([FromQuery] ManageCreateCategoryCommand createCategoryCommand)
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(createCategoryCommand));
+    }
+
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ManageCreateCategoryCommand))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpPost]
+    public async Task<IActionResult> PostTest([FromQuery] ManageCreateCategoryCommandTest createCategoryCommand)
     {
         return GetResponseOnlyResultData(await Mediator.Send(createCategoryCommand));
     }

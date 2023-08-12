@@ -9341,23 +9341,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\acer\\.nuget\\packages\\": {},
+    "C:\\Users\\murat.vuranok\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\Project\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\JobStackProject\\JobStack\\src\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\murat.vuranok\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\murat.vuranok\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9366,18 +9366,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Project\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
-              "projectPath": "D:\\Project\\JobStackProject\\JobStack\\src\\Application\\Application.csproj"
+            "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Application\\Application.csproj"
             },
-            "D:\\Project\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Project\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
+            "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
             }
           }
         }
@@ -9453,7 +9452,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

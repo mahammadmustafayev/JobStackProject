@@ -15,18 +15,50 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="CategoryName" class="control-label"></label>
-                <input asp-for="CategoryName" class="form-control" />
+                <input asp-for="CategoryName" id="sendName" class="form-control" />
                 <span asp-validation-for="CategoryName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Photo" class="control-label"></label>
-                <input asp-for="Photo" class="form-control" />
+                <input asp-for="Photo" id="sendFile" class="form-control" />
                 <span asp-validation-for="Photo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input id="sendInput" type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+        @section scripts{
+            <script>
+                const sendInput = document.querySelector("#sendInput"),
+                      sendFile = document.querySelector("#sendFile"),
+                      sendName = document.querySelector("#sendName");
+                const file =  sendFile.files[0];
+
+                sendInput.addEventListener('click',function(e){
+                    e.preventDefault();
+                    const formData= new FormData();
+                    formData.append('file',file);
+                    console.log(formData);
+                    console.log(sendName.value);
+                    //$.ajax({
+                    //    type: "POST",
+                    //    url: "'http://localhost:7264/api/Categories/PostTest",
+                    //    data: {
+                    //        skills: dataPost,
+                    //        title: titleId,
+                    //        experience: experienceId
+                    //    },
+                    //    success: function (data) {
+                    //        //alert("good: " + data)
+                    //    },
+                    //    error: function (data) {
+                    //        //console.log(data)
+                    //    }
+
+                    //});
+                });
+            </script>
+        }
     </div>
 </div>
 

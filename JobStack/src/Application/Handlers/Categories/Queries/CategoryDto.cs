@@ -10,4 +10,5 @@ public class CategoryDto
     [NotMapped]
     public IFormFile Photo { get; set; }
     public virtual ICollection<Vacancy>? Vacancies { get; set; }
+
 }

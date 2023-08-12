@@ -9,7 +9,7 @@ namespace JobStack.WebUI.Areas.Manage.Controllers;
 [Area("Manage")]
 public class CategoryController : Controller
 {
-    Uri baseUrl = new("https://localhost:7264/api");
+    Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
 
     public CategoryController(HttpClient client)
@@ -37,13 +37,13 @@ public class CategoryController : Controller
     [HttpPost]
     public IActionResult Create(CategoryPostDto category)
     {
-        string data = JsonConvert.SerializeObject(category);
-        StringContent content = new(data, Encoding.UTF8, "application/json");
-        HttpResponseMessage response = _client.PostAsync(_client.BaseAddress + "/Categories/Post", content).Result;
-        if (response.IsSuccessStatusCode)
-        {
-            return RedirectToAction(nameof(Index));
-        }
+        //string data = JsonConvert.SerializeObject(category);
+        //StringContent content = new(data, Encoding.UTF8, "application/json");
+        //HttpResponseMessage response = _client.PostAsJsonAsync(_client.BaseAddress + "/Categories/Post", content).Result;
+        //if (response.IsSuccessStatusCode)
+        //{
+        //    return RedirectToAction(nameof(Index));
+        //}
         return View();
 
 

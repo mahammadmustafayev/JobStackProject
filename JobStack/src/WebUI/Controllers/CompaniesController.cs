@@ -6,7 +6,7 @@ namespace JobStack.WebUI.Controllers;
 
 public class CompaniesController : Controller
 {
-    Uri baseUrl = new("https://localhost:7264/api");
+    Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
 
     public CompaniesController(HttpClient client)

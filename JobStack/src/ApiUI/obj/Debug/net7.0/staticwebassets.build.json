@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EKpSFjUWXQI5y2+eUstR6ulVxl0cBGmno3ADRtTzjaU=",
+  "Hash": "JXh59bMKL3JA0hlbAddb+yo1edKDDhSBRQZUjqA3WDs=",
   "Source": "ApiUI",
   "BasePath": "_content/ApiUI",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "ApiUI\\wwwroot",
       "Source": "ApiUI",
-      "ContentRoot": "D:\\Project\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\ApiUI\\wwwroot\\",
       "BasePath": "_content/ApiUI",
       "Pattern": "**"
     }

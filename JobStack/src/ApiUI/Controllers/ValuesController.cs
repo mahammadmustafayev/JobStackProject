@@ -15,7 +15,7 @@ public class ValuesController : ControllerBase
         _userManager = userManager;
     }
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> CreateSeedAsync()
     {
         var administrator = new ApplicationUser
@@ -56,7 +56,6 @@ public class ValuesController : ControllerBase
 
         await _userManager.CreateAsync(adminModerator, "PaSSword2!");
         await _userManager.AddToRoleAsync(adminModerator, "moderator");
-        await _context.SaveChangesAsync();
 
 
 
@@ -67,6 +66,11 @@ public class ValuesController : ControllerBase
             await _context.Countries.AddRangeAsync(CountrySeed.CountryData);
 
         }
+        //if (!_context.Countries.Any())
+        //{
+        //    await _context.Countries.AddRangeAsync(CountrySeed.CountryData);
+
+        //}
         if (!_context.Cities.Any())
         {
             await _context.Cities.AddRangeAsync(CitySeed.CityData);
@@ -83,6 +87,7 @@ public class ValuesController : ControllerBase
 
         }
 
+        await _context.SaveChangesAsync();
 
         return NoContent();
 

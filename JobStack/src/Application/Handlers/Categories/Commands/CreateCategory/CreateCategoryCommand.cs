@@ -1,9 +1,9 @@
 ﻿namespace JobStack.Application.Handlers.Categories.Commands.CreateCategory;
 
-public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
-        : IRequest<IDataResult<CreateCategoryCommand>>
+public record ManageCreateCategoryCommand(string CategoryName, IFormFile Photo)
+        : IRequest<IDataResult<ManageCreateCategoryCommand>>
 {
-    public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, IDataResult<CreateCategoryCommand>>
+    public class CreateCategoryCommandHandler : IRequestHandler<ManageCreateCategoryCommand, IDataResult<ManageCreateCategoryCommand>>
     {
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
@@ -17,7 +17,7 @@ public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
             _env = env;
         }
 
-        public async Task<IDataResult<CreateCategoryCommand>> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<IDataResult<ManageCreateCategoryCommand>> Handle(ManageCreateCategoryCommand request, CancellationToken cancellationToken)
         {
             Category category = _mapper.Map<Category>(request);
 
@@ -27,11 +27,11 @@ public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
             {
                 if (request.Photo.CheckSize(200))
                 {
-                    return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidPhoto);
+                    return new ErrorDataResult<ManageCreateCategoryCommand>(Messages.InvalidPhoto);
                 }
                 if (!request.Photo.CheckType("image/"))
                 {
-                    return new ErrorDataResult<CreateCategoryCommand>(Messages.InvalidImagePhoto);
+                    return new ErrorDataResult<ManageCreateCategoryCommand>(Messages.InvalidImagePhoto);
                 }
 
 
@@ -48,7 +48,7 @@ public record CreateCategoryCommand(string CategoryName, IFormFile Photo)
             await _context.Categories.AddAsync(category);
 
             await _context.SaveChangesAsync(cancellationToken);
-            return new SuccessDataResult<CreateCategoryCommand>(request, Messages.Added);
+            return new SuccessDataResult<ManageCreateCategoryCommand>(request, Messages.Added);
         }
     }
 }

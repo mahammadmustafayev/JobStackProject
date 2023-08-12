@@ -2,13 +2,16 @@
 
 
 
+using JobStack.Application.Handlers.Categories.Commands;
+
 namespace JobStack.Application.Common.Mapping;
 
 public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<Category, CreateCategoryCommand>().ReverseMap();
+        CreateMap<Category, Handlers.Categories.Commands.CreateCategory.ManageCreateCategoryCommand>().ReverseMap();
+        CreateMap<Category, Handlers.Categories.Commands.ManageCreateCategoryCommandTest>().ReverseMap();
         CreateMap<Category, CategoryDto>().ReverseMap();
         CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
         CreateMap<Category, GetCategoriesQuery>().ReverseMap();

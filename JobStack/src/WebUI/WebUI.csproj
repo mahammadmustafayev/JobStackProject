@@ -19,6 +19,7 @@
     <Folder Include="wwwroot\data\category\" />
     <Folder Include="wwwroot\data\company\" />
     <Folder Include="wwwroot\data\jobapply\" />
+    <Folder Include="wwwroot\data\categorytest\" />
   </ItemGroup>
 
 </Project>

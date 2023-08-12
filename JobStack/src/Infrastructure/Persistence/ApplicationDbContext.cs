@@ -14,6 +14,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, AppRole, 
     public DbSet<Experience> Experiences { get; set; }
     public DbSet<Company> Companies { get; set; }
     public DbSet<JobApply> JobApplies { get; set; }
+    //public DbSet<CategoryTest> CategoryTests { get; set; }
 
     public ApplicationDbContext(
         DbContextOptions<ApplicationDbContext> options,

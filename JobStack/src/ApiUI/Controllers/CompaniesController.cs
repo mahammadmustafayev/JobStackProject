@@ -5,6 +5,7 @@ namespace JobStack.ApiUI.Controllers;
 [ApiController]
 public class CompaniesController : BaseApiController
 {
+    // 2014-12-01 00:00:00.0000000
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ManageCreateCompanyCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
