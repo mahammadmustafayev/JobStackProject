@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {}
+    "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {
+    "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
+        "projectUniqueName": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
         "projectName": "WebUI",
-        "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
-        "packagesPath": "C:\\Users\\murat.vuranok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\obj\\",
+        "projectPath": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
+        "packagesPath": "C:\\Users\\mahammadvm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\murat.vuranok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahammadvm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

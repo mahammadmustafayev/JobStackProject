@@ -2614,23 +2614,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\murat.vuranok\\.nuget\\packages\\": {},
+    "C:\\Users\\mahammadvm\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\murat.vuranok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Application\\obj\\",
+      "projectPath": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\mahammadvm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\murat.vuranok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mahammadvm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2645,8 +2645,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
+            "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
             }
           }
         }
@@ -2725,7 +2725,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

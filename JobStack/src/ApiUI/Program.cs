@@ -19,6 +19,16 @@ public class Program
                         x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 
+       // var devCorsPolicy = "devCorsPolicy";
+        builder.Services.AddCors(opt =>
+        {
+            opt.AddDefaultPolicy(builder =>
+            {
+                builder.AllowAnyOrigin();
+                builder.AllowAnyMethod();
+                builder.AllowAnyHeader();
+            });
+        });
 
 
 
@@ -37,6 +47,7 @@ public class Program
         {
             app.UseSwagger();
             app.UseSwaggerUI();
+            app.UseCors();
         }
 
 

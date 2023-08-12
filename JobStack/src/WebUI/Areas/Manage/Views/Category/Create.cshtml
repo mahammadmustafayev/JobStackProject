@@ -32,27 +32,45 @@
                 const sendInput = document.querySelector("#sendInput"),
                       sendFile = document.querySelector("#sendFile"),
                       sendName = document.querySelector("#sendName");
-                const file =  sendFile.files[0];
+                //const file =  sendFile.files[0];
 
                 sendInput.addEventListener('click',function(e){
                     e.preventDefault();
                     const formData= new FormData();
-                    formData.append('file',file);
-                    console.log(formData);
-                    console.log(sendName.value);
+                    formData.append('file', sendFile.files[0]);
+                    const sendcategoryName=sendName.value
+                   
+                    fetch('http://localhost:7264/api/Categories/PostTest', {
+                        method: 'POST',
+                        body: {
+                            categoryname: sendcategoryName,
+                            photo:formData
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Handle the API response
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.log('Error uploading', error);
+                    });
+
+
                     //$.ajax({
                     //    type: "POST",
-                    //    url: "'http://localhost:7264/api/Categories/PostTest",
+                    //    url: "http://localhost:7264/api/Categories/PostTest",
                     //    data: {
-                    //        skills: dataPost,
-                    //        title: titleId,
-                    //        experience: experienceId
+                    //        categoryname: sendcategoryName,
+                    //        photo:formData
                     //    },
+                    //    contentType: false,
+                    //    processData: false,
                     //    success: function (data) {
-                    //        //alert("good: " + data)
+                    //        console.log("good: " + data)
                     //    },
                     //    error: function (data) {
-                    //        //console.log(data)
+                    //        console.log("bad: "+data)
                     //    }
 
                     //});
