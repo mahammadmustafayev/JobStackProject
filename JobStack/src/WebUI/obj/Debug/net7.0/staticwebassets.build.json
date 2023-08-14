@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SUKLha13Yl5t5cNyD8i0Ite1szpBHdUs2k3d6OfWRp4=",
+  "Hash": "VVAhwM5en2LaiILgkZEaVIJkD421xcpUp+y9tWQSVDg=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -3706,6 +3706,23 @@
       "OriginalItemSpec": "wwwroot\\data\\category\\0f057b82-0e66-4def-b63d-92db835903fbcmd-terminal-icon.svg"
     },
     {
+      "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\1524025c-b14f-406d-9706-9e957c00a42d1.svg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/category/1524025c-b14f-406d-9706-9e957c00a42d1.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\category\\1524025c-b14f-406d-9706-9e957c00a42d1.svg"
+    },
+    {
       "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\1697c551-d6cd-4e26-b965-da006d301170business-report.svg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
@@ -3757,6 +3774,23 @@
       "OriginalItemSpec": "wwwroot\\data\\category\\2148bc0d-cea7-45fd-84f8-c344a4516845code-circle-svgrepo-com.svg"
     },
     {
+      "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\263dd5a5-01e6-4a8c-b547-6887fb08ea131.svg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/category/263dd5a5-01e6-4a8c-b547-6887fb08ea131.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\category\\263dd5a5-01e6-4a8c-b547-6887fb08ea131.svg"
+    },
+    {
       "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\28c245f5-90cc-472f-8600-c79352a339a7pasha.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
@@ -3772,6 +3806,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\category\\28c245f5-90cc-472f-8600-c79352a339a7pasha.png"
+    },
+    {
+      "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\3dbf6268-4434-4fee-9eae-77bed83d378b1.svg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/category/3dbf6268-4434-4fee-9eae-77bed83d378b1.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\category\\3dbf6268-4434-4fee-9eae-77bed83d378b1.svg"
     },
     {
       "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\41067a57-cbd7-407f-8df8-48dee67e2f1ccode-svgrepo-com.svg",
@@ -3842,6 +3893,23 @@
       "OriginalItemSpec": "wwwroot\\data\\category\\607e918c-65bc-47f0-b665-feea01b4ec58wireframe-icon.svg"
     },
     {
+      "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\6b0be89f-347e-4d1c-b05f-69b0e95f1ac91.svg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/category/6b0be89f-347e-4d1c-b05f-69b0e95f1ac91.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\category\\6b0be89f-347e-4d1c-b05f-69b0e95f1ac91.svg"
+    },
+    {
       "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\853a5258-1fe4-42af-bcc4-baa6c50b84ffbusiness-manager.svg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
@@ -3857,6 +3925,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\category\\853a5258-1fe4-42af-bcc4-baa6c50b84ffbusiness-manager.svg"
+    },
+    {
+      "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\8eb4e2fb-afb0-40b9-8aa6-849656802c241.svg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/category/8eb4e2fb-afb0-40b9-8aa6-849656802c241.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\category\\8eb4e2fb-afb0-40b9-8aa6-849656802c241.svg"
     },
     {
       "Identity": "C:\\Users\\mahammadvm\\Desktop\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\905e6742-93b8-406c-832e-bdae39e31cc8business-color-briefcase-24-svgrepo-com.svg",

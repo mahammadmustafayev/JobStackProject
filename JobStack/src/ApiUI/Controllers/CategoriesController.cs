@@ -15,7 +15,7 @@ public class CategoriesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ManageCreateCategoryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromQuery] ManageCreateCategoryCommand createCategoryCommand)
+    public async Task<IActionResult> Create([FromForm]ManageCreateCategoryCommand createCategoryCommand)
     {
         return GetResponseOnlyResultData(await Mediator.Send(createCategoryCommand));
     }

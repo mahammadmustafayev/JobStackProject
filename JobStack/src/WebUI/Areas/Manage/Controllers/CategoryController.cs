@@ -37,9 +37,11 @@ public class CategoryController : Controller
     [HttpPost]
     public IActionResult Create(CategoryPostDto category)
     {
+
         //string data = JsonConvert.SerializeObject(category);
         //StringContent content = new(data, Encoding.UTF8, "application/json");
-        //HttpResponseMessage response = _client.PostAsJsonAsync(_client.BaseAddress + "/Categories/Post", content).Result;
+        //HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + "/Categories/Create", content).Result;
+        //HttpResponseMessage response = result;
         //if (response.IsSuccessStatusCode)
         //{
         //    return RedirectToAction(nameof(Index));

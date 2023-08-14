@@ -39,8 +39,8 @@
                     const formData= new FormData();
                     formData.append('file', sendFile.files[0]);
                     const sendcategoryName=sendName.value
-                   
-                    fetch('http://localhost:7264/api/Categories/PostTest', {
+
+                    fetch('Category/Create', {
                         method: 'POST',
                         body: {
                             categoryname: sendcategoryName,
