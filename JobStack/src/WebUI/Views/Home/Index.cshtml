@@ -143,7 +143,7 @@
                         </div>
 
                         <div class="ms-3">
-                            <a href="employer-detail.html" class="block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500">@vacancy.Company.CompanyName</a>
+                            <a asp-controller="Companies" asp-action="Details" asp-route-id="@vacancy.CompanyId" class="block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500">@vacancy.Company.CompanyName</a>
                             <span class="block text-sm text-slate-400">@vacancy.Created.Day days ago</span>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
 
                 <div class="lg:flex items-center justify-between border-t border-gray-100 dark:border-gray-800 p-6">
                     <div>
-                        <a href="job-detail-one.html" class="text-lg font-semibold hover:text-emerald-600">@vacancy.TitleName</a>
+                        <a asp-controller="Vacancies" asp-action="Details" asp-route-id="@vacancy.Id" class="text-lg font-semibold hover:text-emerald-600">@vacancy.TitleName</a>
                         <p class="text-slate-400 mt-1">Total Openings: 1</p>
                     </div>
 
@@ -197,7 +197,7 @@
 
             <p class="text-white/80 max-w-xl mx-auto">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
 
-            <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="lightbox h-20 w-20 rounded-full shadow-lg dark:shadow-gray-800 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-emerald-600 mx-auto mt-10">
+            <a href="#" data-type="youtube" data-id="yba7hPeTSjk" class="lightbox h-20 w-20 rounded-full shadow-lg dark:shadow-gray-800 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-emerald-600 mx-auto mt-10">
                 <i class="mdi mdi-play inline-flex items-center justify-center text-2xl"></i>
             </a>
         </div><!--end grid-->
@@ -242,7 +242,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <a href="#" class="text-lg hover:text-emerald-600 font-semibold">@company.CompanyName</a>
+                    <a asp-controller="Companies" asp-action="Details" asp-route-id="@company.Id" class="text-lg hover:text-emerald-600 font-semibold">@company.CompanyName</a>
                     <p class="text-slate-400 mt-2">@company.Description</p>
                 </div>
 

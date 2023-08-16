@@ -9,6 +9,7 @@ public class Experience : BaseAuditableEntity
 
     public DateTime? ExperienceEndYear { get; set; }
 
+
     public int CandidateId { get; set; }
     public Candidate Candidate { get; set; } = null!;
 }

@@ -36,11 +36,13 @@
                     <td>
                         @if (item.IsDeleted)
                         {
-                            <span class="text-danger">Hidden</span>
+                            @*<span class="text-danger">Hidden</span>*@
+                            <i class="bi bi-eye-slash-fill text-danger fs-1" style="font-size: 2rem;"></i>
                         }
                         else
                         {
-                            <span class="text-success">Active</span>
+                            <i class="bi bi-eye-fill text-success " style="font-size: 2rem;"></i>
+                            @*<span class="text-success">Active</span>*@
                         }
                     </td>
                     
@@ -48,11 +50,14 @@
                     <td>
                         <a asp-action="Edit" asp-controller="Category" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
                         <a asp-action="Delete" asp-controller="Category" asp-route-id="@item.Id" class="btn btn-danger btn-sweet-delete">Delete</a>
-                        <a asp-action="PermaDelete" asp-controller="Category" asp-route-id="@item.Id" class="btn btn-danger btn-sweet-delete">Perma-Delete</a>
+                        <a asp-action="PermaDelete" asp-controller="Category" asp-route-id="@item.Id" class="btn btn-danger btn-sweet-delete" >
+                            Perma-Delete
+                        </a>
+                        
                     </td>
                 </tr>
             }
-
+            
         </tbody>
     </table>
 </div>

@@ -26,6 +26,8 @@ public record GetCompanyQuery(int id) : IRequest<IDataResult<IEnumerable<Company
                           .AsNoTracking()
                           .Include(p => p.Country)
                           .AsNoTracking()
+                          .Include(p => p.CompanyUser)
+                          .AsNoTracking()
                           .Where(p => p.Id == request.id)
                           .Where(p => p.IsDeleted == false)
                           .ToListAsync()

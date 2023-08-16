@@ -24,6 +24,8 @@ public class GetCompaniesQuery : IRequest<IDataResult<IEnumerable<CompanyDto>>>
                           .AsNoTracking()
                           .Include(p => p.Vacancies)
                           .AsNoTracking()
+                          .Include(p => p.CompanyUser)
+                          .AsNoTracking()
                           .Where(p => p.IsDeleted == false)
                           .ToListAsync()
                     )

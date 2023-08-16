@@ -28,4 +28,6 @@ public class CompanyDto
     public IFormFile CompanyUrl { get; set; }
 
     public ICollection<Vacancy> Vacancies { get; set; }
+    public ApplicationUser? CompanyUser { get; set; }
+
 }

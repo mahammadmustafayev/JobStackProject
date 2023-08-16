@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.8" />
+    <Compile Remove="wwwroot\data\categorytest\**" />
+    <Content Remove="wwwroot\data\categorytest\**" />
+    <EmbeddedResource Remove="wwwroot\data\categorytest\**" />
+    <None Remove="wwwroot\data\categorytest\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
@@ -19,7 +27,6 @@
     <Folder Include="wwwroot\data\category\" />
     <Folder Include="wwwroot\data\company\" />
     <Folder Include="wwwroot\data\jobapply\" />
-    <Folder Include="wwwroot\data\categorytest\" />
   </ItemGroup>
 
 </Project>

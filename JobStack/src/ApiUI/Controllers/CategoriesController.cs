@@ -1,7 +1,4 @@
-﻿
-using JobStack.Application.Handlers.Categories.Commands;
-
-namespace JobStack.ApiUI.Controllers;
+﻿namespace JobStack.ApiUI.Controllers;
 
 [Route("api/[controller]/[action]")]
 [ApiController]
@@ -15,19 +12,12 @@ public class CategoriesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ManageCreateCategoryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Create([FromForm]ManageCreateCategoryCommand createCategoryCommand)
+    public async Task<IActionResult> Create(ManageCreateCategoryCommand createCategoryCommand)
     {
         return GetResponseOnlyResultData(await Mediator.Send(createCategoryCommand));
     }
 
-    [Produces("application/json", "text/plain")]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ManageCreateCategoryCommand))]
-    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
-    [HttpPost]
-    public async Task<IActionResult> PostTest([FromQuery] ManageCreateCategoryCommandTest createCategoryCommand)
-    {
-        return GetResponseOnlyResultData(await Mediator.Send(createCategoryCommand));
-    }
+
 
     [AllowAnonymous]
     [Consumes("application/json")]
@@ -38,6 +28,16 @@ public class CategoriesController : BaseApiController
     public async Task<IActionResult> GetAllCategories()
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetCategoriesQuery()));
+    }
+
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetCategoryQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Details(int id)
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new GetCategoryQuery(id)));
     }
 
     [AllowAnonymous]
@@ -67,24 +67,24 @@ public class CategoriesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UpdateCategoryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPut]
-    public async Task<IActionResult> Put([FromQuery] UpdateCategoryCommand update)
+    public async Task<IActionResult> Put(UpdateCategoryCommand update)
     {
         return GetResponseOnlyResultData(await Mediator.Send(update));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete("perma")]
-    public async Task<IActionResult> PermaDelete([FromForm] PermaDeleteCategoryCommand perma)
+    [HttpPost]
+    public async Task<IActionResult> PermaDelete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(perma));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new PermaDeleteCategoryCommand(id)));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete]
-    public async Task<IActionResult> Delete([FromForm] DeleteCategoryCommand delete)
+    [HttpPost]
+    public async Task<IActionResult> Delete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(delete));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new DeleteCategoryCommand(id)));
     }
 }

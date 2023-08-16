@@ -4,6 +4,7 @@ public record CreateExperienceCommand
     (int CandidateId,
     string ExperienceName,
     string ExperienceDescription,
+    int ExperienceRating,
     DateTime ExperienceStartYear,
     DateTime ExperienceEndYear) : IRequest<IDataResult<CreateExperienceCommand>>
 {
@@ -20,7 +21,7 @@ public record CreateExperienceCommand
 
         public async Task<IDataResult<CreateExperienceCommand>> Handle(CreateExperienceCommand request, CancellationToken cancellationToken)
         {
-            //2014-12-01 00:00:00.0000000
+            //  2014-12-01 00:00:00.0000000
             Experience experience = _mapper.Map<Experience>(request);
             experience.CandidateId = request.CandidateId;
             experience.ExperienceName = request.ExperienceName;

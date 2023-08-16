@@ -2,7 +2,7 @@
 
 
 
-using JobStack.Application.Handlers.Categories.Commands;
+using JobStack.Application.Handlers.Candidates.Commands.CreateCandidate;
 
 namespace JobStack.Application.Common.Mapping;
 
@@ -46,6 +46,7 @@ public class MappingProfile : Profile
 
 
         CreateMap<Candidate, ManageCreateCandidateCommand>().ReverseMap();
+        CreateMap<Candidate, CreateCandidateCommand>().ReverseMap();
         CreateMap<Candidate, CandidateDto>().ReverseMap();
         CreateMap<Candidate, GetCandidatesQuery>().ReverseMap();
         CreateMap<Candidate, GetCandidateQuery>().ReverseMap();

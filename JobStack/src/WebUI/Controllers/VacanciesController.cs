@@ -37,8 +37,14 @@ public class VacanciesController : Controller
             string data = response.Content.ReadAsStringAsync().Result;
             vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(data);
         }
+        ViewBag.Responsibilits = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
+        ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
         return View(vacancies[0]);
     }
-
+    [HttpGet]
+    public IActionResult Post()
+    {
+        return View();
+    }
 }
 

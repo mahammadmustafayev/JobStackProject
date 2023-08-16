@@ -19,6 +19,7 @@ public class CandidateVM : BaseAuditableEntityVM
     public CityVM? City { get; set; }
 
     public string? CandidateSkillName { get; set; }
+    //public int? CandidateSkillRating { get; set; }
     [NotMapped]
     public string[]? CandidateSkillsArray { get; set; }
 
@@ -29,4 +30,6 @@ public class CandidateVM : BaseAuditableEntityVM
     public string? CandidateProfilImage { get; set; }
     [NotMapped]
     public IFormFile? CandidateProfileUrl { get; set; }
+    public AppUserVM? CandidateUser { get; set; }
+
 }

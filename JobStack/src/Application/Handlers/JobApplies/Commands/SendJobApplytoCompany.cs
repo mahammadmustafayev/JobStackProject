@@ -7,7 +7,7 @@ public record SendJobApplytoCompany
       string LastName,
       string EmailAddress,
       string? Description,
-      IFormFile? CvFileUrl
+      string? CvFileUrl
     ) : IRequest<IDataResult<SendJobApplytoCompany>>
 {
     public class SendJobApplytoCompanyHandler : IRequestHandler<SendJobApplytoCompany, IDataResult<SendJobApplytoCompany>>
@@ -27,19 +27,10 @@ public record SendJobApplytoCompany
 
         public async Task<IDataResult<SendJobApplytoCompany>> Handle(SendJobApplytoCompany request, CancellationToken cancellationToken)
         {
-            string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "jobapply");
 
             JobApply jobApply = _mapper.Map<JobApply>(request);
 
-            if (request != null)
-            {
-                if (request.CvFileUrl.CheckSize(500))
-                {
-                    return new ErrorDataResult<SendJobApplytoCompany>(Messages.InvalidCvFile);
 
-                }
-                jobApply.CvFile = request.CvFileUrl.SaveFile(root);
-            }
 
 
 
@@ -47,7 +38,8 @@ public record SendJobApplytoCompany
             jobApply.FirstName = request.FirstName;
             jobApply.LastName = request.LastName;
             jobApply.Description = request.Description;
-
+            jobApply.CvFile = request.CvFileUrl;
+            jobApply.VacancyId = request.VacancyId;
             _emailService.SendEmail(request.EmailAddress,
                 $"""
                 <h3 style="font-size: 20px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Dəyərli {request.FirstName} {request.LastName}</h3>

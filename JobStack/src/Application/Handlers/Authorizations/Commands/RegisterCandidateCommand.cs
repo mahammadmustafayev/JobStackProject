@@ -34,6 +34,7 @@ public record RegisterCandidateCommand(string FirstName, string LastName, string
                 UserName = request.Email
 
             };
+
             candidate.CandidateFirstName = request.FirstName;
             candidate.CandidateLastName = request.LastName;
             candidate.CandidateEmail = request.Email;

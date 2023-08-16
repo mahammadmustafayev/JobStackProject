@@ -27,56 +27,7 @@
                 <input id="sendInput" type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
-        @section scripts{
-            <script>
-                const sendInput = document.querySelector("#sendInput"),
-                      sendFile = document.querySelector("#sendFile"),
-                      sendName = document.querySelector("#sendName");
-                //const file =  sendFile.files[0];
-
-                sendInput.addEventListener('click',function(e){
-                    e.preventDefault();
-                    const formData= new FormData();
-                    formData.append('file', sendFile.files[0]);
-                    const sendcategoryName=sendName.value
-
-                    fetch('Category/Create', {
-                        method: 'POST',
-                        body: {
-                            categoryname: sendcategoryName,
-                            photo:formData
-                        }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        // Handle the API response
-                        console.log(data);
-                    })
-                    .catch(error => {
-                        console.log('Error uploading', error);
-                    });
-
-
-                    //$.ajax({
-                    //    type: "POST",
-                    //    url: "http://localhost:7264/api/Categories/PostTest",
-                    //    data: {
-                    //        categoryname: sendcategoryName,
-                    //        photo:formData
-                    //    },
-                    //    contentType: false,
-                    //    processData: false,
-                    //    success: function (data) {
-                    //        console.log("good: " + data)
-                    //    },
-                    //    error: function (data) {
-                    //        console.log("bad: "+data)
-                    //    }
-
-                    //});
-                });
-            </script>
-        }
+        
     </div>
 </div>
 

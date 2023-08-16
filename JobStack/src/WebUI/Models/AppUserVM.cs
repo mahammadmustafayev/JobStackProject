@@ -1,6 +1,8 @@
-﻿namespace WebUI.Models;
+﻿using Microsoft.AspNetCore.Identity;
 
-public class AppUserVM
+namespace WebUI.Models;
+
+public class AppUserVM : IdentityUser
 {
     public string? FirstName { get; set; }
     public string? LastName { get; set; }

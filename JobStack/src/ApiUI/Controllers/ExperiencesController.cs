@@ -40,17 +40,17 @@ public class ExperiencesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateExperienceCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromQuery] CreateExperienceCommand createExperienceCommand)
+    public async Task<IActionResult> Post(CreateExperienceCommand createExperienceCommand)
     {
         return GetResponseOnlyResultData(await Mediator.Send(createExperienceCommand));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete]
-    public async Task<IActionResult> Delete([FromForm] DeleteExperienceCommand deleteExperienceCommand)
+    [HttpPost]
+    public async Task<IActionResult> Delete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(deleteExperienceCommand));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new DeleteExperienceCommand(id)));
     }
 
     [Consumes("application/json")]
@@ -64,7 +64,7 @@ public class ExperiencesController : BaseApiController
     }
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete("perma")]
+    [HttpPost]
     public async Task<IActionResult> PermaDelete([FromForm] PermaDeleteExperienceCommand permaDeleteExperienceCommand)
     {
         return GetResponseOnlyResultMessage(await Mediator.Send(permaDeleteExperienceCommand));

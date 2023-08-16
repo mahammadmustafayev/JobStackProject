@@ -1,4 +1,6 @@
-﻿namespace JobStack.Domain.Entities;
+﻿using JobStack.Domain.Identity;
+
+namespace JobStack.Domain.Entities;
 
 public class Candidate : BaseAuditableEntity
 {
@@ -16,6 +18,7 @@ public class Candidate : BaseAuditableEntity
     public City? City { get; set; }
 
     public string? CandidateSkillName { get; set; }
+
     [NotMapped]
     public string[]? CandidateSkillsArray { get; set; }
 
@@ -26,4 +29,5 @@ public class Candidate : BaseAuditableEntity
     public string? CandidateProfilImage { get; set; }
     [NotMapped]
     public IFormFile? CandidateProfileUrl { get; set; }
+    public ApplicationUser? CandidateUser { get; set; }
 }

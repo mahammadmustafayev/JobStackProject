@@ -1,0 +1,137 @@
+﻿@model CandidateVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Hero -->
+<section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+    <div class="absolute inset-0 bg-emerald-900/90"></div>
+    <div class="container">
+        <div class="grid grid-cols-1 text-center mt-10">
+            <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Back-End Developer</h3>
+
+        </div><!--end grid-->
+    </div><!--end container-->
+
+    <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+        <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a href="index.html">Jobstack</a></li>
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white" aria-current="page">Job apply form</li>
+        </ul>
+    </div>
+</section><!--end section-->
+<div class="relative">
+    <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-slate-50 dark:text-slate-800">
+        <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!-- End Hero -->
+<!-- Start -->
+<section class="relative bg-slate-50 dark:bg-slate-800 lg:py-24 py-16">
+    <div class="container">
+        <div class="md:flex justify-center">
+            <div class="lg:w-2/4 md:w-2/3">
+                <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
+                    <form class="text-left" asp-action="Edit">
+                        <div class="grid grid-cols-1">
+                            
+
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CandidateProfession">Your Profession:</label>
+                                <input asp-for="CandidateProfession" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
+                                <span asp-validation-for="CandidateProfession" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-2 ltr:text-left rtl:text-right">
+                                <label asp-for="Description" class="font-semibold">Description:</label>
+                                <textarea asp-for="Description" class="form-input border border-slate-100 dark:border-slate-800 mt-1 textarea" placeholder="Message"></textarea>
+                                <span asp-validation-for="Description" class="text-red-600"></span>
+
+                            </div>
+
+                              <div class="mb-4 ltr:text-left rtl:text-right">
+                                    <label  class="font-semibold"> Countries :</label>
+                                    <select asp-for="CountryId" asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
+                                        @*<option disabled selected>Countries</option>*@
+                                        
+                                    </select>
+                              </div>
+                              <div class="mb-4 ltr:text-left rtl:text-right">
+                                    <label  class="font-semibold">Cities :</label>
+                                    <select asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
+                                        @*<option disabled selected>Cities</option>*@
+                                        
+                                    </select>
+                              </div>
+
+
+                         
+
+                          
+
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" >Skills :</label>
+                                <input  id="skillInput" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="C#">
+                                <button type="button" id="addSkill" class="btn mt-3 rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Add Skill</button>
+
+                            </div>
+                            <ul class="list-none mt-1" id="skillCollection">
+                                <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
+                                    <span onclick="deleteSkill" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
+                                    <div class="ms-4">
+                                        @foreach (var item in ViewBag.Skills)
+                                        {
+                                          <span class="text-emerald-600 font-medium text-sm">@item</span>
+                                            
+                                        }
+                                    </div>
+                                </li> 
+                            </ul>
+
+
+                            <div>
+                                <button type="submit" id="submit" name="send" class="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Send</button>
+                            </div>
+                        </div>
+                    </form><!--end form-->
+                </div>
+            </div>
+        </div><!--end flex-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+
+<script>
+    const skills = [];
+    const addSkill = document.querySelector('#addSkill'),
+        skillCollection = document.querySelector('#skillCollection'),
+        skillInput = document.querySelector('#skillInput')
+
+        addSkill.addEventListener('click', function (e) {
+        e.preventDefault();
+        skillCollection.innerHTML +=
+            `
+                <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
+                    <span onclick="deleteSkill(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
+                    <div class="ms-4">
+                        <span class="text-emerald-600 font-medium text-sm">${skillInput.value}</span>
+                    </div>
+                </li>
+               `
+        skills.push(skillInput.value);
+        skillInput.value = '';
+
+         skills.forEach(skill => {
+              console.log(skill);
+           });
+    })
+
+     function deleteSkill(event) {
+        skills.pop(event.nextElementSibling.children[0].textContent);
+        event.parentElement.remove();
+    };
+
+</script>
+

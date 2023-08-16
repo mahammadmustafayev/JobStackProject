@@ -28,4 +28,6 @@ public class CompanyVM : BaseAuditableEntityVM
     public IFormFile? CompanyUrl { get; set; }
 
     public ICollection<VacancyVM> Vacancies { get; set; }
+    public AppUserVM? CompanyUser { get; set; }
+
 }

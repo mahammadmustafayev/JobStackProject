@@ -92,7 +92,7 @@
                         <div class="flex items-center">
                             @*<a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
                         <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>*@
-                            <a href="job-apply.html" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            <a asp-controller="JobApplies" asp-action="SendApply" asp-route-id="@vacancy.Id" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
                         </div>
                     </div>
 

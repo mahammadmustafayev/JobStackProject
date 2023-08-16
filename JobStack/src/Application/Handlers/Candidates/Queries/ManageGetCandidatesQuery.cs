@@ -30,6 +30,9 @@ public class ManageGetCandidatesQuery : IRequest<IDataResult<IEnumerable<Candida
                     .Include(p => p.Experiences)
                     .AsNoTracking()
 
+                     .Include(p => p.CandidateUser)
+                    .AsNoTracking()
+
                     .ToListAsync()
                     )
                 );

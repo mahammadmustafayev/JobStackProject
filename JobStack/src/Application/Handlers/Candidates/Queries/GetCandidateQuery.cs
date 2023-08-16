@@ -30,6 +30,8 @@ public record GetCandidateQuery(int id) : IRequest<IDataResult<IEnumerable<Candi
 
                     .Include(p => p.Experiences)
                     .AsNoTracking()
+                    .Include(p => p.CandidateUser)
+                    .AsNoTracking()
                        .Where(c => c.Id == request.id)
                        .Where(c => c.IsDeleted == false)
                        .ToListAsync()

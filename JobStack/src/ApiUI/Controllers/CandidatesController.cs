@@ -1,6 +1,4 @@
-﻿
-
-namespace JobStack.ApiUI.Controllers;
+﻿namespace JobStack.ApiUI.Controllers;
 
 [Route("api/[controller]/[action]")]
 [ApiController]
@@ -14,6 +12,8 @@ public class CandidatesController : BaseApiController
     {
         return GetResponseOnlyResultData(await Mediator.Send(create));
     }
+
+
 
     //[AllowAnonymous]
     [Consumes("application/json")]

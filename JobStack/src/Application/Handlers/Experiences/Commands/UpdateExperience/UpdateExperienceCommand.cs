@@ -14,6 +14,7 @@ public class UpdateExperienceCommand : IRequest<IDataResult<UpdateExperienceComm
     [DisplayFormat(DataFormatString = "{0:yyyy}")]
     public DateTime ExperienceEndYear { get; set; }
 
+
     public class UpdateExperienceCommandHandler : IRequestHandler<UpdateExperienceCommand, IDataResult<UpdateExperienceCommand>>
     {
         private readonly IApplicationDbContext _context;

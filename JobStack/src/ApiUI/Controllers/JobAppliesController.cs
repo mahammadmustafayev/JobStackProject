@@ -11,7 +11,7 @@ public class JobAppliesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SendJobApplytoCompany))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromQuery] SendJobApplytoCompany send)
+    public async Task<IActionResult> Post(SendJobApplytoCompany send)
     {
         return GetResponseOnlyResultData(await Mediator.Send(send));
     }

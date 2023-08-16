@@ -33,4 +33,6 @@ public class CandidateDto
     public string? CandidateProfilImage { get; set; }
     [NotMapped]
     public IFormFile? CandidateProfileUrl { get; set; }
+    public ApplicationUser? CandidateUser { get; set; }
+
 }

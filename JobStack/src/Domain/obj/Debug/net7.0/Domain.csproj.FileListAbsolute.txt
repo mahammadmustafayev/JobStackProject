@@ -46,3 +46,15 @@ C:\Users\mahammadvm\Desktop\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0
 C:\Users\mahammadvm\Desktop\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\mahammadvm\Desktop\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\mahammadvm\Desktop\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\ref\Domain.dll
+D:\Personal\JobStackProject\JobStack\src\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\Personal\JobStackProject\JobStack\src\Domain\bin\Debug\net7.0\Domain.dll
+D:\Personal\JobStackProject\JobStack\src\Domain\bin\Debug\net7.0\Domain.pdb
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.dll
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.pdb
+D:\Personal\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\ref\Domain.dll

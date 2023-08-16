@@ -1,10 +1,4 @@
-﻿using AutoMapper;
-using JobStack.Application.Common.Interfaces;
-using JobStack.Application.Common.Results;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
-namespace JobStack.Application.Handlers.Candidates.Queries;
+﻿namespace JobStack.Application.Handlers.Candidates.Queries;
 
 //public record GetCandidatesQuery(int? CountryId,
 //        int? CityId) : IRequest<IDataResult<IEnumerable<CandidateDto>>>
@@ -39,7 +33,8 @@ public class GetCandidatesQuery : IRequest<IDataResult<IEnumerable<CandidateDto>
                     .Include(p => p.Experiences)
                     .AsNoTracking()
 
-
+                    .Include(p => p.CandidateUser)
+                    .AsNoTracking()
                     .Where(p => p.IsDeleted == false)
 
 

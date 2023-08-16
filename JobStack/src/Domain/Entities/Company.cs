@@ -1,4 +1,6 @@
-﻿namespace JobStack.Domain.Entities;
+﻿using JobStack.Domain.Identity;
+
+namespace JobStack.Domain.Entities;
 
 public class Company : BaseAuditableEntity
 {
@@ -24,6 +26,7 @@ public class Company : BaseAuditableEntity
     public string? CompanyLogo { get; set; }
     [NotMapped]
     public IFormFile? CompanyUrl { get; set; }
+    public ApplicationUser? CompanyUser { get; set; }
 
     public ICollection<Vacancy> Vacancies { get; set; }
 }

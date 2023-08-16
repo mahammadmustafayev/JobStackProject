@@ -19,7 +19,7 @@ public class Program
                         x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 
-       // var devCorsPolicy = "devCorsPolicy";
+        // var devCorsPolicy = "devCorsPolicy";
         builder.Services.AddCors(opt =>
         {
             opt.AddDefaultPolicy(builder =>

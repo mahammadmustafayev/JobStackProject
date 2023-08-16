@@ -54,6 +54,9 @@ namespace JobStack.Infrastructure.Migrations
                     b.Property<string>("CandidateSkillName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CandidateUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int?>("CityId")
                         .HasColumnType("int");
 
@@ -79,6 +82,8 @@ namespace JobStack.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CandidateUserId");
 
                     b.HasIndex("CityId");
 
@@ -178,6 +183,9 @@ namespace JobStack.Infrastructure.Migrations
                     b.Property<string>("CompanySite")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CompanyUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int?>("CountryId")
                         .HasColumnType("int");
 
@@ -208,6 +216,8 @@ namespace JobStack.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CityId");
+
+                    b.HasIndex("CompanyUserId");
 
                     b.HasIndex("CountryId");
 
@@ -659,6 +669,10 @@ namespace JobStack.Infrastructure.Migrations
 
             modelBuilder.Entity("JobStack.Domain.Entities.Candidate", b =>
                 {
+                    b.HasOne("JobStack.Domain.Identity.ApplicationUser", "CandidateUser")
+                        .WithMany()
+                        .HasForeignKey("CandidateUserId");
+
                     b.HasOne("JobStack.Domain.Entities.City", "City")
                         .WithMany("Candidates")
                         .HasForeignKey("CityId");
@@ -666,6 +680,8 @@ namespace JobStack.Infrastructure.Migrations
                     b.HasOne("JobStack.Domain.Entities.Country", "Country")
                         .WithMany("Candidates")
                         .HasForeignKey("CountryId");
+
+                    b.Navigation("CandidateUser");
 
                     b.Navigation("City");
 
@@ -678,11 +694,17 @@ namespace JobStack.Infrastructure.Migrations
                         .WithMany("Companies")
                         .HasForeignKey("CityId");
 
+                    b.HasOne("JobStack.Domain.Identity.ApplicationUser", "CompanyUser")
+                        .WithMany()
+                        .HasForeignKey("CompanyUserId");
+
                     b.HasOne("JobStack.Domain.Entities.Country", "Country")
                         .WithMany("Companies")
                         .HasForeignKey("CountryId");
 
                     b.Navigation("City");
+
+                    b.Navigation("CompanyUser");
 
                     b.Navigation("Country");
                 });
