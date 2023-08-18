@@ -50,7 +50,7 @@ public class VacanciesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateVacancyCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromQuery] CreateVacancyCommand create)
+    public async Task<IActionResult> Post(CreateVacancyCommand create)
     {
         return GetResponseOnlyResultData(await Mediator.Send(create));
     }

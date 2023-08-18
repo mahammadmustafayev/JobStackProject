@@ -50,7 +50,7 @@ public class CandidatesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UpdateCandidateCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPut]
-    public async Task<IActionResult> Put([FromQuery] UpdateCandidateCommand update)
+    public async Task<IActionResult> Put(UpdateCandidateCommand update)
     {
         return GetResponseOnlyResultData(await Mediator.Send(update));
     }

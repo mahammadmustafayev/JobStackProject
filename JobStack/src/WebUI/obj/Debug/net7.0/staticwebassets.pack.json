@@ -261,6 +261,22 @@
       "PackagePath": "staticwebassets\\assets\\js\\app.js"
     },
     {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.js"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\js\\jquery.min.map",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\js\\jquerymin.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquerymin.min.js"
+    },
+    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\js\\plugins.init.js",
       "PackagePath": "staticwebassets\\assets\\js\\plugins.init.js"
     },
@@ -753,6 +769,10 @@
       "PackagePath": "staticwebassets\\data\\candidate\\images\\161cb2c8-778e-44eb-ba5d-7898228d6b3304.jpg"
     },
     {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\1d73e93c-4526-47ba-9073-2ba8a99a87a804.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\1d73e93c-4526-47ba-9073-2ba8a99a87a804.jpg"
+    },
+    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\2b10faa8-b0de-4769-8c30-d59aaaf6a92402.jpg",
       "PackagePath": "staticwebassets\\data\\candidate\\images\\2b10faa8-b0de-4769-8c30-d59aaaf6a92402.jpg"
     },
@@ -787,6 +807,14 @@
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\779bf5dd-3d2b-402a-8f5d-115d602fe0fb08.jpg",
       "PackagePath": "staticwebassets\\data\\candidate\\images\\779bf5dd-3d2b-402a-8f5d-115d602fe0fb08.jpg"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\97389681-aee0-48c9-8b18-d10cfb8d82bb02.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\97389681-aee0-48c9-8b18-d10cfb8d82bb02.jpg"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\ac780511-7804-4b9a-9183-08190094e3e202.jpg",
+      "PackagePath": "staticwebassets\\data\\candidate\\images\\ac780511-7804-4b9a-9183-08190094e3e202.jpg"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\images\\b43045dc-cc2d-4eb7-bddc-95f83775531e04.jpg",
@@ -829,6 +857,10 @@
       "PackagePath": "staticwebassets\\data\\candidate\\resume\\7ddb0dc0-9edc-49b9-9397-bb4754566aaftestcv.pdf"
     },
     {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\840d9ad1-2d9f-4e94-96a3-1d4bc7b7cbe8Məhəmməd Mustafayev_Cv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\840d9ad1-2d9f-4e94-96a3-1d4bc7b7cbe8Məhəmməd Mustafayev_Cv.pdf"
+    },
+    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\a8593b1f-95b4-43fb-aa51-57aebae45310testcv.pdf",
       "PackagePath": "staticwebassets\\data\\candidate\\resume\\a8593b1f-95b4-43fb-aa51-57aebae45310testcv.pdf"
     },
@@ -851,6 +883,14 @@
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\c55d717f-a6d9-4e02-af38-e373499e4cf4testcv.pdf",
       "PackagePath": "staticwebassets\\data\\candidate\\resume\\c55d717f-a6d9-4e02-af38-e373499e4cf4testcv.pdf"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\eba27675-7f1b-4181-98cc-c7b495837648testcv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\eba27675-7f1b-4181-98cc-c7b495837648testcv.pdf"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\candidate\\resume\\f8acecdc-3516-4d87-be31-5dd91711677dtestcv.pdf",
+      "PackagePath": "staticwebassets\\data\\candidate\\resume\\f8acecdc-3516-4d87-be31-5dd91711677dtestcv.pdf"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\category\\047d8514-7ba8-4b70-ab78-b33262133765health-svgrepo-com.svg",

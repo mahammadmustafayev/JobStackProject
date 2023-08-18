@@ -1,7 +1,9 @@
-﻿@model CandidateVM
+﻿@model JobStack.WebUI.DTOs.Candidate.CandidateEditDto
+
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    
 }
 
 <!-- Start Hero -->
@@ -35,64 +37,90 @@
         <div class="md:flex justify-center">
             <div class="lg:w-2/4 md:w-2/3">
                 <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                    <form class="text-left" asp-action="Edit">
+                    <form class="text-left" asp-action="Edit"  enctype="multipart/form-data">
                         <div class="grid grid-cols-1">
                             
 
                             <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CandidateFirstName">Your Firstname:</label>
+                                <input id="firstnameId" asp-for="CandidateFirstName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Jhon">
+                                <span asp-validation-for="CandidateFirstName" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CandidateLastName">Your Lastname:</label>
+                                <input id="lastnameId" asp-for="CandidateLastName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Doe">
+                                <span asp-validation-for="CandidateLastName" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CandidateEmail">Your Email:</label>
+                                <input id="emailId" asp-for="CandidateEmail" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Doe">
+                                <span asp-validation-for="CandidateEmail" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
                                 <label class="font-semibold" asp-for="CandidateProfession">Your Profession:</label>
-                                <input asp-for="CandidateProfession" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
+                                <input id="professionId" asp-for="CandidateProfession" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
                                 <span asp-validation-for="CandidateProfession" class="text-red-600"></span>
                             </div>
                             <div class="mb-2 ltr:text-left rtl:text-right">
                                 <label asp-for="Description" class="font-semibold">Description:</label>
-                                <textarea asp-for="Description" class="form-input border border-slate-100 dark:border-slate-800 mt-1 textarea" placeholder="Message"></textarea>
+                                <textarea id="descriptionId" asp-for="Description" class="form-input border border-slate-100 dark:border-slate-800 mt-1 textarea" placeholder="Message"></textarea>
                                 <span asp-validation-for="Description" class="text-red-600"></span>
 
                             </div>
+                            <a href="~/data/candidate/resume/@Model.CandidateCV" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md w-full" target="_blank"><i class="uil uil-file-download-alt"></i> Open CV</a>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CandidateCVUrl">Your Cv :</label>
+                                <input id="cvId" asp-for="CandidateCVUrl" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
+                                <span asp-validation-for="CandidateCVUrl" class="text-red-600"></span>
+                            </div>
 
+                            <div class="text-center rounded-lg overflow-hidden w-56 sm:w-96 mx-auto">
+                                <img src="~/data/candidate/images/@Model.CandidateProfilImage" class="object-cover h-48 w-full ">
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CandidateProfileUrl">Your Profile Image :</label>
+                                <input id="imageId" asp-for="CandidateProfileUrl" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
+                                <span asp-validation-for="CandidateProfileUrl" class="text-red-600"></span>
+                            </div>
                               <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label  class="font-semibold"> Countries :</label>
-                                    <select asp-for="CountryId" asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
+                                    <select id="countryId" asp-for="CountryId" asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
                                         @*<option disabled selected>Countries</option>*@
                                         
                                     </select>
                               </div>
                               <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label  class="font-semibold">Cities :</label>
-                                    <select asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
+                                    <select id="cityId" asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
                                         @*<option disabled selected>Cities</option>*@
                                         
                                     </select>
                               </div>
 
 
-                         
-
                           
 
                             <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" >Skills :</label>
-                                <input  id="skillInput" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="C#">
+                                <label class="font-semibold" asp-for="CandidateSkillName" >Skills:</label>
+                                <input  id="skillInput" asp-for="CandidateSkillName"  class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="C#">
                                 <button type="button" id="addSkill" class="btn mt-3 rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Add Skill</button>
-
                             </div>
+                            
                             <ul class="list-none mt-1" id="skillCollection">
-                                <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
-                                    <span onclick="deleteSkill" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
-                                    <div class="ms-4">
-                                        @foreach (var item in ViewBag.Skills)
-                                        {
-                                          <span class="text-emerald-600 font-medium text-sm">@item</span>
-                                            
-                                        }
-                                    </div>
-                                </li> 
+                                @foreach (var item in ViewBag.Skills)
+                                {
+                                    <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
+                                        <span onclick="deleteSkill(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
+                                        <div class="ms-4">
+                                              <span class="text-emerald-600 font-medium text-sm">@item</span>
+                                        </div>
+                                    </li> 
+                                   @*<input  type="hidden" asp-for="CandidateSkillName" value="@(skillArray.ToArray().Append(item))"/>*@
+                                 }
                             </ul>
 
-
                             <div>
-                                <button type="submit" id="submit" name="send" class="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Send</button>
+                                <button type="submit" id="addCandidate"  class="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Edit</button>
                             </div>
                         </div>
                     </form><!--end form-->
@@ -103,35 +131,102 @@
 </section><!--end section-->
 <!-- End -->
 
+
 <script>
     const skills = [];
     const addSkill = document.querySelector('#addSkill'),
         skillCollection = document.querySelector('#skillCollection'),
-        skillInput = document.querySelector('#skillInput')
+        addCandidate = document.querySelector('#addCandidate'),
+        skillInput = document.querySelector('#skillInput');
+        
+        skillInput.value='';
+
+        //[...skillCollection.children].forEach(element => {
+        //    skills.push(element.children[1].children[0].textContent);
+        //});
+
+       
+        
 
         addSkill.addEventListener('click', function (e) {
-        e.preventDefault();
-        skillCollection.innerHTML +=
-            `
-                <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
-                    <span onclick="deleteSkill(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
-                    <div class="ms-4">
-                        <span class="text-emerald-600 font-medium text-sm">${skillInput.value}</span>
-                    </div>
-                </li>
-               `
-        skills.push(skillInput.value);
-        skillInput.value = '';
+            e.preventDefault();
+            skillCollection.innerHTML +=
+                `
+                    <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
+                        <span onclick="deleteSkill(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
+                        <div class="ms-4">
+                            <span class="text-emerald-600 font-medium text-sm">${skillInput.value}</span>
+                        </div>
+                    </li>
+                   `
+           
 
-         skills.forEach(skill => {
-              console.log(skill);
-           });
-    })
+            skills.push(skillInput.value);
+            skillInput.value = '';
 
-     function deleteSkill(event) {
-        skills.pop(event.nextElementSibling.children[0].textContent);
-        event.parentElement.remove();
-    };
+             //skills.forEach(skill => {
+             //     console.log(skill);
+             //  });
+        });
+
+        
+
+        addCandidate.addEventListener('click',function(){
+            //e.preventDefault();
+
+            //alert('regqref');
+            const dataPost = JSON.stringify(skills),
+            firstnameId = document.getElementById('firstnameId').value,
+            lastnameId = document.getElementById('lastnameId').value,
+            emailId = document.getElementById('emailId').value,
+            professionId = document.getElementById('professionId').value,
+            cvId = document.getElementById('cvId').files[0],
+            imageId = document.getElementById('imageId').files[0],
+            descriptionId = document.getElementById('descriptionId').value,
+            countryId = document.getElementById('countryId').value,
+            cityId = document.getElementById('cityId').value;
+            
+            let imageData = new FormData();
+            let cvData = new FormData();
+
+
+            cvData.append(cvId.name,cvId);
+            imageData.append(imageId.name,imageId);
+
+       
+            $.ajax({
+                 type: "POST",
+                 url: "http://localhost:5194/Vacancies/Create",
+                 
+                 //cache: false,
+                 data:{
+                    skills: dataPost,
+                    candidatefirstname:firstnameId,
+                    candidatelastname:lastnameId,
+                    candidateemail:emailId,
+                    candidateprofession:professionId,
+                    candidatecvurl:cvData,
+                    candidateprofileurl: imageData,
+                    description:descriptionId,
+                    countryid:countryId,
+                    cityid:cityId
+                 },
+                  
+                  success: function (data) {
+                      alert("good: " + data)
+                  },
+                  error: function (data) {
+                      console.log(data)
+                  }
+              });
+        });
+
+        function deleteSkill(event) {
+            skills.pop(event.nextElementSibling.children[0].textContent);
+            event.parentElement.remove();
+        };
+
 
 </script>
+
 

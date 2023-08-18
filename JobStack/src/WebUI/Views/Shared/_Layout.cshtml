@@ -288,13 +288,16 @@
     <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-emerald-600 text-white justify-center items-center"><i class="uil uil-arrow-up"></i></a>
     <!-- Back to top -->
     <!-- JAVASCRIPTS -->
+    <script src="~/assets/js/jquerymin.min.js"></script>
     <script src="~/assets/libs/tobii/js/tobii.min.js"></script>
     <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="~/assets/libs/feather-icons/feather.min.js"></script>
     <script src="~/assets/js/plugins.init.js"></script>
     <script src="~/assets/js/app.js"></script>
+    @await RenderSectionAsync("scripts", required: false);
     <!-- JAVASCRIPTS -->
 </body>
 
 <!-- Mirrored from shreethemes.in/jobstack/layouts/index-six.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2023 11:14:30 GMT -->
 </html>
+

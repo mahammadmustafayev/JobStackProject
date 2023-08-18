@@ -23,11 +23,11 @@ public class Candidate : BaseAuditableEntity
     public string[]? CandidateSkillsArray { get; set; }
 
     public string? CandidateCV { get; set; }
-    [NotMapped]
-    public IFormFile? CandidateCVUrl { get; set; }
+    //[NotMapped]
+    //public IFormFile? CandidateCVUrl { get; set; }
 
     public string? CandidateProfilImage { get; set; }
-    [NotMapped]
-    public IFormFile? CandidateProfileUrl { get; set; }
+    //[NotMapped]
+    //public IFormFile? CandidateProfileUrl { get; set; }
     public ApplicationUser? CandidateUser { get; set; }
 }

@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JobStack.WebUI.DTOs.Vacancy;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 using WebUI.Models;
 
 namespace JobStack.WebUI.Controllers;
@@ -15,7 +17,50 @@ public class VacanciesController : Controller
         _client.BaseAddress = baseUrl;
 
     }
-
+    private List<CountryVM> CountryAll()
+    {
+        List<CountryVM> countries = new();
+        HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "/Countries/GetAllCountries").Result;
+        if (response.IsSuccessStatusCode)
+        {
+            string data = response.Content.ReadAsStringAsync().Result;
+            countries = JsonConvert.DeserializeObject<List<CountryVM>>(data);
+        }
+        return countries;
+    }
+    private List<CityVM> CityAll()
+    {
+        List<CityVM> cities = new();
+        HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "/Cities/GetAllCities").Result;
+        if (response.IsSuccessStatusCode)
+        {
+            string data = response.Content.ReadAsStringAsync().Result;
+            cities = JsonConvert.DeserializeObject<List<CityVM>>(data);
+        }
+        return cities;
+    }
+    private List<CategoryVM> CategoryAll()
+    {
+        List<CategoryVM> categories = new();
+        HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "/Categories/GetAllCategories").Result;
+        if (response.IsSuccessStatusCode)
+        {
+            string data = response.Content.ReadAsStringAsync().Result;
+            categories = JsonConvert.DeserializeObject<List<CategoryVM>>(data);
+        }
+        return categories;
+    }
+    private List<JobTypeVM> TypeAll()
+    {
+        List<JobTypeVM> jobTypes = new();
+        HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "/JobTypes/GetAllTypes").Result;
+        if (response.IsSuccessStatusCode)
+        {
+            string data = response.Content.ReadAsStringAsync().Result;
+            jobTypes = JsonConvert.DeserializeObject<List<JobTypeVM>>(data);
+        }
+        return jobTypes;
+    }
     public IActionResult Index()
     {
         List<VacancyVM> vacancies = new();
@@ -42,8 +87,40 @@ public class VacanciesController : Controller
         return View(vacancies[0]);
     }
     [HttpGet]
-    public IActionResult Post()
+    public IActionResult Create()
     {
+
+        ViewBag.Countries = CountryAll();
+        ViewBag.Cities = CityAll();
+        ViewBag.Categories = CategoryAll();
+        ViewBag.Types = TypeAll();
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Create(int id, VacancyPostDto vacancy, string responsibilts, string skills)
+    {
+        VacancyPostDto vacancyPost = new()
+        {
+            CompanyId = id,
+            Address = vacancy.Address,
+            CategoryId = vacancy.CategoryId,
+            CityId = vacancy.CityId,
+            CountryId = vacancy.CountryId,
+            Description = vacancy.Description,
+            Experience = vacancy.Experience,
+            JobTypeId = vacancy.JobTypeId,
+            ResponsibilityName = responsibilts,
+            Salary = vacancy.Salary,
+            SkillName = skills,
+            TitleName = vacancy.TitleName
+        };
+        string data = JsonConvert.SerializeObject(vacancyPost);
+        StringContent content = new(data, Encoding.UTF8, "application/json");
+        HttpResponseMessage response = _client.PostAsync(_client.BaseAddress + "/Vacancies/Post", content).Result;
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+        }
         return View();
     }
 }

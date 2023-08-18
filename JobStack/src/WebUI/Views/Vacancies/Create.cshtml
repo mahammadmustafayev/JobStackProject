@@ -1,0 +1,295 @@
+﻿@model JobStack.WebUI.DTOs.Vacancy.VacancyPostDto
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Hero -->
+<section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+    <div class="absolute inset-0 bg-emerald-900/90"></div>
+    <div class="container">
+        <div class="grid grid-cols-1 text-center mt-10">
+            <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Job Post</h3>
+
+        </div><!--end grid-->
+    </div><!--end container-->
+
+    <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+        <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a href="index.html">Jobstack</a></li>
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white" aria-current="page">Job Post</li>
+        </ul>
+    </div>
+</section><!--end section-->
+<div class="relative">
+    <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-slate-50 dark:text-slate-800">
+        <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!-- End Hero -->
+<!-- Start -->
+<section class="relative bg-slate-50 dark:bg-slate-800 lg:py-24 py-16">
+    <div class="container">
+        <div class="lg:flex justify-center">
+            <div class="lg:w-2/3">
+                <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
+                    <form class="text-left" asp-action="Create">
+                        <div class="grid grid-cols-1">
+                            <h5 class="text-lg font-semibold">Job Details:</h5>
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-4 mt-4">
+                            <div class="col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="TitleName">Job Title:</label>
+                                <input id="titleNameId" asp-for="TitleName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Web Developer">
+                            </div>
+
+                            <div class="col-span-12 ltr:text-left rtl:text-right">
+                                <label asp-for="Description" class="font-semibold">Job Description:</label>
+                                <textarea asp-for="Description" id="descriptionId" class="form-input border border-slate-100 dark:border-slate-800 mt-1 textarea" placeholder="Write Job Description :"></textarea>
+                            </div>
+
+                            <div class="md:col-span-6 col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold">Job Categories:</label>
+                                <select id="categoryId" asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories,nameof(CategoryVM.Id),nameof(CategoryVM.CategoryName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-1">
+                                    @*<option value="WD">Web Designer</option>
+                                    <option value="WD">Web Developer</option>
+                                    <option value="UI">UI / UX Desinger</option>*@
+                                </select>
+                            </div>
+
+                            <div class="md:col-span-6 col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold">Job Type:</label>
+                                <select id="typeId" asp-for="JobTypeId" asp-items="@(new SelectList(ViewBag.Types,nameof(JobTypeVM.Id),nameof(JobTypeVM.TypeName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-1">
+                                    @*<option value="FT">Full Time</option>
+                                    <option value="PT">Part Time</option>
+                                    <option value="WFH">Work From Home</option>
+                                    <option value="RJ">Remote Job</option>*@
+                                </select>
+                            </div>
+
+                            <div class="col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="Salary">Salary:</label>
+                                <input id="salaryId" asp-for="Salary" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="$1000">
+
+                            </div>
+                            <div class="col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="Experience">Experience:</label>
+                                <input id="experienceId" asp-for="Experience" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="1 year">
+
+                            </div>
+
+                            @*<div class="md:col-span-3 col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold md:invisible md:block hidden">Min:</label>
+                                <div class="relative mt-1">
+                                    <span class="w-10 h-10 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 absolute top-0 start-0 overflow-hidden rounded">
+                                        <i data-feather="dollar-sign" class="w-4 h-4 absolute top-3 start-3"></i>
+                                    </span>
+                                    <input type="number" class="form-input border border-slate-100 dark:border-slate-800 ps-12" placeholder="min" name="minsalary">
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-3 col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold md:invisible md:block hidden">Max:</label>
+                                <div class="relative mt-1">
+                                    <span class="w-10 h-10 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 absolute top-0 start-0 overflow-hidden rounded">
+                                        <i data-feather="dollar-sign" class="w-4 h-4 absolute top-3 start-3"></i>
+                                    </span>
+                                    <input type="number" class="form-input border border-slate-100 dark:border-slate-800 ps-12" placeholder="max" name="maxsalary">
+                                </div>
+                            </div>*@
+                        </div>
+
+                        <div class="grid grid-cols-1 mt-8">
+                            <h5 class="text-lg font-semibold">Skill & Responsibility:</h5>
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-4 mt-4">
+                            <div class="col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="SkillName">Skills:</label>
+                                <input id="skillInputt"asp-for="SkillName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Web Developer">
+                                <button type="button" id="addSkillt" class="btn mt-3 rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Add Skill</button>
+
+                            </div>
+                            <ul class="list-none mt-1" id="skillCollection">
+                            </ul>
+                            <div class="col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="ResponsibilityName">Responsibilities:</label>
+                                <input id="responInput"asp-for="ResponsibilityName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Web Developer">
+                                <button type="button" id="addResponsib" class="btn mt-3 rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Add Responsibilty</button>
+
+                            </div>
+                            <ul class="list-none mt-1" id="responCollection">
+                            </ul>
+
+                                @*<div class="md:col-span-6 col-span-12 ltr:text-left rtl:text-right">
+                                    <label class="font-semibold" for="Qualificationname">Qualifications:</label>
+                                    <input id="Qualificationname" type="text" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Qualifications">
+                                </div>
+
+                                <div class="md:col-span-6 col-span-12 ltr:text-left rtl:text-right">
+                                    <label class="font-semibold" for="Experiencename">Experience:</label>
+                                    <input id="Experiencename" type="text" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Experience">
+                                </div>
+
+                                <div class="md:col-span-6 col-span-12 ltr:text-left rtl:text-right">
+                                    <label class="font-semibold">Industry:</label>
+                                    <select class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-1">
+                                        <option value="BANK">Banking</option>
+                                        <option value="BIO">Biotechnology</option>
+                                        <option value="AVI">Aviation</option>
+                                    </select>
+                                </div>*@
+                        </div>
+
+                        <div class="grid grid-cols-1 mt-8">
+                            <h5 class="text-lg font-semibold">Address:</h5>
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-4 mt-4">
+                            <div class="col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="Address">Address:</label>
+                                <input id="addressId" asp-for="Address" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Address">
+                            </div>
+
+                            <div class="md:col-span-4 col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold">Country:</label>
+                                <select id="countryId" asp-for="CountryId" asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-1">
+                                    @*<option value="USA">USA</option>
+                                    <option value="CAD">Canada</option>
+                                    <option value="CHINA">China</option>*@
+                                </select>
+                            </div>
+
+                            <div class="md:col-span-4 col-span-12 ltr:text-left rtl:text-right">
+                                <label class="font-semibold">State:</label>
+                                <select id="cityId" asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-1">
+                                    @*<option value="CAL">California</option>
+                                    <option value="TEX">Texas</option>
+                                    <option value="FLOR">Florida</option>*@
+                                </select>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-4 mt-4">
+                            <div>
+                                <button type="submit" id="addVacancy"  class="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Post Now</button>
+                            </div>
+                        </div>
+                    </form><!--end form-->
+                </div>
+            </div>
+        </div><!--end flex-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+@section scripts{
+<script>
+     
+    const skills = [];
+    const responsibilties = [];
+    const addSkillt = document.querySelector('#addSkillt'),
+        skillCollection = document.querySelector('#skillCollection'),
+        responCollection = document.querySelector('#responCollection'),
+        responInput = document.querySelector('#responInput'),
+        addResponsib = document.querySelector('#addResponsib'),
+        addVacancy = document.querySelector('#addVacancy'),
+        skillInputt = document.querySelector('#skillInputt');
+
+        addSkill.addEventListener('click', function (e) {
+            e.preventDefault();
+            skillCollection.innerHTML +=
+                `
+                            <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
+                                <span onclick="deleteElem(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
+                                <div class="ms-4">
+                                    <span class="text-emerald-600 font-medium text-sm">${skillInput.value}</span>
+                                </div>
+                            </li>
+                           `
+
+
+            skills.push(skillInput.value);
+            skillInput.value = '';
+
+            //skills.forEach(skill => {
+            //     console.log(skill);
+            //  });
+        });
+
+        addResponsib.addEventListener('click', function (e) {
+            e.preventDefault();
+            responCollection.innerHTML +=
+                `
+                            <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
+                                    <span onclick="deleteElem(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
+                                <div class="ms-4">
+                                    <span class="text-emerald-600 font-medium text-sm">${responInput.value}</span>
+                                </div>
+                            </li>
+                           `
+
+
+            responsibilties.push(responInput.value);
+            responInput.value = '';
+
+            //skills.forEach(skill => {
+            //     console.log(skill);
+            //  });
+        });
+
+        addCandidate.addEventListener('click', function () {
+            alert('jj');
+            const dataSkillPost = JSON.stringify(skills),
+                  dataResponsibPost = JSON.stringify(responsibilties),
+                  titleNameId = document.getElementById('titleNameId').value,
+                  descriptionId = document.getElementById('descriptionId').value,
+                  categoryId = document.getElementById('categoryId').value,
+                  typeId = document.getElementById('typeId').value,
+                  salaryId = document.getElementById('salaryId').value,
+                  experienceId = document.getElementById('experinceId').value,
+                  addressId = document.getElementById('addressId').value,
+                  countryId = document.getElementById('countryId').value,
+                  cityId = document.getElementById('cityId').value;
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:5194/Candidates/Edit",
+
+                //cache: false,
+                data: {
+                    skills: dataSkillPost,
+                    responsibilts: dataResponsibPost,
+                    titlename: titleNameId,
+                    description: descriptionId,
+                    salary: salaryId,
+                    address: addressId,
+                    experience: experienceId,
+                    candidateprofileurl: imageData,
+                    description: descriptionId,
+                    countryid: countryId,
+                    cityid: cityId,
+                    categoryid=categoryId,
+                    jobtypeid=typeId
+                },
+                //processData: false,
+                //contentType: false,
+                //enctype: 'multipart/form-data',
+                success: function (data) {
+                    alert("good: " + data)
+                },
+                error: function (data) {
+                    console.log(data)
+                }
+            });
+        });
+
+        function deleteElem(event) {
+            skills.pop(event.nextElementSibling.children[0].textContent);
+            event.parentElement.remove();
+        };
+</script>
+}
