@@ -25,10 +25,10 @@ public class VacancyPostDto
 
     public int JobTypeId { get; set; }
 
-    public JobTypeVM JobType { get; set; }
+    public JobTypeVM? JobType { get; set; }
 
 
-    public CategoryVM Category { get; set; } = null!;
+    public CategoryVM? Category { get; set; }
 
     public int CompanyId { get; set; }
     public CompanyVM Company { get; set; } = null!;

@@ -1,10 +1,11 @@
 ﻿@model CompanyVM
 @{
     ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutWhite.cshtml";
 }
 
 <!-- Start Hero -->
-<section class="relative table w-full py-40 bg-[url('../../assets/images/hero/bg4.html')] bg-center bg-no-repeat bg-cover">
+<section style="background-image:url('https://shreethemes.in/jobstack/layouts/assets/images/hero/bg4.jpg');" class="relative table w-full py-40  bg-center bg-no-repeat bg-cover">
     <div class="absolute inset-0 bg-emerald-900/60"></div>
 </section><!--end section-->
 <div class="relative">
@@ -31,6 +32,9 @@
 
                 <div class="md:mt-0 mt-4">
                     <a asp-controller="Companies" asp-action="SeeJob" asp-route-id="@Model.Id" class="btn btn-sm bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-md ms-1">See Jobs</a>
+                    <a asp-controller="Companies" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white rounded-md ms-1">Edit</a>
+                    <a style="background-color:#dc2626 !important;" asp-action="Delete" asp-controller="Companies" asp-route-id="@Model.Id" class="btn  text-white rounded-md">Delete</a>
+
                 </div>
             </div>
         </div><!--end grid-->
@@ -105,7 +109,7 @@
 
                         <li class="flex justify-between mt-2">
                             <span class="text-slate-400 font-medium">Website:</span>
-                            <span class="font-medium">@Model.CompanySite/span>
+                            <span class="font-medium">@Model.CompanySite </span>
                         </li>
 
                         

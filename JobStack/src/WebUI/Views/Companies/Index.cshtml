@@ -1,22 +1,22 @@
 ﻿@model List<CompanyVM>
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutWhite.cshtml";
 }
 
 <!-- Start Hero -->
-<section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+<section style="background-image:url('https://shreethemes.in/jobstack/layouts/assets/images/hero/bg.jpg');" class="relative table w-full py-36  bg-top bg-no-repeat bg-cover">
     <div class="absolute inset-0 bg-emerald-900/90"></div>
     <div class="container">
         <div class="grid grid-cols-1 text-center mt-10">
-            <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Employers / Companies</h3>
+            <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Companies</h3>
         </div><!--end grid-->
     </div><!--end container-->
 
     <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
         <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
             <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a asp-controller="Home" asp-action="Index">Jobstack</a></li>
-            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a asp-controller="Home" asp-action="Index">Jobs</a></li>
-            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white" aria-current="page">Employers</li>
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white" aria-current="page">Companies</li>
         </ul>
     </div>
 </section><!--end section-->

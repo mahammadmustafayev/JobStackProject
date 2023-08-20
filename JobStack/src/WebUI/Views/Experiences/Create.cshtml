@@ -1,11 +1,11 @@
 ﻿@model ExperienceVM
 @{
     ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutWhite.cshtml";
 }
 
 <!-- Start Hero -->
-<section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+<section style="background-image:url('https://shreethemes.in/jobstack/layouts/assets/images/hero/bg.jpg');" class="relative table w-full py-36  bg-top bg-no-repeat bg-cover">
     <div class="absolute inset-0 bg-emerald-900/90"></div>
     <div class="container">
         <div class="grid grid-cols-1 text-center mt-10">
@@ -73,12 +73,7 @@
 
                             </div>
 
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="ExperienceRating">Rating Maximum 100:</label>
-                                <input asp-for="ExperienceRating" class="form-input border border-slate-100 dark:border-slate-800 mt-1">
-                                <span asp-validation-for="ExperienceRating" class="text-red-600"></span>
-
-                            </div>
+                            
 
 
 

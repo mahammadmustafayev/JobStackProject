@@ -126,4 +126,11 @@ public class CandidatesController : Controller
         }
         return View(candidateEdit);
     }
+    public IActionResult Delete(int id)
+    {
+        string data = id.ToString();
+        StringContent content = new(data, Encoding.UTF8, "application/json");
+        HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Candidates/Delete?id={id}", content).Result;
+        return RedirectToAction(nameof(Index));
+    }
 }

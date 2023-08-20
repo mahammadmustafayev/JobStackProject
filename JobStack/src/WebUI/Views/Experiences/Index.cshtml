@@ -1,15 +1,15 @@
 ﻿@model List<ExperienceVM>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutWhite.cshtml";
 }
 
  <!-- Start Hero -->
-        <section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+<section style="background-image:url('https://shreethemes.in/jobstack/layouts/assets/images/hero/bg.jpg');" class="relative table w-full py-36  bg-top bg-no-repeat bg-cover">
             <div class="absolute inset-0 bg-emerald-900/90"></div>
             <div class="container">
                 <div class="grid grid-cols-1 text-center mt-10">
-                    <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Job Vacancies</h3>
+                    <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Candidate Experiences</h3>
                 </div><!--end grid-->
             </div><!--end container-->
         </section><!--end section-->
@@ -48,9 +48,7 @@
                                 <div class="md:block flex justify-between md:mt-0 mt-4">
                                     <span class="block text-slate-400 text-sm md:mt-1 mt-0">@experience.ExperienceDescription</span>
                                 </div>
-                                <div class="md:block flex justify-between md:mt-0 mt-4">
-                                    <span class="block text-slate-400 text-sm md:mt-1 mt-0">@experience.ExperienceRating %</span>
-                                </div>
+                               
 
                                 <div class="md:block flex justify-between md:mt-0 mt-2">
                                     <span class="block font-semibold md:mt-1 mt-0">@experience.ExperienceStartYear.Value.Year - @experience.ExperienceEndYear.Value.Year</span>

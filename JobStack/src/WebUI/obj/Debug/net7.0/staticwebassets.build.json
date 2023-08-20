@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1U3q9u2YYV5+3ZWaGrtZ8GEGwTKXfJRXiHGoSmvtLbg=",
+  "Hash": "ggsjcVQARnCc7ev6fGiBaNJBZM+olvROGQi5p2QEAYQ=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -4420,6 +4420,23 @@
       "OriginalItemSpec": "wwwroot\\data\\company\\3a9a95b0-a680-4535-b253-15e6f27e6f4cskype.png"
     },
     {
+      "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\4814a226-66af-497e-80c6-37b775c703c0Snapchat-Logo-PNG-Transparent.png",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/company/4814a226-66af-497e-80c6-37b775c703c0Snapchat-Logo-PNG-Transparent.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\company\\4814a226-66af-497e-80c6-37b775c703c0Snapchat-Logo-PNG-Transparent.png"
+    },
+    {
       "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\4ecc0e52-02a0-4bea-adda-66b68d40749fkapital.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
@@ -4452,6 +4469,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\company\\707be087-b1ec-4205-998c-25ceb7e44e5blenovo-logo.png"
+    },
+    {
+      "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\7bee7a10-eccb-448d-a090-c28c5b03e7b7code-academy-logo-new.webp",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/company/7bee7a10-eccb-448d-a090-c28c5b03e7b7code-academy-logo-new.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\company\\7bee7a10-eccb-448d-a090-c28c5b03e7b7code-academy-logo-new.webp"
     },
     {
       "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\87b6f680-9711-44fb-92eb-0a6d895587d5spotify.png",
@@ -4656,6 +4690,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\company\\e9527ed1-94e4-4d48-9a09-db1351d15b75kontakt.png"
+    },
+    {
+      "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\fb0a320e-4bd4-466b-9d3e-c0f8a5a5d0b0code-academy-logo-new.webp",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/company/fb0a320e-4bd4-466b-9d3e-c0f8a5a5d0b0code-academy-logo-new.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\company\\fb0a320e-4bd4-466b-9d3e-c0f8a5a5d0b0code-academy-logo-new.webp"
     },
     {
       "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\fdaefbdd-4386-45d2-bdc0-346d9afc8d30telegram.png",

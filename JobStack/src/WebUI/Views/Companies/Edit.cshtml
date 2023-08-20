@@ -1,0 +1,120 @@
+﻿@model JobStack.WebUI.DTOs.Company.CompanyEditDto
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutWhite.cshtml";
+}
+
+<!-- Start Hero -->
+<section style="background-image:url('https://shreethemes.in/jobstack/layouts/assets/images/hero/bg.jpg');" class="relative table w-full py-36  bg-top bg-no-repeat bg-cover">
+    <div class="absolute inset-0 bg-emerald-900/90"></div>
+    <div class="container">
+        <div class="grid grid-cols-1 text-center mt-10">
+            <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">@Model.CompanyName</h3>
+
+        </div><!--end grid-->
+    </div><!--end container-->
+
+    <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+        <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a asp-controller="Home" asp-action="Index">Jobstack</a></li>
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a asp-controller="Companies" asp-action="Index">Companies</a></li>
+            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white" aria-current="page">Company Edit</li>
+        </ul>
+    </div>
+</section><!--end section-->
+<div class="relative">
+    <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-slate-50 dark:text-slate-800">
+        <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!-- End Hero -->
+<!-- Start -->
+<section class="relative bg-slate-50 dark:bg-slate-800 lg:py-24 py-16">
+    <div class="container">
+        <div class="md:flex justify-center">
+            <div class="lg:w-2/4 md:w-2/3">
+                <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
+                    <form class="text-left" asp-action="Edit" enctype="multipart/form-data">
+                        <div class="grid grid-cols-1">
+
+
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CompanyName">Your CompanyName:</label>
+                                <input  asp-for="CompanyName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Jobstack">
+                                <span asp-validation-for="CompanyName" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CompanyEmail">Your Email:</label>
+                                <input  asp-for="CompanyEmail" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Doe">
+                                <span asp-validation-for="CompanyEmail" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CompanySite">Your Site:</label>
+                                <input  asp-for="CompanySite" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="https:">
+                                <span asp-validation-for="CompanySite" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="Founded">Your Founded date:</label>
+                                <input  asp-for="Founded" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="2001">
+                                <span asp-validation-for="Founded" class="text-red-600"></span>
+                            </div> 
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="NumberOfEmployees">Your Number of Employees:</label>
+                                <input  asp-for="NumberOfEmployees" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="1000">
+                                <span asp-validation-for="NumberOfEmployees" class="text-red-600"></span>
+                            </div>
+                            <div class="mb-2 ltr:text-left rtl:text-right">
+                                <label asp-for="Description" class="font-semibold">Description:</label>
+                                <textarea  asp-for="Description" class="form-input border border-slate-100 dark:border-slate-800 mt-1 textarea" placeholder="Message"></textarea>
+                                <span asp-validation-for="Description" class="text-red-600"></span>
+
+                            </div>
+                            <img src="~/data/company/@Model.CompanyLogo" class="object-cover h-45 w-full ">
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CompanyUrl">Your Image :</label>
+                                <input  asp-for="CompanyUrl" class="form-input border border-slate-100 dark:border-slate-800 mt-1" >
+                                <span asp-validation-for="CompanyUrl" class="text-red-600"></span>
+                            </div>
+
+                            @*<div class="text-center rounded-lg overflow-hidden w-56 sm:w-96 mx-auto">
+                                <img src="~/data/candidate/images/@Model.CandidateProfilImage" class="object-cover h-48 w-full ">
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold" asp-for="CandidateProfileUrl">Your Profile Image :</label>
+                                <input id="imageId" asp-for="CandidateProfileUrl" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
+                                <span asp-validation-for="CandidateProfileUrl" class="text-red-600"></span>
+                            </div>*@
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold"> Countries :</label>
+                                <select  asp-for="CountryId" asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
+                                    @*<option disabled selected>Countries</option>*@
+
+                                </select>
+                            </div>
+                            <div class="mb-4 ltr:text-left rtl:text-right">
+                                <label class="font-semibold">Cities :</label>
+                                <select  asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
+                                    @*<option disabled selected>Cities</option>*@
+
+                                </select>
+                            </div>
+
+
+
+
+                           
+
+                            <div>
+                                <button type="submit"  class="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Edit</button>
+                            </div>
+                        </div>
+                    </form><!--end form-->
+                </div>
+            </div>
+        </div><!--end flex-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+

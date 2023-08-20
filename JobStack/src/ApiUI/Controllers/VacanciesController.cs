@@ -57,10 +57,10 @@ public class VacanciesController : BaseApiController
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete]
-    public async Task<IActionResult> Delete([FromForm] DeleteVacancyCommand delete)
+    [HttpPost]
+    public async Task<IActionResult> Delete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(delete));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new DeleteVacancyCommand(id)));
     }
 
     [Consumes("application/json")]
@@ -68,15 +68,15 @@ public class VacanciesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UpdateVacancyCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPut]
-    public async Task<IActionResult> Put([FromQuery] UpdateVacancyCommand update)
+    public async Task<IActionResult> Put(UpdateVacancyCommand update)
     {
         return GetResponseOnlyResultData(await Mediator.Send(update));
     }
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete("perma")]
-    public async Task<IActionResult> PermaDelete([FromForm] PermaDeleteVacancyCommand perma)
+    [HttpPost]
+    public async Task<IActionResult> PermaDelete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(perma));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new PermaDeleteVacancyCommand(id)));
     }
 }

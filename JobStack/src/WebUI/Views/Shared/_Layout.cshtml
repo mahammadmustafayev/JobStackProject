@@ -140,9 +140,10 @@
                     <li class="has-submenu parent-parent-menu-item">
                         <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
                         <ul class="submenu">
-                            <li><a asp-controller="Categories" asp-action="Index" class="sub-menu-item">Job Categories</a></li>
-                            <li><a href="aboutus.html" class="sub-menu-item">About Us</a></li>
-                            <li><a href="services.html" class="sub-menu-item">Services</a></li>
+                            <li><a asp-controller="Categories" asp-action="Index" class="sub-menu-item">Categories</a></li>
+                            @*<li><a asp-controller="Categories" asp-action="Index" class="sub-menu-item">Job Types</a></li>*@
+                            <li><a asp-controller="Contact" asp-action="Index" class="sub-menu-item">Contact</a></li>
+                            <li><a asp-controller="Services" asp-action="Index" class="sub-menu-item">Services</a></li>
                             
 
                            @* <li class="has-submenu parent-menu-item">
@@ -161,7 +162,7 @@
                                 </ul>
                             </li>*@
 
-                            <li class="has-submenu parent-menu-item">
+                            @*<li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Helpcenter </a><span class="submenu-arrow"></span>
                                 <ul class="submenu">
                                     <li><a href="helpcenter-overview.html" class="sub-menu-item">Overview</a></li>
@@ -169,7 +170,7 @@
                                     <li><a href="helpcenter-guides.html" class="sub-menu-item">Guides</a></li>
                                     <li><a href="helpcenter-support.html" class="sub-menu-item">Support</a></li>
                                 </ul>
-                            </li>
+                            </li>*@
 
                             
 
@@ -183,13 +184,13 @@
                                 </ul>
                             </li>*@
 
-                            <li class="has-submenu parent-menu-item">
+                            @*<li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Utility </a><span class="submenu-arrow"></span>
                                 <ul class="submenu">
                                     <li><a href="terms.html" class="sub-menu-item">Terms of Services</a></li>
                                     <li><a href="privacy.html" class="sub-menu-item">Privacy Policy</a></li>
                                 </ul>
-                            </li>
+                            </li>*@
 
                             @*<li class="has-submenu parent-menu-item">
                                 <a href="javascript:void(0)"> Special </a><span class="submenu-arrow"></span>
@@ -203,7 +204,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="contact.html" class="sub-menu-item">Contact</a></li>
+                    <li><a asp-controller="About" asp-action="Index" class="sub-menu-item">About Us</a></li>
                 </ul><!--end navigation menu-->
             </div><!--end navigation-->
         </div><!--end container-->
@@ -294,7 +295,7 @@
     <script src="~/assets/libs/feather-icons/feather.min.js"></script>
     <script src="~/assets/js/plugins.init.js"></script>
     <script src="~/assets/js/app.js"></script>
-    @await RenderSectionAsync("scripts", required: false);
+    @RenderSection("scripts", required: false);
     <!-- JAVASCRIPTS -->
 </body>
 

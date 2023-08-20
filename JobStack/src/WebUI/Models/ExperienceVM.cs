@@ -10,7 +10,6 @@ public class ExperienceVM : BaseAuditableEntityVM
     public DateTime? ExperienceStartYear { get; set; }
 
     public DateTime? ExperienceEndYear { get; set; }
-    public int? ExperienceRating { get; set; }
 
 
     public int CandidateId { get; set; }

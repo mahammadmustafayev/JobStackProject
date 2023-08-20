@@ -1,4 +1,5 @@
-﻿@model JobStack.WebUI.DTOs.Candidate.CandidateEditDto
+﻿
+@model JobStack.WebUI.DTOs.Candidate.CandidateEditDto
 
 @{
     ViewData["Title"] = "Edit";
@@ -7,131 +8,152 @@
 }
 
 <!-- Start Hero -->
-<section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
-    <div class="absolute inset-0 bg-emerald-900/90"></div>
-    <div class="container">
-        <div class="grid grid-cols-1 text-center mt-10">
-            <h3 class="md:text-3xl text-2xl md:leading-snug tracking-wide leading-snug font-medium text-white">Back-End Developer</h3>
+<section class="relative lg:mt-24 mt-[74px] pb-16">
+    <div class="lg:container container-fluid">
+        <div class="profile-banner relative text-transparent">
+            @*<input id="pro-banner" name="profile-banner" type="file" class="hidden" onchange="loadFile(event)">*@
+            <div class="relative shrink-0">
 
-        </div><!--end grid-->
-    </div><!--end container-->
+                <img src="~/assets/images/hero/bg4.jpg" class="h-64 w-full object-cover lg:rounded-xl shadow dark:shadow-gray-700" id="profile-banner" alt="">
+                
+                <label class="absolute inset-0 cursor-pointer" ></label>
+            </div>
+        </div>
+        <!-- <div class="relative shrink-0">
+            <img src="assets/images/hero/bg5.jpg" class="h-64 w-full object-cover lg:rounded-xl shadow dark:shadow-gray-700" alt="">
+        </div> -->
 
-    <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
-        <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
-            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white/50 hover:text-white"><a href="index.html">Jobstack</a></li>
-            <li class="inline breadcrumb-item text-[15px] font-semibold duration-500 ease-in-out text-white" aria-current="page">Job apply form</li>
-        </ul>
-    </div>
-</section><!--end section-->
-<div class="relative">
-    <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-slate-50 dark:text-slate-800">
-        <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-        </svg>
-    </div>
-</div>
-<!-- End Hero -->
-<!-- Start -->
-<section class="relative bg-slate-50 dark:bg-slate-800 lg:py-24 py-16">
-    <div class="container">
-        <div class="md:flex justify-center">
-            <div class="lg:w-2/4 md:w-2/3">
-                <div class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                    <form class="text-left" asp-action="Edit"  enctype="multipart/form-data">
-                        <div class="grid grid-cols-1">
-                            
-
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="CandidateFirstName">Your Firstname:</label>
-                                <input id="firstnameId" asp-for="CandidateFirstName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Jhon">
-                                <span asp-validation-for="CandidateFirstName" class="text-red-600"></span>
-                            </div>
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="CandidateLastName">Your Lastname:</label>
-                                <input id="lastnameId" asp-for="CandidateLastName" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Doe">
-                                <span asp-validation-for="CandidateLastName" class="text-red-600"></span>
-                            </div>
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="CandidateEmail">Your Email:</label>
-                                <input id="emailId" asp-for="CandidateEmail" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Doe">
-                                <span asp-validation-for="CandidateEmail" class="text-red-600"></span>
-                            </div>
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="CandidateProfession">Your Profession:</label>
-                                <input id="professionId" asp-for="CandidateProfession" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
-                                <span asp-validation-for="CandidateProfession" class="text-red-600"></span>
-                            </div>
-                            <div class="mb-2 ltr:text-left rtl:text-right">
-                                <label asp-for="Description" class="font-semibold">Description:</label>
-                                <textarea id="descriptionId" asp-for="Description" class="form-input border border-slate-100 dark:border-slate-800 mt-1 textarea" placeholder="Message"></textarea>
-                                <span asp-validation-for="Description" class="text-red-600"></span>
-
-                            </div>
-                            <a href="~/data/candidate/resume/@Model.CandidateCV" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md w-full" target="_blank"><i class="uil uil-file-download-alt"></i> Open CV</a>
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="CandidateCVUrl">Your Cv :</label>
-                                <input id="cvId" asp-for="CandidateCVUrl" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
-                                <span asp-validation-for="CandidateCVUrl" class="text-red-600"></span>
-                            </div>
-
-                            <div class="text-center rounded-lg overflow-hidden w-56 sm:w-96 mx-auto">
-                                <img src="~/data/candidate/images/@Model.CandidateProfilImage" class="object-cover h-48 w-full ">
-                            </div>
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="CandidateProfileUrl">Your Profile Image :</label>
-                                <input id="imageId" asp-for="CandidateProfileUrl" class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="Developer">
-                                <span asp-validation-for="CandidateProfileUrl" class="text-red-600"></span>
-                            </div>
-                              <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label  class="font-semibold"> Countries :</label>
-                                    <select id="countryId" asp-for="CountryId" asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
-                                        @*<option disabled selected>Countries</option>*@
-                                        
-                                    </select>
-                              </div>
-                              <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label  class="font-semibold">Cities :</label>
-                                    <select id="cityId" asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 mt-1">
-                                        @*<option disabled selected>Cities</option>*@
-                                        
-                                    </select>
-                              </div>
-
-
-                          
-
-                            <div class="mb-4 ltr:text-left rtl:text-right">
-                                <label class="font-semibold" asp-for="CandidateSkillName" >Skills:</label>
-                                <input  id="skillInput" asp-for="CandidateSkillName"  class="form-input border border-slate-100 dark:border-slate-800 mt-1" placeholder="C#">
-                                <button type="button" id="addSkill" class="btn mt-3 rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Add Skill</button>
-                            </div>
-                            
-                            <ul class="list-none mt-1" id="skillCollection">
-                                @foreach (var item in ViewBag.Skills)
+        <div class="md:flex mx-4 -mt-12">
+            <div class="md:w-full">
+                <div class="relative flex items-end">
+                    <div class="profile-pic text-center">
+                        @*<input id="pro-img" name="profile-image" type="file" class="hidden" onchange="loadFile(event)">*@
+                        <div>
+                            <div class="relative h-28 w-28 max-w-[112px] max-h-[112px] mx-auto">
+                                @if(Model.CandidateProfilImage is null)
                                 {
-                                    <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
-                                        <span onclick="deleteSkill(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
-                                        <div class="ms-4">
-                                              <span class="text-emerald-600 font-medium text-sm">@item</span>
-                                        </div>
-                                    </li> 
-                                   @*<input  type="hidden" asp-for="CandidateSkillName" value="@(skillArray.ToArray().Append(item))"/>*@
-                                 }
-                            </ul>
+                                    <img src="~/assets/images/company/shree-logo.png" class="rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800" id="profile-image" alt="">
 
-                            <div>
-                                <button type="submit" id="addCandidate"  class="btn rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Edit</button>
+                                }
+                                else
+                                {
+                                   <img src="~/data/candidate/images/@Model.CandidateProfilImage" class="rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800" id="profile-image" alt="">
+                                    
+                                }
+                                <label class="absolute inset-0 cursor-pointer" for="pro-img"></label>
                             </div>
                         </div>
-                    </form><!--end form-->
+                    </div>
+                    <div class="ms-4">
+                        <h5 class="text-lg font-semibold">@Model.CandidateFirstName @Model.CandidateLastName</h5>
+                        <p class="text-slate-400">@Model.CandidateProfession</p>
+                    </div>
                 </div>
             </div>
-        </div><!--end flex-->
-    </div><!--end container-->
-</section><!--end section-->
+        </div>
+    </div><!--end -->
+
+    <div class="container mt-16">
+        <div class="grid grid-cols-1 gap-[30px]">
+            <div class="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900">
+                <h5 class="text-lg font-semibold mb-4">Personal Detail :</h5>
+                <form  asp-action="Edit" enctype="multipart/form-data">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+                        <div>
+                            <label asp-for="CandidateFirstName" class="form-label font-medium">First Name : <span class="text-red-600">*</span></label>
+                            <input asp-for="CandidateFirstName" class="form-input border border-slate-100 dark:border-slate-800 mt-2" placeholder="First Name:" id="firstnameId">
+                            <span asp-validation-for="CandidateFirstName" class="text-red-600"></span>
+                        </div>
+                        <div>
+                            <label asp-for="CandidateLastName" class="form-label font-medium">Last Name : <span class="text-red-600">*</span></label>
+                            <input asp-for="CandidateLastName" class="form-input border border-slate-100 dark:border-slate-800 mt-2" placeholder="Last Name:" id="lastnameId">
+                            <span asp-validation-for="CandidateLastName" class="text-red-600"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="CandidateEmail" class="form-label font-medium">Your Email : <span class="text-red-600">*</span></label>
+                            <input asp-for="CandidateEmail" class="form-input border border-slate-100 dark:border-slate-800 mt-2" placeholder="Email" id="emailId">
+                            <span asp-validation-for="CandidateEmail" class="text-red-600"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="CandidateProfession" class="form-label font-medium">Your Profession : <span class="text-red-600">*</span></label>
+                            <input asp-for="CandidateProfession" class="form-input border border-slate-100 dark:border-slate-800 mt-2" placeholder="Web Developer" id="professionId">
+                            <span asp-validation-for="CandidateProfession" class="text-red-600"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="CountryId" class="form-label font-medium">Country :</label>
+                            <select id="countryId" asp-for="CountryId" asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-2">
+                                @*<option value="WD">Web Designer</option>
+                                <option value="WD">Web Developer</option>
+                                <option value="UI">UI / UX Desinger</option>*@
+                            </select>
+                        </div>
+                        <div>
+                            <label asp-for="CityId" class="form-label font-medium">City :</label>
+                            <select id="cityId" asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-2">
+                                @*<option value="NY">New York</option>
+                                <option value="MC">North Carolina</option>
+                                <option value="SC">South Carolina</option>*@
+                            </select>
+                        </div>
+                        <div>
+                             <a href="~/data/candidate/resume/@Model.CandidateCV" target="_blank" class="btn btn-sm bg-emerald-600 hover:bg-emerald-700 border-emerald-600 dark:border-emerald-600 text-white rounded-md">Open CV</a>
+                            <label asp-for="CandidateCVUrl" class="form-label font-medium">Upload Resume:</label>
+                            <input id="cvId" asp-for="CandidateCVUrl" class="relative form-input border border-slate-100 dark:border-slate-800 file:h-10 file:-mx-3 file:-my-2 file:cursor-pointer file:rounded-none file:border-0 file:px-3 file:text-neutral-700 bg-clip-padding px-3 py-1.5 file:me-3 mt-2">
+                            <span asp-validation-for="CandidateCVUrl" class="text-red-600"></span>
+                        </div> 
+                        <div>
+                            <label asp-for ="CandidateProfileUrl" class="form-label font-medium">Upload Profil Image:</label>
+                            <input id="imageId" asp-for="CandidateProfileUrl" class="relative form-input border border-slate-100 dark:border-slate-800 file:h-10 file:-mx-3 file:-my-2 file:cursor-pointer file:rounded-none file:border-0 file:px-3 file:text-neutral-700 bg-clip-padding px-3 py-1.5 file:me-3 mt-2">
+                            <span asp-validation-for="CandidateProfileUrl" class="text-red-600"></span>
+                        </div>
+                    </div><!--end grid-->
+
+                    <div class="grid grid-cols-1">
+                        <div class="mt-5">
+                            <label asp-for="Description" class="form-label font-medium">Description : </label>
+                            <textarea id="descriptionId" asp-for="Description" class="form-input border border-slate-100 dark:border-slate-800 mt-2 textarea" placeholder="Description :"></textarea>
+                             <span asp-validation-for="Description" class="text-red-600"></span>
+                        </div>
+                        <div class="mt-5">
+                             <label asp-for="Description" class="form-label font-medium">Skills : </label>
+                            <input id="skillInput" asp-for="CandidateSkillName" class="form-input border border-slate-100 dark:border-slate-800 mt-2" placeholder="Problem Solving">
+                            <button type="button" id="addSkill" class="btn mt-3 rounded-md bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white">Add Skill</button>
+                        </div>
+                        <ul class="list-none mt-1" id="skillCollection">
+                            @foreach (var item in ViewBag.Skills)
+                            {
+                                <li class="inline-flex items-center py-2 px-4 bg-white me-2 my-1 shadow dark:shadow-gray-700 rounded-md">
+                                    <span onclick="deleteSkill(this)" class="mdi mdi-delete-empty text-xl cursor-pointer"></span>
+                                    <div class="ms-4">
+                                        <span class="text-emerald-600 font-medium text-sm">@item</span>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div><!--end row-->
+
+                    <input type="submit" id="addCandidate" class="btn bg-emerald-600 hover:bg-emerald-700 text-white rounded-md mt-5" value="Save Changes">
+                </form><!--end form-->
+            </div>
+
+            
+
+            <div class="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900">
+                <h5 class="text-lg font-semibold mb-5 text-red-600">Delete Account :</h5>
+
+                <p class="text-slate-400 mb-4">Do you want to delete the account? Please press below "Delete" button</p>
+
+                <a style="background-color:#dc2626 !important;" asp-action="Delete" asp-controller="Candidates" asp-route-id="@Model.Id" class="btn  text-white rounded-md">Delete</a>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End -->
 
-
+@section scripts{
 <script>
     const skills = [];
     const addSkill = document.querySelector('#addSkill'),
@@ -141,9 +163,9 @@
         
         skillInput.value='';
 
-        //[...skillCollection.children].forEach(element => {
-        //    skills.push(element.children[1].children[0].textContent);
-        //});
+        [...skillCollection.children].forEach(element => {
+            skills.push(element.children[1].children[0].textContent);
+        });
 
        
         
@@ -171,10 +193,10 @@
 
         
 
-        addCandidate.addEventListener('click',function(){
-            //e.preventDefault();
+        addCandidate.addEventListener('click',function(e){
+            e.preventDefault();
 
-            //alert('regqref');
+            
             const dataPost = JSON.stringify(skills),
             firstnameId = document.getElementById('firstnameId').value,
             lastnameId = document.getElementById('lastnameId').value,
@@ -186,17 +208,27 @@
             countryId = document.getElementById('countryId').value,
             cityId = document.getElementById('cityId').value;
             
-            let imageData = new FormData();
-            let cvData = new FormData();
+            const imageData = new FormData();
+            const cvData = new FormData();
 
 
-            cvData.append(cvId.name,cvId);
-            imageData.append(imageId.name,imageId);
+            console.log(firstnameId);
+            console.log(lastnameId);
+            console.log(professionId);
+            console.log(emailId);
+            console.log(cvId);
+            console.log(imageId);
+            console.log(descriptionId);
+            console.log(countryId);
+            console.log(cityId);
+
+            //cvData.append(cvId.name,cvId);
+            //imageData.append(imageId.name,imageId);
 
        
             $.ajax({
                  type: "POST",
-                 url: "http://localhost:5194/Vacancies/Create",
+                 url: "http://localhost:5194/Candidates/Edit",
                  
                  //cache: false,
                  data:{
@@ -205,8 +237,8 @@
                     candidatelastname:lastnameId,
                     candidateemail:emailId,
                     candidateprofession:professionId,
-                    candidatecvurl:cvData,
-                    candidateprofileurl: imageData,
+                    candidatecvurl:cvData.append(cvId.name,cvId),
+                    candidateprofileurl: imageData.append(imageId.name, imageId),
                     description:descriptionId,
                     countryid:countryId,
                     cityid:cityId
@@ -228,5 +260,6 @@
 
 
 </script>
+}
 
 

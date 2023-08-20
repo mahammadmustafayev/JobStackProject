@@ -10,12 +10,13 @@ public record RegisterCandidateCommand(string FirstName, string LastName, string
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
-
-        public RegisterCandidateCommandHandler(UserManager<ApplicationUser> userManager, IMapper mapper, IApplicationDbContext context)
+        private readonly IEmailService _emailService;
+        public RegisterCandidateCommandHandler(UserManager<ApplicationUser> userManager, IMapper mapper, IApplicationDbContext context, IEmailService emailService = null)
         {
             _userManager = userManager;
             _mapper = mapper;
             _context = context;
+            _emailService = emailService;
         }
 
         public async Task<IResult> Handle(RegisterCandidateCommand request, CancellationToken cancellationToken)
@@ -40,6 +41,14 @@ public record RegisterCandidateCommand(string FirstName, string LastName, string
             candidate.CandidateEmail = request.Email;
             IdentityResult identityResult = await _userManager.CreateAsync(user, request.Password);
             await _context.Candidates.AddAsync(candidate);
+            _emailService.SendEmail(request.Email,
+               $"""
+                <h3 style="font-size: 20px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Dəyərli {request.FirstName} {request.LastName}</h3>
+                <p style="font-size: 10px;" >Xoş Gəldiniz! Qeydiyyatdan keçdiyiniz üçün təşəkkür edirik.</p>
+                <p>Hörmətlə</p>
+                <p>JobStack Managment</p>
+                <img  src="https://shreethemes.in/jobstack/layouts/assets/images/logo-dark.png" style="width: 200px;height: 45px; ">
+                """);
             await _context.SaveChangesAsync(cancellationToken);
 
             if (!identityResult.Succeeded)

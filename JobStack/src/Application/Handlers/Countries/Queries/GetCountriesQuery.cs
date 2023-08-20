@@ -27,7 +27,7 @@ public class GetCountriesQuery : IRequest<IDataResult<IEnumerable<CountryDto>>>
 
                       //.Include(c => c.Candidates)
                       //.AsNoTracking()
-
+                      .OrderBy(c => c.Name)
                       .Where(c => c.IsDeleted == false)
                       .ToListAsync()));
         }

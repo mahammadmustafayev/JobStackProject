@@ -1,12 +1,13 @@
 ﻿@model CompanyVM
 @{
     ViewData["Title"] = "SeeJob";
+    Layout = "~/Views/Shared/_LayoutWhite.cshtml";
 }
 
 
 
 <!-- Start Hero -->
-<section class="relative table w-full py-36 bg-[url('../../assets/images/hero/bg.html')] bg-top bg-no-repeat bg-cover">
+<section style="background-image:url('https://shreethemes.in/jobstack/layouts/assets/images/hero/bg.jpg');" class="relative table w-full py-36  bg-top bg-no-repeat bg-cover">
     <div class="absolute inset-0 bg-emerald-900/90"></div>
     <div class="container">
         <div class="grid grid-cols-1 text-center mt-10">
@@ -96,6 +97,8 @@
                             @*<a href="javascript:void(0)" class="text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600 text-2xl"><i class="mdi mdi-heart"></i></a>
                         <a href="#" class="btn btn-icon rounded-full bg-emerald-600/5 hover:bg-emerald-600 border-emerald-600/10 hover:border-emerald-600 text-emerald-600 hover:text-white ms-1"><i data-feather="bookmark" class="h-4 w-4"></i></a>*@
                             <a asp-controller="JobApplies" asp-action="SendApply" asp-route-id="@vacancy.Id" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><i class="uil uil-arrow-up-right"></i></a>
+                            <a asp-controller="Vacancies" asp-action="Edit" asp-route-id="@vacancy.Id" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M12.92 2.873a2.975 2.975 0 0 1 4.207 4.207l-.669.669l-4.207-4.207l.67-.669ZM11.544 4.25l-7.999 7.999a2.438 2.438 0 0 0-.655 1.194l-.878 3.95a.5.5 0 0 0 .597.597l3.926-.873a2.518 2.518 0 0 0 1.234-.678l7.982-7.982l-4.207-4.207Z" /></svg></a>
+                            <a asp-controller="Vacancies" asp-action="Delete" asp-route-id="@vacancy.Id" class="btn btn-icon rounded-full bg-emerald-600/5 group-hover:bg-emerald-600 border-emerald-600/10 text-emerald-600 group-hover:text-white ms-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></a>
                         </div>
                     </div>
 

@@ -12,6 +12,7 @@ public record SendJobApplytoCompany
 {
     public class SendJobApplytoCompanyHandler : IRequestHandler<SendJobApplytoCompany, IDataResult<SendJobApplytoCompany>>
     {
+
         private readonly IMapper _mapper;
         private readonly IApplicationDbContext _context;
         private readonly IHostEnvironment _env;

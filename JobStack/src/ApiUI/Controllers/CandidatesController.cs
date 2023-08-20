@@ -57,17 +57,17 @@ public class CandidatesController : BaseApiController
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete("perma")]
-    public async Task<IActionResult> PermaDelete([FromForm] PermaDeleteCandidateCommand perma)
+    [HttpPost]
+    public async Task<IActionResult> PermaDelete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(perma));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new PermaDeleteCandidateCommand(id)));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete]
-    public async Task<IActionResult> Delete([FromForm] DeleteCandidateCommand delete)
+    [HttpPost]
+    public async Task<IActionResult> Delete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(delete));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new DeleteCandidateCommand(id)));
     }
 }

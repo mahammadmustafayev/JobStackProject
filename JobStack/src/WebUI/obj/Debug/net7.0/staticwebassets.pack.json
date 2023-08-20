@@ -1033,12 +1033,20 @@
       "PackagePath": "staticwebassets\\data\\company\\3a9a95b0-a680-4535-b253-15e6f27e6f4cskype.png"
     },
     {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\4814a226-66af-497e-80c6-37b775c703c0Snapchat-Logo-PNG-Transparent.png",
+      "PackagePath": "staticwebassets\\data\\company\\4814a226-66af-497e-80c6-37b775c703c0Snapchat-Logo-PNG-Transparent.png"
+    },
+    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\4ecc0e52-02a0-4bea-adda-66b68d40749fkapital.jpg",
       "PackagePath": "staticwebassets\\data\\company\\4ecc0e52-02a0-4bea-adda-66b68d40749fkapital.jpg"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\707be087-b1ec-4205-998c-25ceb7e44e5blenovo-logo.png",
       "PackagePath": "staticwebassets\\data\\company\\707be087-b1ec-4205-998c-25ceb7e44e5blenovo-logo.png"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\7bee7a10-eccb-448d-a090-c28c5b03e7b7code-academy-logo-new.webp",
+      "PackagePath": "staticwebassets\\data\\company\\7bee7a10-eccb-448d-a090-c28c5b03e7b7code-academy-logo-new.webp"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\87b6f680-9711-44fb-92eb-0a6d895587d5spotify.png",
@@ -1087,6 +1095,10 @@
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\e9527ed1-94e4-4d48-9a09-db1351d15b75kontakt.png",
       "PackagePath": "staticwebassets\\data\\company\\e9527ed1-94e4-4d48-9a09-db1351d15b75kontakt.png"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\fb0a320e-4bd4-466b-9d3e-c0f8a5a5d0b0code-academy-logo-new.webp",
+      "PackagePath": "staticwebassets\\data\\company\\fb0a320e-4bd4-466b-9d3e-c0f8a5a5d0b0code-academy-logo-new.webp"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\fdaefbdd-4386-45d2-bdc0-346d9afc8d30telegram.png",

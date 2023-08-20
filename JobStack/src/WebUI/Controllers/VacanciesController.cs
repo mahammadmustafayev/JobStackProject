@@ -123,5 +123,60 @@ public class VacanciesController : Controller
         }
         return View();
     }
+    [HttpGet]
+    public IActionResult Edit(int id)
+    {
+        List<VacancyUpdateDto> vacancies = new();
+        HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + $"/Vacancies/Details/{id}").Result;
+        if (response.IsSuccessStatusCode)
+        {
+            string data = response.Content.ReadAsStringAsync().Result;
+            vacancies = JsonConvert.DeserializeObject<List<VacancyUpdateDto>>(data);
+        }
+        ViewBag.Responsibility = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
+        ViewBag.Skillss = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
+        ViewBag.Countries = CountryAll();
+        ViewBag.Cities = CityAll();
+        ViewBag.Categories = CategoryAll();
+        ViewBag.Types = TypeAll();
+        TempData["VacancyId"] = id;
+        return View(vacancies[0]);
+    }
+    [HttpPost]
+    public IActionResult Edit(VacancyUpdateDto vacancy, string responsibilts, string skills)
+    {
+        VacancyUpdateDto vacancyUpdate = new()
+        {
+            VacancyId = Convert.ToInt32(TempData["VacancyId"]),
+            TitleName = vacancy.TitleName,
+            Address = vacancy.Address,
+            CategoryId = vacancy.CategoryId,
+            CityId = vacancy.CityId,
+            CountryId = vacancy.CountryId,
+            Description = vacancy.Description,
+            Experience = vacancy.Experience,
+            JobTypeId = vacancy.JobTypeId,
+            ResponsibilityName = responsibilts,
+            Salary = vacancy.Salary,
+            SkillName = skills,
+        };
+        string data = JsonConvert.SerializeObject(vacancyUpdate);
+        StringContent content = new(data, Encoding.UTF8, "application/json");
+        HttpResponseMessage result = _client.PutAsync(_client.BaseAddress + "/Vacancies/Put", content).Result;
+        HttpResponseMessage response = result;
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+        }
+        return View(vacancyUpdate);
+    }
+
+    public IActionResult Delete(int id)
+    {
+        string data = id.ToString();
+        StringContent content = new(data, Encoding.UTF8, "application/json");
+        HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Vacancies/Delete?id={id}", content).Result;
+        return RedirectToAction(nameof(Index));
+    }
 }
 

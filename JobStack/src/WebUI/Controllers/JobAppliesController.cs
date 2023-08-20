@@ -23,6 +23,7 @@ public class JobAppliesController : Controller
 
     public IActionResult Index(int id)
     {
+        ViewBag.DetailsId = id;
         List<JobApplyVM> jobApplies = new();
         HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + $"/JobApplies/GetAllJobAppliesVacancy/{id}").Result;
         if (response.IsSuccessStatusCode)
