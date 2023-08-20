@@ -137,6 +137,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\favicon.ico"
     },
     {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\approved-candidate.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\approved-candidate.svg"
+    },
+    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\hero\\bg.jpg"
     },
@@ -163,6 +167,10 @@
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg6.png",
       "PackagePath": "staticwebassets\\assets\\images\\hero\\bg6.png"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\company.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\company.svg"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\curve-shape-dark.png",

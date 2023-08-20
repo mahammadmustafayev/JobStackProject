@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ggsjcVQARnCc7ev6fGiBaNJBZM+olvROGQi5p2QEAYQ=",
+  "Hash": "Hs0XDO8AkBvcPHuCVzTB9ArPGrBPLJC3OtRfFfsOBMo=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -612,6 +612,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\favicon.ico"
     },
     {
+      "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\approved-candidate.svg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "assets/images/hero/approved-candidate.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\hero\\approved-candidate.svg"
+    },
+    {
       "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\bg.jpg",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
@@ -729,6 +746,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\hero\\bg6.png"
+    },
+    {
+      "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\company.svg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "assets/images/hero/company.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\hero\\company.svg"
     },
     {
       "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\assets\\images\\hero\\curve-shape.png",

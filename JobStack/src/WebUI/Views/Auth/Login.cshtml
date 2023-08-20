@@ -1,6 +1,7 @@
-﻿
+﻿@model JobStack.WebUI.DTOs.AuthDTOs.LoginDto
 @{
     Layout = null;
+
 }
 
 <!DOCTYPE html>
@@ -44,22 +45,23 @@
                             <img src="~/assets/images/logo-light.png" class="mx-auto h-[24px] dark:block hidden" alt="">
                         </a>
                         <h5 class="my-6 text-xl font-semibold">Login</h5>
-                        <form class="text-left">
+                        <form class="text-left" asp-action="Login">
                             <div class="grid grid-cols-1">
+                                <div asp-validation-summary=ModelOnly class="text-danger"></div>
                                 <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label class="font-semibold" for="LoginEmail">Email Address:</label>
-                                    <input id="LoginEmail" type="email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
+                                    <label class="font-semibold" asp-for="Email">Email Address:</label>
+                                    <input asp-for="Email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
                                 </div>
 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label class="font-semibold" for="LoginPassword">Password:</label>
-                                    <input id="LoginPassword" type="password" class="form-input mt-3 rounded-md" placeholder="Password:">
+                                    <label class="font-semibold" asp-for="Password">Password:</label>
+                                    <input asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
                                 </div>
 
                                 <div class="flex justify-between mb-4">
                                     <div class="inline-flex items-center mb-0">
-                                        <input class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-emerald-600 focus:border-emerald-300 focus:ring focus:ring-offset-0 focus:ring-emerald-200 focus:ring-opacity-50 me-2" type="checkbox" value="" id="RememberMe">
-                                        <label class="form-checkbox-label text-slate-400" for="RememberMe">Remember me</label>
+                                        <input  asp-for="RememberMe" class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-emerald-600 focus:border-emerald-300 focus:ring focus:ring-offset-0 focus:ring-emerald-200 focus:ring-opacity-50 me-2" >
+                                        <label  asp-for="RememberMe" class="form-checkbox-label text-slate-400" >Remember me</label>
                                     </div>
                                     @*<p class="text-slate-400 mb-0"><a href="reset-password.html" class="text-slate-400">Forgot password ?</a></p>*@
                                 </div>
@@ -69,7 +71,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <span class="text-slate-400 me-2">Don't have an account ?</span> <a href="signup.html" class="text-black dark:text-white font-bold">Sign Up</a>
+                                    <span class="text-slate-400 me-2">Don't have an account ?</span> <a asp-controller="Auth" asp-action="Register" class="text-black dark:text-white font-bold">Sign Up</a>
                                 </div>
                             </div>
                         </form>

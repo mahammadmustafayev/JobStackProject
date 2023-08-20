@@ -4,18 +4,18 @@
 [ApiController]
 public class AuthController : BaseApiController
 {
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IDataResult<LoginUserCommand>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
-    [HttpPost("Login")]
-    public async Task<IActionResult> Login([FromQuery] LoginUserCommand loginUserCommand)
+    [HttpPost]
+    public async Task<IActionResult> Login(LoginUserCommand loginUserCommand)
     {
         var result = await Mediator.Send(loginUserCommand);
         return result.Success ? Ok(result) : Unauthorized(result.Message);
     }
 
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IDataResult<SignOutCommand>))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
@@ -26,24 +26,24 @@ public class AuthController : BaseApiController
         return result.Success ? Ok(result) : Unauthorized(result.Message);
     }
 
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IResult))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IResult))]
-    [HttpPost("registerCandidate")]
+    [HttpPost]
 
-    public async Task<IActionResult> RegisterCandidate([FromQuery] RegisterCandidateCommand registerCandidateCommand)
+    public async Task<IActionResult> RegisterCandidate(RegisterCandidateCommand registerCandidateCommand)
     {
         return GetResponseOnlyResultMessage(await Mediator.Send(registerCandidateCommand));
     }
 
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Produces("application/json", "text/plain")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IResult))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IResult))]
-    [HttpPost("registerCompany")]
+    [HttpPost]
 
-    public async Task<IActionResult> RegisterCompany([FromQuery] RegisterCompanyCommand registerCompanyCommand)
+    public async Task<IActionResult> RegisterCompany(RegisterCompanyCommand registerCompanyCommand)
     {
         return GetResponseOnlyResultMessage(await Mediator.Send(registerCompanyCommand));
     }

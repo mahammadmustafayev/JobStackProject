@@ -1,4 +1,4 @@
-﻿
+﻿@model JobStack.WebUI.DTOs.AuthDTOs.RegiserCandidateDto
 @{
     Layout = null;
 }
@@ -43,26 +43,26 @@
                             <img src="~/assets/images/logo-dark.png" class="mx-auto h-[24px] block dark:hidden" alt="">
                             <img src="~/assets/images/logo-light.png" class="mx-auto h-[24px] dark:block hidden" alt="">
                         </a>
-                        <h5 class="my-6 text-xl font-semibold">Signup</h5>
-                        <form action="https://shreethemes.in/jobstack/layouts/signup-success.html" class="text-left">
+                        <h5 class="my-6 text-xl font-semibold">Register a Candidate</h5>
+                        <form asp-action="RegisterCandidate" class="text-left">
                             <div class="grid grid-cols-1">
                                 <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label class="font-semibold" for="RegisterName">Your Firstname:</label>
-                                    <input id="RegisterName" type="text" class="form-input mt-3 rounded-md" placeholder="Jhon">
+                                    <label class="font-semibold" asp-for="FirstName">Your Firstname:</label>
+                                    <input asp-for="FirstName" class="form-input mt-3 rounded-md" placeholder="Jhon">
                                 </div> 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label class="font-semibold" for="RegisterName">Your Lastname:</label>
-                                    <input id="RegisterName" type="text" class="form-input mt-3 rounded-md" placeholder="Doe">
+                                    <label class="font-semibold" asp-for="LastName">Your Lastname:</label>
+                                    <input asp-for="LastName" class="form-input mt-3 rounded-md" placeholder="Doe">
                                 </div>
 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label class="font-semibold" for="LoginEmail">Email Address:</label>
-                                    <input id="LoginEmail" type="email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
+                                    <label class="font-semibold" asp-for="Email">Email Address:</label>
+                                    <input asp-for="Email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
                                 </div>
 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
-                                    <label class="font-semibold" for="LoginPassword">Password:</label>
-                                    <input id="LoginPassword" type="password" class="form-input mt-3 rounded-md" placeholder="Password:">
+                                    <label class="font-semibold" asp-for="Password"> Password:</label>
+                                    <input asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
                                 </div>
 
                                 <div class="mb-4">
@@ -77,7 +77,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <span class="text-slate-400 me-2">Already have an account ? </span> <a href="login.html" class="text-black dark:text-white font-bold">Sign in</a>
+                                    <span class="text-slate-400 me-2">Already have an account ? </span> <a asp-controller="Auth" asp-action="Login" class="text-black dark:text-white font-bold">Sign in</a>
                                 </div>
                             </div>
                         </form>

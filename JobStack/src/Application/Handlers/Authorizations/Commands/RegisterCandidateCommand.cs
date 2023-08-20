@@ -22,11 +22,11 @@ public record RegisterCandidateCommand(string FirstName, string LastName, string
         public async Task<IResult> Handle(RegisterCandidateCommand request, CancellationToken cancellationToken)
         {
             Candidate candidate = _mapper.Map<Candidate>(request);
-            var isAnyUser = await _userManager.FindByEmailAsync(request.Email);
-            if (isAnyUser is not null)
-            {
-                return new ErrorResult(Messages.EmailExist);
-            }
+            //var isAnyUser = await _userManager.FindByEmailAsync(request.Email);
+            //if (isAnyUser is not null)
+            //{
+            //    return new ErrorResult(Messages.EmailExist);
+            //}
             ApplicationUser user = new()
             {
                 FirstName = request.FirstName,

@@ -74,9 +74,9 @@
                         <input type="text" class="form-input h-9 pe-10 rounded-3xl sm:w-44 w-36 border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900" name="s" id="searchItem" placeholder="Search...">
                     </div>
                 </li>*@
-                <li class="inline-block ps-1 mb-0">
+                @*<li class="inline-block ps-1 mb-0">
                     <a asp-controller="Home" asp-action="Index" class="btn btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><img src="~/assets/images/team/05.jpg" class="rounded-full" alt=""></a>
-                </li>
+                </li>*@
             </ul>
             <!--Login button End-->
 
@@ -205,6 +205,20 @@
                     </li>
 
                     <li><a asp-controller="About" asp-action="Index" class="sub-menu-item">About Us</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Your Account</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a  class="sub-menu-item">@User.Identity.Name</a></li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                       <li><a asp-controller="Auth" asp-action="Login" class="sub-menu-item">Login </a></li>
+                        
+                    }
                 </ul><!--end navigation menu-->
             </div><!--end navigation-->
         </div><!--end container-->
