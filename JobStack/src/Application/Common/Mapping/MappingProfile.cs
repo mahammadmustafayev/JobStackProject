@@ -21,11 +21,13 @@ public class MappingProfile : Profile
         CreateMap<City, CityDto>().ReverseMap();
         CreateMap<City, UpdateCityCommand>().ReverseMap();
         CreateMap<City, GetCitiesQuery>().ReverseMap();
+        CreateMap<City, GetCityQuery>().ReverseMap();
 
         CreateMap<Country, CreateCountryCommand>().ReverseMap();
         CreateMap<Country, CountryDto>().ReverseMap();
         CreateMap<Country, UpdateCountryCommand>().ReverseMap();
         CreateMap<Country, GetCountriesQuery>().ReverseMap();
+        CreateMap<Country, GetCountryQuery>().ReverseMap();
 
         CreateMap<Experience, CreateExperienceCommand>().ReverseMap();
         CreateMap<Experience, ExperienceDto>().ReverseMap();

@@ -1,0 +1,52 @@
+﻿@model List<CandidateVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+<div class="container">
+    <div class="bd-example-snippet bd-code-snippet">
+        <div class="bd-example m-0 border-0">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach (var item in Model)
+                {
+                    <div class="col">
+                        <div class="card">
+                            @if (item.CandidateProfilImage is null)
+                            {
+                                <img class="bd-placeholder-img card-img-top" src="~/assets/images/company/shree-logo.png" width="100%" height="140" />
+
+                            }
+                            else
+                            {
+                                <img class="bd-placeholder-img card-img-top" src="~/data/candidate/images/@item.CandidateProfilImage" width="90%" height="250" />
+
+                            }
+                            <div class="card-body">
+                                <h5 class="card-title">@item.CandidateFirstName @item.CandidateLastName @if (item.IsDeleted)
+                                    {
+                                        <i class="bi bi-eye-slash-fill text-danger fs-1" style="font-size: 1rem;"></i>
+
+                                    }
+                                    else
+                                    {
+                                        <i class="bi bi-eye-fill text-success " style="font-size: 1rem;"></i>
+
+                                    }
+                                </h5>
+                                <span class="fs-4">Profession: @item.CandidateProfession</span>
+                                <div>
+                                    <a class="btn btn-success" href="~/data/candidate/resume/@item.CandidateCV" target="_blank"><i class="bi bi-folder2-open text-white"></i> Open Cv</a>
+                                    <a class="btn btn-danger" asp-area="Manage" asp-controller="Candidate" asp-action="Delete" asp-route-id="@item.Id"> Delete</a>
+                                    <a class="btn btn-danger" asp-area="Manage" asp-controller="Candidate" asp-action="PermaDelete" asp-route-id="@item.Id"><i class="bi bi-trash3-fill text-white"></i> Perma-Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -32,11 +32,13 @@
                     <td>
                         @if (item.IsDeleted)
                         {
-                            <span class="text-danger">Hidden</span>
+                            @*<span class="text-danger">Hidden</span>*@
+                            <i class="bi bi-eye-slash-fill text-danger fs-1" style="font-size: 2rem;"></i>
                         }
                         else
                         {
-                            <span class="text-success">Active</span>
+                            <i class="bi bi-eye-fill text-success " style="font-size: 2rem;"></i>
+                            @*<span class="text-success">Active</span>*@
                         }
                     </td>
 

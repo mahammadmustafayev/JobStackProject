@@ -30,16 +30,12 @@
                         @*<input id="pro-img" name="profile-image" type="file" class="hidden" onchange="loadFile(event)">*@
                         <div>
                             <div class="relative h-28 w-28 max-w-[112px] max-h-[112px] mx-auto">
-                                @if(Model.CandidateProfilImage is null)
-                                {
-                                    <img src="~/assets/images/company/shree-logo.png" class="rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800" id="profile-image" alt="">
-
-                                }
-                                else
+                                @if(Model.CandidateProfilImage is not null)
                                 {
                                    <img src="~/data/candidate/images/@Model.CandidateProfilImage" class="rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800" id="profile-image" alt="">
-                                    
+
                                 }
+                               
                                 <label class="absolute inset-0 cursor-pointer" for="pro-img"></label>
                             </div>
                         </div>

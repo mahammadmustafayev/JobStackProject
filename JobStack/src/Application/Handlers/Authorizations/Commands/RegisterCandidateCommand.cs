@@ -3,7 +3,7 @@
 
 namespace JobStack.Application.Handlers.Authorizations.Commands;
 
-public record RegisterCandidateCommand(string FirstName, string LastName, string Email, string Password) : IRequest<IResult>
+public record RegisterCandidateCommand(string FirstName, string LastName, string Email, string Password, int CountryId, int CityId) : IRequest<IResult>
 {
     public class RegisterCandidateCommandHandler : IRequestHandler<RegisterCandidateCommand, IResult>
     {
@@ -39,6 +39,8 @@ public record RegisterCandidateCommand(string FirstName, string LastName, string
             candidate.CandidateFirstName = request.FirstName;
             candidate.CandidateLastName = request.LastName;
             candidate.CandidateEmail = request.Email;
+            candidate.CityId = request.CityId;
+            candidate.CountryId = request.CountryId;
             IdentityResult identityResult = await _userManager.CreateAsync(user, request.Password);
             await _context.Candidates.AddAsync(candidate);
             _emailService.SendEmail(request.Email,

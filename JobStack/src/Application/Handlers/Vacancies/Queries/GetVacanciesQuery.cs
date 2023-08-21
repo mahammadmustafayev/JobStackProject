@@ -31,6 +31,7 @@ public class GetVacanciesQuery : IRequest<IDataResult<IEnumerable<VacancyDto>>>
 
                     .Include(v => v.JobApplies)
                     .AsNoTracking()
+                    .OrderByDescending(p => p.Id)
                     .Where(v => v.IsDeleted == false)
                     .ToListAsync()));
         }

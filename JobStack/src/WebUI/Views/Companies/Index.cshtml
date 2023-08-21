@@ -36,7 +36,16 @@
             {
                 <div class="group relative p-6 rounded-md shadow dark:shadow-gray-700 mt-6">
                     <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md relative -mt-12">
+                        @if (company.CompanyLogo is null)
+                        {
+                            <img src="~/assets/images/company/shree-logo.png" class="h-8 w-8" alt="error">
+
+                        }
+                        else
+                        {
                         <img src="~/data/company/@company.CompanyLogo" class="h-8 w-8" alt="error">
+                            
+                        }
                     </div>
 
                     <div class="mt-4">

@@ -27,6 +27,7 @@ public class ManageGetCitiesQuery : IRequest<IDataResult<IEnumerable<CityDto>>>
 
                      //.Include(c => c.Candidates)
                      //.AsNoTracking()
+                     .OrderBy(c => c.CityName)
 
 
                      .ToListAsync()));

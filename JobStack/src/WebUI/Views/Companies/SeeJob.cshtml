@@ -88,7 +88,16 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <div class="w-14 h-14 flex items-center justify-center bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full mb-2">
-                                <img src="~/data/company/@vacancy.Company.CompanyLogo" class="h-8 w-8" alt="">
+                                @if (vacancy.Company.CompanyLogo is null)
+                                {
+                                    <img src="~/assets/images/company/shree-logo.png" class="h-8 w-8" alt="error">
+
+                                }
+                                else
+                                {
+                                    <img src="~/data/company/@vacancy.Company.CompanyLogo" class="h-8 w-8" alt="">
+
+                                }
                             </div>
                             <a asp-controller="Vacancies" asp-action="Details" asp-route-id="@vacancy.Id" class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">@vacancy.Company.CompanyName</a>
                         </div>

@@ -15,6 +15,15 @@ public class CountriesController : BaseApiController
     {
         return GetResponseOnlyResultData(await Mediator.Send(new GetCountriesQuery()));
     }
+    [Consumes("application/json")]
+    [Produces("application/json", "text/plain")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<GetCountryQuery>))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Details(int id)
+    {
+        return GetResponseOnlyResultData(await Mediator.Send(new GetCountryQuery(id)));
+    }
 
     [Consumes("application/json")]
     [Produces("application/json", "text/plain")]
@@ -31,7 +40,7 @@ public class CountriesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateCountryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPost]
-    public async Task<IActionResult> Post([FromQuery] CreateCountryCommand createCountryCommand)
+    public async Task<IActionResult> Post(CreateCountryCommand createCountryCommand)
     {
         return GetResponseOnlyResultData(await Mediator.Send(createCountryCommand));
     }
@@ -41,25 +50,25 @@ public class CountriesController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UpdateCountryCommand))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
     [HttpPut]
-    public async Task<IActionResult> Put([FromQuery] UpdateCountryCommand updateCountryCommand)
+    public async Task<IActionResult> Put(UpdateCountryCommand updateCountryCommand)
     {
         return GetResponseOnlyResultData(await Mediator.Send(updateCountryCommand));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete]
-    public async Task<IActionResult> Delete([FromForm] DeleteCountryCommand deleteCountryCommand)
+    [HttpPost]
+    public async Task<IActionResult> Delete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(deleteCountryCommand));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new DeleteCountryCommand(id)));
     }
 
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-    [HttpDelete("perma")]
-    public async Task<IActionResult> PermaDelete([FromForm] PermaDeleteCountryCommand perma)
+    [HttpPost]
+    public async Task<IActionResult> PermaDelete(int id)
     {
-        return GetResponseOnlyResultMessage(await Mediator.Send(perma));
+        return GetResponseOnlyResultMessage(await Mediator.Send(new PermaDeleteCountryCommand(id)));
     }
 
 

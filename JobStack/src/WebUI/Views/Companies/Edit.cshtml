@@ -71,7 +71,11 @@
                                 <span asp-validation-for="Description" class="text-red-600"></span>
 
                             </div>
-                            <img src="~/data/company/@Model.CompanyLogo" class="object-cover h-45 w-full ">
+                            @if (Model.CompanyLogo is not null)
+                            {
+                               <img src="~/data/company/@Model.CompanyLogo" class="object-cover h-45 w-full ">
+                                
+                            }
                             <div class="mb-4 ltr:text-left rtl:text-right">
                                 <label class="font-semibold" asp-for="CompanyUrl">Your Image :</label>
                                 <input  asp-for="CompanyUrl" class="form-input border border-slate-100 dark:border-slate-800 mt-1" >

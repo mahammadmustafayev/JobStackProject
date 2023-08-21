@@ -64,7 +64,22 @@
                                     <label class="font-semibold" asp-for="Password"> Password:</label>
                                     <input asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
                                 </div>
-
+                                <div class="mb-4 ltr:text-left rtl:text-right">
+                                    <label class="font-semibold" asp-for="Password">Country:</label>
+                                    <select  asp-for="CountryId    " asp-items="@(new SelectList(ViewBag.Countries,nameof(CountryVM.Id),nameof(CountryVM.Name)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-1">
+                                            @*<option value="USA">USA</option>
+                                           <option value="CAD">Ca    nada</option>
+                                            <option value="CHINA"    >China</option>*@
+                                    </select>
+                                </div>
+                                 <div class="mb-4 ltr:text-left rtl:text-right">
+                                    <label class="font-semibold" asp-for="Password">City:</label>
+                                        <select asp-for="CityId" asp-items="@(new SelectList(ViewBag.Cities,nameof(CityVM.Id),nameof(CityVM.CityName)))" class="form-select form-input border border-slate-100 dark:border-slate-800 block w-full mt-1">
+                                        @*<option value="USA">USA</option>
+                                    <option value="CAD">Canada</option>
+                                    <option value="CHINA">China</option>*@
+                                    </select>
+                                </div>
                                 <div class="mb-4">
                                     <div class="flex items-center mb-0">
                                         <input class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-emerald-600 focus:border-emerald-300 focus:ring focus:ring-offset-0 focus:ring-emerald-200 focus:ring-opacity-50 me-2" type="checkbox" value="" id="Accept:T&C">

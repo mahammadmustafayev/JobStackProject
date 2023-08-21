@@ -2,7 +2,7 @@
 
 [Route("api/[controller]/[action]")]
 [ApiController]
-public class AuthController : BaseApiController
+public class AuthorController : BaseApiController
 {
     //[AllowAnonymous]
     [Produces("application/json", "text/plain")]
@@ -28,8 +28,8 @@ public class AuthController : BaseApiController
 
     //[AllowAnonymous]
     [Produces("application/json", "text/plain")]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IResult))]
-    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IResult))]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Application.Common.Results.IResult))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Application.Common.Results.IResult))]
     [HttpPost]
 
     public async Task<IActionResult> RegisterCandidate(RegisterCandidateCommand registerCandidateCommand)
@@ -39,8 +39,8 @@ public class AuthController : BaseApiController
 
     //[AllowAnonymous]
     [Produces("application/json", "text/plain")]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IResult))]
-    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(IResult))]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Application.Common.Results.IResult))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Application.Common.Results.IResult))]
     [HttpPost]
 
     public async Task<IActionResult> RegisterCompany(RegisterCompanyCommand registerCompanyCommand)

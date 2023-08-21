@@ -34,7 +34,7 @@
         <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -46,6 +46,11 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" >
+                    <i class="fa-sharp fa-regular fa-hurricane"></i>
+                    <span>Jobstack</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" asp-area="Manage" asp-controller="Category" asp-action="Index" >
                     <i class="fa-sharp fa-regular fa-hurricane"></i>
                     <span>Categories</span></a>
@@ -54,6 +59,31 @@
                 <a class="nav-link" asp-area="Manage" asp-controller="JobType" asp-action="Index" >
                     <i class="fa-sharp fa-regular fa-hurricane"></i>
                     <span>Job Types</span></a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Manage" asp-controller="Vacancy" asp-action="Index" >
+                    <i class="fa-sharp fa-regular fa-hurricane"></i>
+                    <span>Vacancies</span></a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Manage" asp-controller="Country" asp-action="Index" >
+                    <i class="fa-sharp fa-regular fa-hurricane"></i>
+                    <span>Countries</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Manage" asp-controller="City" asp-action="Index" >
+                    <i class="fa-sharp fa-regular fa-hurricane"></i>
+                    <span>Cities</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Manage" asp-controller="Candidate" asp-action="Index" >
+                    <i class="fa-sharp fa-regular fa-hurricane"></i>
+                    <span>Candidates</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Manage" asp-controller="Company" asp-action="Index" >
+                    <i class="fa-sharp fa-regular fa-hurricane"></i>
+                    <span>Companies</span></a>
             </li>
 
             @*<!-- Divider -->

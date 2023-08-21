@@ -22,7 +22,16 @@
         <div class="grid grid-cols-1">
             <div class="md:flex justify-between items-center shadow dark:shadow-gray-700 rounded-md p-6 bg-white dark:bg-slate-900">
                 <div class="flex items-center">
+                    @if (Model.CompanyLogo is null)
+                    {
+                        <img src="~/assets/images/company/shree-logo.png" class="h-20 w-20 p-3 shadow dark:shadow-gray-700 rounded-md bg-slate-50 dark:bg-slate-800" alt="">
+
+                    }
+                    else
+                    {
                     <img src="~/data/company/@Model.CompanyLogo" class="h-20 w-20 p-3 shadow dark:shadow-gray-700 rounded-md bg-slate-50 dark:bg-slate-800" alt="">
+
+                    }
 
                     <div class="ms-4">
                         <h5 class="text-xl font-bold">@Model.CompanyName</h5>

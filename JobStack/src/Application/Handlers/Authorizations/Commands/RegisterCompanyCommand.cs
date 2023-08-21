@@ -3,7 +3,7 @@
 
 namespace JobStack.Application.Handlers.Authorizations.Commands;
 
-public record RegisterCompanyCommand(string CompanyName, string Email, string Password) : IRequest<IResult>
+public record RegisterCompanyCommand(string CompanyName, string Email, string Password, int CountryId, int CityId) : IRequest<IResult>
 {
 
 
@@ -38,6 +38,8 @@ public record RegisterCompanyCommand(string CompanyName, string Email, string Pa
             };
             company.CompanyName = request.CompanyName;
             company.CompanyEmail = request.Email;
+            company.CityId = request.CityId;
+            company.CountryId = request.CountryId;
             IdentityResult identityResult = await _userManager.CreateAsync(user, request.Password);
             await _context.Companies.AddAsync(company);
             _emailService.SendEmail(request.Email,

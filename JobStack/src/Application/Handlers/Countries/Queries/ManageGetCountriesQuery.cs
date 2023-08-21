@@ -27,8 +27,7 @@ public class ManageGetCountriesQuery : IRequest<IDataResult<IEnumerable<CountryD
 
                       //.Include(c => c.Candidates)
                       //.AsNoTracking()
-
-                      .Where(c => c.IsDeleted == false)
+                      .OrderByDescending(c => c.Id)
                       .ToListAsync()));
         }
     }

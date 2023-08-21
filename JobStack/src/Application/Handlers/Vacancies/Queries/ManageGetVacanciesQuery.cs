@@ -18,8 +18,8 @@ public class ManageGetVacanciesQuery : IRequest<IDataResult<IEnumerable<VacancyD
             return new SuccessDataResult<IEnumerable<VacancyDto>>(
                 _mapper.Map<IEnumerable<VacancyDto>>(
                     await _context.Vacancies
-                    //.Include(p => p.C)
-                    //.AsNoTracking()
+                    .Include(p => p.Company)
+                    .AsNoTracking()
                     .Include(p => p.JobType)
                     .AsNoTracking()
                     .Include(p => p.Category)
@@ -31,6 +31,8 @@ public class ManageGetVacanciesQuery : IRequest<IDataResult<IEnumerable<VacancyD
 
                     .Include(v => v.JobApplies)
                     .AsNoTracking()
+                    .OrderByDescending(p => p.Id)
+
                     .ToListAsync()));
         }
     }

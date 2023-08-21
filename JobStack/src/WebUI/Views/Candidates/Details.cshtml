@@ -13,7 +13,16 @@
             <div class="md:w-full">
                 <div class="relative flex items-end justify-between">
                     <div class="relative flex items-end">
+                        @if (Model.CandidateProfilImage is null)
+                        {
+                            <img src="~/assets/images/company/shree-logo.png" class="h-28 w-28 rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800" alt="">
+
+                        }
+                        else
+                        {
+                            
                         <img src="~/data/candidate/images/@Model.CandidateProfilImage" class="h-28 w-28 rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800" alt="">
+                        }
                         <div class="ms-4">
                             <h5 class="text-lg font-semibold">Mr. Calvin carlo</h5>
                             <p class="text-slate-400">Web Designer</p>
