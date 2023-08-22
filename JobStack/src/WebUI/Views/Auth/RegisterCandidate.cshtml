@@ -48,21 +48,21 @@
                             <div class="grid grid-cols-1">
                                 <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label class="font-semibold" asp-for="FirstName">Your Firstname:</label>
-                                    <input asp-for="FirstName" class="form-input mt-3 rounded-md" placeholder="Jhon">
+                                    <input autocomplete="off" asp-for="FirstName" class="form-input mt-3 rounded-md" placeholder="Jhon">
                                 </div> 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label class="font-semibold" asp-for="LastName">Your Lastname:</label>
-                                    <input asp-for="LastName" class="form-input mt-3 rounded-md" placeholder="Doe">
+                                    <input autocomplete="off" asp-for="LastName" class="form-input mt-3 rounded-md" placeholder="Doe">
                                 </div>
 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label class="font-semibold" asp-for="Email">Email Address:</label>
-                                    <input asp-for="Email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
+                                    <input autocomplete="off" asp-for="Email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
                                 </div>
 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label class="font-semibold" asp-for="Password"> Password:</label>
-                                    <input asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
+                                    <input autocomplete="off" asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
                                 </div>
                                 <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label class="font-semibold" asp-for="Password">Country:</label>
@@ -79,6 +79,10 @@
                                     <option value="CAD">Canada</option>
                                     <option value="CHINA">China</option>*@
                                     </select>
+                                </div>
+                                <div class="mb-4 ltr:text-left rtl:text-right">
+                                    <label asp-for="CandidateProfileUrl" class="form-label font-medium">Upload Profile Image:</label>
+                                    <input autocomplete="off" asp-for="CandidateProfileUrl" class="relative form-input border border-slate-100 dark:border-slate-800 file:h-10 file:-mx-3 file:-my-2 file:cursor-pointer file:rounded-none file:border-0 file:px-3 file:text-neutral-700 bg-clip-padding px-3 py-1.5 file:me-3 mt-2">
                                 </div>
                                 <div class="mb-4">
                                     <div class="flex items-center mb-0">

@@ -1021,10 +1021,6 @@
       "PackagePath": "staticwebassets\\data\\company\\0d50689b-49e7-49fe-a723-659e429de495googlelogo.png"
     },
     {
-      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\138c4e1f-3bab-48b2-81b9-ec4e34ea966dcodeacdemy.png",
-      "PackagePath": "staticwebassets\\data\\company\\138c4e1f-3bab-48b2-81b9-ec4e34ea966dcodeacdemy.png"
-    },
-    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\1ade46bc-1f44-4d17-9eb1-57b59705bd66circle-logo.png",
       "PackagePath": "staticwebassets\\data\\company\\1ade46bc-1f44-4d17-9eb1-57b59705bd66circle-logo.png"
     },
@@ -1059,6 +1055,10 @@
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\87b6f680-9711-44fb-92eb-0a6d895587d5spotify.png",
       "PackagePath": "staticwebassets\\data\\company\\87b6f680-9711-44fb-92eb-0a6d895587d5spotify.png"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\8a174eab-def9-4ad4-bf5a-1cbd172e7a22code-academy-logo-new.webp",
+      "PackagePath": "staticwebassets\\data\\company\\8a174eab-def9-4ad4-bf5a-1cbd172e7a22code-academy-logo-new.webp"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\8ded5478-682f-4216-b080-82dc0b36b6aafacebook-logo.png",

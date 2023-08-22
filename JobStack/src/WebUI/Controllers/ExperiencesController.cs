@@ -60,6 +60,7 @@ public class ExperiencesController : Controller
     [HttpGet]
     public IActionResult Edit(int id)
     {
+        ViewBag.ExperienceId = id;
         List<ExperienceVM> experiences = new();
         HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + $"/Experiences/Details/{id}").Result;
         if (response.IsSuccessStatusCode)

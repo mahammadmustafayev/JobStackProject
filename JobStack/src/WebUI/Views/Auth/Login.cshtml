@@ -50,18 +50,18 @@
                                 <div asp-validation-summary=ModelOnly class="text-danger"></div>
                                 <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label class="font-semibold" asp-for="Email">Email Address:</label>
-                                    <input asp-for="Email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
+                                    <input autocomplete="off" asp-for="Email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
                                 </div>
 
                                 <div class="mb-4 ltr:text-left rtl:text-right">
                                     <label class="font-semibold" asp-for="Password">Password:</label>
-                                    <input asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
+                                    <input autocomplete="off" asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
                                 </div>
 
                                 <div class="flex justify-between mb-4">
                                     <div class="inline-flex items-center mb-0">
-                                        <input  asp-for="RememberMe" class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-emerald-600 focus:border-emerald-300 focus:ring focus:ring-offset-0 focus:ring-emerald-200 focus:ring-opacity-50 me-2" >
                                         <label  asp-for="RememberMe" class="form-checkbox-label text-slate-400" >Remember me</label>
+                                        <input autocomplete="off"  asp-for="RememberMe" class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-emerald-600 focus:border-emerald-300 focus:ring focus:ring-offset-0 focus:ring-emerald-200 focus:ring-opacity-50 me-2" >
                                     </div>
                                     @*<p class="text-slate-400 mb-0"><a href="reset-password.html" class="text-slate-400">Forgot password ?</a></p>*@
                                 </div>

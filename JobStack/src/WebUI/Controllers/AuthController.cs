@@ -1,4 +1,5 @@
 ﻿using JobStack.WebUI.DTOs.AuthDTOs;
+using JobStack.WebUI.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -10,11 +11,13 @@ public class AuthController : Controller
 {
     Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
+    private readonly IWebHostEnvironment _env;
 
-    public AuthController(HttpClient client)
+    public AuthController(HttpClient client, IWebHostEnvironment env)
     {
         _client = client;
         _client.BaseAddress = baseUrl;
+        _env = env;
     }
     private List<CountryVM> CountryAll()
     {
@@ -73,7 +76,18 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult RegisterCompany(RegisterCompanyDto registerCompany)
     {
-        string data = JsonConvert.SerializeObject(registerCompany);
+        var imagefolderPath = Path.Combine(_env.WebRootPath, "data", "company");
+        string imagereturnPath = registerCompany.CompanyUrl.SaveFile(imagefolderPath);
+        RegisterCompanyPostDto companyUpdate = new()
+        {
+            CompanyName = registerCompany.CompanyName,
+            Email = registerCompany.Email,
+            Password = registerCompany.Password,
+            CityId = registerCompany.CityId,
+            CountryId = registerCompany.CountryId,
+            CompanyLogo = imagereturnPath
+        };
+        string data = JsonConvert.SerializeObject(companyUpdate);
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + "/Author/RegisterCompany", content).Result;
         HttpResponseMessage response = result;
@@ -81,7 +95,7 @@ public class AuthController : Controller
         {
             return RedirectToAction("Index", "Companies");
         }
-        return View();
+        return View(registerCompany);
     }
     [HttpGet]
     public IActionResult RegisterCandidate()
@@ -93,7 +107,19 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult RegisterCandidate(RegiserCandidateDto regiserCandidate)
     {
-        string data = JsonConvert.SerializeObject(regiserCandidate);
+        var imagefolderPath = Path.Combine(_env.WebRootPath, "data", "candidate", "images");
+        string imagereturnPath = regiserCandidate.CandidateProfileUrl.SaveFile(imagefolderPath);
+        RegisterCandidatePostDto postDto = new()
+        {
+            FirstName = regiserCandidate.FirstName,
+            LastName = regiserCandidate.LastName,
+            Email = regiserCandidate.Email,
+            CityId = regiserCandidate.CityId,
+            CountryId = regiserCandidate.CountryId,
+            CandidateProfilImage = imagereturnPath,
+            Password = regiserCandidate.Password
+        };
+        string data = JsonConvert.SerializeObject(postDto);
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + "/Author/RegisterCandidate", content).Result;
         HttpResponseMessage response = result;

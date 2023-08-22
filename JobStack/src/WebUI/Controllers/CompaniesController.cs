@@ -90,6 +90,7 @@ public class CompaniesController : Controller
         TempData["OldImage"] = company[0].CompanyLogo;
         ViewBag.Countries = CountryAll();
         ViewBag.Cities = CityAll();
+        ViewBag.CompanyId = id;
         return View(company[0]);
     }
     [HttpPost]
@@ -119,7 +120,7 @@ public class CompaniesController : Controller
             string OldPicture = TempData["OldImage"] as string;
             var fullImagePath = Path.Combine(imagefolderPath, OldPicture);
             if (System.IO.File.Exists(fullImagePath)) System.IO.File.Delete(fullImagePath);
-            return RedirectToAction(nameof(Details));
+            return RedirectToAction(nameof(Index));
         }
         return View(companyEdit);
     }
