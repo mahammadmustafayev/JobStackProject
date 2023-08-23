@@ -9,7 +9,7 @@ namespace JobStack.WebUI.Areas.Manage.Controllers;
 
 public class CountryController : Controller
 {
-    Uri baseUrl = new("http://localhost:7264/api");
+    Uri baseUrl = new("https://localhost:7264/api");
     private readonly HttpClient _client;
 
     public CountryController(HttpClient client)
