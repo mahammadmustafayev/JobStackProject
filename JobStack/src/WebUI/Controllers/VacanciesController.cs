@@ -72,6 +72,18 @@ public class VacanciesController : Controller
         }
         return View(vacancies);
     }
+    private string JsonData()
+    {
+        // List<VacancyVM> vacancies = new();
+        string data = "";
+        HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "/Vacancies/GetAllVacancies").Result;
+        if (response.IsSuccessStatusCode)
+        {
+            data = response.Content.ReadAsStringAsync().Result;
+            //vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(data);
+        }
+        return data;
+    }
     [HttpGet]
     public IActionResult Details(int id)
     {
@@ -99,6 +111,7 @@ public class VacanciesController : Controller
     [HttpPost]
     public IActionResult Create(int id, VacancyPostDto vacancy, string responsibilts, string skills)
     {
+        var root = @"D:\Personal\JobStackProject\JobstackApp\JobApp\assets\test.json";
         VacancyPostDto vacancyPost = new()
         {
             CompanyId = id,
@@ -119,6 +132,7 @@ public class VacanciesController : Controller
         HttpResponseMessage response = _client.PostAsync(_client.BaseAddress + "/Vacancies/Post", content).Result;
         if (response.IsSuccessStatusCode)
         {
+            System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return View();
@@ -145,6 +159,7 @@ public class VacanciesController : Controller
     [HttpPost]
     public IActionResult Edit(VacancyUpdateDto vacancy, string responsibilts, string skills)
     {
+        var root = @"D:\Personal\JobStackProject\JobstackApp\JobApp\assets\test.json";
         VacancyUpdateDto vacancyUpdate = new()
         {
             VacancyId = Convert.ToInt32(TempData["VacancyId"]),
@@ -166,6 +181,7 @@ public class VacanciesController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
+            System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return View(vacancyUpdate);
