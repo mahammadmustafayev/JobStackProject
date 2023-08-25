@@ -28,8 +28,9 @@ public class CompaniesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             companies = JsonConvert.DeserializeObject<List<CompanyVM>>(data);
+            return View(companies);
         }
-        return View(companies);
+        return RedirectToAction("Index", "Error");
     }
     public IActionResult Details(int id)
     {
@@ -39,8 +40,9 @@ public class CompaniesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             company = JsonConvert.DeserializeObject<List<CompanyVM>>(data);
+            return View(company[0]);
         }
-        return View(company[0]);
+        return RedirectToAction("Index", "Error");
     }
     public IActionResult SeeJob(int id)
     {
@@ -50,8 +52,9 @@ public class CompaniesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             company = JsonConvert.DeserializeObject<List<CompanyVM>>(data);
+            return View(company[0]);
         }
-        return View(company[0]);
+        return RedirectToAction("Index", "Error");
     }
     private List<CountryVM> CountryAll()
     {
@@ -85,13 +88,14 @@ public class CompaniesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             company = JsonConvert.DeserializeObject<List<CompanyEditDto>>(data);
+            TempData["Id"] = id;
+            TempData["OldImage"] = company[0].CompanyLogo;
+            ViewBag.Countries = CountryAll();
+            ViewBag.Cities = CityAll();
+            ViewBag.CompanyId = id;
+            return View(company[0]);
         }
-        TempData["Id"] = id;
-        TempData["OldImage"] = company[0].CompanyLogo;
-        ViewBag.Countries = CountryAll();
-        ViewBag.Cities = CityAll();
-        ViewBag.CompanyId = id;
-        return View(company[0]);
+        return RedirectToAction("Index", "Error");
     }
     [HttpPost]
     public IActionResult Edit(CompanyEditDto companyEdit)
@@ -122,13 +126,18 @@ public class CompaniesController : Controller
             if (System.IO.File.Exists(fullImagePath)) System.IO.File.Delete(fullImagePath);
             return RedirectToAction(nameof(Index));
         }
-        return View(companyEdit);
+        return RedirectToAction("Index", "Error");
     }
     public IActionResult Delete(int id)
     {
         string data = id.ToString();
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Companies/Delete?id={id}", content).Result;
-        return RedirectToAction(nameof(Index));
+        if (result.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+
+        }
+        return RedirectToAction("Index", "Error");
     }
 }

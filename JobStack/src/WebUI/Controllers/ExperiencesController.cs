@@ -26,8 +26,9 @@ public class ExperiencesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             experiences = JsonConvert.DeserializeObject<List<ExperienceVM>>(data);
+            return View(experiences);
         }
-        return View(experiences);
+        return RedirectToAction("Index", "Error");
     }
     [HttpGet]
     public IActionResult Create()
@@ -54,7 +55,7 @@ public class ExperiencesController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Error");
     }
 
     [HttpGet]
@@ -67,8 +68,9 @@ public class ExperiencesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             experiences = JsonConvert.DeserializeObject<List<ExperienceVM>>(data);
+            return View(experiences[0]);
         }
-        return View(experiences[0]);
+        return RedirectToAction("Index", "Error");
     }
     [HttpPost]
     public IActionResult Edit(ExperinceEditDto experience)
@@ -81,7 +83,7 @@ public class ExperiencesController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View(experience);
+        return RedirectToAction("Index", "Error");
     }
     public IActionResult Delete(int id)
     {
@@ -89,8 +91,11 @@ public class ExperiencesController : Controller
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Experiences/Delete?id={id}", content).Result;
         HttpResponseMessage response = result;
-        //if (response.IsSuccessStatusCode)
-        return RedirectToAction(nameof(Index));
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+        }
+        return RedirectToAction("Index", "Error");
 
     }
 }

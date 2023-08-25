@@ -46,9 +46,9 @@ public record RegisterCompanyCommand(string CompanyName, string Email, string Pa
             _emailService.SendEmail(request.Email,
                $"""
                 <h3 style="font-size: 20px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Dəyərli {request.CompanyName}</h3>
-                <p style="font-size: 10px;" >Xoş Gəldiniz! Qeydiyyatdan keçdiyiniz üçün təşəkkür edirik.</p>
-                <p>Hörmətlə</p>
-                <p>JobStack Managment</p>
+                <p style="font-size: 17px;" >Xoş Gəldiniz! Qeydiyyatdan keçdiyiniz üçün təşəkkür edirik.</p>
+                <p style="font-size: 17px;">Hörmətlə</p>
+                <p style="color:black;">JobStack Managment</p>
                 <img  src="https://shreethemes.in/jobstack/layouts/assets/images/logo-dark.png" style="width: 200px;height: 45px; ">
                 """);
             await _context.SaveChangesAsync(cancellationToken);

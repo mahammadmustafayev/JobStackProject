@@ -43,11 +43,11 @@ public record SendJobApplytoCompany
             jobApply.VacancyId = request.VacancyId;
             _emailService.SendEmail(request.EmailAddress,
                 $"""
-                <h3 style="font-size: 20px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Dəyərli {request.FirstName} {request.LastName}</h3>
-                <p style="font-size: 10px;" >Müraciətiniz üçün təşəkkür edirik.Müraciət etdiniz vakansiya əgər qəbul edilərsə sizinlə vakansiya verən şirkət tərəfindən  əlaqə qurulacaq.</p>
-                <p>Hörmətlə</p>
-                <p>JobStack Managment</p>
-                <img  src="https://shreethemes.in/jobstack/layouts/assets/images/logo-dark.png" style="width: 200px;height: 45px; ">
+                <h3 style="font-size: 20px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Hörmətli {request.FirstName} {request.LastName}</h3>
+                <p style="font-size: 17px;" >Müraciətiniz üçün təşəkkür edirik.Müraciətiniz qəbul olunarsa sizinlə şirkət tərəfindən  məlumat veriləcəkdir.</p>
+                <p style="font-size:17px;">Hörmətlə</p>
+                <p style="color:black;">JobStack Managment</p>
+                <img  src="https://shreethemes.in/jobstack/layouts/assets/images/logo-dark.png" style="width: 200px;height: 50px; ">
                 """);
             //await _context.JobApplies.Where(j => j.Id == request.VacancyId);
             await _context.JobApplies.AddAsync(jobApply);

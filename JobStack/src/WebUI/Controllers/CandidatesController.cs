@@ -29,8 +29,9 @@ public class CandidatesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             candidates = JsonConvert.DeserializeObject<List<CandidateVM>>(data);
+            return View(candidates);
         }
-        return View(candidates);
+        return RedirectToAction("Index", "Error");
     }
     public IActionResult Details(int id)
     {
@@ -40,10 +41,10 @@ public class CandidatesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             candidates = JsonConvert.DeserializeObject<List<CandidateVM>>(data);
+            ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(candidates[0].CandidateSkillName);
+            return View(candidates[0]);
         }
-        var test = JsonConvert.DeserializeObject<string[]>(candidates[0].CandidateSkillName);
-        ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(candidates[0].CandidateSkillName);
-        return View(candidates[0]);
+        return RedirectToAction("Index", "Error");
     }
 
 
@@ -79,14 +80,15 @@ public class CandidatesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             candidates = JsonConvert.DeserializeObject<List<CandidateEditDto>>(data);
+            TempData["OldImage"] = candidates[0].CandidateProfilImage;
+            TempData["OldCV"] = candidates[0].CandidateCV;
+            var test = JsonConvert.DeserializeObject<string[]>(candidates[0].CandidateSkillName);
+            ViewBag.Countries = CountryAll();
+            ViewBag.Cities = CityAll();
+            ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(candidates[0].CandidateSkillName);
+            return View(candidates[0]);
         }
-        TempData["OldImage"] = candidates[0].CandidateProfilImage;
-        TempData["OldCV"] = candidates[0].CandidateCV;
-        var test = JsonConvert.DeserializeObject<string[]>(candidates[0].CandidateSkillName);
-        ViewBag.Countries = CountryAll();
-        ViewBag.Cities = CityAll();
-        ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(candidates[0].CandidateSkillName);
-        return View(candidates[0]);
+        return RedirectToAction("Index", "Error");
     }
     [HttpPost]
     public IActionResult Edit(string skills, CandidateEditDto candidateEdit)
@@ -122,15 +124,20 @@ public class CandidatesController : Controller
             var fullCvPath = Path.Combine(cvfolderPath, OldCV);
             if (System.IO.File.Exists(fullCvPath)) System.IO.File.Delete(fullCvPath);
             if (System.IO.File.Exists(fullImagePath)) System.IO.File.Delete(fullImagePath);
-            return RedirectToAction(nameof(Details));
+            return RedirectToAction(nameof(Index));
         }
-        return View(candidateEdit);
+        return RedirectToAction("Index", "Error");
     }
     public IActionResult Delete(int id)
     {
         string data = id.ToString();
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Candidates/Delete?id={id}", content).Result;
-        return RedirectToAction(nameof(Index));
+        if (result.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+
+        }
+        return RedirectToAction("Index", "Error");
     }
 }

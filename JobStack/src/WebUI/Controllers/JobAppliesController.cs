@@ -30,8 +30,9 @@ public class JobAppliesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             jobApplies = JsonConvert.DeserializeObject<List<JobApplyVM>>(data);
+            return View(jobApplies);
         }
-        return View(jobApplies);
+        return RedirectToAction("Index", "Error");
     }
     public IActionResult Details(int id)
     {
@@ -41,8 +42,9 @@ public class JobAppliesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             jobs = JsonConvert.DeserializeObject<List<JobApplyVM>>(data);
+            return View(jobs[0]);
         }
-        return View(jobs[0]);
+        return RedirectToAction("Index", "Error");
     }
 
 
@@ -76,6 +78,6 @@ public class JobAppliesController : Controller
         {
             return RedirectToAction("Index", "Thank");
         }
-        return View();
+        return RedirectToAction("Index", "Error");
     }
 }

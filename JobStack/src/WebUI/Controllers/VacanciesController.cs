@@ -10,13 +10,16 @@ public class VacanciesController : Controller
 {
     Uri baseUrl = new("https://localhost:7264/api");
     private readonly HttpClient _client;
+    private readonly IWebHostEnvironment _env;
+    private readonly string root = Path.Combine(Directory.GetParent("JobStack").Parent.Parent.Parent.ToString(), "JobstackApp", "JobApp", "assets", "vacancies.json");
 
-    public VacanciesController(HttpClient client)
+    public VacanciesController(HttpClient client, IWebHostEnvironment env)
     {
         _client = client;
         _client.BaseAddress = baseUrl;
-
+        _env = env;
     }
+
     private List<CountryVM> CountryAll()
     {
         List<CountryVM> countries = new();
@@ -69,8 +72,10 @@ public class VacanciesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(data);
+            return View(vacancies);
+
         }
-        return View(vacancies);
+        return RedirectToAction("Index", "Error");
     }
     private string JsonData()
     {
@@ -93,10 +98,11 @@ public class VacanciesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(data);
+            ViewBag.Responsibilits = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
+            ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
+            return View(vacancies[0]);
         }
-        ViewBag.Responsibilits = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
-        ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
-        return View(vacancies[0]);
+        return RedirectToAction("Index", "Error");
     }
     [HttpGet]
     public IActionResult Create()
@@ -111,7 +117,6 @@ public class VacanciesController : Controller
     [HttpPost]
     public IActionResult Create(int id, VacancyPostDto vacancy, string responsibilts, string skills)
     {
-        var root = @"D:\Personal\JobStackProject\JobstackApp\JobApp\assets\test.json";
         VacancyPostDto vacancyPost = new()
         {
             CompanyId = id,
@@ -132,10 +137,11 @@ public class VacanciesController : Controller
         HttpResponseMessage response = _client.PostAsync(_client.BaseAddress + "/Vacancies/Post", content).Result;
         if (response.IsSuccessStatusCode)
         {
+            string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Error");
     }
     [HttpGet]
     public IActionResult Edit(int id)
@@ -146,20 +152,21 @@ public class VacanciesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             vacancies = JsonConvert.DeserializeObject<List<VacancyUpdateDto>>(data);
+            ViewBag.Responsibility = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
+            ViewBag.Skillss = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
+            ViewBag.Countries = CountryAll();
+            ViewBag.Cities = CityAll();
+            ViewBag.Categories = CategoryAll();
+            ViewBag.Types = TypeAll();
+            TempData["VacancyId"] = id;
+            return View(vacancies[0]);
         }
-        ViewBag.Responsibility = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
-        ViewBag.Skillss = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
-        ViewBag.Countries = CountryAll();
-        ViewBag.Cities = CityAll();
-        ViewBag.Categories = CategoryAll();
-        ViewBag.Types = TypeAll();
-        TempData["VacancyId"] = id;
-        return View(vacancies[0]);
+        return RedirectToAction("Index", "Error");
     }
     [HttpPost]
     public IActionResult Edit(VacancyUpdateDto vacancy, string responsibilts, string skills)
     {
-        var root = @"D:\Personal\JobStackProject\JobstackApp\JobApp\assets\test.json";
+
         VacancyUpdateDto vacancyUpdate = new()
         {
             VacancyId = Convert.ToInt32(TempData["VacancyId"]),
@@ -184,7 +191,7 @@ public class VacanciesController : Controller
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
-        return View(vacancyUpdate);
+        return RedirectToAction("Index", "Error");
     }
 
     public IActionResult Delete(int id)
@@ -192,7 +199,12 @@ public class VacanciesController : Controller
         string data = id.ToString();
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Vacancies/Delete?id={id}", content).Result;
-        return RedirectToAction(nameof(Index));
+        if (result.IsSuccessStatusCode)
+        {
+            System.IO.File.WriteAllText(root, JsonData());
+            return RedirectToAction(nameof(Index));
+        }
+        return RedirectToAction("Index", "Error");
     }
 }
 

@@ -1,29 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState,useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import vacancies from './assets/test.json'
+
+import { StyleSheet,ScrollView, Image, Text, View } from 'react-native';
+import vacancies from './assets/vacancies.json'
 
 const App=()=> {
-//  // const url = "https://localhost:7264/api/Countries/GetAllCountries";
-//   const url = "https://localhost:7264/api/Countries/Details/1";
-//   const [data, setData] = useState([])
-//   const [loading, setLoading] = useState(true)
-//   const fetchInfo = () => {
-//     return fetch(url)
-//       .then((res) => res.json())
-//       .then((d) => setData(d))
-//       .catch((err)=>console.error(err))
-//       .finally(()=>setLoading(false))
-//   }
-//   useEffect(() => {
-//     fetchInfo();
-//   }, [])
+
+
+const filtered = vacancies.filter(obj => {
+  return obj.id === 2;
+});
+
+// const found = vacancies.find(obj => {
+//   return obj.id === 2;
+// });
+// console.log(found.titleName);
+// console.log(filtered[0].titleName);
+
   return (
     <View style={styles.container}>
-          {vacancies.map((post)=>(
-               <Text>{post.titleName}</Text>
-          ))}
-     
+          {/* {vacancies.map((post)=>(
+                <Text >{post.titleName}</Text>
+                
+           ))} */}
+
+
+            {/* {filtered.map(obj => {
+              return (
+                <Text>{obj.address}</Text> 
+              )
+            })} */}
+            
+            {/* {found && (
+                  <Text>{found.address}</Text>
+              )} */}
+             <Text>Hello World</Text>
     </View>
   );
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wb5pFi83UW3uottv3+McWJA2IveiUw9wFOVhfQKtHRA=",
+  "Hash": "kJLHy6gawsmuGaTuBle6K/PNEi39gev4f49267tNkeM=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -4826,6 +4826,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\jobapply\\74aa2e13-d97a-44d2-810f-cecbf74b8fa8testcv.pdf"
+    },
+    {
+      "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\jobapply\\7a49325f-7f61-4a27-93ae-e32a55bc1201testcv.pdf",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "data/jobapply/7a49325f-7f61-4a27-93ae-e32a55bc1201testcv.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\jobapply\\7a49325f-7f61-4a27-93ae-e32a55bc1201testcv.pdf"
     },
     {
       "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\jobapply\\7eb98f21-00f4-4ea1-9d72-84c3d70cc664testcv.pdf",

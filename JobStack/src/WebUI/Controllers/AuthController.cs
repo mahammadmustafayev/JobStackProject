@@ -62,9 +62,9 @@ public class AuthController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Category", new { Area = "Manage" });
         }
-        return View();
+        return RedirectToAction("Index", "Error");
     }
     [HttpGet]
     public IActionResult RegisterCompany()
@@ -95,7 +95,7 @@ public class AuthController : Controller
         {
             return RedirectToAction("Index", "Companies");
         }
-        return View(registerCompany);
+        return RedirectToAction("Index", "Error");
     }
     [HttpGet]
     public IActionResult RegisterCandidate()
@@ -127,14 +127,23 @@ public class AuthController : Controller
         {
             return RedirectToAction("Index", "Candidates");
         }
-        return View();
+        return RedirectToAction("Index", "Error");
     }
+    [HttpGet]
     public IActionResult Register()
     {
         return View();
     }
+    [HttpPost]
     public IActionResult SignOut()
     {
-        return View();
+        StringContent content = new(" ", Encoding.UTF8, "application/json");
+        HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + "/Author/SignOut", content).Result;
+        HttpResponseMessage response = result;
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Index", "Companies");
+        }
+        return RedirectToAction("Index", "Error");
     }
 }

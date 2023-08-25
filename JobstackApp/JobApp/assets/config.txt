@@ -1,0 +1,4 @@
+"icon": "./assets/icon.png",
+"image": "./assets/splash.png",
+ "foregroundImage": "./assets/adaptive-icon.png",
+ "favicon": "./assets/favicon.png"

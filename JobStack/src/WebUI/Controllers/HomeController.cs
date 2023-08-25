@@ -33,11 +33,12 @@ public class HomeController : Controller
             homeVM.Categories = JsonConvert.DeserializeObject<List<CategoryVM>>(dataCategory);
             homeVM.Vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(dataVacancy);
             homeVM.Companies = JsonConvert.DeserializeObject<List<CompanyVM>>(dataCompany);
+            return View(homeVM);
 
 
         }
+        return RedirectToAction("Index", "Error");
 
-        return View(homeVM);
     }
 
 

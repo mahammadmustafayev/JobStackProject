@@ -23,7 +23,8 @@ public class CategoriesController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             categories = JsonConvert.DeserializeObject<List<CategoryVM>>(data);
+            return View(categories);
         }
-        return View(categories);
+        return RedirectToAction("Index", "Error");
     }
 }
