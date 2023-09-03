@@ -60,6 +60,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvdW50cnlcUGVybWFEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Errors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEVycm9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEpvYlR5cGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -114,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Auth/RegisterCompany.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3RlckNvbXBhbnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Auth/Sign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTaWduLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Candidates/Details.cshtml]

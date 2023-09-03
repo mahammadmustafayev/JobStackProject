@@ -25,15 +25,23 @@ public class VacancyController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(data);
+            return View(vacancies);
         }
-        return View(vacancies);
+        return RedirectToAction("Index", "Errors");
+
     }
     public IActionResult Delete(int id)
     {
         string data = id.ToString();
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Vacancies/Delete?id={id}", content).Result;
-        return RedirectToAction(nameof(Index));
+        if (result.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+
+        }
+        return RedirectToAction("Index", "Errors");
+
     }
     [HttpGet]
     public IActionResult PermaDelete(int id)
@@ -44,10 +52,12 @@ public class VacancyController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(data);
+            ViewBag.Responsibilits = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
+            ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
+            return View(vacancies[0]);
         }
-        ViewBag.Responsibilits = JsonConvert.DeserializeObject<string[]>(vacancies[0].ResponsibilityName);
-        ViewBag.Skills = JsonConvert.DeserializeObject<string[]>(vacancies[0].SkillName);
-        return View(vacancies[0]);
+        return RedirectToAction("Index", "Errors");
+
     }
     [HttpPost, ActionName(nameof(PermaDelete))]
     public IActionResult DeleteConfirmed(int id)
@@ -60,6 +70,6 @@ public class VacancyController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Errors");
     }
 }

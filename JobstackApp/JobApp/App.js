@@ -1,44 +1,31 @@
 
-import { StyleSheet,ScrollView, Image, Text, View ,StatusBar} from 'react-native';
+import { StyleSheet,ScrollView,Button, Text, View ,StatusBar} from 'react-native';
+
 import { EvilIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import vacancies from './assets/vacancies.json'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './Components/Home';
+import Details from './Components/Details';
+
+
+
+const Stack = createNativeStackNavigator();
 
 const App=()=> {
-
-
-
   return (
-    <ScrollView >
-      <View style={styles.container}>
-        <StatusBar backgroundColor={'#059669'} style="light"/>
-        <Text style={styles.textCenter}>Job Stack</Text>
-      </View>
-      <View style={styles.mainScroll}>
-        {vacancies.map((vacancy)=>(
-         <View style={styles.vacancyView}>
-             <View style={styles.differentParent}>
-                 <View style={styles.firstChild}>
-                   <Text style={styles.vacancyName}>{vacancy.titleName}</Text>
-                   <Text style={styles.companyName}>by {vacancy.company.companyName}</Text>
-                 </View>
-                 <View style={styles.secondChild}>
-                     <Text style={styles.details}><Feather name="arrow-up-right"  size={24} color="#059669" />
-                         
-                     </Text>
-                 </View>
-             </View>
-             <View style={styles.others}>
-                  <Text style={styles.jobType}>{vacancy.jobType.typeName}</Text>
-                  <Text style={styles.country}><EvilIcons name="location" size={20} color="#33ac9e" /> {vacancy.country.name}</Text>
-                  <Text style={styles.salary}>{vacancy.salary}</Text>
-             </View>
-         </View>
-        ))}
-         
-      </View>
-         
-    </ScrollView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen options={{headerShown:false}}  name='Home' component={Home} />
+        <Stack.Screen options={{headerShown:false}}  name='Details' component={Details} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    
+
+
+    
+    
   );
 }
 export default  App;
@@ -110,7 +97,8 @@ const styles = StyleSheet.create({
      paddingTop:15,
      fontSize:22,
      fontWeight:'500',
-     
+     //backgroundColor:'red',
+     width:400
   },
   companyName:{
      paddingLeft:10,

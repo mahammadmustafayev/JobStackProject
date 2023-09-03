@@ -62,7 +62,31 @@ public class AuthController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
-            return RedirectToAction("Index", "Category", new { Area = "Manage" });
+            return RedirectToAction("Index", "Dashboard", new { Area = "Manage" });
+        }
+        return RedirectToAction("Index", "Error");
+    }
+    [HttpGet]
+    public IActionResult Sign()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Sign(LoginDto login)
+    {
+        LoginDto loginDto = new()
+        {
+            Email = login.Email,
+            Password = login.Password,
+            RememberMe = false
+        };
+        string data = JsonConvert.SerializeObject(loginDto);
+        StringContent content = new(data, Encoding.UTF8, "application/json");
+        HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + "/Author/LoginTest", content).Result;
+        HttpResponseMessage response = result;
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Index", "Dashboard", new { Area = "Manage" });
         }
         return RedirectToAction("Index", "Error");
     }

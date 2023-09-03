@@ -1,0 +1,102 @@
+﻿@model JobStack.WebUI.DTOs.AuthDTOs.LoginDto
+@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth" dir="ltr">
+
+<!-- Mirrored from shreethemes.in/jobstack/layouts/index-six.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2023 11:14:27 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jobstack - Job Portal Tailwind CSS Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Job Listing Landing Template" name="description">
+    <meta content="Job, CV, Career, Resume, Job Portal, Create Job, Post job, tailwind Css" name="keywords">
+    <meta name="author" content="Shreethemes">
+    <meta name="website" content="https://shreethemes.in/">
+    <meta name="email" content="support@shreethemes.in">
+    <meta name="version" content="1.2.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.ico">
+
+    <!-- Css -->
+    <link href="~/assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+    <link href="~/assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+    <!-- Main Css -->
+    <link href="~/assets/libs/%40iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+    <link href="~/assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/tailwind.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="dark:bg-slate-900">
+    <section style="background-image:url('https://shreethemes.in/jobstack/layouts/assets/images/hero/bg3.jpg');" class="h-screen flex items-center justify-center relative overflow-hidden  bg-no-repeat bg-center bg-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+        <div class="container">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+                <div class="relative overflow-hidden bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800 rounded-md">
+                    <div class="p-6">
+                        <a href="#">
+                            <img src="~/assets/images/logo-dark.png" class="mx-auto h-[24px] block dark:hidden" alt="">
+                            <img src="~/assets/images/logo-light.png" class="mx-auto h-[24px] dark:block hidden" alt="">
+                        </a>
+                        <h5 class="my-6 text-xl font-semibold">Login</h5>
+                        <form class="text-left" asp-action="Sign">
+                            <div class="grid grid-cols-1">
+                                <div asp-validation-summary=ModelOnly class="text-danger"></div>
+                                <div class="mb-4 ltr:text-left rtl:text-right">
+                                    <label class="font-semibold" asp-for="Email">Email Address:</label>
+                                    <input autocomplete="off" asp-for="Email" class="form-input mt-3 rounded-md" placeholder="name@example.com">
+                                </div>
+
+                                <div class="mb-4 ltr:text-left rtl:text-right">
+                                    <label class="font-semibold" asp-for="Password">Password:</label>
+                                    <input autocomplete="off" asp-for="Password" class="form-input mt-3 rounded-md" placeholder="Password:">
+                                </div>
+
+                                <div class="flex justify-between mb-4">
+                                    <div class="inline-flex items-center mb-0">
+                                        <label asp-for="RememberMe" class="form-checkbox-label text-slate-400">Remember me</label>
+                                        <input autocomplete="off" asp-for="RememberMe" class="form-checkbox rounded border-gray-200 dark:border-gray-800 text-emerald-600 focus:border-emerald-300 focus:ring focus:ring-offset-0 focus:ring-emerald-200 focus:ring-opacity-50 me-2">
+                                    </div>
+                                    @*<p class="text-slate-400 mb-0"><a href="reset-password.html" class="text-slate-400">Forgot password ?</a></p>*@
+                                </div>
+
+                                <div class="mb-4">
+                                    <input type="submit" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md w-full" value="Login / Sign in">
+                                </div>
+
+                                <div class="text-center">
+                                    <span class="text-slate-400 me-2">Don't have an account ?</span> <a asp-controller="Auth" asp-action="Register" class="text-black dark:text-white font-bold">Sign Up</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="px-6 py-2 bg-slate-50 dark:bg-slate-800 text-center">
+                        <p class="mb-0 text-gray-400 font-medium">© <script>document.write(new Date().getFullYear())</script> Jobstack. Designed by <a href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--end section -->
+
+    <div class="fixed bottom-3 end-3">
+        <a href="#" class="back-button btn btn-icon bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md"><i data-feather="arrow-left" class="h-4 w-4"></i></a>
+    </div>
+
+    <script src="~/assets/js/jquerymin.min.js"></script>
+    <script src="~/assets/libs/tobii/js/tobii.min.js"></script>
+    <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="~/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="~/assets/js/plugins.init.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    @*@RenderSection("scripts", required: false);*@
+    <!-- JAVASCRIPTS -->
+</body>
+
+<!-- Mirrored from shreethemes.in/jobstack/layouts/index-six.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2023 11:14:30 GMT -->
+</html>

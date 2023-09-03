@@ -24,8 +24,10 @@ public class CityController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             cities = JsonConvert.DeserializeObject<List<CityVM>>(data);
+            return View(cities);
         }
-        return View(cities);
+        return RedirectToAction("Index", "Errors");
+
     }
     public IActionResult Delete(int id)
     {
@@ -33,8 +35,12 @@ public class CityController : Controller
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Cities/Delete?id={id}", content).Result;
         HttpResponseMessage response = result;
-        //if (response.IsSuccessStatusCode)
-        return RedirectToAction(nameof(Index));
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+        }
+        return RedirectToAction("Index", "Errors");
+
 
     }
 }

@@ -26,8 +26,10 @@ public class CountryController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             countries = JsonConvert.DeserializeObject<List<CountryVM>>(data);
+            return View(countries);
         }
-        return View(countries);
+        return RedirectToAction("Index", "Errors");
+
     }
     [HttpGet]
     public IActionResult Create()
@@ -45,7 +47,8 @@ public class CountryController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Errors");
+
     }
     [HttpGet]
     public IActionResult Edit(int id)
@@ -70,7 +73,8 @@ public class CountryController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View(country);
+        return RedirectToAction("Index", "Errors");
+
     }
     public IActionResult Delete(int id)
     {
@@ -78,8 +82,13 @@ public class CountryController : Controller
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Countries/Delete?id={id}", content).Result;
         HttpResponseMessage response = result;
-        //if (response.IsSuccessStatusCode)
-        return RedirectToAction(nameof(Index));
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+
+        }
+        return RedirectToAction("Index", "Errors");
+
 
     }
     [HttpGet]
@@ -107,6 +116,6 @@ public class CountryController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Errors");
     }
 }

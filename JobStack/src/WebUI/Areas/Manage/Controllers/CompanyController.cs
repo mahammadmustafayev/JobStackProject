@@ -24,21 +24,35 @@ public class CompanyController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             companies = JsonConvert.DeserializeObject<List<CompanyVM>>(data);
+            return View(companies);
         }
-        return View(companies);
+        return RedirectToAction("Index", "Errors");
+
     }
     public IActionResult Delete(int id)
     {
         string data = id.ToString();
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Companies/Delete?id={id}", content).Result;
-        return RedirectToAction(nameof(Index));
+        if (result.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+
+        }
+        return RedirectToAction("Index", "Errors");
+
     }
     public IActionResult PermaDelete(int id)
     {
         string data = id.ToString();
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Companies/PermaDelete?id={id}", content).Result;
-        return RedirectToAction(nameof(Index));
+        if (result.IsSuccessStatusCode)
+        {
+
+            return RedirectToAction(nameof(Index));
+        }
+        return RedirectToAction("Index", "Errors");
+
     }
 }

@@ -23,6 +23,8 @@ public class MappingProfile : Profile
         CreateMap<City, GetCitiesQuery>().ReverseMap();
         CreateMap<City, GetCityQuery>().ReverseMap();
 
+        //CreateMap<UserLogin, UserLoginCommand>().ReverseMap();
+
         CreateMap<Country, CreateCountryCommand>().ReverseMap();
         CreateMap<Country, CountryDto>().ReverseMap();
         CreateMap<Country, UpdateCountryCommand>().ReverseMap();

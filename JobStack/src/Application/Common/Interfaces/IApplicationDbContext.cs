@@ -17,6 +17,7 @@ public interface IApplicationDbContext
     //DbSet<CategoryTest> CategoryTests { get; set; }
     DbSet<JobType> JobTypes { get; set; }
     DbSet<Vacancy> Vacancies { get; set; }
+    DbSet<UserLogin> UserLogins { get; set; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

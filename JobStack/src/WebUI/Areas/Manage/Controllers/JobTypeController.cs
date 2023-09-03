@@ -27,8 +27,10 @@ public class JobTypeController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             categories = JsonConvert.DeserializeObject<List<JobTypeVM>>(data);
+            return View(categories);
         }
-        return View(categories);
+        return RedirectToAction("Index", "Errors");
+
     }
     [HttpGet]
     public IActionResult Create()
@@ -47,7 +49,7 @@ public class JobTypeController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Errors");
 
     }
     // /JobTypes/Update?JobTypeId=7&TypeName=test12
@@ -74,7 +76,7 @@ public class JobTypeController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View(jobType);
+        return RedirectToAction("Index", "Errors");
     }
 
     public IActionResult Delete(int id)
@@ -83,8 +85,13 @@ public class JobTypeController : Controller
         StringContent content = new(data, Encoding.UTF8, "application/json");
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/JobTypes/Delete?id={id}", content).Result;
         HttpResponseMessage response = result;
-        //if (response.IsSuccessStatusCode)
-        return RedirectToAction(nameof(Index));
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction(nameof(Index));
+
+        }
+        return RedirectToAction("Index", "Errors");
+
 
     }
 
@@ -113,6 +120,6 @@ public class JobTypeController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Errors");
     }
 }

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <!-- 404 Error Text -->
+    <div class="text-center">
+        <div class="error mx-auto" data-text="Problem">Problem</div>
+        <p class="lead text-gray-800 mb-5">Something went wrong!</p>
+        @*<p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>*@
+        <a asp-controller="Category" asp-action="Index">← Back </a>
+    </div>
+
+</div>
+

@@ -45,8 +45,9 @@ public class CategoryController : Controller
             string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             categories = JsonConvert.DeserializeObject<List<CategoryVM>>(data);
+            return View(categories);
         }
-        return View(categories);
+        return RedirectToAction("Index", "Errors");
     }
     [HttpGet]
     public IActionResult Create()
@@ -76,7 +77,7 @@ public class CategoryController : Controller
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
-        return View();
+        return RedirectToAction("Index", "Errors");
 
 
 
@@ -118,7 +119,8 @@ public class CategoryController : Controller
             if (System.IO.File.Exists(fullPath)) System.IO.File.Delete(fullPath);
             return RedirectToAction(nameof(Index));
         }
-        return View(categoryEdit);
+        return RedirectToAction("Index", "Errors");
+
     }
     public IActionResult Delete(int id)
     {
@@ -131,7 +133,8 @@ public class CategoryController : Controller
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
-        return BadRequest();
+        return RedirectToAction("Index", "Errors");
+
 
     }
     [HttpGet]
@@ -158,7 +161,7 @@ public class CategoryController : Controller
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
-        return BadRequest();
+        return RedirectToAction("Index", "Errors");
 
     }
 

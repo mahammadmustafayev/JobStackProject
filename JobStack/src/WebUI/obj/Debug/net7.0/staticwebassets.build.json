@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kJLHy6gawsmuGaTuBle6K/PNEi39gev4f49267tNkeM=",
+  "Hash": "ZK+jC/Eb/gLkeo18vZH2L8T8GDLBVwKKmJZ7GrC/ngQ=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -36548,6 +36548,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\vendor\\jquery-easing\\jquery.easing.min.js"
+    },
+    {
+      "Identity": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\user\\identity.json",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "user/identity.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user\\identity.json"
     }
   ]
 }
