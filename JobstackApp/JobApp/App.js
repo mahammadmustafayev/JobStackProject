@@ -1,9 +1,5 @@
 
-import { StyleSheet,ScrollView,Button, Text, View ,StatusBar} from 'react-native';
-
-import { EvilIcons } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
-import vacancies from './assets/vacancies.json'
+import { StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './Components/Home';

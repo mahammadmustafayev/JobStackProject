@@ -8,10 +8,11 @@ namespace JobStack.WebUI.Controllers;
 
 public class VacanciesController : Controller
 {
-    Uri baseUrl = new("https://localhost:7264/api");
+    Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
     private readonly IWebHostEnvironment _env;
     private readonly string root = Path.Combine(Directory.GetParent("JobStack").Parent.Parent.Parent.ToString(), "JobstackApp", "JobApp", "assets", "vacancies.json");
+
 
     public VacanciesController(HttpClient client, IWebHostEnvironment env)
     {
@@ -105,9 +106,9 @@ public class VacanciesController : Controller
         return RedirectToAction("Index", "Error");
     }
     [HttpGet]
-    public IActionResult Create()
+    public IActionResult Create(int id)
     {
-
+        TempData["CompanyId"] = id;
         ViewBag.Countries = CountryAll();
         ViewBag.Cities = CityAll();
         ViewBag.Categories = CategoryAll();
@@ -115,11 +116,12 @@ public class VacanciesController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult Create(int id, VacancyPostDto vacancy, string responsibilts, string skills)
+    public IActionResult Create(VacancyPostDto vacancy, string responsibilts, string skills)
     {
+
         VacancyPostDto vacancyPost = new()
         {
-            CompanyId = id,
+            CompanyId = (int)TempData["CompanyId"],
             Address = vacancy.Address,
             CategoryId = vacancy.CategoryId,
             CityId = vacancy.CityId,
@@ -137,7 +139,7 @@ public class VacanciesController : Controller
         HttpResponseMessage response = _client.PostAsync(_client.BaseAddress + "/Vacancies/Post", content).Result;
         if (response.IsSuccessStatusCode)
         {
-            string root = Path.Combine(_env.ContentRootPath);
+            //string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
@@ -164,12 +166,12 @@ public class VacanciesController : Controller
         return RedirectToAction("Index", "Error");
     }
     [HttpPost]
-    public IActionResult Edit(VacancyUpdateDto vacancy, string responsibilts, string skills)
+    public IActionResult Edit(VacancyUpdateDto vacancy, string responsible, string skillsebla)
     {
 
         VacancyUpdateDto vacancyUpdate = new()
         {
-            VacancyId = Convert.ToInt32(TempData["VacancyId"]),
+            VacancyId = (int)TempData["VacancyId"],
             TitleName = vacancy.TitleName,
             Address = vacancy.Address,
             CategoryId = vacancy.CategoryId,
@@ -178,9 +180,9 @@ public class VacanciesController : Controller
             Description = vacancy.Description,
             Experience = vacancy.Experience,
             JobTypeId = vacancy.JobTypeId,
-            ResponsibilityName = responsibilts,
+            ResponsibilityName = responsible,
             Salary = vacancy.Salary,
-            SkillName = skills,
+            SkillName = skillsebla,
         };
         string data = JsonConvert.SerializeObject(vacancyUpdate);
         StringContent content = new(data, Encoding.UTF8, "application/json");
@@ -188,6 +190,7 @@ public class VacanciesController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
+            //System.IO.FileMode.Open;
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }

@@ -257,7 +257,7 @@
         });
 
         addVacancyEdit.addEventListener('click', function () {
-            //e.preventDefault();
+           // e.preventDefault();
             
             const dataSkillPost = JSON.stringify(skillss);
             const dataResponsibPost = JSON.stringify(responsibilties);
@@ -289,8 +289,7 @@
 
                 
                 data: {
-                    skills: dataSkillPost,
-                    responsibilts: dataResponsibPost,
+                   
                     titlename: titleNameId,
                     description: descriptionId,
                     salary: salaryId,
@@ -300,15 +299,18 @@
                     categoryid:categoryIds,
                     countryid: countryIds,
                     cityid: cityIds,
+                    responsible: dataResponsibPost,
+                    skillsebla: dataSkillPost
                 },
                 
                 success: function (data) {
-                    console.log(data)
+                    console.log("good"+ data)
                 },
                 error: function (data) {
                     console.log(data)
                 }
             });
+
         });
 
         function deleteElem(event) {

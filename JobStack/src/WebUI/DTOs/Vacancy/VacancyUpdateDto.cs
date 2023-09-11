@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using WebUI.Models;
+﻿using WebUI.Models;
 
 namespace JobStack.WebUI.DTOs.Vacancy;
 
@@ -15,11 +14,11 @@ public class VacancyUpdateDto
 
     public string? Experience { get; set; }
     public string? ResponsibilityName { get; set; }
-    [NotMapped]
-    public string[]? ResponsibilitiesArray { get; set; }
+    //[NotMapped]
+    //public string[]? ResponsibilitiesArray { get; set; }
     public string? SkillName { get; set; }
-    [NotMapped]
-    public string[]? SkillsArray { get; set; }
+    //[NotMapped]
+    //public string[]? SkillsArray { get; set; }
 
     public int? CountryId { get; set; }
 

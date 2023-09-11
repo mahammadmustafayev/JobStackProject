@@ -29,7 +29,7 @@ public class AuthorController : BaseApiController
         var result = await Mediator.Send(loginUserCommand);
         //System.IO.File.WriteAllText(root, result.ToString());
         var test = JsonConvert.SerializeObject(result);
-        TestPost(test);
+        //TestPost(test);
         return Ok(result);
     }
 

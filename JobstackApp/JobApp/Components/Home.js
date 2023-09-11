@@ -20,7 +20,9 @@ const Home = ({navigation}) => {
                    <Text style={styles.companyName}>by {vacancy.company.companyName}</Text>
                  </View>
                  <View style={styles.secondChild}>
-                     <Text style={styles.details} onPress={()=>navigation.navigate('Details')}><Feather name="arrow-up-right"  size={24} color="#059669" /></Text>
+                     <Text style={styles.details} onPress={()=>navigation.navigate('Details',{
+                       itemId:vacancy.id
+                     })}><Feather name="arrow-up-right"  size={24} color="#059669" /></Text>
                      {/* <Button style={styles.details}  onPress={()=>navigation.navigate('Details')}>
                         <Feather name="arrow-up-right"  size={24} color="#059669" />
                      </Button> */}

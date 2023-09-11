@@ -10,7 +10,7 @@ namespace JobStack.WebUI.Controllers;
 
 public class CandidatesController : Controller
 {
-    Uri baseUrl = new("https://localhost:7264/api");
+    Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
     private readonly IWebHostEnvironment _env;
 

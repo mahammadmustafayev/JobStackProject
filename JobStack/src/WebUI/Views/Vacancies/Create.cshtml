@@ -174,16 +174,15 @@
 @section scripts{
 <script>
        
-    const skillss = [];
-    const responsibilties = [];
-
-    const addSkillt = document.querySelector('#addSkillt');
-    const skillCollections = document.querySelector('#skillCollections');
-    const responCollection = document.querySelector('#responCollection');
-    const responInput = document.querySelector('#responInput');
-    const addResponsib = document.querySelector('#addResponsib');
-    const addVacancyPost = document.querySelector('#addVacancyPost');
-    const skillInputt = document.querySelector('#skillInputt');
+        const skillss = [];
+        const responsibilties = [];
+        const addSkillt = document.querySelector('#addSkillt');
+        const skillCollections = document.querySelector('#skillCollections');
+        const responCollection = document.querySelector('#responCollection');
+        const responInput = document.querySelector('#responInput');
+        const addResponsib = document.querySelector('#addResponsib');
+        const addVacancyPost = document.querySelector('#addVacancyPost');
+        const skillInputt = document.querySelector('#skillInputt');
      
     
        
@@ -232,7 +231,8 @@
 
         addVacancyPost.addEventListener('click', function (){
             
-            
+           // e.preventDefault();
+
             const dataSkillPost = JSON.stringify(skillss);
             const dataResponsibPost = JSON.stringify(responsibilties);
             const titleNameId = document.getElementById('titleNameId').value;
@@ -245,17 +245,17 @@
             const countryIds = document.getElementById('countryIds').value;
             const cityIds = document.getElementById('cityIds').value;
 
-            //console.log(dataSkillPost);
-            //console.log(dataResponsibPost);
-            //console.log(titleNameId);
-            //console.log(descriptionId);
-            //console.log(categoryIds);
-            //console.log(typeId);
-            //console.log(salaryId);
-            //console.log(experienceIds);
-            //console.log(addressId);
-            //console.log(countryIds);
-            //console.log(cityIds);
+            console.log(dataSkillPost);
+            console.log(dataResponsibPost);
+            console.log(titleNameId);
+            console.log(descriptionId);
+            console.log(categoryIds);
+            console.log(typeId);
+            console.log(salaryId);
+            console.log(experienceIds);
+            console.log(addressId);
+            console.log(countryIds);
+            console.log(cityIds);
 
             $.ajax({
                 type: "POST",
@@ -263,8 +263,6 @@
 
                 
                 data: {
-                    skills: dataSkillPost,
-                    responsibilts: dataResponsibPost,
                     titlename: titleNameId,
                     description: descriptionId,
                     salary: salaryId,
@@ -274,10 +272,12 @@
                     categoryid:categoryIds,
                     countryid: countryIds,
                     cityid: cityIds,
+                    skills: dataSkillPost,
+                    responsibilts: dataResponsibPost
                 },
                 
                 success: function (data) {
-                    alert("good: " + data)
+                    console.log("good: " + data)
                 },
                 error: function (data) {
                     console.log(data)
