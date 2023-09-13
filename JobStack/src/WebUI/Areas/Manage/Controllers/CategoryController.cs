@@ -12,7 +12,7 @@ namespace JobStack.WebUI.Areas.Manage.Controllers;
 
 public class CategoryController : Controller
 {
-    Uri baseUrl = new("https://localhost:7264/api");
+    Uri baseUrl = new("http://localhost:7264/api");
     private readonly HttpClient _client;
     private readonly IWebHostEnvironment _env;
     private readonly string root = Path.Combine(Directory.GetParent("JobStack").Parent.Parent.Parent.ToString(), "JobstackApp", "JobApp", "assets", "categories.json");
@@ -42,7 +42,6 @@ public class CategoryController : Controller
         if (response.IsSuccessStatusCode)
         {
             string data = response.Content.ReadAsStringAsync().Result;
-            string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             categories = JsonConvert.DeserializeObject<List<CategoryVM>>(data);
             return View(categories);
@@ -73,7 +72,6 @@ public class CategoryController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
-            string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
@@ -112,7 +110,6 @@ public class CategoryController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
-            string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             string OldPicture = TempData["OldImage"] as string;
             var fullPath = Path.Combine(folderPath, OldPicture);
@@ -129,7 +126,6 @@ public class CategoryController : Controller
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Categories/Delete?id={id}", content).Result;
         if (result.IsSuccessStatusCode)
         {
-            string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
@@ -157,7 +153,6 @@ public class CategoryController : Controller
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Categories/PermaDelete?id={id}", content).Result;
         if (result.IsSuccessStatusCode)
         {
-            string root = Path.Combine(_env.ContentRootPath);
             System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
