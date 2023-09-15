@@ -42,7 +42,7 @@ public class CategoryController : Controller
         if (response.IsSuccessStatusCode)
         {
             string data = response.Content.ReadAsStringAsync().Result;
-            System.IO.File.WriteAllText(root, JsonData());
+            //System.IO.File.WriteAllText(root, JsonData());
             categories = JsonConvert.DeserializeObject<List<CategoryVM>>(data);
             return View(categories);
         }
@@ -72,7 +72,7 @@ public class CategoryController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
-            System.IO.File.WriteAllText(root, JsonData());
+            //System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return RedirectToAction("Index", "Errors");
@@ -110,7 +110,7 @@ public class CategoryController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
-            System.IO.File.WriteAllText(root, JsonData());
+            // System.IO.File.WriteAllText(root, JsonData());
             string OldPicture = TempData["OldImage"] as string;
             var fullPath = Path.Combine(folderPath, OldPicture);
             if (System.IO.File.Exists(fullPath)) System.IO.File.Delete(fullPath);
@@ -126,7 +126,7 @@ public class CategoryController : Controller
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Categories/Delete?id={id}", content).Result;
         if (result.IsSuccessStatusCode)
         {
-            System.IO.File.WriteAllText(root, JsonData());
+            // System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return RedirectToAction("Index", "Errors");
@@ -153,7 +153,7 @@ public class CategoryController : Controller
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Categories/PermaDelete?id={id}", content).Result;
         if (result.IsSuccessStatusCode)
         {
-            System.IO.File.WriteAllText(root, JsonData());
+            //System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return RedirectToAction("Index", "Errors");

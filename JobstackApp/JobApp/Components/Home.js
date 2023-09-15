@@ -1,10 +1,10 @@
-import { StyleSheet,ScrollView, Text,Button, View ,StatusBar} from 'react-native';
-
+import { StyleSheet,ScrollView, Text, View ,StatusBar} from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import vacancies from '../assets/vacancies.json'
 
 const Home = ({navigation}) => {
+ 
   return (
     <ScrollView >
       <View style={styles.container}>

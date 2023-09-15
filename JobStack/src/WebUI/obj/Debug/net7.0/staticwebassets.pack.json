@@ -1057,10 +1057,6 @@
       "PackagePath": "staticwebassets\\data\\company\\87b6f680-9711-44fb-92eb-0a6d895587d5spotify.png"
     },
     {
-      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\8a174eab-def9-4ad4-bf5a-1cbd172e7a22code-academy-logo-new.webp",
-      "PackagePath": "staticwebassets\\data\\company\\8a174eab-def9-4ad4-bf5a-1cbd172e7a22code-academy-logo-new.webp"
-    },
-    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\8ded5478-682f-4216-b080-82dc0b36b6aafacebook-logo.png",
       "PackagePath": "staticwebassets\\data\\company\\8ded5478-682f-4216-b080-82dc0b36b6aafacebook-logo.png"
     },
@@ -1105,6 +1101,10 @@
       "PackagePath": "staticwebassets\\data\\company\\e9527ed1-94e4-4d48-9a09-db1351d15b75kontakt.png"
     },
     {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\f2a8c354-8d3b-42a6-a5b7-e5ed9382caf8logocode.jpg",
+      "PackagePath": "staticwebassets\\data\\company\\f2a8c354-8d3b-42a6-a5b7-e5ed9382caf8logocode.jpg"
+    },
+    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\company\\fb0a320e-4bd4-466b-9d3e-c0f8a5a5d0b0code-academy-logo-new.webp",
       "PackagePath": "staticwebassets\\data\\company\\fb0a320e-4bd4-466b-9d3e-c0f8a5a5d0b0code-academy-logo-new.webp"
     },
@@ -1121,12 +1121,20 @@
       "PackagePath": "staticwebassets\\data\\jobapply\\2f670b52-d457-48da-9553-02cedf55560etestcv.pdf"
     },
     {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\jobapply\\3b996ea2-72fe-4b40-80b8-a1617db7d19atestcv.pdf",
+      "PackagePath": "staticwebassets\\data\\jobapply\\3b996ea2-72fe-4b40-80b8-a1617db7d19atestcv.pdf"
+    },
+    {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\jobapply\\50d0f97a-eab2-40d3-9af6-9e798e4486c0testcv.pdf",
       "PackagePath": "staticwebassets\\data\\jobapply\\50d0f97a-eab2-40d3-9af6-9e798e4486c0testcv.pdf"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\jobapply\\60bfc453-f3e1-446f-bd0b-dd241de3bb26testcv.pdf",
       "PackagePath": "staticwebassets\\data\\jobapply\\60bfc453-f3e1-446f-bd0b-dd241de3bb26testcv.pdf"
+    },
+    {
+      "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\jobapply\\6c4e7582-8ed4-4e39-933f-f816ea0cca51testcv.pdf",
+      "PackagePath": "staticwebassets\\data\\jobapply\\6c4e7582-8ed4-4e39-933f-f816ea0cca51testcv.pdf"
     },
     {
       "Id": "D:\\Personal\\JobStackProject\\JobStack\\src\\WebUI\\wwwroot\\data\\jobapply\\74aa2e13-d97a-44d2-810f-cecbf74b8fa8testcv.pdf",

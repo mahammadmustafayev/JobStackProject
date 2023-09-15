@@ -41,7 +41,7 @@ public class VacancyController : Controller
         {
             string data = response.Content.ReadAsStringAsync().Result;
             vacancies = JsonConvert.DeserializeObject<List<VacancyVM>>(data);
-            System.IO.File.WriteAllText(root, JsonData());
+            //System.IO.File.WriteAllText(root, JsonData());
             return View(vacancies);
         }
         return RedirectToAction("Index", "Errors");
@@ -54,7 +54,7 @@ public class VacancyController : Controller
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Vacancies/Delete?id={id}", content).Result;
         if (result.IsSuccessStatusCode)
         {
-            System.IO.File.WriteAllText(root, JsonData());
+            // System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
 
         }
@@ -86,7 +86,7 @@ public class VacancyController : Controller
         HttpResponseMessage response = result;
         if (response.IsSuccessStatusCode)
         {
-            System.IO.File.WriteAllText(root, JsonData());
+            // System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return RedirectToAction("Index", "Errors");

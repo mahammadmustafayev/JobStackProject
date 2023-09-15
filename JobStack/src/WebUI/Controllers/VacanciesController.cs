@@ -12,6 +12,7 @@ public class VacanciesController : Controller
     private readonly HttpClient _client;
     private readonly IWebHostEnvironment _env;
     private readonly string root = Path.Combine(Directory.GetParent("JobStack").Parent.Parent.Parent.ToString(), "JobstackApp", "JobApp", "assets", "vacancies.json");
+    // private readonly string root = Path.Combine(Directory.GetParent("JobStack").Parent.Parent.ToString(), "src", "test.json");
 
 
     public VacanciesController(HttpClient client, IWebHostEnvironment env)
@@ -118,7 +119,8 @@ public class VacanciesController : Controller
     [HttpPost]
     public IActionResult Create(VacancyPostDto vacancy, string responsibilts, string skills)
     {
-
+        string test = root;
+        //"D:\Personal\JobStackProject\JobstackApp\JobApp\assets\vacancies.json"
         VacancyPostDto vacancyPost = new()
         {
             CompanyId = (int)TempData["CompanyId"],
@@ -139,8 +141,17 @@ public class VacanciesController : Controller
         HttpResponseMessage response = _client.PostAsync(_client.BaseAddress + "/Vacancies/Post", content).Result;
         if (response.IsSuccessStatusCode)
         {
-            //string root = Path.Combine(_env.ContentRootPath);
-            System.IO.File.WriteAllText(root, JsonData());
+            //using (FileStream fs = new FileStream(root, FileMode.Open, FileAccess.ReadWrite))
+            //{
+            //    using (StreamWriter sw = new(fs))
+            //    {
+            //        sw.Write(JsonData());
+            //    }
+            //}
+
+            // System.IO.File.WriteAllText(root, JsonData());
+
+
             return RedirectToAction(nameof(Index));
         }
         return RedirectToAction("Index", "Error");
@@ -191,7 +202,7 @@ public class VacanciesController : Controller
         if (response.IsSuccessStatusCode)
         {
             //System.IO.FileMode.Open;
-            System.IO.File.WriteAllText(root, JsonData());
+            //System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return RedirectToAction("Index", "Error");
@@ -204,7 +215,7 @@ public class VacanciesController : Controller
         HttpResponseMessage result = _client.PostAsync(_client.BaseAddress + $"/Vacancies/Delete?id={id}", content).Result;
         if (result.IsSuccessStatusCode)
         {
-            System.IO.File.WriteAllText(root, JsonData());
+            //System.IO.File.WriteAllText(root, JsonData());
             return RedirectToAction(nameof(Index));
         }
         return RedirectToAction("Index", "Error");

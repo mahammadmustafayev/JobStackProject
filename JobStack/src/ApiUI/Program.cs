@@ -24,9 +24,10 @@ public class Program
         {
             opt.AddDefaultPolicy(builder =>
             {
-                builder.AllowAnyOrigin();
+                builder.SetIsOriginAllowed(x => true);
                 builder.AllowAnyMethod();
                 builder.AllowAnyHeader();
+                builder.AllowCredentials();
             });
         });
 
