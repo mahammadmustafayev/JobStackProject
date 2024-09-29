@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -43,6 +39,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\data\candidate\images\" />
+    <Folder Include="wwwroot\data\candidate\resume\" />
+    <Folder Include="wwwroot\data\category\" />
+    <Folder Include="wwwroot\data\company\" />
+    <Folder Include="wwwroot\data\jobapply\" />
   </ItemGroup>
 
 </Project>

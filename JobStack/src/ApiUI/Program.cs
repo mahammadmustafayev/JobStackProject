@@ -22,13 +22,11 @@ public class Program
         // var devCorsPolicy = "devCorsPolicy";
         builder.Services.AddCors(opt =>
         {
-            opt.AddDefaultPolicy(builder =>
-            {
-                builder.SetIsOriginAllowed(x => true);
-                builder.AllowAnyMethod();
-                builder.AllowAnyHeader();
-                builder.AllowCredentials();
-            });
+            opt.AddPolicy("AllowAll",
+                builder => builder
+                     .AllowAnyOrigin()
+                     .AllowAnyMethod()
+                     .AllowAnyHeader());
         });
 
 
@@ -48,7 +46,7 @@ public class Program
         {
             app.UseSwagger();
             app.UseSwaggerUI();
-            app.UseCors();
+            app.UseCors("AllowAll");
         }
 
 

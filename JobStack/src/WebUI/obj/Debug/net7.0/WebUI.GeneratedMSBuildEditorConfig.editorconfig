@@ -9,245 +9,247 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JobStack.WebUI
 build_property.RootNamespace = JobStack.WebUI
-build_property.ProjectDir = D:\Personal\JobStackProject\JobStack\src\WebUI\
+build_property.ProjectDir = D:\Projects\JobStackProject\JobStack\src\WebUI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Personal\JobStackProject\JobStack\src\WebUI
+build_property.MSBuildProjectDirectory = D:\Projects\JobStackProject\JobStack\src\WebUI
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Candidate/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Candidate/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhbmRpZGF0ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/Create.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/Edit.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/PermaDelete.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Category/PermaDelete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XFBlcm1hRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/City/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/City/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENpdHlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Company/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Company/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvbXBhbnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/Create.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvdW50cnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/Edit.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvdW50cnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvdW50cnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/PermaDelete.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Country/PermaDelete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvdW50cnlcUGVybWFEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Dashboard/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Errors/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Errors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEVycm9yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/Create.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEpvYlR5cGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/Edit.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEpvYlR5cGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEpvYlR5cGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/PermaDelete.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/JobType/PermaDelete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEpvYlR5cGVcUGVybWFEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Shared/_ManageLayout.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Shared/_ManageLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfTWFuYWdlTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Vacancy/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Vacancy/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFZhY2FuY3lcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Vacancy/PermaDelete.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/Vacancy/PermaDelete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFZhY2FuY3lcUGVybWFEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/_ViewImports.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/_ViewStart.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Areas/Manage/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/About/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Auth/Login.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Auth/Register.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Auth/RegisterCandidate.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Auth/RegisterCandidate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3RlckNhbmRpZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Auth/RegisterCompany.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Auth/RegisterCompany.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3RlckNvbXBhbnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Auth/Sign.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Auth/Sign.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTaWduLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Candidates/Details.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Candidates/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Candidates/Edit.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Candidates/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Candidates/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Candidates/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Categories/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Companies/Details.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Companies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Companies/Edit.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Companies/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Companies/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Companies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Companies/SeeJob.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Companies/SeeJob.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXFNlZUpvYi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Contact/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Error/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Error/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Experiences/Create.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Experiences/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Experiences/Edit.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Experiences/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Experiences/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Experiences/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Home/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Home/Privacy.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/JobApplies/Details.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/JobApplies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iQXBwbGllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/JobApplies/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/JobApplies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iQXBwbGllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/JobApplies/SendApply.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/JobApplies/SendApply.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iQXBwbGllc1xTZW5kQXBwbHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Services/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Services/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Shared/Error.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Shared/_LayoutWhite.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Shared/_LayoutWhite.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRXaGl0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Thank/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Thank/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmtcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Create.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jaWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Details.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jaWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Edit.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jaWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Index.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jaWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Post.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Vacancies/Post.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jaWVzXFBvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/_ViewImports.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/_ViewStart.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Personal/JobStackProject/JobStack/src/WebUI/Views/Shared/_Layout.cshtml]
+[D:/Projects/JobStackProject/JobStack/src/WebUI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mv07mvknwk

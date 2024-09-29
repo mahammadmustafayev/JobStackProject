@@ -29,7 +29,7 @@ public record ManageCreateCompanyCommand
         public async Task<IDataResult<ManageCreateCompanyCommand>> Handle(ManageCreateCompanyCommand request, CancellationToken cancellationToken)
         {
             Company company = _mapper.Map<Company>(request);
-            string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "WebUI", "wwwroot", "data", "company");
+            string root = Path.Combine(Directory.GetParent("src").Parent.ToString(), "ApiUI", "wwwroot", "data", "company");
 
             if (request != null)
             {
