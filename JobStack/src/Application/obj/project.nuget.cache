@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yDQNl7RUpe7PdTNtSaLBLuWt2IbLGD4ABL+7wFKa+G3o4w1Xh4mKl7p85s+7U3tyBlnqUUYCu/x8zVcoYLFsWw==",
+  "dgSpecHash": "l6WWrESD7T1fVmZJsVQNoMbF6xipHAufzFUZIN3RukUmypzdieAJnuwESepKuB/7RkV3bHAupdm206z0nmMtCw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\musta\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\musta\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

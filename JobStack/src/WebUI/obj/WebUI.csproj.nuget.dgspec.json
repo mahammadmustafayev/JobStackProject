@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {}
+    "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {
+    "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
+        "projectUniqueName": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
         "projectName": "WebUI",
-        "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
+        "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
         "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\WebUI\\obj\\",
+        "outputPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -84,3 +84,16 @@ D:\Projects\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.dll
 D:\Projects\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\refint\Domain.dll
 D:\Projects\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.pdb
 D:\Projects\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\ref\Domain.dll
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\bin\Debug\net7.0\Domain.dll
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\bin\Debug\net7.0\Domain.pdb
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.sourcelink.json
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.dll
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\Domain.pdb
+D:\Projects\vacancy\JobStackProject\JobStack\src\Domain\obj\Debug\net7.0\ref\Domain.dll

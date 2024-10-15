@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GmKF4Ruf6q4dGvC5Y9kBm8PV7bIxEVEqUp3KapLT/5Fbidpt6rLNSfUElQAw+Ws9/bhh93U26ZILPNjlM9djTQ==",
+  "dgSpecHash": "JWnOOAwiU5JVhh+we+/UuVHIGCHKf0hCDQzQIdlwtvh0un2Hkb8NqLjNB3oX/4LM7zIJTOBAHZ0X+BXMEknJJg==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\musta\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.9\\microsoft.aspnetcore.cryptography.internal.7.0.9.nupkg.sha512",
     "C:\\Users\\musta\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.9\\microsoft.aspnetcore.cryptography.keyderivation.7.0.9.nupkg.sha512",

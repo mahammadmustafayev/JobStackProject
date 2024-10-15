@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9BBjQI5gulfjSENPh0LQWhcVB+jbO7h09963IsNYl7hzkTtbxevRJh57kMKn/7g8JvuBRgAJniUuTg6hfRHmng==",
+  "dgSpecHash": "fF1s2T51svJY2tPtXBp+ES2XcffO7AAYO3KQhb+E7xcirzi8MSxtuLxWh1B23fbnAO5b5B3uV7jz/puFthB8dQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
+  "projectFilePath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\musta\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\musta\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1R+vUWFFJtgiKWiDa5dLd/G4wtn2jftaB36eWX/l+VWERSVqPZXEy71x6l3IsywLJPolkFPJu6OCWypx2pwNfg==",
+  "dgSpecHash": "/6bYZ19KC5+tddlv+/WjDu1Ayn+t+yScdzcRXASmxSEZe5HJ094Tyw7wAS7LcryC7ZdpnGCjjn1EdLcflMbQZQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
+  "projectFilePath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\WebUI\\WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\musta\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\musta\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

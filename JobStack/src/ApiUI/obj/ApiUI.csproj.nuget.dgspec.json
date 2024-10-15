@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj": {}
+    "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj": {
+    "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
+        "projectUniqueName": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
         "projectName": "ApiUI",
-        "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
+        "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\ApiUI\\ApiUI.csproj",
         "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\ApiUI\\obj\\",
+        "outputPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\ApiUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
-                "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj"
+              "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
+                "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj"
               },
-              "D:\\Projects\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj"
+              "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -104,14 +104,14 @@
         }
       }
     },
-    "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
+    "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
+        "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\obj\\",
+        "outputPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -132,8 +132,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
+              "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -221,14 +221,14 @@
         }
       }
     },
-    "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
+    "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\obj\\",
+        "outputPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -295,14 +295,14 @@
         }
       }
     },
-    "D:\\Projects\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Infrastructure\\obj\\",
+        "outputPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -323,11 +323,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
-                "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Application\\Application.csproj"
+              "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj": {
+                "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Application\\Application.csproj"
               },
-              "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Projects\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
+              "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Projects\\vacancy\\JobStackProject\\JobStack\\src\\Domain\\Domain.csproj"
               }
             }
           }
